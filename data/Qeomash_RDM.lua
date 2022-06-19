@@ -94,20 +94,50 @@ function init_gear_sets()
        
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
-    sets.precast.WS = {
-        head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Atrophy Tabard +1",hands="Yaoyotl Gloves",ring1="Rajas Ring",ring2="K'ayres Ring",
-        back="Atheling Mantle",waist="Caudata Belt",legs="Hagondes Pants",feet="Hagondes Sabots"}
-
+    sets.baseWS = {}
+    sets.baseWS.Str = {
+        head="Duelist's Chapeau +1",
+        neck="Chivalrous Chain",
+        lear="Brutal Earring",
+        rear="Magnetic Earring",
+        body="Dux Scale Mail",
+        hands="Brego Gloves",
+        lring="Flame Ring",
+        rring="Rajas Ring",
+        back="Forager's Mantle",
+        waist="Warwolf Belt",
+        legs="Duelist's Tights +1",
+        feet="Goliard Clogs",
+    }
+    sets.baseWS.Mnd = {
+        head="Duelist's Chapeau +1",
+        neck="Chivalrous Chain",
+        lear="Brutal Earring",
+        rear="Geist Earring",
+        body="Dux Scale Mail",
+        hands="Yigit Gages",
+        lring="Aqua Ring",
+        rring="Aqua Ring",
+        back="Prism Cape",
+        waist="Warwolf Belt",
+        legs="Warlock's Tights +1",
+        feet="Duelist's Boots +1",
+    }
+    
+    sets.precast.WS = sets.baseWS.Str
+    sets.precast.WS['Death Blossom'] = set_combine(sets.baseWS.Mnd, {})
+        -- head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
+        -- body="Atrophy Tabard +1",hands="Yaoyotl Gloves",ring1="Rajas Ring",ring2="K'ayres Ring",
+        -- back="Atheling Mantle",waist="Caudata Belt",legs="Hagondes Pants",feet="Hagondes Sabots"}
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-    sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, 
-        {neck="Soil Gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-        ring1="Aquasoul Ring",ring2="Aquasoul Ring",waist="Soil Belt"})
+    -- sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, 
+    --     {neck="Soil Gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
+    --     ring1="Aquasoul Ring",ring2="Aquasoul Ring",waist="Soil Belt"})
 
-    sets.precast.WS['Sanguine Blade'] = {ammo="Witchstone",
-        head="Hagondes Hat",neck="Eddy Necklace",ear1="Friomisi Earring",ear2="Hecate's Earring",
-        body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Strendu Ring",ring2="Acumen Ring",
-        back="Toro Cape",legs="Hagondes Pants",feet="Hagondes Sabots"}
+    -- sets.precast.WS['Sanguine Blade'] = {ammo="Witchstone",
+    --     head="Hagondes Hat",neck="Eddy Necklace",ear1="Friomisi Earring",ear2="Hecate's Earring",
+    --     body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Strendu Ring",ring2="Acumen Ring",
+    --     back="Toro Cape",legs="Hagondes Pants",feet="Hagondes Sabots"}
 
     
     -- Midcast Sets
