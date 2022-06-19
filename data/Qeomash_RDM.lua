@@ -177,9 +177,22 @@ function init_gear_sets()
     --sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
 
     sets.midcast['Enhancing Magic'] = {
-        head="Atrophy Chapeau +1",neck="Colossus's Torque",
-        body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
-        back="Estoqueur's Cape",waist="Olympus Sash",legs="Atrophy Tights",feet="Estoqueur's Houseaux +2"}
+        head="Duelist's Chapeau +1",
+        neck="Colossus's Torque",
+        lear="Augmenting Earring",
+        rear="Magnetic Earring",
+        body="Glamor Jupon",
+        hands="Duelist's Gloves",
+        lring="Aqua Ring",
+        rring="Aqua Ring",
+        back="Prism Cape",
+        waist="Demonry Sash",
+        legs="Warlock's Tights +1",
+        feet="Goliard Clogs",
+    }
+        -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
+        -- body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
+        -- back="Estoqueur's Cape",waist="Olympus Sash",legs="Atrophy Tights",feet="Estoqueur's Houseaux +2"}
 
     sets.midcast.Refresh = {legs="Estoqueur's Fuseau +2"}
 
@@ -190,7 +203,6 @@ function init_gear_sets()
     --     body="Atrophy Tabard +1",hands="Yaoyotl Gloves",ring1="Aquasoul Ring",ring2="Sangoma Ring",
     --     back="Refraction Cape",waist="Demonry Sash",legs="Bokwus Slops",feet="Bokwus Boots"}
 
-    -- Other Old sets from XML:
     sets.Enfeebling = {}
     sets.Enfeebling.Base = {
         head="Duelist's Chapeau +1",
