@@ -408,39 +408,34 @@ end
 is_meleeing = false
 -- the example: https://github.com/Tunaliz/Liz_Gearswaps/blob/master/RDM_Lib.lua
 function job_self_command(command)
-    --hud_command(command)
-    --equip({main="Joydfadfeuse",sub=empty})
-    -- windower.add_to_chat(8,'----- Weapons Unlocked, WILL LOSE TP -----')
-    -- windower.add_to_chat(8,"test:"..tostring(command))
-    if command[1] == 'melee' then
-        if command[2] == 'on' then
-            windower.add_to_chat(1,'melee now turned on')
-            equip(sets.meleeWeapons)
-            disable('main','sub','ranged', 'ammo')
-        elseif command[2] == 'off' then
-            enable('main','sub','ranged', 'ammo')
-            windower.add_to_chat(1,'melee now turned OFF')
 
+    -- Super Smash RDM MELEE
+    if command[1] == 'melee' then
+        -- explicit on/off switches:
+        if command[2] == 'on' then
+            enable_vermelee()
+        elseif command[2] == 'off' then
+            disable_vermelee()
+        -- No arg, so toggle
         else
             if is_meleeing == false then
-                add_to_chat(8, "melee mode before: "..tostring(is_meleeing))
-                is_meleeing = true
-                windower.add_to_chat(1,'melee now turned on')
-                equip(sets.meleeWeapons)
-                disable('main','sub','ranged', 'ammo')
-                idle()
+                enable_vermelee()
             elseif is_meleeing == true then
-                is_meleeing = false
-                enable('main','sub','ranged', 'ammo')
-                windower.add_to_chat(1,'melee now turned OFF')
-                idle()
+                disable_vermelee()
             end
         end
-        add_to_chat(8, "melee mode after: "..tostring(is_meleeing))
     end
 end
 
--- function job_self_command(command)
---     windower.add_to_chat(8,'----- Weapons Unlocked, WILL LOSE TP -----')
---     equip({main="Joydfadfeuse",sub=empty})
--- end
+function enable_vermelee()
+    is_meleeing = true
+    equip(sets.meleeWeapons)
+    disable('main','sub','ranged', 'ammo')
+    windower.add_to_chat(64,'RDM Melee: ON')
+end
+
+function disable_vermelee()
+    is_meleeing = false
+    enable('main','sub','ranged', 'ammo')
+    windower.add_to_chat(64,'RDM Melee: OFF')
+end
