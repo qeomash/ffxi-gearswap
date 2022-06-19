@@ -29,7 +29,7 @@ function user_setup()
 
     gear.default.obi_waist = "Sekhmet Corset"
     
-    select_default_macro_book()
+    -- select_default_macro_book()
 end
 
 
@@ -38,7 +38,25 @@ function init_gear_sets()
     --------------------------------------
     -- Start defining the sets
     --------------------------------------
-    
+
+    -- sets.Obis = {}
+    -- sets.Obis.Fire = {waist='Hachirin-no-Obi'}
+    -- sets.Obis.Earth = {waist='Hachirin-no-Obi'}
+    -- sets.Obis.Water = {waist='Hachirin-no-Obi'}
+    -- sets.Obis.Wind = {waist='Hachirin-no-Obi'}
+    -- sets.Obis.Ice = {waist='Hachirin-no-Obi'}
+    -- sets.Obis.Lightning = {waist='Hachirin-no-Obi'}
+    -- sets.Obis.Light = {waist='Hachirin-no-Obi'}
+    -- sets.Obis.Dark = {waist='Hachirin-no-Obi'}
+    sets.ElementalStaves = {}
+    sets.ElementalStaves.Fire = {main="Fire Staff"}
+    sets.ElementalStaves.Earth = {main="Terra's Staff"}
+    sets.ElementalStaves.Water = {main="Water Staff"}
+    sets.ElementalStaves.Wind = {main="Auster's Staff"}
+    sets.ElementalStaves.Ice = {main="Aquilo's Staff"}
+    sets.ElementalStaves.Lightning = {main="Jupiter's Staff"}
+    sets.ElementalStaves.Light = {main="Apollo's Staff"}
+    sets.ElementalStaves.Dark = {main="Pluto's Staff"}
     -- Precast Sets
     
     -- Precast sets to enhance JAs
@@ -58,11 +76,18 @@ function init_gear_sets()
     
     -- 80% Fast Cast (including trait) for all spells, plus 5% quick cast
     -- No other FC sets necessary.
-    sets.precast.FC = {ammo="Impatiens",
-        head="Atrophy Chapeau +1",ear2="Loquacious Earring",
-        body="Vitivation Tabard",hands="Gendewitha Gages",ring1="Prolix Ring",
-        back="Swith Cape +1",waist="Witful Belt",legs="Orvail Pants +1",feet="Chelona Boots +1"}
-
+    -- sets.precast.FC = {ammo="Impatiens",
+    --     head="Atrophy Chapeau +1",ear2="Loquacious Earring",
+    --     body="Vitivation Tabard",hands="Gendewitha Gages",ring1="Prolix Ring",
+    --     back="Swith Cape +1",waist="Witful Belt",legs="Orvail Pants +1",feet="Chelona Boots +1"}
+    sets.precast.FC = {
+        head="Warlock's Chapeau +1",
+        lear="Loquacious Earring",
+        body="Duelist's Tabard",
+        hands="Brego Gloves",
+        legs="Nashira Seraweels",
+        waist="Paewr Belt",
+    }
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
        
     -- Weaponskill sets
@@ -86,17 +111,38 @@ function init_gear_sets()
     -- Midcast Sets
     
     sets.midcast.FastRecast = {
-        head="Atrophy Chapeau +1",ear2="Loquacious Earring",
-        body="Vitivation Tabard",hands="Gendewitha Gages",ring1="Prolix Ring",
-        back="Swith Cape +1",waist="Witful Belt",legs="Hagondes Pants",feet="Hagondes Sabots"}
-
-    sets.midcast.Cure = {main="Tamaxchi",sub="Genbu's Shield",
-        head="Gendewitha Caubeen",neck="Colossus's Torque",ear1="Roundel Earring",ear2="Loquacious Earring",
-        body="Gendewitha Bliaut",hands="Bokwus Gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
-        back="Swith Cape +1",waist="Witful Belt",legs="Atrophy Tights",feet="Hagondes Sabots"}
-        
+    --     head="Atrophy Chapeau +1",ear2="Loquacious Earring",
+    --     body="Vitivation Tabard",hands="Gendewitha Gages",ring1="Prolix Ring",
+    --     back="Swith Cape +1",waist="Witful Belt",legs="Hagondes Pants",feet="Hagondes Sabots"}
+        head="Warlock's Chapeau +1",
+        lear="Loquacious Earring",
+        body="Duelist's Tabard",
+        hands="Brego Gloves",
+        legs="Nashira Seraweels",
+        waist="Paewr Belt",
+    }
+    -- sets.midcast.Cure = {main="Tamaxchi",sub="Genbu's Shield",
+    --     head="Gendewitha Caubeen",neck="Colossus's Torque",ear1="Roundel Earring",ear2="Loquacious Earring",
+    --     body="Gendewitha Bliaut",hands="Bokwus Gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
+    --     back="Swith Cape +1",waist="Witful Belt",legs="Atrophy Tights",feet="Hagondes Sabots"}
+    sets.midcast.Cure = {
+        main="Apollo's Staff",
+        -- sub="$Grip-Light",
+        head="Duelist's Chapeau +1",
+        neck="Colossus's Torque",
+        lear="Moonshade Earring",
+        rear="Magnetic Earring",
+        body="Heka's Kalasiris",
+        hands="Yigit Gages",
+        lring="Aqua Ring",
+        rring="Aqua Ring",
+        back="Prism Cape",
+        waist="Duelist's Belt",
+        legs="Mahatma Slops",
+        feet="Goliard Clogs",
+    }
     sets.midcast.Curaga = sets.midcast.Cure
-    sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
+    --sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
 
     sets.midcast['Enhancing Magic'] = {
         head="Atrophy Chapeau +1",neck="Colossus's Torque",
@@ -105,7 +151,7 @@ function init_gear_sets()
 
     sets.midcast.Refresh = {legs="Estoqueur's Fuseau +2"}
 
-    sets.midcast.Stoneskin = {waist="Siegel Sash"}
+    --sets.midcast.Stoneskin = {waist="Siegel Sash"}
     
     sets.midcast['Enfeebling Magic'] = {main="Lehbrailg +2",sub="Mephitis Grip",ammo="Kalboron Stone",
         head="Atrophy Chapeau +1",neck="Weike Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
@@ -116,11 +162,27 @@ function init_gear_sets()
 
     sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
     
-    sets.midcast['Elemental Magic'] = {main="Lehbrailg +2",sub="Zuuxowu Grip",ammo="Dosis Tathlum",
-        head="Hagondes Hat",neck="Eddy Necklace",ear1="Friomisi Earring",ear2="Hecate's Earring",
-        body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Icesoul Ring",ring2="Acumen Ring",
-        back="Toro Cape",waist=gear.ElementalObi,legs="Hagondes Pants",feet="Hagondes Sabots"}
-        
+    -- sets.midcast['Elemental Magic'] = {main="Lehbrailg +2",sub="Zuuxowu Grip",ammo="Dosis Tathlum",
+    --     head="Hagondes Hat",neck="Eddy Necklace",ear1="Friomisi Earring",ear2="Hecate's Earring",
+    --     body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Icesoul Ring",ring2="Acumen Ring",
+    --     back="Toro Cape",waist=gear.ElementalObi,legs="Hagondes Pants",feet="Hagondes Sabots"}
+    sets.midcast['Elemental Magic'] = {
+        -- main="$Staff-%SpellElement",
+        -- sub="$Grip-%SpellElement",
+        head="Warlock's Chapeau +1",
+        neck="Aesir Torque",
+        lear="Moldavite Earring",
+        rear="Hecate's Earring",
+        body="Yigit Gomlek",
+        hands="Yigit Gages",
+        lring="Snow Ring",
+        rring="Snow Ring",
+        back="Prism Cape",
+        waist="Demonry Sash",
+        legs="Duelist's Tights +1",
+        feet="Duelist's Boots +1",
+    }
+
     sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {head=empty,body="Twilight Cloak"})
 
     sets.midcast['Dark Magic'] = {main="Lehbrailg +2",sub="Mephitis Grip",ammo="Kalboron Stone",
@@ -149,22 +211,54 @@ function init_gear_sets()
     -- Sets to return to when not performing an action.
     
     -- Resting sets
-    sets.resting = {main="Chatoyant Staff",
-        head="Vitivation Chapeau",neck="Wiglen Gorget",
-        body="Atrophy Tabard +1",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Paguroidea Ring",
-        waist="Austerity Belt",legs="Nares Trews",feet="Chelona Boots +1"}
-    
+    -- sets.resting = {main="Chatoyant Staff",
+    --     head="Vitivation Chapeau",neck="Wiglen Gorget",
+    --     body="Atrophy Tabard +1",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Paguroidea Ring",
+    --     waist="Austerity Belt",legs="Nares Trews",feet="Chelona Boots +1"}
+    sets.resting = {
+        main="Pluto's Staff",
+        -- sub="$Grip-Default",
+        head="Duelist's Chapeau +1",
+        neck="Grandiose Chain",
+        ear1="Antivenom Earring",
+        ear2="Magnetic Earring",
+        body="Errant Houppelande",
+        hands="Goliard Cuffs",
+        ring1="Balrahn's Ring",
+        ring2="Aqua Ring",
+        back="Prism Cape",
+        waist="Duelist's Belt",
+        legs="Nashira Seraweels",
+        feet="Goliard Clogs",
+    }
 
     -- Idle sets
-    sets.idle = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
-        head="Vitivation Chapeau",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
-        body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Sheltered Ring",ring2="Paguroidea Ring",
-        back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
+    -- sets.idle = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
+    --     head="Vitivation Chapeau",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
+    --     body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Sheltered Ring",ring2="Paguroidea Ring",
+    --     back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
 
-    sets.idle.Town = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
-        head="Atrophy Chapeau +1",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
-        body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Sheltered Ring",ring2="Paguroidea Ring",
-        back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
+    sets.idle = {
+        -- main="$Staff-Idle",
+        -- sub="$Grip-Default",
+        head="Duelist's Chapeau +1",
+        neck="Orochi Nodowa",
+        lear="Moonshade Earring",
+        rear="Magnetic Earring",
+        body="Dalmatica",
+        hands="Yigit Gages",
+        lring="Balrahn's Ring",
+        rring="Snow Ring",
+        back="Prism Cape",
+        waist="Duelist's Belt",
+        legs="Crimson Cuisses",
+        feet="Goliard Clogs",
+    }
+
+    -- sets.idle.Town = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
+    --     head="Atrophy Chapeau +1",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
+    --     body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Sheltered Ring",ring2="Paguroidea Ring",
+    --     back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
     
     sets.idle.Weak = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
         head="Vitivation Chapeau",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
@@ -206,14 +300,31 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {
-        head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
-        back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
-
+        -- head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
+        -- body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
+        -- back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
+        head="Duelist's Chapeau +1",
+        neck="Chivalrous Chain",
+        lear="Brutal Earring",
+        rear="Magnetic Earring",
+        body="Dux Scale Mail",
+        hands="Brego Gloves",
+        lring="Blood Ring",
+        rring="Rajas Ring",
+        back="Forager's Mantle",
+        waist="Paewr Belt",
+        legs="Nashira Seraweels",
+        feet="Goliard Clogs",
+    }
     sets.engaged.Defense = {ammo="Demonry Stone",
         head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
         back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
+
+    sets.meleeWeapons = {
+        main="Joyeuse",
+        sub="Genbu's Shield",
+    }
 
 end
 
@@ -275,16 +386,61 @@ end
 -------------------------------------------------------------------------------------------------------------------
 
 -- Select default macro book on initial load or subjob change.
-function select_default_macro_book()
-    -- Default macro set/book
-    if player.sub_job == 'DNC' then
-        set_macro_page(2, 4)
-    elseif player.sub_job == 'NIN' then
-        set_macro_page(3, 4)
-    elseif player.sub_job == 'THF' then
-        set_macro_page(4, 4)
-    else
-        set_macro_page(1, 4)
+-- function select_default_macro_book()
+--     -- Default macro set/book
+--     if player.sub_job == 'DNC' then
+--         set_macro_page(2, 4)
+--     elseif player.sub_job == 'NIN' then
+--         set_macro_page(3, 4)
+--     elseif player.sub_job == 'THF' then
+--         set_macro_page(4, 4)
+--     else
+--         set_macro_page(1, 4)
+--     end
+-- end
+
+function job_midcast(spell, action, spellMap, eventArgs)
+    if spell.skill == 'Elemental Magic' then
+        equip(sets.ElementalStaves[spell.element])
     end
 end
 
+is_meleeing = false
+-- the example: https://github.com/Tunaliz/Liz_Gearswaps/blob/master/RDM_Lib.lua
+function job_self_command(command)
+    --hud_command(command)
+    --equip({main="Joydfadfeuse",sub=empty})
+    -- windower.add_to_chat(8,'----- Weapons Unlocked, WILL LOSE TP -----')
+    -- windower.add_to_chat(8,"test:"..tostring(command))
+    if command[1] == 'melee' then
+        if command[2] == 'on' then
+            windower.add_to_chat(1,'melee now turned on')
+            equip(sets.meleeWeapons)
+            disable('main','sub','ranged', 'ammo')
+        elseif command[2] == 'off' then
+            enable('main','sub','ranged', 'ammo')
+            windower.add_to_chat(1,'melee now turned OFF')
+
+        else
+            if is_meleeing == false then
+                add_to_chat(8, "melee mode before: "..tostring(is_meleeing))
+                is_meleeing = true
+                windower.add_to_chat(1,'melee now turned on')
+                equip(sets.meleeWeapons)
+                disable('main','sub','ranged', 'ammo')
+                idle()
+            elseif is_meleeing == true then
+                is_meleeing = false
+                enable('main','sub','ranged', 'ammo')
+                windower.add_to_chat(1,'melee now turned OFF')
+                idle()
+            end
+        end
+        add_to_chat(8, "melee mode after: "..tostring(is_meleeing))
+    end
+end
+
+-- function job_self_command(command)
+--     windower.add_to_chat(8,'----- Weapons Unlocked, WILL LOSE TP -----')
+--     equip({main="Joydfadfeuse",sub=empty})
+-- end
