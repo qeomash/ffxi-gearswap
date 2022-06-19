@@ -49,14 +49,16 @@ function init_gear_sets()
     -- sets.Obis.Light = {waist='Hachirin-no-Obi'}
     -- sets.Obis.Dark = {waist='Hachirin-no-Obi'}
     sets.ElementalStaves = {}
-    sets.ElementalStaves.Fire = {main="Fire Staff"}
-    sets.ElementalStaves.Earth = {main="Terra's Staff"}
-    sets.ElementalStaves.Water = {main="Water Staff"}
-    sets.ElementalStaves.Wind = {main="Auster's Staff"}
-    sets.ElementalStaves.Ice = {main="Aquilo's Staff"}
-    sets.ElementalStaves.Lightning = {main="Jupiter's Staff"}
-    sets.ElementalStaves.Light = {main="Apollo's Staff"}
-    sets.ElementalStaves.Dark = {main="Pluto's Staff"}
+    sets.ElementalStaves.Fire = {main="Fire Staff", sub="Staff Strap"}
+    sets.ElementalStaves.Earth = {main="Terra's Staff", sub="Earth Grip"}
+    sets.ElementalStaves.Water = {main="Water Staff", sub="Staff Strap"}
+    sets.ElementalStaves.Wind = {main="Auster's Staff", sub="Wind Grip"}
+    sets.ElementalStaves.Ice = {main="Aquilo's Staff", sub="Ice Grip"}
+    sets.ElementalStaves.Lightning = {main="Jupiter's Staff", sub="Thunder Grip"}
+    sets.ElementalStaves.Light = {main="Apollo's Staff", sub="Staff Strap"}
+    sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
+
+
     -- Precast Sets
     
     -- Precast sets to enhance JAs
@@ -127,7 +129,7 @@ function init_gear_sets()
     --     back="Swith Cape +1",waist="Witful Belt",legs="Atrophy Tights",feet="Hagondes Sabots"}
     sets.midcast.Cure = {
         main="Apollo's Staff",
-        -- sub="$Grip-Light",
+        sub="Staff Strap",
         head="Duelist's Chapeau +1",
         neck="Colossus's Torque",
         lear="Moonshade Earring",
@@ -153,22 +155,99 @@ function init_gear_sets()
 
     --sets.midcast.Stoneskin = {waist="Siegel Sash"}
     
-    sets.midcast['Enfeebling Magic'] = {main="Lehbrailg +2",sub="Mephitis Grip",ammo="Kalboron Stone",
-        head="Atrophy Chapeau +1",neck="Weike Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
-        body="Atrophy Tabard +1",hands="Yaoyotl Gloves",ring1="Aquasoul Ring",ring2="Sangoma Ring",
-        back="Refraction Cape",waist="Demonry Sash",legs="Bokwus Slops",feet="Bokwus Boots"}
+    -- sets.midcast['Enfeebling Magic'] = {main="Lehbrailg +2",sub="Mephitis Grip",ammo="Kalboron Stone",
+    --     head="Atrophy Chapeau +1",neck="Weike Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
+    --     body="Atrophy Tabard +1",hands="Yaoyotl Gloves",ring1="Aquasoul Ring",ring2="Sangoma Ring",
+    --     back="Refraction Cape",waist="Demonry Sash",legs="Bokwus Slops",feet="Bokwus Boots"}
 
-    sets.midcast['Dia III'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
+    -- Other Old sets from XML:
+    sets.Enfeebling = {}
+    sets.Enfeebling.Base = {
+        head="Duelist's Chapeau +1",
+        neck="Enfeebling Torque",
+        lear="Moonshade Earring",
+        rear="Magnetic Earring",
+        body="Warlock's Tabard +1",
+        hands="Goliard Cuffs",
+        lring="Balrahn's Ring",
+        rring="Snow Ring",
+        back="Altruistic Cape",
+        waist="Demonry Sash",
+        legs="Nashira Seraweels",
+        feet="Goliard Clogs",
+    }
+    sets.Enfeebling.Int = {}
+    sets.Enfeebling.Int.Hard = set_combine(sets.Enfeebling.Base,
+        {
+            head="Duelist's Chapeau +1",
+            neck="Enfeebling Torque",
+            lear="Moonshade Earring",
+            rear="Magnetic Earring",
+            body="Warlock's Tabard +1",
+            hands="Goliard Cuffs",
+            lring="Balrahn's Ring",
+            rring="Snow Ring",
+            back="Altruistic Cape",
+            waist="Demonry Sash",
+            legs="Nashira Seraweels",
+            feet="Goliard Clogs",
+        }
+    )
+    sets.Enfeebling.Int.Soft = set_combine(sets.Enfeebling.Int.Hard,
+        {
+            lear="Abyssal Earring",
+            body="Errant Houppelande",
+            hands="Yigit Gages",
+            lring="Snow Ring",
+            rring="Snow Ring",
+            back="Prism Cape",
+            legs="Mahatma Slops",
+        }
+    )
+    sets.Enfeebling.Mnd = {}
+    sets.Enfeebling.Mnd.Hard = set_combine(sets.Enfeebling.Base,
+        {
+            head="Duelist's Chapeau +1",
+            neck="Enfeebling Torque",
+            lear="Moonshade Earring",
+            rear="Magnetic Earring",
+            body="Warlock's Tabard +1",
+            hands="Goliard Cuffs",
+            lring="Balrahn's Ring",
+            rring="Aqua Ring",
+            back="Altruistic Cape",
+            waist="Demonry Sash",
+            legs="Nashira Seraweels",
+            feet="Goliard Clogs",
+        }
+    )
+    sets.Enfeebling.Mnd.Soft = set_combine(sets.Enfeebling.Mnd.Hard,
+        {
 
-    sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
+            lear="Geist Earring",
+            body="Heka's Kalasiris",
+            hands="Yigit Gages",
+            lring="Aqua Ring",
+            rring="Aqua Ring",
+            back="Prism Cape",
+            legs="Mahatma Slops",
+        }
+    )
+
+    sets.midcast['Enfeebling Magic'] = sets.Enfeebling.Base
+    sets.midcast['Dia III'] = sets.Enfeebling.Mnd.Soft
+    sets.midcast['Silence'] = sets.Enfeebling.Mnd.Hard
+    sets.midcast['Sleep'] = sets.Enfeebling.Int.Hard
+    sets.midcast['Sleep II'] = sets.Enfeebling.Int.Hard
+    sets.midcast['Sleepga'] = sets.Enfeebling.Int.Hard
+
+    -- sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
     
     -- sets.midcast['Elemental Magic'] = {main="Lehbrailg +2",sub="Zuuxowu Grip",ammo="Dosis Tathlum",
     --     head="Hagondes Hat",neck="Eddy Necklace",ear1="Friomisi Earring",ear2="Hecate's Earring",
     --     body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Icesoul Ring",ring2="Acumen Ring",
     --     back="Toro Cape",waist=gear.ElementalObi,legs="Hagondes Pants",feet="Hagondes Sabots"}
     sets.midcast['Elemental Magic'] = {
-        -- main="$Staff-%SpellElement",
-        -- sub="$Grip-%SpellElement",
         head="Warlock's Chapeau +1",
         neck="Aesir Torque",
         lear="Moldavite Earring",
@@ -183,17 +262,30 @@ function init_gear_sets()
         feet="Duelist's Boots +1",
     }
 
-    sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {head=empty,body="Twilight Cloak"})
+    --sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {head=empty,body="Twilight Cloak"})
 
-    sets.midcast['Dark Magic'] = {main="Lehbrailg +2",sub="Mephitis Grip",ammo="Kalboron Stone",
-        head="Atrophy Chapeau +1",neck="Weike Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
-        body="Vanir Cotehardie",hands="Gendewitha Gages",ring1="Prolix Ring",ring2="Sangoma Ring",
-        back="Refraction Cape",waist="Goading Belt",legs="Bokwus Slops",feet="Bokwus Boots"}
+    -- sets.midcast['Dark Magic'] = {main="Lehbrailg +2",sub="Mephitis Grip",ammo="Kalboron Stone",
+    --     head="Atrophy Chapeau +1",neck="Weike Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
+    --     body="Vanir Cotehardie",hands="Gendewitha Gages",ring1="Prolix Ring",ring2="Sangoma Ring",
+    --     back="Refraction Cape",waist="Goading Belt",legs="Bokwus Slops",feet="Bokwus Boots"}
+    sets.midcast['Dark Magic'] = {
+        head="Warlock's Chapeau +1",
+        neck="Aesir Torque",
+        lear="Abyssal Earring",
+        rear="Magnetic Earring",
+        body="Glamor Jupon",
+        hands="Crimson Finger Gauntlets",
+        lring="Snow Ring",
+        rring="Snow Ring",
+        back="Prism Cape",
+        waist="Demonry Sash",
+        legs="Mahatma Slops",
+        feet="Goliard Clogs",
+    }
 
     --sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {})
 
-    sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {ring1="Excelsis Ring", waist="Fucho-no-Obi"})
-
+    sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {ring1="Excelsis Ring"})
     sets.midcast.Aspir = sets.midcast.Drain
 
 
@@ -217,7 +309,7 @@ function init_gear_sets()
     --     waist="Austerity Belt",legs="Nares Trews",feet="Chelona Boots +1"}
     sets.resting = {
         main="Pluto's Staff",
-        -- sub="$Grip-Default",
+        sub="Staff Strap",
         head="Duelist's Chapeau +1",
         neck="Grandiose Chain",
         ear1="Antivenom Earring",
@@ -239,8 +331,8 @@ function init_gear_sets()
     --     back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
 
     sets.idle = {
-        -- main="$Staff-Idle",
-        -- sub="$Grip-Default",
+        main="Terra's Staff",
+        sub="Staff Strap",
         head="Duelist's Chapeau +1",
         neck="Orochi Nodowa",
         lear="Moonshade Earring",
@@ -260,20 +352,20 @@ function init_gear_sets()
     --     body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Sheltered Ring",ring2="Paguroidea Ring",
     --     back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
     
-    sets.idle.Weak = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
-        head="Vitivation Chapeau",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
-        body="Atrophy Tabard +1",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Paguroidea Ring",
-        back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
+    -- sets.idle.Weak = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
+    --     head="Vitivation Chapeau",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
+    --     body="Atrophy Tabard +1",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Paguroidea Ring",
+    --     back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
 
-    sets.idle.PDT = {main="Bolelabunga",sub="Genbu's Shield",ammo="Demonry Stone",
-        head="Gendewitha Caubeen +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
-        body="Gendewitha Bliaut +1",hands="Gendewitha Gages",ring1="Defending Ring",ring2=gear.DarkRing.physical,
-        back="Shadow Mantle",waist="Flume Belt",legs="Osmium Cuisses",feet="Gendewitha Galoshes"}
+    -- sets.idle.PDT = {main="Bolelabunga",sub="Genbu's Shield",ammo="Demonry Stone",
+    --     head="Gendewitha Caubeen +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
+    --     body="Gendewitha Bliaut +1",hands="Gendewitha Gages",ring1="Defending Ring",ring2=gear.DarkRing.physical,
+    --     back="Shadow Mantle",waist="Flume Belt",legs="Osmium Cuisses",feet="Gendewitha Galoshes"}
 
-    sets.idle.MDT = {main="Bolelabunga",sub="Genbu's Shield",ammo="Demonry Stone",
-        head="Gendewitha Caubeen +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
-        body="Gendewitha Caubeen +1",hands="Yaoyotl Gloves",ring1="Defending Ring",ring2="Shadow Ring",
-        back="Engulfer Cape",waist="Flume Belt",legs="Osmium Cuisses",feet="Gendewitha Galoshes"}
+    -- sets.idle.MDT = {main="Bolelabunga",sub="Genbu's Shield",ammo="Demonry Stone",
+    --     head="Gendewitha Caubeen +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
+    --     body="Gendewitha Caubeen +1",hands="Yaoyotl Gloves",ring1="Defending Ring",ring2="Shadow Ring",
+    --     back="Engulfer Cape",waist="Flume Belt",legs="Osmium Cuisses",feet="Gendewitha Galoshes"}
     
     
     -- Defense sets
@@ -400,9 +492,20 @@ end
 -- end
 
 function job_midcast(spell, action, spellMap, eventArgs)
-    if spell.skill == 'Elemental Magic' then
+    -- Enfeebling Sets, by element
+    if spell.skill == 'Enfeebling Magic' then
+        if spell.type == 'WhiteMagic' then
+            equip(sets.Enfeebling.Mnd.Soft)
+        else
+            equip(sets.Enfeebling.Int.Soft)
+        end
+    end
+
+    -- Elemental Staves
+    if spell.skill == 'Elemental Magic' or spell.skill == 'Enfeebling Magic' or spell.skill == "Dark Magic" then
         equip(sets.ElementalStaves[spell.element])
     end
+    
 end
 
 is_meleeing = false
