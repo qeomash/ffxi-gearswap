@@ -408,7 +408,15 @@ function init_gear_sets()
     --     head="Gendewitha Caubeen +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
     --     body="Gendewitha Caubeen +1",hands="Yaoyotl Gloves",ring1="Defending Ring",ring2="Shadow Ring",
     --     back="Engulfer Cape",waist="Flume Belt",legs="Osmium Cuisses",feet="Gendewitha Galoshes"}
-    
+    sets.idle.MDT = {
+        main="Kebbie",
+        range="Lamian kaman",
+        back="Lamia Mantle +1",
+        ear1="Coral Earring",
+        ear2="Coral Earring",
+        ring1="Merman's Ring",
+        ring2="Merman's Ring",
+    }
     
     -- Defense sets
     sets.defense.PDT = {
