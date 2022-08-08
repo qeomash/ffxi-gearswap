@@ -561,7 +561,7 @@ end
 is_meleeing = false
 -- the example: https://github.com/Tunaliz/Liz_Gearswaps/blob/master/RDM_Lib.lua
 function job_self_command(command)
-
+    -- $ gs c [command]
     -- Super Smash RDM MELEE
     if command[1] == 'melee' then
         -- explicit on/off switches:
