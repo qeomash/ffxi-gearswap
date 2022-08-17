@@ -7,6 +7,9 @@ function get_sets()
 end
 
 function user_setup()
+    enable('main','sub','ranged', 'ammo')
+    select_default_macro_book()
+    send_command('wait 2;input /lockstyleset 10')
     equip(sets.mainweapons)
 end
 
@@ -153,4 +156,19 @@ function job_pet_midcast(spell, action, spellMap, eventArgs)
     if spell.english:startswith('Healing Breath') or spell.english == 'Restoring Breath' or spell.english == 'Steady Wing' or spell.english == 'Smiting Breath' then
 		equip(sets.HealingBreath)
 	end
+end
+
+-- Select default macro book on initial load or subjob change.
+function select_default_macro_book()
+    -- Default macro set/book
+    set_macro_page(1, 2)
+    -- if player.sub_job == 'DNC' then
+
+    -- elseif player.sub_job == 'NIN' then
+    --     set_macro_page(3, 4)
+    -- elseif player.sub_job == 'THF' then
+    --     set_macro_page(4, 4)
+    -- else
+    --     set_macro_page(1, 4)
+    -- end
 end
