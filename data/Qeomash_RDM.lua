@@ -29,7 +29,8 @@ function user_setup()
 
     gear.default.obi_waist = "Sekhmet Corset"
     
-    -- select_default_macro_book()
+    select_default_macro_book()
+    send_command('wait 2;input /lockstyleset 1')
 end
 
 
@@ -540,18 +541,19 @@ end
 -------------------------------------------------------------------------------------------------------------------
 
 -- Select default macro book on initial load or subjob change.
--- function select_default_macro_book()
---     -- Default macro set/book
---     if player.sub_job == 'DNC' then
---         set_macro_page(2, 4)
---     elseif player.sub_job == 'NIN' then
---         set_macro_page(3, 4)
---     elseif player.sub_job == 'THF' then
---         set_macro_page(4, 4)
---     else
---         set_macro_page(1, 4)
---     end
--- end
+function select_default_macro_book()
+    -- Default macro set/book
+    set_macro_page(1, 1)
+    -- if player.sub_job == 'DNC' then
+
+    -- elseif player.sub_job == 'NIN' then
+    --     set_macro_page(3, 4)
+    -- elseif player.sub_job == 'THF' then
+    --     set_macro_page(4, 4)
+    -- else
+    --     set_macro_page(1, 4)
+    -- end
+end
 
 function job_midcast(spell, action, spellMap, eventArgs)
     -- Enfeebling Sets, by element
