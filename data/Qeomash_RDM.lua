@@ -102,28 +102,28 @@ function init_gear_sets()
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Magnetic Earring",
-        body="Wayfarer Robe", -- STR+20
-        hands="Wayfarer Cuffs", -- STR+6
+        body="Weatherspoon Robe +1", -- STR+26
+        hands="Weatherspoon Cuffs +1", -- STR+6
         lring="Flame Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Warwolf Belt",
-        legs="Wayfarer Slops",
-        feet="Wayfarer Clogs",
+        legs="Weatherspoon Pants +1", -- STR+25
+        feet="Weatherspoon Souliers +1", -- +10
     }
     sets.baseWS.Mnd = {
-        head="Wayfarer Circlet", -- MND+24
+        head="Weatherspoon Corona +1", --MND+26
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Geist Earring",
-        body="Wayfarer Robe", --MND+28
-        hands="Wayfarer Cuffs", --MND+32
+        body="Weatherspoon Robe +1", -- MND+34
+        hands="Weatherspoon Cuffs +1", -- MND+33
         lring="Aqua Ring",
         rring="Aqua Ring",
         back="Prism Cape",
         waist="Warwolf Belt",
-        legs="Wayfarer Slops",
-        feet="Wayfarer Clogs",
+        legs="Weatherspoon Pants +1", -- +24
+        feet="Weatherspoon Souliers +1", -- +19
     }
     
     sets.precast.WS = sets.baseWS.Str
@@ -162,38 +162,28 @@ function init_gear_sets()
     sets.midcast.Cure = {
         main="Apollo's Staff",
         sub="Staff Strap",
-        head="Duelist's Chapeau +1",
+        head="Weatherspoon Corona +1",
         neck="Colossus's Torque",
         lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Heka's Kalasiris",
-        hands="Wayfarer Cuffs",
+        hands="Weatherspoon Cuffs +1", --CP+9%
         lring="Aqua Ring",
         rring="Aqua Ring",
         back="Prism Cape",
         waist="Duelist's Belt",
-        legs="Wayfarer Slops",
-        feet="Wayfarer Clogs",
+        legs="Weatherspoon Pants +1",
+        feet="Weatherspoon Souliers +1",
     }
     sets.midcast.Curaga = sets.midcast.Cure
     --sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
 
     sets.midcast['Enhancing Magic'] = {
-        main="Eminent Wand",
-        sub="Genbu's Shield",
-        head="Wayfarer Circlet",
-        neck="Colossus's Torque",
-        lear="Augmenting Earring",
-        rear="Magnetic Earring",
-        -- body="Wayfarer Robe",
+        neck="Colossus's Torque", -- +7
+        lear="Augmenting Earring", -- +3
         body="Glamor Jupon", -- ench skill +3
-        hands="Duelist's Gloves", -- Enhc skill +15
-        lring="Aqua Ring",
-        rring="Aqua Ring",
-        back="Prism Cape",
-        waist="Demonry Sash",
-        legs="Warlock's Tights +1", -- enhc skill +15
-        feet="Wayfarer Clogs",
+        hands="Duelist's Gloves", -- +15
+        legs="Warlock's Tights +1", -- +15
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
         -- body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
@@ -210,9 +200,9 @@ function init_gear_sets()
 
     sets.Enfeebling = {}
     sets.Enfeebling.Base = {
-        main="Eminent Wand",
+        main="Homestead Wand",
         sub="Genbu's Shield",
-        head="Wayfarer Circlet",
+        head="Weatherspoon Corona +1",
         neck="Enfeebling Torque",
         lear="Moonshade Earring",
         rear="Magnetic Earring",
@@ -244,14 +234,15 @@ function init_gear_sets()
     )
     sets.Enfeebling.Int.Soft = set_combine(sets.Enfeebling.Int.Hard,
         {
-            head="Wayfarer Circlet",
+            head="Weatherspoon Corona +1",
             lear="Abyssal Earring",
-            body="Wayfarer Robe",
-            hands="Wayfarer Cuffs",
+            body="Weatherspoon Robe +1",
+            hands="Weatherspoon Cuffs +1",
             lring="Snow Ring",
             rring="Snow Ring",
             back="Prism Cape",
-            legs="Wayfarer Slops",
+            legs="Weatherspoon Pants +1",
+            feet="Weatherspoon Souliers +1",
         }
     )
     sets.Enfeebling.Mnd = {}
@@ -262,25 +253,25 @@ function init_gear_sets()
             lear="Moonshade Earring",
             rear="Magnetic Earring",
             body="Warlock's Tabard +1",
-            hands="Wayfarer Cuffs",
+            hands="Weatherspoon Cuffs +1",
             lring="Balrahn's Ring",
             rring="Aqua Ring",
             back="Altruistic Cape",
             waist="Demonry Sash",
             legs="Nashira Seraweels",
-            feet="Wayfarer Clogs",
+            feet="Weatherspoon Souliers +1",
         }
     )
     sets.Enfeebling.Mnd.Soft = set_combine(sets.Enfeebling.Mnd.Hard,
         {
-            head="Wayfarer Circlet",
+            head="Weatherspoon Corona +1",
             lear="Geist Earring",
-            body="Wayfarer Robe",
-            hands="Wayfarer Cuffs",
+            body="Weatherspoon Robe +1",
+            hands="Weatherspoon Cuffs +1",
             lring="Aqua Ring",
             rring="Aqua Ring",
             back="Prism Cape",
-            legs="Wayfarer Slops",
+            legs="Weatherspoon Pants +1",
         }
     )
 
@@ -298,20 +289,20 @@ function init_gear_sets()
     --     body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Icesoul Ring",ring2="Acumen Ring",
     --     back="Toro Cape",waist=gear.ElementalObi,legs="Hagondes Pants",feet="Hagondes Sabots"}
     sets.midcast['Elemental Magic'] = {
-        main="Eminent Wand",
+        main="Homestead Wand",
         sub="Genbu's Shield",
-        head="Wayfarer Circlet",
+        head="Wayfarer Circlet", -- MAB+5
         neck="Aesir Torque",
         lear="Moldavite Earring",
         rear="Hecate's Earring",
-        body="Wayfarer Robe",
-        hands="Wayfarer Cuffs",
+        body="Wayfarer Robe", -- MAB+6
+        hands="Wayfarer Cuffs", -- MAC+4
         lring="Snow Ring",
         rring="Snow Ring",
         back="Prism Cape",
         waist="Demonry Sash",
         legs="Wayfarer Slops",
-        feet="Wayfarer Clogs",
+        feet="Weatherspoon Souliers +1", --MAB+12
     }
 
     --sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {head=empty,body="Twilight Cloak"})
@@ -321,7 +312,7 @@ function init_gear_sets()
     --     body="Vanir Cotehardie",hands="Gendewitha Gages",ring1="Prolix Ring",ring2="Sangoma Ring",
     --     back="Refraction Cape",waist="Goading Belt",legs="Bokwus Slops",feet="Bokwus Boots"}
     sets.midcast['Dark Magic'] = {
-        main="Eminent Wand",
+        main="Homestead Wand",
         sub="Genbu's Shield",
         head="Wayfarer Circlet",
         neck="Aesir Torque",
@@ -462,14 +453,14 @@ function init_gear_sets()
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Magnetic Earring",
-        body="Wayfarer Robe", --haste+3%
+        body="Weatherspoon Robe +1", --haste+3%,str+26
         hands="Brego Gloves", --haste+4%,acc+9,Str+5
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Paewr Belt",
-        legs="Wayfarer Slops",
-        feet="Wayfarer Clogs",
+        legs="Weatherspoon Pants +1",
+        feet="Weatherspoon Souliers +1",
     }
     sets.engaged.Defense = {ammo="Demonry Stone",
         head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
