@@ -16,25 +16,27 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Sixgill",
+        main="Eminent Lance",
         sub="Pole Grip",
-        ranged="Lamiabane",
+        -- ranged="Lamiabane",
         ammo="Tiphia Sting",
     }
 
     sets.engaged = {
-        head="Brego Helm",
+        -- head="Brego Helm", -- haste 5, str6 dex6
+        head="Karieyh Morion +1", -- haste7
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Assault Earring",
-        body="Askar Korazin",
-        hands="Brego Gloves",
+        -- body="Askar Korazin",
+        body="Karieyh Haubert +1",
+        hands="Karieyh Moufles +1", --haste+4% str6
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Paewr Belt",
-        legs="Homam Cosciales",
-        feet="Ace's Leggings",
+        legs="Karieyh Brayettes +1",
+        feet="Karieyh Sollerets +1",
     }
     sets.RelicAF = {
         head="Wyrm Armet",
@@ -48,32 +50,32 @@ function init_gear_sets()
 
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Hecatomb Cap",
+        head="Karieyh Morion +1",
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Assault Earring",
-        body="Hecatomb Harness",
-        hands="Drachen Finger Gauntlets +1",
+        body="Karieyh Haubert +1",
+        hands="Karieyh Moufles +1",
         lring="Flame Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Warwolf Belt",
-        legs="Barone Cosciales",
-        feet="Hecatomb Leggings",
+        legs="Karieyh Brayettes +1",
+        feet="Karieyh Sollerets +1",
     }
     sets.baseWS.Accuracy = {
-        head="Hecatomb Cap",
+        head="Karieyh Morion +1",
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Assault Earring",
-        body="Hecatomb Harness",
-        hands="Wyrm Finger Gauntlets",
+        body="Hecatomb Harness", --acc+10 str+12
+        hands="Karieyh Moufles +1",
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Wyrm Belt",
-        legs="Perle Brayettes",
-        feet="Aurum Sabatons",
+        legs="Perle Brayettes", --acc+10
+        feet="Karieyh Sollerets +1",
     }
 
     sets.precast.WS = sets.baseWS.Str
