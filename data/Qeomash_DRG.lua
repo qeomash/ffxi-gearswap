@@ -83,27 +83,31 @@ function init_gear_sets()
     sets.precast.WS['Sonic Thrust'] = set_combine(sets.baseWS.Str, {neck='Light Gorget'})
     sets.precast.WS['Penta Thrust'] = set_combine(sets.baseWS.Accuracy, {})
     sets.precast.WS['Drakesbane'] = set_combine(sets.baseWS.Str, {
-        body="Zahak's Mail",
         neck="Light Gorget"
     })
 
     sets.precast.JA.Angon = {ammo="Angon",hands="Pteroslaver Finger Gauntlets +2"}
     -- Jumps
-    sets.precast.JA.Jump = {
-        head="Hecatomb Cap",
-        neck="Chivalrous Chain",
-        lear="Brutal Earring",
-        rear="Assault Earring",
-        body="Hecatomb Harness",
-        hands="Brego Gloves",
-        lring="Blood Ring",
-        rring="Rajas Ring",
-        back="Forager's Mantle",
-        waist="Wyrm Belt",
-        legs="Perle Brayettes",
-        feet="Aurum Sabatons",
+    sets.JumpSpecialGear = {
+        feet="Drachen Geaves"
     }
-    sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {})
+    sets.precast.JA.Jump = set_combine(sets.baseWS.Accuracy, {})
+        -- head="Hecatomb Cap",
+        -- neck="Chivalrous Chain",
+        -- lear="Brutal Earring",
+        -- rear="Assault Earring",
+        -- body="Hecatomb Harness",
+        -- hands="Brego Gloves",
+        -- lring="Blood Ring",
+        -- rring="Rajas Ring",
+        -- back="Forager's Mantle",
+        -- waist="Wyrm Belt",
+        -- legs="Perle Brayettes",
+        -- feet="Aurum Sabatons",
+    -- }
+    sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {
+        legs="Wyrm Brias",
+    })
     sets.precast.JA['Soul Jump'] = set_combine(sets.precast.JA.Jump, {})
     -- body="Vishap Mail +2",
     sets.precast.JA['Spirit Jump'] = set_combine(sets.precast.JA.Jump, {})
@@ -141,6 +145,7 @@ function init_gear_sets()
         -- ammo="Impatiens",
         -- head="Cizin Helm +1", 
         ear2="Loquacious Earring", 
+        legs="Homam Cosciales",
         -- hands="Leyline Gloves",
         -- legs="Limbo Trousers",
         -- ring1="Prolix Ring",
