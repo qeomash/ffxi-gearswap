@@ -375,7 +375,7 @@ function init_gear_sets()
     --     body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Sheltered Ring",ring2="Paguroidea Ring",
     --     back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
 
-    sets.idle = {
+    sets.MPIdle = {
         main="Terra's Staff",
         sub="Staff Strap",
         head="Duelist's Chapeau +1",
@@ -391,6 +391,7 @@ function init_gear_sets()
         legs="Crimson Cuisses",
         feet="Wayfarer Clogs",
     }
+    sets.idle = sets.MPIdle
 
     -- sets.idle.Town = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
     --     head="Atrophy Chapeau +1",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
@@ -445,7 +446,8 @@ function init_gear_sets()
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
     
     -- Normal melee group
-    sets.engaged = {
+    sets.engaged = sets.MPIdle -- default to idle, thanks trusts
+    sets.Myengaged = {
         -- head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         -- body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
         -- back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
@@ -588,12 +590,15 @@ end
 function enable_vermelee()
     is_meleeing = true
     equip(sets.meleeWeapons)
+    sets.engaged = sets.Myengaged
     disable('main','sub','ranged', 'ammo')
     windower.add_to_chat(64,'RDM Melee: ON')
 end
 
 function disable_vermelee()
+
     is_meleeing = false
     enable('main','sub','ranged', 'ammo')
+    sets.engaged = sets.MPIdle
     windower.add_to_chat(64,'RDM Melee: OFF')
 end

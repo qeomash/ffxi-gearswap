@@ -65,6 +65,7 @@ function init_gear_sets()
         body="Dalmatica",
         legs=""
     }
+    sets.engaged = sets.idle
 
     sets.precast.FC = {
         head="Warlock's Chapeau +1",
