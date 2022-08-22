@@ -17,24 +17,25 @@ function init_gear_sets()
     sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
 
     sets.midcast['Elemental Magic'] = {
+        main="Eminent Staff",
+        sub="Staff Strap",
         ammo="Pantom Tathlum",
-        head="Sorcerer's Petasos",
+        head="Wayfarer Circlet",
         neck="Aesir Torque",
         ear1="Moldavite Earring",
-        -- ear2="Hecate's Earring", it's 90
-        body="Igqira Weskit",
-        hands="Goliard Cuffs",
-        ring1="Snow Ring",
-        ring2="Snow Ring",
+        ear2="Hecate's Earring",
+        body="Wayfarer Robe", -- MAB+6
+        hands="Otomi Gloves", -- MAB+13
+        lring="Snow Ring",
+        rring="Snow Ring",
         back="Prism Cape",
-        waist="Anrin Obi", -- TODO: this sucks
-        legs="Teal Slops",
-        feet="Goliard Clogs"
+        waist="Demonry Sash", -- TODO: this sucks
+        legs="Wayfarer Slops",
+        feet="Weatherspoon Souliers +1", --MAB+12
     }
     -- sets.midcast.Elemental = {
     --     neck="Elemental Torque",
     --     ear1="Moldavite Earring",
-    --     body="Yigit Gomlek",
     -- }
 
     sets.midcast['Enfeebling Magic'] = {
@@ -63,12 +64,10 @@ function init_gear_sets()
         lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Dalmatica",
-        legs=""
     }
     sets.engaged = sets.idle
 
     sets.precast.FC = {
-        head="Warlock's Chapeau +1",
         --head="Wayfarer Circlet",
         lear="Loquacious Earring",
         body="Duelist's Tabard",
@@ -103,8 +102,8 @@ function job_midcast(spell, action, spellMap, eventArgs)
     -- end
 
     -- Elemental Staves
-    if spell.skill == 'Elemental Magic' or spell.skill == 'Enfeebling Magic' or spell.skill == "Dark Magic" then
-        equip(sets.ElementalStaves[spell.element])
-    end
+    -- if spell.skill == 'Elemental Magic' or spell.skill == 'Enfeebling Magic' or spell.skill == "Dark Magic" then
+    --     equip(sets.ElementalStaves[spell.element])
+    -- end
     
 end
