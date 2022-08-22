@@ -296,7 +296,7 @@ function init_gear_sets()
         lear="Moldavite Earring",
         rear="Hecate's Earring",
         body="Wayfarer Robe", -- MAB+6
-        hands="Wayfarer Cuffs", -- MAC+4
+        hands="Otomi Gloves", -- MAB+13
         lring="Snow Ring",
         rring="Snow Ring",
         back="Prism Cape",
