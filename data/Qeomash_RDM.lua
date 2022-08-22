@@ -202,6 +202,7 @@ function init_gear_sets()
     sets.Enfeebling.Base = {
         main="Homestead Wand",
         sub="Genbu's Shield",
+        ammo="Kalboron Stone",
         head="Weatherspoon Corona +1",
         neck="Enfeebling Torque",
         lear="Moonshade Earring",
