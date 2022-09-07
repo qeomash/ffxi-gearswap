@@ -17,7 +17,7 @@ function init_gear_sets()
     sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
 
     sets.midcast['Elemental Magic'] = {
-        main="Eminent Staff",
+        main="Homestead Staff",
         sub="Staff Strap",
         ammo="Pantom Tathlum",
         head="Wayfarer Circlet", -- MAB+5
