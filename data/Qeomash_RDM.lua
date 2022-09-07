@@ -90,7 +90,8 @@ function init_gear_sets()
         body="Duelist's Tabard",
         hands="Brego Gloves",
         legs="Wayfarer Slops",
-        waist="Paewr Belt",
+        waist="Dynamic Belt +1",
+        back="Swith Cape",
     }
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
        
@@ -293,15 +294,15 @@ function init_gear_sets()
         main="Homestead Wand",
         sub="Genbu's Shield",
         head="Wayfarer Circlet", -- MAB+5
-        neck="Aesir Torque",
-        lear="Moldavite Earring",
-        rear="Hecate's Earring",
+        neck="Stoicheion Medal", -- MAB+8
+        lear="Friomisi Earring", -- MAB+10
+        rear="Hecate's Earring", -- MAB+6
         body="Wayfarer Robe", -- MAB+6
         hands="Otomi Gloves", -- MAB+13
         lring="Snow Ring",
         rring="Snow Ring",
         back="Prism Cape",
-        waist="Demonry Sash",
+        waist="Aswang Sash", -- MAB+3
         legs="Wayfarer Slops",
         feet="Weatherspoon Souliers +1", --MAB+12
     }
@@ -461,7 +462,7 @@ function init_gear_sets()
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
-        waist="Paewr Belt",
+        waist="Dynamic Belt +1",
         legs="Weatherspoon Pants +1",
         feet="Weatherspoon Souliers +1",
     }

@@ -20,8 +20,8 @@ function init_gear_sets()
         main="Eminent Staff",
         sub="Staff Strap",
         ammo="Pantom Tathlum",
-        head="Wayfarer Circlet",
-        neck="Aesir Torque",
+        head="Wayfarer Circlet", -- MAB+5
+        neck="Stoicheion Medal", -- MAB+8
         ear1="Moldavite Earring",
         ear2="Hecate's Earring",
         body="Wayfarer Robe", -- MAB+6
@@ -29,7 +29,7 @@ function init_gear_sets()
         lring="Snow Ring",
         rring="Snow Ring",
         back="Prism Cape",
-        waist="Demonry Sash", -- TODO: this sucks
+        waist="Aswang Sash", -- MAB+3
         legs="Wayfarer Slops",
         feet="Weatherspoon Souliers +1", --MAB+12
     }
@@ -70,10 +70,10 @@ function init_gear_sets()
     sets.precast.FC = {
         --head="Wayfarer Circlet",
         lear="Loquacious Earring",
-        body="Duelist's Tabard",
         hands="Brego Gloves",
         legs="Wayfarer Slops",
         waist="Paewr Belt",
+        back="Swith Cape",
     }
 
 end
