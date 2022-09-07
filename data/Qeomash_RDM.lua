@@ -475,6 +475,11 @@ function init_gear_sets()
         main="Eminent Scimitar",
         sub="Genbu's Shield",
     }
+    sets.dualWeapons = {
+        main="Eminent Scimitar",
+        sub="Camaraderie Blade",
+        -- sub="Joyeuse",
+    }
 
 end
 
@@ -591,7 +596,11 @@ end
 
 function enable_vermelee()
     is_meleeing = true
-    equip(sets.meleeWeapons)
+    if player.sub_job == 'NIN' then
+        equip(sets.dualWeapons)
+    else
+        equip(sets.meleeWeapons)
+    end
     sets.engaged = sets.Myengaged
     disable('main','sub','ranged', 'ammo')
     windower.add_to_chat(64,'RDM Melee: ON')
