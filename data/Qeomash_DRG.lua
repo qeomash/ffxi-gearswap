@@ -16,27 +16,25 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Eminent Lance",
+        main="Homestead Lance",
         sub="Pole Grip",
         -- ranged="Lamiabane",
         ammo="Tiphia Sting",
     }
 
     sets.engaged = {
-        -- head="Brego Helm", -- haste 5, str6 dex6
-        head="Karieyh Morion +1", -- haste7
+        head="Gorney Morion +1",
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Assault Earring",
-        -- body="Askar Korazin",
-        body="Karieyh Haubert +1",
-        hands="Karieyh Moufles +1", --haste+4% str6
+        body="Gorney Haubert +1",
+        hands="Gorney Moufles +1",
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
-        waist="Paewr Belt",
-        legs="Karieyh Brayettes +1",
-        feet="Karieyh Sollerets +1",
+        waist="Dynamic Belt +1",
+        legs="Gorney Brayettes +1",
+        feet="Gorney Sollerets +1", 
     }
     sets.RelicAF = {
         head="Wyrm Armet",
@@ -50,32 +48,32 @@ function init_gear_sets()
 
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Karieyh Morion +1",
+        head="Gorney Morion +1",
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Assault Earring",
-        body="Karieyh Haubert +1",
-        hands="Karieyh Moufles +1",
+        body="Gorney Haubert +1",
+        hands="Gorney Moufles +1",
         lring="Flame Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Warwolf Belt",
-        legs="Karieyh Brayettes +1",
-        feet="Karieyh Sollerets +1",
+        legs="Gorney Brayettes +1",
+        feet="Gorney Sollerets +1", 
     }
     sets.baseWS.Accuracy = {
-        head="Karieyh Morion +1",
+        head="Karieyh Morion +1", -- Acc+11
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Assault Earring",
-        body="Hecatomb Harness", --acc+10 str+12
-        hands="Karieyh Moufles +1",
+        body="Gorney Haubert +1",
+        hands="Karieyh Moufles +1", --Acc+11
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Wyrm Belt",
-        legs="Perle Brayettes", --acc+10
-        feet="Karieyh Sollerets +1",
+        legs="Gorney Brayettes +1",
+        feet="Gorney Sollerets +1", --Acc+14
     }
 
     sets.precast.WS = sets.baseWS.Str
