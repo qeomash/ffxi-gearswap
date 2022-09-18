@@ -30,7 +30,7 @@ function user_setup()
     gear.default.obi_waist = "Sekhmet Corset"
     
     select_default_macro_book()
-    send_command('wait 2;input /lockstyleset 1')
+    send_command('wait 2;input /lockstyleset 2')
 end
 
 
@@ -603,6 +603,7 @@ function enable_vermelee()
     end
     sets.engaged = sets.Myengaged
     disable('main','sub','ranged', 'ammo')
+    send_command('wait 2;input /lockstyleset 1')
     windower.add_to_chat(64,'RDM Melee: ON')
 end
 
@@ -611,5 +612,6 @@ function disable_vermelee()
     is_meleeing = false
     enable('main','sub','ranged', 'ammo')
     sets.engaged = sets.MPIdle
+    send_command('wait 2;input /lockstyleset 2')
     windower.add_to_chat(64,'RDM Melee: OFF')
 end
