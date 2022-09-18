@@ -64,6 +64,7 @@ function init_gear_sets()
         lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Dalmatica",
+        legs="Tatsumaki Sitagoromo",
     }
     sets.engaged = sets.idle
 
