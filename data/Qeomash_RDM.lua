@@ -220,7 +220,7 @@ function init_gear_sets()
     sets.Enfeebling.Int = {}
     sets.Enfeebling.Int.Hard = set_combine(sets.Enfeebling.Base,
         {
-            head="Duelist's Chapeau +1",
+            head="Vitiation Chapeau",
             neck="Enfeebling Torque",
             lear="Moonshade Earring",
             rear="Magnetic Earring",
@@ -250,7 +250,7 @@ function init_gear_sets()
     sets.Enfeebling.Mnd = {}
     sets.Enfeebling.Mnd.Hard = set_combine(sets.Enfeebling.Base,
         {
-            head="Duelist's Chapeau +1",
+            head="Vitiation Chapeau",
             neck="Enfeebling Torque",
             lear="Moonshade Earring",
             rear="Magnetic Earring",
@@ -357,7 +357,7 @@ function init_gear_sets()
     sets.resting = {
         main="Pluto's Staff",
         sub="Staff Strap",
-        head="Duelist's Chapeau +1",
+        head="Vitiation Chapeau",
         neck="Grandiose Chain",
         ear1="Antivenom Earring",
         ear2="Magnetic Earring",
@@ -380,7 +380,7 @@ function init_gear_sets()
     sets.MPIdle = {
         main="Terra's Staff",
         sub="Staff Strap",
-        head="Duelist's Chapeau +1",
+        head="Vitiation Chapeau",
         neck="Orochi Nodowa",
         lear="Moonshade Earring",
         rear="Magnetic Earring",
