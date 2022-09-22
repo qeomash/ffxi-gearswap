@@ -113,7 +113,7 @@ function init_gear_sets()
         feet="Weatherspoon Souliers +1", -- +10
     }
     sets.baseWS.Mnd = {
-        head="Weatherspoon Corona +1", --MND+26
+        head="Vitiation Chapeau +1", -- MND+32
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Geist Earring",
@@ -163,7 +163,7 @@ function init_gear_sets()
     sets.midcast.Cure = {
         main="Apollo's Staff",
         sub="Staff Strap",
-        head="Weatherspoon Corona +1",
+        head="Vitiation Chapeau +1",
         neck="Colossus's Torque",
         lear="Moonshade Earring",
         rear="Magnetic Earring",
@@ -204,7 +204,7 @@ function init_gear_sets()
         main="Homestead Wand",
         sub="Genbu's Shield",
         ammo="Kalboron Stone",
-        head="Weatherspoon Corona +1",
+        head="Vitiation Chapeau +1",
         neck="Enfeebling Torque",
         lear="Moonshade Earring",
         rear="Magnetic Earring",
@@ -220,7 +220,7 @@ function init_gear_sets()
     sets.Enfeebling.Int = {}
     sets.Enfeebling.Int.Hard = set_combine(sets.Enfeebling.Base,
         {
-            head="Vitiation Chapeau",
+            head="Vitiation Chapeau +1",
             neck="Enfeebling Torque",
             lear="Moonshade Earring",
             rear="Magnetic Earring",
@@ -250,7 +250,7 @@ function init_gear_sets()
     sets.Enfeebling.Mnd = {}
     sets.Enfeebling.Mnd.Hard = set_combine(sets.Enfeebling.Base,
         {
-            head="Vitiation Chapeau",
+            head="Vitiation Chapeau +1",
             neck="Enfeebling Torque",
             lear="Moonshade Earring",
             rear="Magnetic Earring",
@@ -266,7 +266,7 @@ function init_gear_sets()
     )
     sets.Enfeebling.Mnd.Soft = set_combine(sets.Enfeebling.Mnd.Hard,
         {
-            head="Weatherspoon Corona +1",
+            head="Vitiation Chapeau +1",
             lear="Geist Earring",
             body="Weatherspoon Robe +1",
             hands="Weatherspoon Cuffs +1",
@@ -300,7 +300,7 @@ function init_gear_sets()
         body="Wayfarer Robe", -- MAB+6
         hands="Otomi Gloves", -- MAB+13
         lring="Snow Ring",
-        rring="Snow Ring",
+        rring="Acumen Ring", -- MAB+4
         back="Prism Cape",
         waist="Aswang Sash", -- MAB+3
         legs="Wayfarer Slops",
@@ -316,7 +316,7 @@ function init_gear_sets()
     sets.midcast['Dark Magic'] = {
         main="Homestead Wand",
         sub="Genbu's Shield",
-        head="Wayfarer Circlet",
+        head="Weatherspoon Corona +1",
         neck="Aesir Torque",
         lear="Abyssal Earring",
         rear="Magnetic Earring",
@@ -357,7 +357,7 @@ function init_gear_sets()
     sets.resting = {
         main="Pluto's Staff",
         sub="Staff Strap",
-        head="Vitiation Chapeau",
+        head="Vitiation Chapeau +1",
         neck="Grandiose Chain",
         ear1="Antivenom Earring",
         ear2="Magnetic Earring",
@@ -380,7 +380,7 @@ function init_gear_sets()
     sets.MPIdle = {
         main="Terra's Staff",
         sub="Staff Strap",
-        head="Vitiation Chapeau",
+        head="Vitiation Chapeau +1",
         neck="Orochi Nodowa",
         lear="Moonshade Earring",
         rear="Magnetic Earring",
@@ -417,6 +417,7 @@ function init_gear_sets()
     sets.idle.MDT = {
         main="Kebbie",
         range="Lamian kaman",
+        head="Vitiation Chapeau +1",
         body="Wayfarer Robe",
         back="Lamia Mantle +1",
         ear1="Coral Earring",
@@ -453,7 +454,8 @@ function init_gear_sets()
         -- head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         -- body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
         -- back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
-        head="Wayfarer Circlet", --haste+6%,str+19
+        head="Vitiation Chapeau +1", --haste+6%,str+14
+        -- head="Wayfarer Circlet", --haste+6%,str+19
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Magnetic Earring",
