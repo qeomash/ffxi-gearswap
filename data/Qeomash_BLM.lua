@@ -25,7 +25,7 @@ function init_gear_sets()
         ear1="Moldavite Earring",
         ear2="Hecate's Earring",
         body="Wayfarer Robe", -- MAB+6
-        hands="Otomi Gloves", -- MAB+13
+        hands="Amalric Gages", -- MAB+23, MBII+5
         lring="Snow Ring",
         rring="Snow Ring",
         back="Prism Cape",

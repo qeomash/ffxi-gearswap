@@ -118,7 +118,7 @@ function init_gear_sets()
         lear="Brutal Earring",
         rear="Geist Earring",
         body="Weatherspoon Robe +1", -- MND+34
-        hands="Weatherspoon Cuffs +1", -- MND+33
+        hands="Amalric Gages", -- MND+34
         lring="Aqua Ring",
         rring="Aqua Ring",
         back="Prism Cape",
@@ -239,7 +239,7 @@ function init_gear_sets()
             head="Weatherspoon Corona +1",
             lear="Abyssal Earring",
             body="Weatherspoon Robe +1",
-            hands="Weatherspoon Cuffs +1",
+            hands="Amalric Gages", -- INT+24
             lring="Snow Ring",
             rring="Snow Ring",
             back="Prism Cape",
@@ -269,7 +269,7 @@ function init_gear_sets()
             head="Vitiation Chapeau +1",
             lear="Geist Earring",
             body="Weatherspoon Robe +1",
-            hands="Weatherspoon Cuffs +1",
+            hands="Amalric Gages", -- MND+33
             lring="Aqua Ring",
             rring="Aqua Ring",
             back="Prism Cape",
@@ -298,7 +298,7 @@ function init_gear_sets()
         lear="Friomisi Earring", -- MAB+10
         rear="Hecate's Earring", -- MAB+6
         body="Wayfarer Robe", -- MAB+6
-        hands="Otomi Gloves", -- MAB+13
+        hands="Amalric Gages", -- MAB+23, MBII+5
         lring="Snow Ring",
         rring="Acumen Ring", -- MAB+4
         back="Prism Cape",
@@ -321,7 +321,8 @@ function init_gear_sets()
         lear="Abyssal Earring",
         rear="Magnetic Earring",
         body="Glamor Jupon", -- Drk skill +3
-        hands="Crimson Finger Gauntlets", --Drk skill +10
+        -- hands="Crimson Finger Gauntlets", --Drk skill +10
+        hands="Amalric Gages", -- MAB+23, MBII+5, sure why not
         lring="Snow Ring",
         rring="Snow Ring",
         back="Prism Cape",
@@ -419,6 +420,7 @@ function init_gear_sets()
         range="Lamian kaman",
         head="Vitiation Chapeau +1",
         body="Wayfarer Robe",
+        hands="Amalric Gages", -- MDT+3,MEv+37
         back="Lamia Mantle +1",
         ear1="Coral Earring",
         ear2="Coral Earring",
