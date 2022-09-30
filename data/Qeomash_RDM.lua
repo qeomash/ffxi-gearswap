@@ -283,6 +283,7 @@ function init_gear_sets()
     sets.midcast['Sleep'] = sets.Enfeebling.Int.Hard
     sets.midcast['Sleep II'] = sets.Enfeebling.Int.Hard
     sets.midcast['Sleepga'] = sets.Enfeebling.Int.Hard
+    sets.midcast['Dispel'] = sets.Enfeebling.Int.Hard
 
     -- sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
     
