@@ -25,53 +25,46 @@ function init_gear_sets()
     }
    
     sets.precast.FC = {
-
         head="Warlock's Chapeau",
         neck="Holy Phial",
         ear1="Moldavite Earring",
         ear2="Morion Earring",
         body="Duelist's Tabard",
-        hands="Sly Gauntlets",
-        ring1="Electrum Ring",
-        ring2="Ether Ring",
-        back="Red Cape +1",
-        waist="Friar's Rope",
+        back="Prism Cape",
         legs="Warlock's Tights",
         feet="Warlock's Boots",
     }
 
     sets.idle = {
         head="Duelist's Chapeau",
-        neck="Holy Phial",
+        neck="Orochi Nodowa",
         ear1="Moldavite Earring",
         ear2="Morion Earring",
         body="Duelist's Tabard",
         hands="Sly Gauntlets",
-        ring1="Electrum Ring",
-        ring2="Ether Ring",
-        back="Red Cape +1",
-        waist="Friar's Rope",
+        back="Prism Cape",
+        waist="Demonry Sash",
         legs="Warlock's Tights",
         feet="Warlock's Boots",
     }
 
     sets.midcast['Elemental Magic'] = {
-        head="Warlock's Chapeau",
+        head="Carmine Mask",
         neck="Elemental Torque",
         ear1="Moldavite Earring",
-        ear2="Morion Earring",
-        body="Warlock's Tabard",
+        ear2="Abyssal Earring",
+        body="Errant Houppelande",
         hands="Sly Gauntlets",
         ring1="Snow Ring",
         ring2="Snow Ring",
         back="Prism Cape",
-        waist="Shaman's Belt",
+        waist="Demonry Sash",
         legs="Mahatma Slops",
-        feet="Warlock's Boots",
+        feet="Duelist's Boots",
     }
 
     sets.midcast['Enhancing Magic'] = {
-        head="Warlock's Chapeau",
+        head="Carmine Mask",
         neck="Holy Phial",
         ear1="Moldavite Earring",
         ear2="Morion Earring",
@@ -79,8 +72,8 @@ function init_gear_sets()
         hands="Sly Gauntlets",
         ring1="Electrum Ring",
         ring2="Ether Ring",
-        back="Red Cape +1",
-        waist="Friar's Rope",
+        back="Prism Cape",
+        waist="Demonry Sash",
         legs="Warlock's Tights",
         feet="Warlock's Boots",
     }
@@ -90,13 +83,13 @@ function init_gear_sets()
         head="Carmine Mask",
         neck="Enfeebling Torque",
         ear1="Moldavite Earring",
-        ear2="Morion Earring",
+        ear2="Abyssal Earring",
         body="Warlock's Tabard",
         hands="Sly Gauntlets",
         ring1="Snow Ring",
         ring2="Snow Ring",
         back="Prism Cape",
-        waist="Shaman's Belt",
+        waist="Demonry Sash",
         legs="Mahatma Slops",
         feet="Warlock's Boots",
     }
@@ -104,15 +97,14 @@ function init_gear_sets()
         head="Carmine Mask",
         neck="Enfeebling Torque",
         ear1="Moldavite Earring",
-        ear2="Morion Earring",
         body="Warlock's Tabard",
         hands="Sly Gauntlets",
         ring1="Aqua Ring",
         ring2="Aqua Ring",
         back="Prism Cape",
-        waist="Friar's Rope",
+        waist="Demonry Sash",
         legs="Mahatma Slops",
-        feet="Warlock's Boots",
+        feet="Duelist's Boots",
     }
     sets.midcast['Enfeebling Magic'] = sets.Enfeebling.Int
     sets.midcast['Dia III'] = sets.Enfeebling.Mnd
@@ -123,22 +115,22 @@ function init_gear_sets()
     sets.midcast['Dispel'] = sets.Enfeebling.Int
 
     sets.resting = {
-        head="Warlock's Chapeau",
-        neck="Holy Phial",
+        head="Duelist's Chapeau",
+        neck="Orochi Nodowa",
         ear1="Moldavite Earring",
-        ear2="Morion Earring",
+        ear2="Antivenom Earring",
         body="Warlock's Tabard",
         hands="Sly Gauntlets",
         ring1="Electrum Ring",
         ring2="Ether Ring",
         back="Prism Cape",
-        waist="Friar's Rope",
+        waist="Demonry Sash",
         legs="Mahatma Slops",
-        feet="Warlock's Boots",
+        feet="Duelist's Boots",
     }
 
     sets.midcast.Cure = {
-        head="Warlock's Chapeau",
+        head="Duelist's Chapeau",
         neck="Holy Phial",
         ear1="Moldavite Earring",
         ear2="Morion Earring",
@@ -147,7 +139,7 @@ function init_gear_sets()
         ring1="Aqua Ring",
         ring2="Aqua Ring",
         back="Prism Cape",
-        waist="Friar's Rope",
+        waist="Demonry Sash",
         legs="Mahatma Slops",
         feet="Warlock's Boots",
     }
