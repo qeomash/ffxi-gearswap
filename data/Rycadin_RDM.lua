@@ -32,7 +32,7 @@ function init_gear_sets()
         body="Duelist's Tabard",
         back="Prism Cape",
         legs="Warlock's Tights",
-        feet="Warlock's Boots",
+        feet="Jhakri Pigaches",
     }
 
     sets.idle = {
@@ -45,7 +45,7 @@ function init_gear_sets()
         back="Prism Cape",
         waist="Demonry Sash",
         legs="Warlock's Tights",
-        feet="Warlock's Boots",
+        feet="Jhakri Pigaches",
     }
 
     sets.midcast['Elemental Magic'] = {
@@ -58,9 +58,9 @@ function init_gear_sets()
         ring1="Snow Ring",
         ring2="Snow Ring",
         back="Prism Cape",
-        waist="Demonry Sash",
+        waist="Duelist's Belt",
         legs="Mahatma Slops",
-        feet="Duelist's Boots",
+        feet="Jhakri Pigaches",
     }
 
     sets.midcast['Enhancing Magic'] = {
@@ -73,9 +73,9 @@ function init_gear_sets()
         ring1="Electrum Ring",
         ring2="Ether Ring",
         back="Prism Cape",
-        waist="Demonry Sash",
+        waist="Duelist's Belt",
         legs="Warlock's Tights",
-        feet="Warlock's Boots",
+        feet="Jhakri Pigaches",
     }
 
     sets.Enfeebling = {}
@@ -89,9 +89,9 @@ function init_gear_sets()
         ring1="Snow Ring",
         ring2="Snow Ring",
         back="Prism Cape",
-        waist="Demonry Sash",
+        waist="Duelist's Belt",
         legs="Mahatma Slops",
-        feet="Warlock's Boots",
+        feet="Jhakri Pigaches",
     }
     sets.Enfeebling.Mnd = {
         head="Carmine Mask",
@@ -104,7 +104,7 @@ function init_gear_sets()
         back="Prism Cape",
         waist="Demonry Sash",
         legs="Mahatma Slops",
-        feet="Duelist's Boots",
+        feet="Jhakri Pigaches",
     }
     sets.midcast['Enfeebling Magic'] = sets.Enfeebling.Int
     sets.midcast['Dia III'] = sets.Enfeebling.Mnd
@@ -119,14 +119,14 @@ function init_gear_sets()
         neck="Orochi Nodowa",
         ear1="Moldavite Earring",
         ear2="Antivenom Earring",
-        body="Warlock's Tabard",
+        body="Errant Houppelande",
         hands="Sly Gauntlets",
         ring1="Electrum Ring",
         ring2="Ether Ring",
         back="Prism Cape",
-        waist="Demonry Sash",
+        waist="Duelist's Belt",
         legs="Mahatma Slops",
-        feet="Duelist's Boots",
+        feet="Jhakri Pigaches",
     }
 
     sets.midcast.Cure = {
@@ -141,7 +141,7 @@ function init_gear_sets()
         back="Prism Cape",
         waist="Demonry Sash",
         legs="Mahatma Slops",
-        feet="Warlock's Boots",
+        feet="Jhakri Pigaches",
     }
 
 end
