@@ -15,9 +15,8 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Homestead Lance",
-        sub="Pole Grip",
-        -- ranged="Lamiabane",
+        main="Firmament",
+        sub="Firmament",
         ammo="Tiphia Sting",
     }
 
@@ -26,7 +25,7 @@ function init_gear_sets()
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Spike Earring",
-        body="Scorpion Harness", --should be the BLU relic
+        body="Mirage Jubbah",
         hands="Magus Bazubands",
         lring="Blood Ring",
         rring="Rajas Ring",
@@ -62,7 +61,7 @@ function init_gear_sets()
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Swift Belt",
-        legs="Homam Cosciales",
+        legs="Mirage Shalwar",
         feet="Dusk Ledelsens",
     }
     sets.baseWS.Str = set_combine(sets.baseWS, {
