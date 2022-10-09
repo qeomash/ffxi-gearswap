@@ -92,6 +92,7 @@ function init_gear_sets()
         legs="Wayfarer Slops",
         waist="Dynamic Belt +1",
         back="Swith Cape",
+        feet="Carmine Greaves",
     }
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
        
@@ -110,7 +111,7 @@ function init_gear_sets()
         back="Forager's Mantle",
         waist="Warwolf Belt",
         legs="Weatherspoon Pants +1", -- STR+25
-        feet="Weatherspoon Souliers +1", -- +10
+        feet="Carmine Greaves", -- STR+14
     }
     sets.baseWS.Mnd = {
         head="Vitiation Chapeau +1", -- MND+32
@@ -155,6 +156,7 @@ function init_gear_sets()
         hands="Brego Gloves",
         -- legs="Nashira Seraweels",
         waist="Paewr Belt",
+        feet="Carmine Greaves",
     }
     -- sets.midcast.Cure = {main="Tamaxchi",sub="Genbu's Shield",
     --     head="Gendewitha Caubeen",neck="Colossus's Torque",ear1="Roundel Earring",ear2="Loquacious Earring",
@@ -393,7 +395,7 @@ function init_gear_sets()
         back="Prism Cape",
         waist="Duelist's Belt",
         legs="Crimson Cuisses",
-        feet="Wayfarer Clogs",
+        feet="Carmine Greaves",
     }
     sets.idle = sets.MPIdle
 
@@ -469,7 +471,7 @@ function init_gear_sets()
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
         legs="Weatherspoon Pants +1",
-        feet="Weatherspoon Souliers +1",
+        feet="Carmine Greaves", --haste+4%,STR+14,DA+3%
     }
     sets.engaged.Defense = {ammo="Demonry Stone",
         head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
