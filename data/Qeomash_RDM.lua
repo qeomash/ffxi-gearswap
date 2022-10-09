@@ -105,7 +105,7 @@ function init_gear_sets()
         lear="Brutal Earring",
         rear="Magnetic Earring",
         body="Weatherspoon Robe +1", -- STR+26
-        hands="Weatherspoon Cuffs +1", -- STR+6
+        hands="Jhakri Cuffs", --STR+10,Attack+25,WS+3%
         lring="Flame Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
@@ -119,7 +119,7 @@ function init_gear_sets()
         lear="Brutal Earring",
         rear="Geist Earring",
         body="Weatherspoon Robe +1", -- MND+34
-        hands="Amalric Gages", -- MND+34
+        hands="Jhakri Cuffs", --MND+35,Attack+25,WS+3%
         lring="Aqua Ring",
         rring="Aqua Ring",
         back="Prism Cape",
@@ -211,7 +211,7 @@ function init_gear_sets()
         lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Warlock's Tabard +1",
-        hands="Wayfarer Cuffs",
+        hands="Jhakri Cuffs", --MAC+25
         lring="Balrahn's Ring",
         rring="Snow Ring",
         back="Altruistic Cape",
@@ -227,7 +227,7 @@ function init_gear_sets()
             lear="Moonshade Earring",
             rear="Magnetic Earring",
             body="Warlock's Tabard +1",
-            hands="Wayfarer Cuffs",
+            hands="Jhakri Cuffs", --INT+18
             lring="Balrahn's Ring",
             rring="Snow Ring",
             back="Altruistic Cape",
@@ -241,7 +241,7 @@ function init_gear_sets()
             head="Weatherspoon Corona +1",
             lear="Abyssal Earring",
             body="Weatherspoon Robe +1",
-            hands="Amalric Gages", -- INT+24
+            hands="Jhakri Cuffs", --INT+18
             lring="Snow Ring",
             rring="Snow Ring",
             back="Prism Cape",
@@ -257,7 +257,7 @@ function init_gear_sets()
             lear="Moonshade Earring",
             rear="Magnetic Earring",
             body="Warlock's Tabard +1",
-            hands="Weatherspoon Cuffs +1",
+            hands="Jhakri Cuffs", --MND+35
             lring="Balrahn's Ring",
             rring="Aqua Ring",
             back="Altruistic Cape",
@@ -271,7 +271,7 @@ function init_gear_sets()
             head="Vitiation Chapeau +1",
             lear="Geist Earring",
             body="Weatherspoon Robe +1",
-            hands="Amalric Gages", -- MND+33
+            hands="Jhakri Cuffs", --MND+35
             lring="Aqua Ring",
             rring="Aqua Ring",
             back="Prism Cape",
@@ -301,7 +301,8 @@ function init_gear_sets()
         lear="Friomisi Earring", -- MAB+10
         rear="Hecate's Earring", -- MAB+6
         body="Wayfarer Robe", -- MAB+6
-        hands="Amalric Gages", -- MAB+23, MBII+5
+        -- hands="Amalric Gages", -- MAB+23, MBII+5
+        hands="Jhakri Cuffs", --MAB+25
         lring="Snow Ring",
         rring="Acumen Ring", -- MAB+4
         back="Prism Cape",
@@ -325,7 +326,8 @@ function init_gear_sets()
         rear="Magnetic Earring",
         body="Glamor Jupon", -- Drk skill +3
         -- hands="Crimson Finger Gauntlets", --Drk skill +10
-        hands="Amalric Gages", -- MAB+23, MBII+5, sure why not
+        -- hands="Amalric Gages", -- MAB+23, MBII+5, sure why not
+        hands="Jhakri Cuffs", --INT+28,MAB+25
         lring="Snow Ring",
         rring="Snow Ring",
         back="Prism Cape",
@@ -465,7 +467,7 @@ function init_gear_sets()
         lear="Brutal Earring",
         rear="Magnetic Earring",
         body="Weatherspoon Robe +1", --haste+3%,str+26
-        hands="Brego Gloves", --haste+4%,acc+9,Str+5
+        hands="Jhakri Cuffs", --Acc+25,Att+25
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
@@ -479,11 +481,11 @@ function init_gear_sets()
         back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
 
     sets.meleeWeapons = {
-        main="Eminent Scimitar",
+        main="Tokko Sword",
         sub="Genbu's Shield",
     }
     sets.dualWeapons = {
-        main="Eminent Scimitar",
+        main="Tokko Sword",
         sub="Camaraderie Blade",
         -- sub="Joyeuse",
     }
