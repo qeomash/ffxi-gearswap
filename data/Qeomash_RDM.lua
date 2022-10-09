@@ -214,7 +214,7 @@ function init_gear_sets()
         hands="Jhakri Cuffs", --MAC+25
         lring="Balrahn's Ring",
         rring="Snow Ring",
-        back="Altruistic Cape",
+        back="Sucellos's Cape",
         waist="Demonry Sash",
         legs="Nashira Seraweels", -- macc+3
         feet="Wayfarer Clogs",
@@ -230,7 +230,7 @@ function init_gear_sets()
             hands="Jhakri Cuffs", --INT+18
             lring="Balrahn's Ring",
             rring="Snow Ring",
-            back="Altruistic Cape",
+            back="Sucellos's Cape",
             waist="Demonry Sash",
             legs="Nashira Seraweels",
             feet="Wayfarer Clogs",
@@ -260,7 +260,7 @@ function init_gear_sets()
             hands="Jhakri Cuffs", --MND+35
             lring="Balrahn's Ring",
             rring="Aqua Ring",
-            back="Altruistic Cape",
+            back="Sucellos's Cape",
             waist="Demonry Sash",
             legs="Nashira Seraweels",
             feet="Weatherspoon Souliers +1",
