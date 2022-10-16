@@ -89,7 +89,7 @@ function init_gear_sets()
     sets.JumpSpecialGear = {
         feet="Drachen Geaves"
     }
-    sets.precast.JA.Jump = set_combine(sets.baseWS.Accuracy, {})
+    sets.precast.JA.Jump = set_combine(sets.baseWS.Accuracy, {
         -- head="Hecatomb Cap",
         -- neck="Chivalrous Chain",
         -- lear="Brutal Earring",
@@ -98,10 +98,11 @@ function init_gear_sets()
         -- hands="Brego Gloves",
         -- lring="Blood Ring",
         -- rring="Rajas Ring",
-        -- back="Forager's Mantle",
+        back="Brigantia's Mantle",
         -- waist="Wyrm Belt",
         -- legs="Perle Brayettes",
         -- feet="Aurum Sabatons",
+    })
     -- }
     sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {
         legs="Wyrm Brias",
