@@ -16,31 +16,39 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Beetle Knife",
-        sub="Garuda's Dagger",
+        main="Yataghan",
+        sub="Yataghan",
         ranged="Lamiabane",
         -- ammo="Tiphia Sting",
     }
 
     sets.engaged = {
-        head="Emperor Hairpin",
+        head="Walahra Turban",
         neck="Chivalrous Chain",
-        lear="Spike Earring",
-        rear="Coral Earring",
-        body="Scorpion Harness",
-        hands="Rogue's Armlets",
-        lring="Woodsman Ring",
+        ear1="Spike Earring",
+        ear2="Brutal Earring",
+        -- body="Scorpion Harness",
+        body="Pahluwan Khazagand",
+        hands="Dusk Gloves",
+        lring="Blood Ring",
         rring="Rajas Ring",
-        -- back="",
+        back="Forager's Mantle",
         waist="Swift Belt",
-        legs="Rogue's Culottes", -- useless
-        feet="Leaping Boots",
+        legs="Homam Cosciales",
+        feet="Dusk Ledelsens",
     }
-    sets.idle = sets.engaged
+    sets.idle = set_combine(sets.engaged, {
+        hands="Rogue's Armlets",
+        feet="Hecatomb Leggings",
+    })
 
     sets.baseWS = {}
     sets.baseWS.Str = {
-        body="Assault Jerkin",
+        head="Hecatomb Cap",
+        body="Hecatomb Harness",
+        ring1="Flame Ring",
+        ring2="Rajas Ring",
+        feet="Hecatomb Leggings",
     }
     sets.precast.WS = sets.baseWS.Str
 
