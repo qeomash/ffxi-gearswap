@@ -46,11 +46,23 @@ function init_gear_sets()
     sets.baseWS.Str = {
         head="Hecatomb Cap",
         body="Hecatomb Harness",
+        hands="Hecatomb Mittens",
+        ring1="Flame Ring",
+        ring2="Rajas Ring",
+        feet="Hecatomb Leggings",
+    }
+    sets.baseWS.Dex = {
+        head="Hecatomb Cap",
+        body="Hecatomb Harness",
+        hands="Hecatomb Mittens",
         ring1="Flame Ring",
         ring2="Rajas Ring",
         feet="Hecatomb Leggings",
     }
     sets.precast.WS = sets.baseWS.Str
+
+    sets.precast.WS['Dancing Edge'] = set_combine(sets.baseWS.Dex, {})
+    sets.precast.WS['Evisceration'] = set_combine(sets.baseWS.Dex, {neck='Light Gorget'})
 
     sets.precast.JA['Steal'] = {
         head="Rogue's Bonnet",
