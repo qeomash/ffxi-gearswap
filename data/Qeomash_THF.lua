@@ -75,7 +75,8 @@ function init_gear_sets()
     }
 
     sets.TH = {
-        head="White Rarab Cap +1"
+        head="White Rarab Cap +1",
+        hands="Assassin's Armlets",
     }
 
 end
