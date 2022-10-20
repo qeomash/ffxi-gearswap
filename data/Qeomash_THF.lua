@@ -9,55 +9,54 @@ end
 function user_setup()
     enable('main','sub','ranged', 'ammo')
     select_default_macro_book()
-    -- send_command('wait 2;input /lockstyleset 10')
+    send_command('wait 2;input /lockstyleset 20')
     equip(sets.mainweapons)
 end
 
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Yataghan",
-        sub="Yataghan",
+        main="Homestead Dagger",
+        sub="Leisilonu",
         ranged="Lamiabane",
         -- ammo="Tiphia Sting",
     }
 
     sets.engaged = {
-        head="Walahra Turban",
-        neck="Chivalrous Chain",
+        head="Felistris Mask",
+        neck="Ocachi Gorget",
         ear1="Spike Earring",
         ear2="Brutal Earring",
         -- body="Scorpion Harness",
-        body="Pahluwan Khazagand",
-        hands="Dusk Gloves",
+        body="Wayfarer Robe",
+        hands="Breo Gloves",
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
-        waist="Swift Belt",
-        legs="Homam Cosciales",
-        feet="Dusk Ledelsens",
+        waist="Dynamic Belt +1",
+        legs="Quiahuiz Trousers",
+        feet="Wayfarer Clogs",
     }
     sets.idle = set_combine(sets.engaged, {
-        hands="Rogue's Armlets",
-        feet="Hecatomb Leggings",
+
     })
 
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Hecatomb Cap",
-        body="Hecatomb Harness",
+        head="Felistris Mask",
+        body="Wayfarer Robe",
         hands="Hecatomb Mittens",
         ring1="Flame Ring",
         ring2="Rajas Ring",
-        feet="Hecatomb Leggings",
+        feet="Wayfarer Clogs",
     }
     sets.baseWS.Dex = {
-        head="Hecatomb Cap",
-        body="Hecatomb Harness",
+        head="Felistris Mask",
+        body="Wayfarer Robe",
         hands="Hecatomb Mittens",
         ring1="Flame Ring",
         ring2="Rajas Ring",
-        feet="Hecatomb Leggings",
+        feet="Wayfarer Clogs",
     }
     sets.precast.WS = sets.baseWS.Str
 
