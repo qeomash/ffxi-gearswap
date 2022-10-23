@@ -369,12 +369,7 @@ function init_gear_sets()
         ear2="Magnetic Earring",
         body="Errant Houppelande",
         hands="Wayfarer Cuffs",
-        ring1="Balrahn's Ring",
-        ring2="Aqua Ring",
-        back="Prism Cape",
         waist="Duelist's Belt",
-        legs="Nashira Seraweels",
-        feet="Wayfarer Clogs",
     }
 
     -- Idle sets
@@ -439,10 +434,11 @@ function init_gear_sets()
         body="Hagondes Coat",hands="Gendewitha Gages",ring1="Defending Ring",ring2=gear.DarkRing.physical,
         back="Shadow Mantle",waist="Flume Belt",legs="Hagondes Pants",feet="Gendewitha Galoshes"}
 
-    sets.defense.MDT = {ammo="Demonry Stone",
-        head="Atrophy Chapeau +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
-        body="Atrophy Tabard +1",hands="Yaoyotl Gloves",ring1="Defending Ring",ring2="Shadow Ring",
-        back="Engulfer Cape",waist="Flume Belt",legs="Bokwus Slops",feet="Gendewitha Galoshes"}
+    -- sets.defense.MDT = {ammo="Demonry Stone",
+    --     head="Atrophy Chapeau +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
+    --     body="Atrophy Tabard +1",hands="Yaoyotl Gloves",ring1="Defending Ring",ring2="Shadow Ring",
+    --     back="Engulfer Cape",waist="Flume Belt",legs="Bokwus Slops",feet="Gendewitha Galoshes"}
+    sets.defense.MDT = set_combine(sets.idle.MDT, {})
 
     sets.Kiting = {legs="Crimson Cuisses"}
 
