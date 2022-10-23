@@ -89,7 +89,8 @@ function init_gear_sets()
         lear="Loquacious Earring",
         body="Duelist's Tabard",
         hands="Brego Gloves",
-        legs="Wayfarer Slops",
+        legs="Ayanmo Cosciales",
+        lring="Weatherspoon Ring",
         waist="Dynamic Belt +1",
         back="Swith Cape",
         feet="Carmine Greaves",
@@ -100,18 +101,18 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Wayfarer Circlet", --STR+19
+        head="Ayanmo Zucchetto", -- STR+20
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Magnetic Earring",
-        body="Weatherspoon Robe +1", -- STR+26
+        body="Ayanmo Corazza",
         hands="Jhakri Cuffs", --STR+10,Attack+25,WS+3%
-        lring="Flame Ring",
+        lring="Pyrosoul Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Warwolf Belt",
-        legs="Weatherspoon Pants +1", -- STR+25
-        feet="Carmine Greaves", -- STR+14
+        legs="Ayanmo Cosciales",
+        feet="Jhakri Pigaches +1", -- STR+22
     }
     sets.baseWS.Mnd = {
         head="Vitiation Chapeau +1", -- MND+32
@@ -125,7 +126,7 @@ function init_gear_sets()
         back="Prism Cape",
         waist="Warwolf Belt",
         legs="Weatherspoon Pants +1", -- +24
-        feet="Weatherspoon Souliers +1", -- +19
+        feet="Jhakri Pigaches +1", --MND+21
     }
     
     sets.precast.WS = sets.baseWS.Str
@@ -303,12 +304,12 @@ function init_gear_sets()
         body="Wayfarer Robe", -- MAB+6
         -- hands="Amalric Gages", -- MAB+23, MBII+5
         hands="Jhakri Cuffs", --MAB+25
-        lring="Snow Ring",
+        lring="Weatherspoon Ring", --MAB+10
         rring="Acumen Ring", -- MAB+4
         back="Prism Cape",
         waist="Aswang Sash", -- MAB+3
         legs="Wayfarer Slops",
-        feet="Weatherspoon Souliers +1", --MAB+12
+        feet="Jhakri Pigaches +1", --MAB+36
     }
 
     --sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {head=empty,body="Twilight Cloak"})
@@ -386,13 +387,13 @@ function init_gear_sets()
         lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Dalmatica",
-        hands="Wayfarer Cuffs",
-        lring="Balrahn's Ring",
+        hands="Ayanmo Manopolas",
+        lring="Jhakri Ring",
         rring="Snow Ring",
-        back="Prism Cape",
+        back="Sucello's Cape",
         waist="Duelist's Belt",
         legs="Crimson Cuisses",
-        feet="Carmine Greaves",
+        feet="Ayanmo Gambieras",
     }
     sets.idle = sets.MPIdle
 
@@ -457,18 +458,19 @@ function init_gear_sets()
         -- head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         -- body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
         -- back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
-        head="Vitiation Chapeau +1", --haste+6%,str+14
-        -- head="Wayfarer Circlet", --haste+6%,str+19
-        neck="Chivalrous Chain",
+
+        -- head="Vitiation Chapeau +1", --haste+6%,str+14
+        head="Ayanmo Zucchetto",
+        neck="Ocachi Gorget",
         lear="Brutal Earring",
         rear="Magnetic Earring",
-        body="Weatherspoon Robe +1", --haste+3%,str+26
-        hands="Jhakri Cuffs", --Acc+25,Att+25
-        lring="Blood Ring",
+        body="Ayanmo Corazza", --Haste+4%,DA+4%,Acc+28
+        hands="Ayanmo Manopolas", --Acc+25,Haste+4%
+        lring="Jhakri Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
-        legs="Weatherspoon Pants +1",
+        legs="Ayanmo Cosciales",
         feet="Carmine Greaves", --haste+4%,STR+14,DA+3%
     }
     sets.engaged.Defense = {ammo="Demonry Stone",

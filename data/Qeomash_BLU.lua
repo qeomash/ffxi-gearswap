@@ -28,36 +28,36 @@ function init_gear_sets()
     }
 
     sets.engaged = {
-        head="Wayfarer Circlet",
+        head="Ayanmo Zucchetto",
         neck="Ocachi Gorget",
         lear="Brutal Earring",
-        rear="Spike Earring",
-        body="Weatherspoon Robe +1", --haste+3%,str+26
-        hands="Jhakri Cuffs", --Acc+25,Att+25
-        lring="Blood Ring",
+        rear="Magnetic Earring",
+        body="Ayanmo Corazza", --Haste+4%,DA+4%,Acc+28
+        hands="Ayanmo Manopolas", --Acc+25,Haste+4%
+        lring="Jhakri Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
-        legs="Weatherspoon Pants +1",
+        legs="Ayanmo Cosciales",
         feet="Carmine Greaves", --haste+4%,STR+14,DA+3%
     }
 
     sets.baseWS = {
-        head="Wayfarer Circlet", --STR+19
+        head="Ayanmo Zucchetto", -- STR+20
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Magnetic Earring",
-        body="Weatherspoon Robe +1", -- STR+26
+        body="Ayanmo Corazza",
         hands="Jhakri Cuffs", --STR+10,Attack+25,WS+3%
-        lring="Flame Ring",
+        lring="Pyrosoul Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Warwolf Belt",
-        legs="Weatherspoon Pants +1", -- STR+25
-        feet="Carmine Greaves", -- STR+14
+        legs="Ayanmo Cosciales",
+        feet="Jhakri Pigaches +1", -- STR+22
     }
     sets.baseWS.Str = set_combine(sets.baseWS, {
-        lring="Flame Ring",
+        lring="Pyrosoul Ring",
     })
     sets.baseWS.Accuracy = set_combine(sets.baseWS, {})
     sets.precast.WS = sets.baseWS.Str
@@ -68,6 +68,8 @@ function init_gear_sets()
     sets.precast.FC = {
         lear="Loquacious Earring",
         back="Swith Cape",
+        legs="Ayanmo Cosciales",
+        lring="Weatherspoon Ring",
         feet="Carmine Greaves",
     }
 end

@@ -26,12 +26,12 @@ function init_gear_sets()
         ear2="Hecate's Earring",
         body="Wayfarer Robe", -- MAB+6
         hands="Amalric Gages", -- MAB+23, MBII+5
-        lring="Snow Ring",
-        rring="Snow Ring",
+        lring="Weatherspoon Ring", --MAB+10
+        rring="Acumen Ring", -- MAB+4
         back="Prism Cape",
         waist="Aswang Sash", -- MAB+3
         legs="Wayfarer Slops",
-        feet="Weatherspoon Souliers +1", --MAB+12
+        feet="Jhakri Pigaches +1", --MAB+36
     }
     -- sets.midcast.Elemental = {
     --     neck="Elemental Torque",
@@ -71,8 +71,8 @@ function init_gear_sets()
     sets.precast.FC = {
         --head="Wayfarer Circlet",
         lear="Loquacious Earring",
-        hands="Brego Gloves",
-        legs="Wayfarer Slops",
+        legs="Ayanmo Cosciales",
+        lring="Weatherspoon Ring",
         waist="Paewr Belt",
         back="Swith Cape",
     }

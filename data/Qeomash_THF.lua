@@ -29,7 +29,7 @@ function init_gear_sets()
         ear2="Brutal Earring",
         -- body="Scorpion Harness",
         body="Wayfarer Robe",
-        hands="Breo Gloves",
+        hands="Meghanada Gloves",
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
@@ -45,16 +45,16 @@ function init_gear_sets()
     sets.baseWS.Str = {
         head="Felistris Mask",
         body="Wayfarer Robe",
-        hands="Hecatomb Mittens",
-        ring1="Flame Ring",
+        hands="Meghanada Gloves", -- STR+15
+        ring1="Pyrosoul Ring",
         ring2="Rajas Ring",
         feet="Wayfarer Clogs",
     }
     sets.baseWS.Dex = {
         head="Felistris Mask",
         body="Wayfarer Robe",
-        hands="Hecatomb Mittens",
-        ring1="Flame Ring",
+        hands="Meghanada Gloves", --DEX+42
+        ring1="Pyrosoul Ring",
         ring2="Rajas Ring",
         feet="Wayfarer Clogs",
     }

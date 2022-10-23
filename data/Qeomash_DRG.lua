@@ -24,17 +24,17 @@ function init_gear_sets()
     }
 
     sets.engaged = {
-        head="Gorney Morion +1",
-        neck="Chivalrous Chain",
+        head="Sulevia's Mask",
+        neck="Ocachi Gorget",
         lear="Brutal Earring",
         rear="Assault Earring",
         body="Gorney Haubert +1",
-        hands="Gorney Moufles +1",
-        lring="Blood Ring",
+        hands="Sulevia's Gauntlets +1",
+        lring="Flamma Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
-        legs="Gorney Brayettes +1",
+        legs="Sulevia's Cuisses",
         feet="Gorney Sollerets +1", 
     }
     sets.RelicAF = {
@@ -49,32 +49,32 @@ function init_gear_sets()
 
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Gorney Morion +1",
+        head="Gorney Morion +1", --STR+29
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Assault Earring",
         body="Gorney Haubert +1",
-        hands="Gorney Moufles +1",
-        lring="Flame Ring",
+        hands="Sulevia's Gauntlets +1",
+        lring="Pyrosoul Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Warwolf Belt",
-        legs="Gorney Brayettes +1",
-        feet="Gorney Sollerets +1", 
+        legs="Sulevia's Cuisses",
+        feet="Sulevia's Leggings",
     }
     sets.baseWS.Accuracy = {
-        head="Karieyh Morion +1", -- Acc+11
+        head="Sulevia's Mask", --Acc+26
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Assault Earring",
-        body="Gorney Haubert +1",
-        hands="Karieyh Moufles +1", --Acc+11
+        body="Sulevia's Platemail", -- Acc+28,SC+5
+        hands="Sulevia's Gauntlets +1", --Acc+37
         lring="Blood Ring",
-        rring="Rajas Ring",
+        rring="Flamma Ring",
         back="Forager's Mantle",
         waist="Wyrm Belt",
-        legs="Gorney Brayettes +1",
-        feet="Gorney Sollerets +1", --Acc+14
+        legs="Sulevia's Cuisses",
+        feet="Sulevia's Leggings",
     }
 
     sets.precast.WS = sets.baseWS.Str
