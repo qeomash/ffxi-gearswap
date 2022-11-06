@@ -123,7 +123,7 @@ function init_gear_sets()
         hands="Jhakri Cuffs", --MND+35,Attack+25,WS+3%
         lring="Aqua Ring",
         rring="Aqua Ring",
-        back="Prism Cape",
+        back="Swith Cape", --MND+5
         waist="Warwolf Belt",
         legs="Weatherspoon Pants +1", -- +24
         feet="Jhakri Pigaches +1", --MND+21
@@ -174,7 +174,7 @@ function init_gear_sets()
         hands="Weatherspoon Cuffs +1", --CP+9%
         lring="Aqua Ring",
         rring="Aqua Ring",
-        back="Prism Cape",
+        back="Swith Cape",
         waist="Duelist's Belt",
         legs="Weatherspoon Pants +1",
         feet="Weatherspoon Souliers +1",
@@ -187,13 +187,14 @@ function init_gear_sets()
         lear="Augmenting Earring", -- +3
         body="Glamor Jupon", -- ench skill +3
         hands="Duelist's Gloves", -- +15
+        back="Sucellos's Cape", --duration+20%
         legs="Warlock's Tights +1", -- +15
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
         -- body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
         -- back="Estoqueur's Cape",waist="Olympus Sash",legs="Atrophy Tights",feet="Estoqueur's Houseaux +2"}
 
-    sets.midcast.Refresh = {legs="Estoqueur's Fuseau +2"}
+    sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], {legs="Estoqueur's Fuseau +2"})
 
     --sets.midcast.Stoneskin = {waist="Siegel Sash"}
     
@@ -230,7 +231,7 @@ function init_gear_sets()
             body="Warlock's Tabard +1",
             hands="Jhakri Cuffs", --INT+18
             lring="Balrahn's Ring",
-            rring="Snow Ring",
+            rring="Perception Ring",
             back="Sucellos's Cape",
             waist="Demonry Sash",
             legs="Nashira Seraweels",
@@ -260,7 +261,7 @@ function init_gear_sets()
             body="Warlock's Tabard +1",
             hands="Jhakri Cuffs", --MND+35
             lring="Balrahn's Ring",
-            rring="Aqua Ring",
+            rring="Perception Ring",
             back="Sucellos's Cape",
             waist="Demonry Sash",
             legs="Nashira Seraweels",
@@ -275,7 +276,7 @@ function init_gear_sets()
             hands="Jhakri Cuffs", --MND+35
             lring="Aqua Ring",
             rring="Aqua Ring",
-            back="Prism Cape",
+            back="Swith Cape",
             legs="Weatherspoon Pants +1",
         }
     )
@@ -306,7 +307,7 @@ function init_gear_sets()
         hands="Jhakri Cuffs", --MAB+25
         lring="Weatherspoon Ring", --MAB+10
         rring="Acumen Ring", -- MAB+4
-        back="Prism Cape",
+        back="Izdubar Mantle", -- MAB+10
         waist="Aswang Sash", -- MAB+3
         legs="Wayfarer Slops",
         feet="Jhakri Pigaches +1", --MAB+36
@@ -390,7 +391,7 @@ function init_gear_sets()
         hands="Ayanmo Manopolas",
         lring="Jhakri Ring",
         rring="Snow Ring",
-        back="Sucello's Cape",
+        back="Sucellos's Cape",
         waist="Duelist's Belt",
         legs="Crimson Cuisses",
         feet="Ayanmo Gambieras",
