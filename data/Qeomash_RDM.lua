@@ -88,7 +88,7 @@ function init_gear_sets()
         --head="Wayfarer Circlet",
         lear="Loquacious Earring",
         body="Duelist's Tabard",
-        hands="Brego Gloves",
+        hands="Ayanmo Manopolas", --Haste+4%
         legs="Ayanmo Cosciales",
         lring="Weatherspoon Ring",
         waist="Dynamic Belt +1",

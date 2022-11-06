@@ -28,7 +28,7 @@ function init_gear_sets()
         hands="Amalric Gages", -- MAB+23, MBII+5
         lring="Weatherspoon Ring", --MAB+10
         rring="Acumen Ring", -- MAB+4
-        back="Prism Cape",
+        back="Izdubar Mantle", -- MAB+10
         waist="Aswang Sash", -- MAB+3
         legs="Wayfarer Slops",
         feet="Jhakri Pigaches +1", --MAB+36
@@ -52,7 +52,7 @@ function init_gear_sets()
     sets.resting = {
         main="Pluto's Staff",
         sub="Staff Strap",
-        body="Errant Houppelande",
+        body="Dalmatica",
 
     }
 
