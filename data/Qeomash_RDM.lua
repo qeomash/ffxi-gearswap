@@ -87,7 +87,7 @@ function init_gear_sets()
         head="Warlock's Chapeau +1",
         --head="Wayfarer Circlet",
         lear="Loquacious Earring",
-        body="Duelist's Tabard",
+        body="Vitiation Tabard",
         hands="Ayanmo Manopolas", --Haste+4%
         legs="Ayanmo Cosciales",
         lring="Weatherspoon Ring",
@@ -153,7 +153,7 @@ function init_gear_sets()
     --     back="Swith Cape +1",waist="Witful Belt",legs="Hagondes Pants",feet="Hagondes Sabots"}
         head="Warlock's Chapeau +1",
         lear="Loquacious Earring",
-        body="Duelist's Tabard",
+        body="Vitiation Tabard",
         hands="Brego Gloves",
         -- legs="Nashira Seraweels",
         waist="Paewr Belt",
@@ -185,7 +185,7 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {
         neck="Colossus's Torque", -- +7
         lear="Augmenting Earring", -- +3
-        body="Glamor Jupon", -- ench skill +3
+        body="Vitiation Tabard", -- +17
         hands="Duelist's Gloves", -- +15
         back="Sucellos's Cape", --duration+20%
         legs="Warlock's Tights +1", -- +15
@@ -212,7 +212,7 @@ function init_gear_sets()
         neck="Enfeebling Torque",
         lear="Moonshade Earring",
         rear="Magnetic Earring",
-        body="Warlock's Tabard +1",
+        body="Atrophy Tabard +1",
         hands="Jhakri Cuffs", --MAC+25
         lring="Balrahn's Ring",
         rring="Snow Ring",
@@ -228,7 +228,7 @@ function init_gear_sets()
             neck="Enfeebling Torque",
             lear="Moonshade Earring",
             rear="Magnetic Earring",
-            body="Warlock's Tabard +1",
+            body="Atrophy Tabard +1",
             hands="Jhakri Cuffs", --INT+18
             lring="Balrahn's Ring",
             rring="Perception Ring",
@@ -258,7 +258,7 @@ function init_gear_sets()
             neck="Enfeebling Torque",
             lear="Moonshade Earring",
             rear="Magnetic Earring",
-            body="Warlock's Tabard +1",
+            body="Atrophy Tabard +1",
             hands="Jhakri Cuffs", --MND+35
             lring="Balrahn's Ring",
             rring="Perception Ring",
@@ -302,7 +302,7 @@ function init_gear_sets()
         neck="Stoicheion Medal", -- MAB+8
         lear="Friomisi Earring", -- MAB+10
         rear="Hecate's Earring", -- MAB+6
-        body="Wayfarer Robe", -- MAB+6
+        body="Atrophy Tabard +1", -- MAB+10
         -- hands="Amalric Gages", -- MAB+23, MBII+5
         hands="Jhakri Cuffs", --MAB+25
         lring="Weatherspoon Ring", --MAB+10
@@ -369,8 +369,7 @@ function init_gear_sets()
         neck="Grandiose Chain",
         ear1="Antivenom Earring",
         ear2="Magnetic Earring",
-        body="Errant Houppelande",
-        hands="Wayfarer Cuffs",
+        body="Atrophy Tabard +1",
         waist="Duelist's Belt",
     }
 
@@ -387,7 +386,7 @@ function init_gear_sets()
         neck="Orochi Nodowa",
         lear="Moonshade Earring",
         rear="Magnetic Earring",
-        body="Dalmatica",
+        body="Atrophy Tabard +1",
         hands="Ayanmo Manopolas",
         lring="Jhakri Ring",
         rring="Snow Ring",
@@ -421,7 +420,7 @@ function init_gear_sets()
         main="Kebbie",
         range="Lamian kaman",
         head="Vitiation Chapeau +1",
-        body="Wayfarer Robe",
+        body="Atrophy Tabard +1",
         hands="Amalric Gages", -- MDT+3,MEv+37
         back="Lamia Mantle +1",
         ear1="Coral Earring",
