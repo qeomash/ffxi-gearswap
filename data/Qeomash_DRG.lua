@@ -17,7 +17,7 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Homestead Lance",
+        main="Rhomphaia",
         sub="Pole Grip",
         -- ranged="Lamiabane",
         ammo="Tiphia Sting",
@@ -32,7 +32,7 @@ function init_gear_sets()
         hands="Sulevia's Gauntlets +1",
         lring="Flamma Ring",
         rring="Rajas Ring",
-        back="Forager's Mantle",
+        back="Brigantia's Mantle",
         waist="Dynamic Belt +1",
         legs="Sulevia's Cuisses",
         feet="Gorney Sollerets +1", 
@@ -90,19 +90,10 @@ function init_gear_sets()
     sets.JumpSpecialGear = {
         feet="Drachen Geaves"
     }
-    sets.precast.JA.Jump = set_combine(sets.baseWS.Accuracy, {
-        -- head="Hecatomb Cap",
-        -- neck="Chivalrous Chain",
-        -- lear="Brutal Earring",
-        -- rear="Assault Earring",
-        -- body="Hecatomb Harness",
-        -- hands="Brego Gloves",
-        -- lring="Blood Ring",
-        -- rring="Rajas Ring",
-        back="Brigantia's Mantle",
-        -- waist="Wyrm Belt",
-        -- legs="Perle Brayettes",
-        -- feet="Aurum Sabatons",
+    sets.precast.JA.Jump = set_combine(
+        sets.baseWS.Accuracy,
+        {
+            back="Brigantia's Mantle",
     })
     -- }
     sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {
