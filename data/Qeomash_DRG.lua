@@ -24,18 +24,19 @@ function init_gear_sets()
     }
 
     sets.engaged = {
+        ammo="Hagneia Stone",
         head="Sulevia's Mask",
         neck="Ocachi Gorget",
         lear="Brutal Earring",
         rear="Assault Earring",
         body="Valorous Mail",
-        hands="Sulevia's Gauntlets +1",
+        hands="Sulevia's Gauntlets +2",
         lring="Flamma Ring",
         rring="Rajas Ring",
         back="Brigantia's Mantle",
         waist="Dynamic Belt +1",
-        legs="Sulevia's Cuisses",
-        feet="Flamma Gambieras +1", 
+        legs="Sulevia's Cuisses +2",
+        feet="Flamma Gambieras +2", 
     }
     sets.RelicAF = {
         head="Wyrm Armet",
@@ -54,13 +55,13 @@ function init_gear_sets()
         lear="Brutal Earring",
         rear="Assault Earring",
         body="Gorney Haubert +1",
-        hands="Sulevia's Gauntlets +1",
+        hands="Sulevia's Gauntlets +2",
         lring="Pyrosoul Ring",
         rring="Pyrosoul Ring",
         back="Forager's Mantle",
         waist="Warwolf Belt",
-        legs="Sulevia's Cuisses",
-        feet="Sulevia's Leggings", --WS+5%
+        legs="Sulevia's Cuisses +2",
+        feet="Sulevia's Leggings +2", --WS+7%
     }
     sets.baseWS.Accuracy = {
         head="Sulevia's Mask", --Acc+26
@@ -68,13 +69,13 @@ function init_gear_sets()
         lear="Brutal Earring",
         rear="Assault Earring",
         body="Sulevia's Platemail", -- Acc+28,SC+5
-        hands="Sulevia's Gauntlets +1", --Acc+37
+        hands="Sulevia's Gauntlets +2", --Acc+37
         lring="Blood Ring",
         rring="Flamma Ring",
         back="Forager's Mantle",
         waist="Wyrm Belt",
-        legs="Sulevia's Cuisses",
-        feet="Flamma Gambieras +1",
+        legs="Sulevia's Cuisses +2",
+        feet="Flamma Gambieras +2",
     }
 
     sets.precast.WS = sets.baseWS.Str
