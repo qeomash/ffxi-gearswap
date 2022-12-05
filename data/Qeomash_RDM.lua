@@ -84,6 +84,7 @@ function init_gear_sets()
     --     body="Vitivation Tabard",hands="Gendewitha Gages",ring1="Prolix Ring",
     --     back="Swith Cape +1",waist="Witful Belt",legs="Orvail Pants +1",feet="Chelona Boots +1"}
     sets.precast.FC = {
+        sub="Clerisy Strap", --FC+2%
         head="Warlock's Chapeau +1",
         lear="Loquacious Earring",
         body="Vitiation Tabard",
@@ -203,8 +204,8 @@ function init_gear_sets()
 
     sets.Enfeebling = {}
     sets.Enfeebling.Base = {
-        main="Homestead Wand",
-        sub="Genbu's Shield",
+        main="Grioavolr", --MAC+14
+        sub="Clerisy Strap", --MAC+10
         ammo="Kalboron Stone",
         head="Vitiation Chapeau +1",
         neck="Enfeebling Torque",
@@ -294,8 +295,8 @@ function init_gear_sets()
     --     body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Icesoul Ring",ring2="Acumen Ring",
     --     back="Toro Cape",waist=gear.ElementalObi,legs="Hagondes Pants",feet="Hagondes Sabots"}
     sets.midcast['Elemental Magic'] = {
-        main="Homestead Wand",
-        sub="Genbu's Shield",
+        main="Grioavolr", -- MAB+30
+        sub="Elan Strap", -- MAB+5
         head="Jhakri Coronal +1", -- MAB+38
         neck="Stoicheion Medal", -- MAB+8
         lear="Friomisi Earring", -- MAB+10
@@ -318,8 +319,8 @@ function init_gear_sets()
     --     body="Vanir Cotehardie",hands="Gendewitha Gages",ring1="Prolix Ring",ring2="Sangoma Ring",
     --     back="Refraction Cape",waist="Goading Belt",legs="Bokwus Slops",feet="Bokwus Boots"}
     sets.midcast['Dark Magic'] = {
-        main="Homestead Wand",
-        sub="Genbu's Shield",
+        main="Grioavolr",
+        sub="Clerisy Strap",
         head="Jhakri Coronal +1",
         neck="Aesir Torque",
         lear="Abyssal Earring",
