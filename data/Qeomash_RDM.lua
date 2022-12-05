@@ -85,7 +85,6 @@ function init_gear_sets()
     --     back="Swith Cape +1",waist="Witful Belt",legs="Orvail Pants +1",feet="Chelona Boots +1"}
     sets.precast.FC = {
         head="Warlock's Chapeau +1",
-        --head="Wayfarer Circlet",
         lear="Loquacious Earring",
         body="Vitiation Tabard",
         hands="Ayanmo Manopolas", --Haste+4%
@@ -104,14 +103,14 @@ function init_gear_sets()
         head="Ayanmo Zucchetto", -- STR+20
         neck="Chivalrous Chain",
         lear="Brutal Earring",
-        rear="Magnetic Earring",
+        -- rear="Magnetic Earring",
         body="Ayanmo Corazza",
-        hands="Jhakri Cuffs", --STR+10,Attack+25,WS+3%
+        hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         lring="Pyrosoul Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Warwolf Belt",
-        legs="Ayanmo Cosciales",
+        legs="Jhakri Slops", --Att+27
         feet="Jhakri Pigaches +1", -- STR+22
     }
     sets.baseWS.Mnd = {
@@ -120,12 +119,12 @@ function init_gear_sets()
         lear="Brutal Earring",
         rear="Geist Earring",
         body="Weatherspoon Robe +1", -- MND+34
-        hands="Jhakri Cuffs", --MND+35,Attack+25,WS+3%
+        hands="Jhakri Cuffs +2", --MND+35,Attack+43,WS+7%
         lring="Aqua Ring",
         rring="Aqua Ring",
         back="Swith Cape", --MND+5
         waist="Warwolf Belt",
-        legs="Weatherspoon Pants +1", -- +24
+        legs="Jhakri Slops", -- +26
         feet="Jhakri Pigaches +1", --MND+21
     }
     
@@ -155,7 +154,6 @@ function init_gear_sets()
         lear="Loquacious Earring",
         body="Vitiation Tabard",
         hands="Brego Gloves",
-        -- legs="Nashira Seraweels",
         waist="Paewr Belt",
         feet="Carmine Greaves",
     }
@@ -176,8 +174,8 @@ function init_gear_sets()
         rring="Aqua Ring",
         back="Swith Cape",
         waist="Duelist's Belt",
-        legs="Weatherspoon Pants +1",
-        feet="Weatherspoon Souliers +1",
+        legs="Jhakri Slops",
+        feet="Jhakri Pigaches +1",
     }
     sets.midcast.Curaga = sets.midcast.Cure
     --sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
@@ -213,13 +211,13 @@ function init_gear_sets()
         lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Atrophy Tabard +1",
-        hands="Jhakri Cuffs", --MAC+25
+        hands="Jhakri Cuffs +2", --MAC+25
         lring="Balrahn's Ring",
         rring="Snow Ring",
         back="Sucellos's Cape",
         waist="Demonry Sash",
-        legs="Nashira Seraweels", -- macc+3
-        feet="Wayfarer Clogs",
+        legs="Jhakri Slops", -- macc+27
+        feet="Jhakri Pigaches +1",
     }
     sets.Enfeebling.Int = {}
     sets.Enfeebling.Int.Hard = set_combine(sets.Enfeebling.Base,
@@ -229,26 +227,26 @@ function init_gear_sets()
             lear="Moonshade Earring",
             rear="Magnetic Earring",
             body="Atrophy Tabard +1",
-            hands="Jhakri Cuffs", --INT+18
+            hands="Jhakri Cuffs +2", --INT+36
             lring="Balrahn's Ring",
             rring="Perception Ring",
             back="Sucellos's Cape",
             waist="Demonry Sash",
-            legs="Nashira Seraweels",
-            feet="Wayfarer Clogs",
+            legs="Jhakri Slops", -- macc+27
+            feet="Jhakri Pigaches +1",
         }
     )
     sets.Enfeebling.Int.Soft = set_combine(sets.Enfeebling.Int.Hard,
         {
-            head="Weatherspoon Corona +1",
+            head="Jhakri Coronal +1",
             lear="Abyssal Earring",
             body="Weatherspoon Robe +1",
-            hands="Jhakri Cuffs", --INT+18
+            hands="Jhakri Cuffs +2", --INT+36
             lring="Snow Ring",
             rring="Snow Ring",
             back="Prism Cape",
-            legs="Weatherspoon Pants +1",
-            feet="Weatherspoon Souliers +1",
+            legs="Jhakri Slops", -- INT+44
+            feet="Jhakri Pigaches +1",
         }
     )
     sets.Enfeebling.Mnd = {}
@@ -259,13 +257,13 @@ function init_gear_sets()
             lear="Moonshade Earring",
             rear="Magnetic Earring",
             body="Atrophy Tabard +1",
-            hands="Jhakri Cuffs", --MND+35
+            hands="Jhakri Cuffs +2", --MND+35
             lring="Balrahn's Ring",
             rring="Perception Ring",
             back="Sucellos's Cape",
             waist="Demonry Sash",
-            legs="Nashira Seraweels",
-            feet="Weatherspoon Souliers +1",
+            legs="Jhakri Slops", -- macc+27,MND+26
+            feet="Jhakri Pigaches +1",
         }
     )
     sets.Enfeebling.Mnd.Soft = set_combine(sets.Enfeebling.Mnd.Hard,
@@ -273,11 +271,11 @@ function init_gear_sets()
             head="Vitiation Chapeau +1",
             lear="Geist Earring",
             body="Weatherspoon Robe +1",
-            hands="Jhakri Cuffs", --MND+35
+            hands="Jhakri Cuffs +2", --MND+35
             lring="Aqua Ring",
             rring="Aqua Ring",
             back="Swith Cape",
-            legs="Weatherspoon Pants +1",
+            legs="Jhakri Slops", -- MND+26
         }
     )
 
@@ -298,18 +296,18 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {
         main="Homestead Wand",
         sub="Genbu's Shield",
-        head="Wayfarer Circlet", -- MAB+5
+        head="Jhakri Coronal +1", -- MAB+38
         neck="Stoicheion Medal", -- MAB+8
         lear="Friomisi Earring", -- MAB+10
         rear="Hecate's Earring", -- MAB+6
         body="Atrophy Tabard +1", -- MAB+10
         -- hands="Amalric Gages", -- MAB+23, MBII+5
-        hands="Jhakri Cuffs", --MAB+25
+        hands="Jhakri Cuffs +2", --MAB+40
         lring="Weatherspoon Ring", --MAB+10
         rring="Acumen Ring", -- MAB+4
         back="Izdubar Mantle", -- MAB+10
         waist="Aswang Sash", -- MAB+3
-        legs="Wayfarer Slops",
+        legs="Jhakri Slops", -- MAB+27
         feet="Jhakri Pigaches +1", --MAB+36
     }
 
@@ -322,20 +320,20 @@ function init_gear_sets()
     sets.midcast['Dark Magic'] = {
         main="Homestead Wand",
         sub="Genbu's Shield",
-        head="Weatherspoon Corona +1",
+        head="Jhakri Coronal +1",
         neck="Aesir Torque",
         lear="Abyssal Earring",
         rear="Magnetic Earring",
         body="Glamor Jupon", -- Drk skill +3
         -- hands="Crimson Finger Gauntlets", --Drk skill +10
         -- hands="Amalric Gages", -- MAB+23, MBII+5, sure why not
-        hands="Jhakri Cuffs", --INT+28,MAB+25
+        hands="Jhakri Cuffs +2", --INT+36,MAB+40
         lring="Snow Ring",
         rring="Snow Ring",
         back="Prism Cape",
         waist="Demonry Sash",
-        legs="Wayfarer Slops",
-        feet="Wayfarer Clogs",
+        legs="Jhakri Slops",
+        feet="Jhakri Pigaches +1",
     }
 
     --sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {})
