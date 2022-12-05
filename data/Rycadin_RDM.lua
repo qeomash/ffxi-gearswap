@@ -49,7 +49,7 @@ function init_gear_sets()
     }
 
     sets.midcast['Elemental Magic'] = {
-        main="Tokko Staff",
+        main="Grioavolr",
         sub="Staff Strap",
         head="Jhakri Coronal",
         neck="Elemental Torque",
@@ -66,7 +66,7 @@ function init_gear_sets()
     }
 
     sets.midcast['Enhancing Magic'] = {
-        main="Tokko Staff",
+        main="Grioavolr",
         sub="Staff Strap",
         head="Carmine Mask",
         neck="Holy Phial",
@@ -84,7 +84,7 @@ function init_gear_sets()
 
     sets.Enfeebling = {}
     sets.Enfeebling.Int = {
-        main="Tokko Staff",
+        main="Grioavolr",
         sub="Staff Strap",
         head="Carmine Mask",
         neck="Enfeebling Torque",
@@ -100,7 +100,7 @@ function init_gear_sets()
         feet="Jhakri Pigaches",
     }
     sets.Enfeebling.Mnd = {
-        main="Tokko Staff",
+        main="Grioavolr",
         sub="Staff Strap",
         head="Carmine Mask",
         neck="Enfeebling Torque",
@@ -123,7 +123,7 @@ function init_gear_sets()
     sets.midcast['Dispel'] = sets.Enfeebling.Int
 
     sets.resting = {
-        main="Iridal Staff",
+        main="Grioavolr",
         sub="Staff Strap",
         head="Duelist's Chapeau",
         neck="Orochi Nodowa",
