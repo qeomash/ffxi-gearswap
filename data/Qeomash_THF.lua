@@ -17,7 +17,7 @@ function init_gear_sets()
 
     sets.mainweapons = {
         main="Homestead Dagger",
-        sub="Leisilonu",
+        sub="Tokko Knife",
         ranged="Lamiabane",
         -- ammo="Tiphia Sting",
     }
@@ -28,35 +28,35 @@ function init_gear_sets()
         ear1="Spike Earring",
         ear2="Brutal Earring",
         -- body="Scorpion Harness",
-        body="Wayfarer Robe",
+        body="Shneddick Tabard +1",
         hands="Meghanada Gloves",
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
         legs="Quiahuiz Trousers",
-        feet="Wayfarer Clogs",
+        feet="Shneddick Boots +1",
     }
     sets.idle = set_combine(sets.engaged, {
-
+        feet="Trotter Boots"
     })
 
     sets.baseWS = {}
     sets.baseWS.Str = {
         head="Felistris Mask",
-        body="Wayfarer Robe",
+        body="Shneddick Tabard +1",
         hands="Meghanada Gloves", -- STR+15
         ring1="Pyrosoul Ring",
         ring2="Rajas Ring",
-        feet="Wayfarer Clogs",
+        feet="Shneddick Boots +1",
     }
     sets.baseWS.Dex = {
         head="Felistris Mask",
-        body="Wayfarer Robe",
+        body="Shneddick Tabard +1",
         hands="Meghanada Gloves", --DEX+42
         ring1="Pyrosoul Ring",
         ring2="Rajas Ring",
-        feet="Wayfarer Clogs",
+        feet="Shneddick Boots +1",
     }
     sets.precast.WS = sets.baseWS.Str
 
@@ -78,6 +78,7 @@ function init_gear_sets()
         head="White Rarab Cap +1",
         hands="Assassin's Armlets",
     }
+    sets.precast.JA.Step = sets.TH
 
 end
 
