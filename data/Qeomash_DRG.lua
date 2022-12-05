@@ -18,9 +18,9 @@ function init_gear_sets()
 
     sets.mainweapons = {
         main="Rhomphaia",
-        sub="Pole Grip",
+        sub="Duplus Grip",
         -- ranged="Lamiabane",
-        ammo="Tiphia Sting",
+        ammo="Hagneia Stone",
     }
 
     sets.engaged = {
@@ -28,14 +28,14 @@ function init_gear_sets()
         neck="Ocachi Gorget",
         lear="Brutal Earring",
         rear="Assault Earring",
-        body="Gorney Haubert +1",
+        body="Valorous Mail",
         hands="Sulevia's Gauntlets +1",
         lring="Flamma Ring",
         rring="Rajas Ring",
         back="Brigantia's Mantle",
         waist="Dynamic Belt +1",
         legs="Sulevia's Cuisses",
-        feet="Gorney Sollerets +1", 
+        feet="Flamma Gambieras +1", 
     }
     sets.RelicAF = {
         head="Wyrm Armet",
@@ -56,11 +56,11 @@ function init_gear_sets()
         body="Gorney Haubert +1",
         hands="Sulevia's Gauntlets +1",
         lring="Pyrosoul Ring",
-        rring="Rajas Ring",
+        rring="Pyrosoul Ring",
         back="Forager's Mantle",
         waist="Warwolf Belt",
         legs="Sulevia's Cuisses",
-        feet="Sulevia's Leggings",
+        feet="Sulevia's Leggings", --WS+5%
     }
     sets.baseWS.Accuracy = {
         head="Sulevia's Mask", --Acc+26
@@ -74,11 +74,11 @@ function init_gear_sets()
         back="Forager's Mantle",
         waist="Wyrm Belt",
         legs="Sulevia's Cuisses",
-        feet="Sulevia's Leggings",
+        feet="Flamma Gambieras +1",
     }
 
     sets.precast.WS = sets.baseWS.Str
-    sets.precast.WS['Stardiver'] = set_combine(sets.baseWS.Str, {neck='Light Gorget'})
+    sets.precast.WS['Stardiver'] = set_combine(sets.baseWS.Str, {neck='Soil Gorget'})
     sets.precast.WS['Sonic Thrust'] = set_combine(sets.baseWS.Str, {neck='Light Gorget'})
     sets.precast.WS['Penta Thrust'] = set_combine(sets.baseWS.Accuracy, {})
     sets.precast.WS['Drakesbane'] = set_combine(sets.baseWS.Str, {
