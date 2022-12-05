@@ -479,12 +479,12 @@ function init_gear_sets()
         back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
 
     sets.meleeWeapons = {
-        main="Tokko Sword",
+        main="Claidheamh Soluis",
         sub="Genbu's Shield",
     }
     sets.dualWeapons = {
-        main="Tokko Sword",
-        sub="Camaraderie Blade",
+        main="Claidheamh Soluis",
+        sub="Ajja Sword",
         -- sub="Joyeuse",
     }
 

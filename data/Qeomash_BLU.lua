@@ -8,16 +8,20 @@ end
 function user_setup()
     enable('main','sub','ranged', 'ammo')
     select_default_macro_book()
-    -- send_command('wait 2;input /lockstyleset 10')
+    send_command('wait 2;input /lockstyleset 21')
     equip(sets.mainweapons)
 end
 
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Tokko Sword",
-        sub="Camaraderie Blade",
+        main="Claidheamh Soluis",
+        sub="Tokko Sword",
         ammo="Tiphia Sting",
+    }
+    sets.learningweapons = {
+        main="Wax Sword",
+        sub="Wax Sword",
     }
 
     sets.idle = {
