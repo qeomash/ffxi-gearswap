@@ -44,7 +44,7 @@ function init_gear_sets()
         hands="Jhakri Cuffs",
         back="Prism Cape",
         waist="Demonry Sash",
-        legs="Jhakri Slops",
+        legs="Carmine Cuisses",
         feet="Jhakri Pigaches +1",
     }
 
