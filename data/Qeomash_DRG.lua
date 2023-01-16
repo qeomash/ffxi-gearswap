@@ -10,7 +10,7 @@ end
 function user_setup()
     enable('main','sub','ranged', 'ammo')
     select_default_macro_book()
-    send_command('wait 2;input /lockstyleset 10')
+    send_command('wait 2;input /lockstyleset 11')
     equip(sets.mainweapons)
 end
 
@@ -25,7 +25,7 @@ function init_gear_sets()
 
     sets.engaged = {
         ammo="Hagneia Stone",
-        head="Sulevia's Mask",
+        head="Flamma Zucchetto +2",
         neck="Ocachi Gorget",
         lear="Brutal Earring",
         rear="Assault Earring",
@@ -34,7 +34,7 @@ function init_gear_sets()
         lring="Flamma Ring",
         rring="Rajas Ring",
         back="Brigantia's Mantle",
-        waist="Dynamic Belt +1",
+        waist="Ioskeha Belt",
         legs="Sulevia's Cuisses +2",
         feet="Flamma Gambieras +2", 
     }
@@ -50,7 +50,7 @@ function init_gear_sets()
 
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Gorney Morion +1", --STR+29
+        head="Flamma Zucchetto +2", --STR+36
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Assault Earring",
@@ -64,7 +64,7 @@ function init_gear_sets()
         feet="Sulevia's Leggings +2", --WS+7%
     }
     sets.baseWS.Accuracy = {
-        head="Sulevia's Mask", --Acc+26
+        head="Flamma Zucchetto +2", --Acc+44
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Assault Earring",
@@ -73,7 +73,7 @@ function init_gear_sets()
         lring="Blood Ring",
         rring="Flamma Ring",
         back="Forager's Mantle",
-        waist="Wyrm Belt",
+        waist="Ioskeha Belt", --ACC+12,DA+8%
         legs="Sulevia's Cuisses +2",
         feet="Flamma Gambieras +2",
     }
