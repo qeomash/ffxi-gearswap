@@ -16,8 +16,8 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Homestead Dagger",
-        sub="Tokko Knife",
+        main="Vanir Knife",
+        sub="Homestead Dagger",
         ranged="Lamiabane",
         -- ammo="Tiphia Sting",
     }
