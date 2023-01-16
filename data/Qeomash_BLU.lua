@@ -15,8 +15,8 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Claidheamh Soluis",
-        sub="Tokko Sword",
+        main="Kaja Sword",
+        sub="Claidheamh Soluis",
         ammo="Tiphia Sting",
     }
     sets.learningweapons = {
@@ -36,13 +36,13 @@ function init_gear_sets()
         neck="Ocachi Gorget",
         lear="Brutal Earring",
         rear="Magnetic Earring",
-        body="Ayanmo Corazza", --Haste+4%,DA+4%,Acc+28
-        hands="Ayanmo Manopolas", --Acc+25,Haste+4%
+        body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
+        hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Jhakri Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
-        legs="Ayanmo Cosciales",
+        legs="Ayanmo Cosciales +2",
         feet="Carmine Greaves", --haste+4%,STR+14,DA+3%
     }
 
@@ -51,13 +51,13 @@ function init_gear_sets()
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Magnetic Earring",
-        body="Ayanmo Corazza",
+        body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
         hands="Jhakri Cuffs", --STR+10,Attack+25,WS+3%
         lring="Pyrosoul Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Warwolf Belt",
-        legs="Ayanmo Cosciales",
+        legs="Ayanmo Cosciales +2",
         feet="Jhakri Pigaches +1", -- STR+22
     }
     sets.baseWS.Str = set_combine(sets.baseWS, {
