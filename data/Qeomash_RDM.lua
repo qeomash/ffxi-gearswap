@@ -60,6 +60,10 @@ function init_gear_sets()
     sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
 
 
+    sets.TH = {
+        head="White Rarab Cap +1",
+    }
+
     -- Precast Sets
     
     -- Precast sets to enhance JAs
@@ -300,6 +304,7 @@ function init_gear_sets()
     )
 
     sets.midcast['Enfeebling Magic'] = sets.Enfeebling.Base
+    sets.midcast['Dia'] = sets.TH
     sets.midcast['Dia III'] = sets.Enfeebling.Mnd.Soft
     sets.midcast['Silence'] = sets.Enfeebling.Mnd.Hard
     sets.midcast['Sleep'] = sets.Enfeebling.Int.Hard
@@ -316,6 +321,7 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {
         main="Grioavolr", -- MAB+30
         sub="Elan Strap", -- MAB+5
+        ammo="Kalboron Stone",
         head="Jhakri Coronal +1", -- MAB+38
         neck="Stoicheion Medal", -- MAB+8
         lear="Friomisi Earring", -- MAB+10
@@ -364,7 +370,6 @@ function init_gear_sets()
 
     -- Sets for special buff conditions on spells.
 
-    sets.midcast.EnhancingDuration = {hands="Atrophy Gloves +1",back="Estoqueur's Cape",feet="Estoqueur's Houseaux +2"}
         
     sets.buff.ComposureOther = {head="Estoqueur's Chappel +2",
         body="Estoqueur's Sayon +2",hands="Estoqueur's Gantherots +2",
@@ -518,7 +523,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
     if spell.skill == 'Enfeebling Magic' and state.Buff.Saboteur then
         equip(sets.buff.Saboteur)
     elseif spell.skill == 'Enhancing Magic' then
-        equip(sets.midcast.EnhancingDuration)
+        --equip(sets.midcast.EnhancingDuration)
         if buffactive.composure and spell.target.type == 'PLAYER' then
             equip(sets.buff.ComposureOther)
         end
