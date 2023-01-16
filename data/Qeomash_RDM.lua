@@ -88,8 +88,8 @@ function init_gear_sets()
         head="Warlock's Chapeau +1",
         lear="Loquacious Earring",
         body="Vitiation Tabard",
-        hands="Ayanmo Manopolas", --Haste+4%
-        legs="Ayanmo Cosciales",
+        hands="Ayanmo Manopolas +2", --Haste+4%
+        legs="Ayanmo Cosciales +2",
         lring="Weatherspoon Ring",
         waist="Dynamic Belt +1",
         back="Swith Cape",
@@ -105,7 +105,7 @@ function init_gear_sets()
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         -- rear="Magnetic Earring",
-        body="Ayanmo Corazza",
+        body="Ayanmo Corazza +2",
         hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         lring="Pyrosoul Ring",
         rring="Rajas Ring",
@@ -192,6 +192,25 @@ function init_gear_sets()
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
         -- body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
         -- back="Estoqueur's Cape",waist="Olympus Sash",legs="Atrophy Tights",feet="Estoqueur's Houseaux +2"}
+    sets.enspelldmg = set_combine(sets.midcast['Enhancing Magic'],
+        {
+            hands="Ayanmo Manopolas +2"
+        }
+    )
+    sets.midcast['Enfire'] = sets.enspelldmg
+    sets.midcast['Enfire II'] = sets.enspelldmg
+    sets.midcast['Enblizzard'] = sets.enspelldmg
+    sets.midcast['Enblizzard II'] = sets.enspelldmg
+    sets.midcast['Enaero'] = sets.enspelldmg
+    sets.midcast['Enaero II'] = sets.enspelldmg
+    sets.midcast['Enstone'] = sets.enspelldmg
+    sets.midcast['Enstone II'] = sets.enspelldmg
+    sets.midcast['Enthunder'] = sets.enspelldmg
+    sets.midcast['Enthunder II'] = sets.enspelldmg
+    sets.midcast['Enwater'] = sets.enspelldmg
+    sets.midcast['Enwater II'] = sets.enspelldmg
+
+    sets.midcast.EnhancingDuration = {hands="Atrophy Gloves +1",back="Estoqueur's Cape",feet="Estoqueur's Houseaux +2"}
 
     sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], {legs="Estoqueur's Fuseau +2"})
 
@@ -386,7 +405,7 @@ function init_gear_sets()
         lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Atrophy Tabard +1",
-        hands="Ayanmo Manopolas",
+        hands="Ayanmo Manopolas +2",
         lring="Jhakri Ring",
         rring="Snow Ring",
         back="Sucellos's Cape",
@@ -463,13 +482,13 @@ function init_gear_sets()
         neck="Ocachi Gorget",
         lear="Brutal Earring",
         rear="Magnetic Earring",
-        body="Ayanmo Corazza", --Haste+4%,DA+4%,Acc+28
-        hands="Ayanmo Manopolas", --Acc+25,Haste+4%
+        body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
+        hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Jhakri Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
-        legs="Ayanmo Cosciales",
+        legs="Ayanmo Cosciales +2",
         feet="Carmine Greaves", --haste+4%,STR+14,DA+3%
     }
     sets.engaged.Defense = {ammo="Demonry Stone",
@@ -478,12 +497,12 @@ function init_gear_sets()
         back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
 
     sets.meleeWeapons = {
-        main="Claidheamh Soluis",
+        main="Kaja Sword",
         sub="Genbu's Shield",
     }
     sets.dualWeapons = {
-        main="Claidheamh Soluis",
-        sub="Ajja Sword",
+        main="Kaja Sword",
+        sub="Claidheamh Soluis",
         -- sub="Joyeuse",
     }
 
