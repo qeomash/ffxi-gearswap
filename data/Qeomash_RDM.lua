@@ -91,7 +91,7 @@ function init_gear_sets()
         sub="Clerisy Strap", --FC+2%
         head="Atrophy Chapeau +1",
         lear="Loquacious Earring",
-        body="Vitiation Tabard",
+        body="Vitiation Tabard +1",
         hands="Ayanmo Manopolas +2", --Haste+4%
         legs="Ayanmo Cosciales +2",
         lring="Weatherspoon Ring",
@@ -157,7 +157,7 @@ function init_gear_sets()
     --     back="Swith Cape +1",waist="Witful Belt",legs="Hagondes Pants",feet="Hagondes Sabots"}
         head="Atrophy Chapeau +1",
         lear="Loquacious Earring",
-        body="Vitiation Tabard",
+        body="Vitiation Tabard +1",
         hands="Brego Gloves",
         waist="Paewr Belt",
         feet="Carmine Greaves +1",
@@ -188,7 +188,7 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {
         neck="Colossus's Torque", -- +7
         lear="Augmenting Earring", -- +3
-        body="Vitiation Tabard", -- +17
+        body="Vitiation Tabard +1", -- +19
         hands="Duelist's Gloves", -- +15
         back="Sucellos's Cape", --duration+20%
         legs="Atrophy Tights", -- +17
