@@ -506,11 +506,11 @@ function init_gear_sets()
         back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
 
     sets.meleeWeapons = {
-        main="Kaja Sword",
+        main="Naegling",
         sub="Genbu's Shield",
     }
     sets.dualWeapons = {
-        main="Kaja Sword",
+        main="Naegling",
         sub="Claidheamh Soluis",
         -- sub="Joyeuse",
     }

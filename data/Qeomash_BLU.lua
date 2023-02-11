@@ -15,7 +15,7 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Kaja Sword",
+        main="Naegling",
         sub="Claidheamh Soluis",
         ammo="Tiphia Sting",
     }
