@@ -191,6 +191,7 @@ function init_gear_sets()
         body="Vitiation Tabard +1", -- +19
         hands="Duelist's Gloves", -- +15
         back="Sucellos's Cape", --duration+20%
+        wasist="Olympus Sash", -- +5
         legs="Atrophy Tights", -- +17
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
@@ -368,7 +369,9 @@ function init_gear_sets()
 
     --sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {})
 
-    sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {ring1="Excelsis Ring"})
+    sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
+        head="Appetence Crown",
+        ring1="Excelsis Ring"})
     sets.midcast.Aspir = sets.midcast.Drain
 
 
@@ -488,7 +491,7 @@ function init_gear_sets()
 
         -- head="Vitiation Chapeau +1", --haste+6%,str+14
         head="Ayanmo Zucchetto",
-        neck="Ocachi Gorget",
+        neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Magnetic Earring",
         body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
@@ -514,6 +517,8 @@ function init_gear_sets()
         sub="Claidheamh Soluis",
         -- sub="Joyeuse",
     }
+
+    sets.precast.WS['Aeolian Edge'] = set_combine(sets.midcast['Elemental Magic'], {})
 
 end
 
