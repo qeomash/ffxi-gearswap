@@ -17,20 +17,21 @@ function init_gear_sets()
     sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
 
     sets.midcast['Elemental Magic'] = {
-        main="Homestead Staff",
-        sub="Staff Strap",
-        ammo="Pantom Tathlum",
-        head="Wayfarer Circlet", -- MAB+5
+        main="Grioavolr", -- MAB+30
+        sub="Elan Strap", -- MAB+5
+        ammo="Kalboron Stone",
+        head="Jhakri Coronal +1", -- MAB+38
         neck="Stoicheion Medal", -- MAB+8
-        ear1="Moldavite Earring",
-        ear2="Hecate's Earring",
-        body="Wayfarer Robe", -- MAB+6
-        hands="Amalric Gages", -- MAB+23, MBII+5
+        lear="Friomisi Earring", -- MAB+10
+        rear="Hecate's Earring", -- MAB+6
+        body="Jhakri Robe +2", -- MAB+43
+        -- hands="Amalric Gages", -- MAB+23, MBII+5
+        hands="Jhakri Cuffs +2", --MAB+40
         lring="Weatherspoon Ring", --MAB+10
         rring="Acumen Ring", -- MAB+4
         back="Izdubar Mantle", -- MAB+10
         waist="Aswang Sash", -- MAB+3
-        legs="Wayfarer Slops",
+        legs="Jhakri Slops", -- MAB+27
         feet="Jhakri Pigaches +1", --MAB+36
     }
     -- sets.midcast.Elemental = {
@@ -52,7 +53,7 @@ function init_gear_sets()
     sets.resting = {
         main="Pluto's Staff",
         sub="Staff Strap",
-        body="Dalmatica",
+        body="Jhakri Robe +2",
 
     }
 
@@ -63,7 +64,7 @@ function init_gear_sets()
         -- neck="Orochi Nodowa",
         lear="Moonshade Earring",
         rear="Magnetic Earring",
-        body="Dalmatica",
+        body="Jhakri Robe +2",
         legs="Tatsumaki Sitagoromo",
     }
     sets.engaged = sets.idle
@@ -76,6 +77,11 @@ function init_gear_sets()
         waist="Paewr Belt",
         back="Swith Cape",
     }
+    sets.midcast['Dark Magic'] = {}
+    sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
+        head="Appetence Crown",
+        ring1="Excelsis Ring"})
+    sets.midcast.Aspir = sets.midcast.Drain
 
 end
 
