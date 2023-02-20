@@ -94,7 +94,7 @@ function init_gear_sets()
     sets.precast.JA.Jump = set_combine(
         sets.baseWS.Accuracy,
         {
-            hands="Vishap Finger Gauntlets",
+            hands="Vishap Finger Gauntlets +1",
             back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
     })
     -- }
@@ -119,7 +119,7 @@ function init_gear_sets()
         legs="Vishap Brias",
     }
     sets.HealingBreath = set_combine(sets.WyvernHP, {
-        head="Wyrm Armet",
+        head="Wyrm Armet +2",
         -- ammo="Coiste Bodhar",
         -- head="Pteroslaver Armet +3",
         -- neck="Adad Amulet",
