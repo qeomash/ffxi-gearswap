@@ -26,14 +26,14 @@ function init_gear_sets()
     sets.engaged = {
         ammo="Hagneia Stone",
         head="Flamma Zucchetto +2",
-        neck="Ocachi Gorget",
+        neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Assault Earring",
         body="Valorous Mail",
         hands="Sulevia's Gauntlets +2",
         lring="Flamma Ring",
         rring="Rajas Ring",
-        back="Brigantia's Mantle",
+        back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
         waist="Ioskeha Belt",
         legs="Sulevia's Cuisses +2",
         feet="Flamma Gambieras +2", 
@@ -51,28 +51,28 @@ function init_gear_sets()
     sets.baseWS = {}
     sets.baseWS.Str = {
         head="Flamma Zucchetto +2", --STR+36
-        neck="Chivalrous Chain",
+        neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Assault Earring",
         body="Gorney Haubert +1",
         hands="Sulevia's Gauntlets +2",
         lring="Pyrosoul Ring",
         rring="Pyrosoul Ring",
-        back="Forager's Mantle",
-        waist="Warwolf Belt",
+        back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+        waist="Ioskeha Belt", --ACC+12,DA+8%
         legs="Sulevia's Cuisses +2",
         feet="Sulevia's Leggings +2", --WS+7%
     }
     sets.baseWS.Accuracy = {
         head="Flamma Zucchetto +2", --Acc+44
-        neck="Chivalrous Chain",
+        neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Assault Earring",
         body="Sulevia's Platemail", -- Acc+28,SC+5
         hands="Sulevia's Gauntlets +2", --Acc+37
         lring="Blood Ring",
         rring="Flamma Ring",
-        back="Forager's Mantle",
+        back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
         waist="Ioskeha Belt", --ACC+12,DA+8%
         legs="Sulevia's Cuisses +2",
         feet="Flamma Gambieras +2",
@@ -94,7 +94,8 @@ function init_gear_sets()
     sets.precast.JA.Jump = set_combine(
         sets.baseWS.Accuracy,
         {
-            back="Brigantia's Mantle",
+            hands="Vishap Finger Gauntlets",
+            back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
     })
     -- }
     sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {
