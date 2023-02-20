@@ -39,7 +39,7 @@ function init_gear_sets()
         feet="Flamma Gambieras +2", 
     }
     sets.RelicAF = {
-        head="Wyrm Armet",
+        head="Wyrm Armet +2",
         body="Wyrm Mail",
         hands="Wyrm Finger Gauntlets",
         legs="Wyrm Brais",
@@ -89,7 +89,7 @@ function init_gear_sets()
     sets.precast.JA.Angon = {ammo="Angon",hands="Pteroslaver Finger Gauntlets +2"}
     -- Jumps
     sets.JumpSpecialGear = {
-        feet="Drachen Geaves"
+        feet="Vishap Greaves"
     }
     sets.precast.JA.Jump = set_combine(
         sets.baseWS.Accuracy,
@@ -111,11 +111,11 @@ function init_gear_sets()
     
     -- Wyvern Breaths
     sets.WyvernHP = {
-        head="Drachen Armet",
+        head="Vishap Armet",
         neck="Chanoix's Gorget",
         body="Wyvern Mail",
         hands="Ostreger Mitts",
-        legs="Drachen Brais +1",
+        legs="Vishap Brias",
     }
     sets.HealingBreath = set_combine(sets.WyvernHP, {
         head="Wyrm Armet",
@@ -146,7 +146,7 @@ function init_gear_sets()
     sets.midcast.Breath = {
         --head="Vishap Armet +1",
         --ring1="Dreki Ring" })
-        head="Drachen Armet",
+        head="Vishap Armet",
     }
 
 end
