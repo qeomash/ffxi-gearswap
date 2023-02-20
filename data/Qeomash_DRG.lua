@@ -23,6 +23,12 @@ function init_gear_sets()
         ammo="Hagneia Stone",
     }
 
+    sets.TH = {
+        head="White Rarab Cap +1",
+    }
+
+    sets.midcast.RA = sets.TH
+
     sets.engaged = {
         ammo="Hagneia Stone",
         head="Flamma Zucchetto +2",
