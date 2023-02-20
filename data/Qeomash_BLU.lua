@@ -28,7 +28,7 @@ function init_gear_sets()
         head="Magus Keffiyeh",
         body="Mirage Jubbah",
         legs="Crimson Cuisses",
-        feet="Carmine Greaves", --haste+4%,STR+14,DA+3%
+        feet="Carmine Greaves +1", --haste+4%,STR+14,DA+4%
     }
 
     sets.engaged = {
@@ -43,7 +43,7 @@ function init_gear_sets()
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
         legs="Ayanmo Cosciales +2",
-        feet="Carmine Greaves", --haste+4%,STR+14,DA+3%
+        feet="Carmine Greaves +1", --haste+4%,STR+14,DA+4%
     }
 
     sets.baseWS = {
@@ -72,9 +72,9 @@ function init_gear_sets()
     sets.precast.FC = {
         lear="Loquacious Earring",
         back="Swith Cape",
-        legs="Ayanmo Cosciales",
+        legs="Ayanmo Cosciales +2",
         lring="Weatherspoon Ring",
-        feet="Carmine Greaves",
+        feet="Carmine Greaves +1", --FC+8%
     }
 end
 
