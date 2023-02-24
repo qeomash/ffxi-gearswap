@@ -59,6 +59,11 @@ function init_gear_sets()
     sets.ElementalStaves.Light = {main="Apollo's Staff", sub="Staff Strap"}
     sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
 
+    Sucellos = {}
+    Sucellos.WS = { name="Sucellos's Cape", augments={'Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+    Sucellos.DA = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
+    Sucellos.Enhancing = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
+    Sucellos.Enfeebling = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
 
     sets.TH = {
         head="White Rarab Cap +1",
@@ -113,7 +118,7 @@ function init_gear_sets()
         hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         lring="Pyrosoul Ring",
         rring="Rajas Ring",
-        back="Forager's Mantle",
+        back=Sucellos.WS,
         waist="Warwolf Belt",
         legs="Jhakri Slops", --Att+27
         feet="Jhakri Pigaches +1", -- STR+22
@@ -127,7 +132,7 @@ function init_gear_sets()
         hands="Jhakri Cuffs +2", --MND+35,Attack+43,WS+7%
         lring="Aqua Ring",
         rring="Aqua Ring",
-        back="Swith Cape", --MND+5
+        back=Sucellos.WS,
         waist="Warwolf Belt",
         legs="Jhakri Slops", -- +26
         feet="Jhakri Pigaches +1", --MND+21
@@ -190,7 +195,7 @@ function init_gear_sets()
         lear="Augmenting Earring", -- +3
         body="Vitiation Tabard +1", -- +19
         hands="Duelist's Gloves", -- +15
-        back="Sucellos's Cape", --duration+20%
+        back=Sucellos.Enhancing, --duration+20%
         wasist="Olympus Sash", -- +5
         legs="Atrophy Tights", -- +17
     }
@@ -498,7 +503,7 @@ function init_gear_sets()
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Jhakri Ring",
         rring="Rajas Ring",
-        back="Sucellos's Cape",
+        back=Sucellos.DA,
         waist="Dynamic Belt +1",
         legs="Ayanmo Cosciales +2",
         feet="Carmine Greaves +1", --haste+4%,STR+14,DA+3%
