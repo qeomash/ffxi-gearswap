@@ -110,7 +110,7 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Ayanmo Zucchetto", -- STR+20
+        head="Ayanmo Zucchetto +1", -- STR+20
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         -- rear="Magnetic Earring",
@@ -495,7 +495,7 @@ function init_gear_sets()
         -- back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
 
         -- head="Vitiation Chapeau +1", --haste+6%,str+14
-        head="Ayanmo Zucchetto",
+        head="Ayanmo Zucchetto +1",
         neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Magnetic Earring",

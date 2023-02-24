@@ -32,7 +32,7 @@ function init_gear_sets()
     }
 
     sets.engaged = {
-        head="Ayanmo Zucchetto",
+        head="Ayanmo Zucchetto +1",
         neck="Ocachi Gorget",
         lear="Brutal Earring",
         rear="Magnetic Earring",
@@ -47,7 +47,7 @@ function init_gear_sets()
     }
 
     sets.baseWS = {
-        head="Ayanmo Zucchetto", -- STR+20
+        head="Ayanmo Zucchetto +1", -- STR+20
         neck="Chivalrous Chain",
         lear="Brutal Earring",
         rear="Magnetic Earring",
