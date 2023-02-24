@@ -180,7 +180,7 @@ function init_gear_sets()
         rear="Magnetic Earring",
         body="Heka's Kalasiris",
         hands="Weatherspoon Cuffs +1", --CP+9%
-        lring="Aqua Ring",
+        lring="Lebeche Ring", --CP+3%
         rring="Aqua Ring",
         back="Swith Cape",
         waist="Duelist's Belt",
