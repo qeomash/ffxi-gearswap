@@ -140,7 +140,6 @@ function init_gear_sets()
     }
     
     sets.precast.WS = sets.baseWS.Str
-    sets.precast.WS['Death Blossom'] = set_combine(sets.baseWS.Mnd, {})
         -- head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         -- body="Atrophy Tabard +2",hands="Yaoyotl Gloves",ring1="Rajas Ring",ring2="K'ayres Ring",
         -- back="Atheling Mantle",waist="Caudata Belt",legs="Hagondes Pants",feet="Hagondes Sabots"}
@@ -525,7 +524,12 @@ function init_gear_sets()
         -- sub="Joyeuse",
     }
 
-    sets.precast.WS['Aeolian Edge'] = set_combine(sets.midcast['Elemental Magic'], {})
+    sets.precast.WS['Aeolian Edge'] = set_combine(sets.midcast['Elemental Magic'], {
+        back=Sucellos.WS,
+    })
+    sets.precast.WS['Death Blossom'] = set_combine(sets.midcast['Elemental Magic'], {
+        back=Sucellos.WS,
+    })
 
 end
 
