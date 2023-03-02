@@ -23,19 +23,19 @@ function init_gear_sets()
     }
 
     sets.engaged = {
-        head="Felistris Mask",
+        head="Mummu Bonnet",
         neck="Ocachi Gorget",
         ear1="Spike Earring",
         ear2="Brutal Earring",
         -- body="Scorpion Harness",
-        body="Shneddick Tabard +1",
+        body="Mummu Jacket",
         hands="Meghanada Gloves",
-        lring="Blood Ring",
+        lring="Mummu Ring",
         rring="Rajas Ring",
-        back="Forager's Mantle",
+        back="Canny Cape",
         waist="Dynamic Belt +1",
-        legs="Quiahuiz Trousers",
-        feet="Shneddick Boots +1",
+        legs="Mummu Kecks",
+        feet="Mummu Gamash. +1",
     }
     sets.idle = set_combine(sets.engaged, {
         feet="Trotter Boots"
@@ -44,7 +44,7 @@ function init_gear_sets()
     sets.baseWS = {}
     sets.baseWS.Str = {
         head="Felistris Mask",
-        body="Shneddick Tabard +1",
+        body="Meghanada Cuirie",
         hands="Meghanada Gloves", -- STR+15
         ring1="Pyrosoul Ring",
         ring2="Rajas Ring",
@@ -52,7 +52,7 @@ function init_gear_sets()
     }
     sets.baseWS.Dex = {
         head="Felistris Mask",
-        body="Shneddick Tabard +1",
+        body="Meghanada Cuirie",
         hands="Meghanada Gloves", --DEX+42
         ring1="Pyrosoul Ring",
         ring2="Rajas Ring",
