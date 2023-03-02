@@ -24,7 +24,7 @@ function init_gear_sets()
 
     sets.engaged = {
         head="Mummu Bonnet",
-        neck="Ocachi Gorget",
+        neck="Asperity Necklace",
         ear1="Spike Earring",
         ear2="Brutal Earring",
         -- body="Scorpion Harness",
@@ -48,7 +48,7 @@ function init_gear_sets()
         hands="Meghanada Gloves", -- STR+15
         ring1="Pyrosoul Ring",
         ring2="Rajas Ring",
-        feet="Shneddick Boots +1",
+        feet="Mummu Gamash. +1",
     }
     sets.baseWS.Dex = {
         head="Felistris Mask",
@@ -56,7 +56,7 @@ function init_gear_sets()
         hands="Meghanada Gloves", --DEX+42
         ring1="Pyrosoul Ring",
         ring2="Rajas Ring",
-        feet="Shneddick Boots +1",
+        feet="Mummu Gamash. +1",
     }
     sets.precast.WS = sets.baseWS.Str
 
