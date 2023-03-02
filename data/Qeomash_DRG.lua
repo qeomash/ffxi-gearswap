@@ -60,7 +60,8 @@ function init_gear_sets()
         neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Assault Earring",
-        body="Gorney Haubert +1",
+        -- body="Gorney Haubert +1",
+        body="Vishap Mail +2",
         hands="Sulevia's Gauntlets +2",
         lring="Pyrosoul Ring",
         rring="Pyrosoul Ring",
@@ -74,7 +75,7 @@ function init_gear_sets()
         neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Assault Earring",
-        body="Sulevia's Platemail", -- Acc+28,SC+5
+        body="Vishap Mail +2", --Acc+47
         hands="Sulevia's Gauntlets +2", --Acc+37
         lring="Blood Ring",
         rring="Flamma Ring",
@@ -101,14 +102,18 @@ function init_gear_sets()
         sets.baseWS.Accuracy,
         {
             hands="Vishap Finger Gauntlets +1",
+            body="Vishap Mail +2",
             back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
-    })
+        }
+    )
     -- }
     sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {
-        legs="Wyrm Brias",
+        -- legs="Wyrm Brias",
+        legs="Vishap Brais",
     })
-    sets.precast.JA['Soul Jump'] = set_combine(sets.precast.JA.Jump, {})
-    -- body="Vishap Mail +2",
+    sets.precast.JA['Soul Jump'] = set_combine(sets.precast.JA.Jump, {
+        body="Vishap Mail +2",
+    })
     sets.precast.JA['Spirit Jump'] = set_combine(sets.precast.JA.Jump, {})
     sets.precast.JA['Super Jump'] = sets.precast.JA.Jump
 
