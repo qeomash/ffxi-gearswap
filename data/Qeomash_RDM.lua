@@ -93,14 +93,15 @@ function init_gear_sets()
     --     body="Vitivation Tabard",hands="Gendewitha Gages",ring1="Prolix Ring",
     --     back="Swith Cape +1",waist="Witful Belt",legs="Orvail Pants +1",feet="Chelona Boots +1"}
     sets.precast.FC = {
-        sub="Clerisy Strap", --FC+2%
+        main="Colada",
+        -- sub="Clerisy Strap", --FC+2%
         head="Atrophy Chapeau +1",
         lear="Loquacious Earring",
         body="Vitiation Tabard +1",
         hands="Ayanmo Manopolas +2", --Haste+4%
         legs="Ayanmo Cosciales +2",
         lring="Weatherspoon Ring",
-        waist="Dynamic Belt +1",
+        waist="Embla Sash", --FC+5%
         back="Swith Cape",
         feet="Carmine Greaves +1",
     }
@@ -164,7 +165,7 @@ function init_gear_sets()
         lear="Loquacious Earring",
         body="Vitiation Tabard +1",
         hands="Brego Gloves",
-        waist="Paewr Belt",
+        waist="Embla Sash", --FC+5%
         feet="Carmine Greaves +1",
     }
     -- sets.midcast.Cure = {main="Tamaxchi",sub="Genbu's Shield",
@@ -193,10 +194,12 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {
         neck="Colossus's Torque", -- +7
         lear="Augmenting Earring", -- +3
+        rear="Mimir Earring", -- +10
         body="Vitiation Tabard +1", -- +19
         hands="Duelist's Gloves", -- +15
         back=Sucellos.Enhancing, --duration+20%
-        wasist="Olympus Sash", -- +5
+        -- waist="Olympus Sash", -- +5
+        waist="Embla Sash", --duration+10%
         legs="Atrophy Tights", -- +17
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
@@ -242,8 +245,8 @@ function init_gear_sets()
         ammo="Kalboron Stone",
         head="Vitiation Chapeau +1",
         neck="Enfeebling Torque",
-        lear="Moonshade Earring",
-        rear="Magnetic Earring",
+        lear="Vor Earring", -- +10
+        rear="Snotra Earring", -- duration+10%
         body="Atrophy Tabard +2",
         hands="Jhakri Cuffs +2", --MAC+25
         lring="Balrahn's Ring",
@@ -258,8 +261,8 @@ function init_gear_sets()
         {
             head="Vitiation Chapeau +1",
             neck="Enfeebling Torque",
-            lear="Moonshade Earring",
-            rear="Magnetic Earring",
+            lear="Vor Earring",-- +10
+            rear="Snotra Earring", -- duration+10%
             body="Atrophy Tabard +2",
             hands="Jhakri Cuffs +2", --INT+36
             lring="Balrahn's Ring",
@@ -273,7 +276,6 @@ function init_gear_sets()
     sets.Enfeebling.Int.Soft = set_combine(sets.Enfeebling.Int.Hard,
         {
             head="Jhakri Coronal +1",
-            lear="Abyssal Earring",
             body="Jhakri Robe +2",
             hands="Jhakri Cuffs +2", --INT+36
             lring="Snow Ring",
@@ -288,8 +290,8 @@ function init_gear_sets()
         {
             head="Vitiation Chapeau +1",
             neck="Enfeebling Torque",
-            lear="Moonshade Earring",
-            rear="Magnetic Earring",
+            lear="Vor Earring",-- +10
+            rear="Snotra Earring", -- duration+10%
             body="Atrophy Tabard +2",
             hands="Jhakri Cuffs +2", --MND+35
             lring="Balrahn's Ring",
