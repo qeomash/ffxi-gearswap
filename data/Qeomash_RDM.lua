@@ -61,7 +61,7 @@ function init_gear_sets()
 
     Sucellos = {}
     Sucellos.WS = { name="Sucellos's Cape", augments={'Accuracy+20 Attack+20','Weapon skill damage +10%',}}
-    Sucellos.DA = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
+    Sucellos.DA = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10','Damage taken-2%',}}
     Sucellos.Enhancing = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
     Sucellos.Enfeebling = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
 
