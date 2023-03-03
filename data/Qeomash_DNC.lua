@@ -38,8 +38,7 @@ function init_gear_sets()
         feet="Mummu Gamash. +1",
     }
     sets.idle = set_combine(sets.engaged, {
-        feet="Tandava Crackows", -- TODO!
-        -- feet="Trotter Boots"
+        feet="Tandava Crackows",
     })
 
     sets.baseWS = {}
