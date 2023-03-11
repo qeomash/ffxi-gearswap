@@ -27,8 +27,7 @@ function init_gear_sets()
         neck="Asperity Necklace",
         ear1="Spike Earring",
         ear2="Brutal Earring",
-        -- body="Scorpion Harness",
-        body="Mummu Jacket",
+        body="Ashera Harness",
         hands="Meghanada Gloves",
         lring="Mummu Ring",
         rring="Rajas Ring",
@@ -44,7 +43,7 @@ function init_gear_sets()
     sets.baseWS = {}
     sets.baseWS.Str = {
         head="Felistris Mask",
-        body="Meghanada Cuirie",
+        body="Ashera Harness",
         hands="Meghanada Gloves", -- STR+15
         ring1="Pyrosoul Ring",
         ring2="Rajas Ring",
