@@ -210,6 +210,7 @@ function init_gear_sets()
     --     back="Umbra Cape",waist="Witful Belt",legs="Nares Trews",feet="Herald's Gaiters"}
     sets.idle = {
         main="Tefnut Wand",
+        sub="Genbu's Shield",
         ammo="Incantor Stone",
         head="Inyanga Tiara +1",
         neck="Orochi Nodowa",

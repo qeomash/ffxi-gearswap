@@ -42,6 +42,7 @@ function init_gear_sets()
 
     sets.idle = {
         main="Emissary", --Refresh+1
+        sub="Genbu's Shield",
         head="Duelist's Chapeau",
         neck="Orochi Nodowa",
         ear1="Moldavite Earring",
@@ -164,6 +165,7 @@ function init_gear_sets()
 
     sets.engaged = {
             main="Ajja Sword",
+            sub="Genbu's Shield",
             head="Aya. Zucchetto +1",
             body="Ayanmo Corazza +1",
             hands="Aya. Manopolas +1",
