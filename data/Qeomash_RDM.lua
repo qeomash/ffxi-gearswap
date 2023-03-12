@@ -496,6 +496,7 @@ function init_gear_sets()
         -- back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
 
         -- head="Vitiation Chapeau +1", --haste+6%,str+14
+        ammo="Aurgelmir Orb",
         head="Ayanmo Zucchetto +1",
         neck="Asperity Necklace",
         lear="Brutal Earring",
@@ -652,7 +653,7 @@ function enable_vermelee()
         equip(sets.meleeWeapons)
     end
     sets.engaged = sets.Myengaged
-    disable('main','sub','ranged', 'ammo')
+    disable('main','sub','ranged')
     send_command('wait 2;input /lockstyleset 1')
     windower.add_to_chat(64,'RDM Melee: ON')
 end

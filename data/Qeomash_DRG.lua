@@ -20,7 +20,7 @@ function init_gear_sets()
         main="Rhomphaia",
         sub="Duplus Grip",
         -- ranged="Lamiabane",
-        ammo="Hagneia Stone",
+        ammo="Aurgelmir Orb",
     }
 
     sets.TH = {
@@ -30,7 +30,7 @@ function init_gear_sets()
     sets.midcast.RA = sets.TH
 
     sets.engaged = {
-        ammo="Hagneia Stone",
+        ammo="Aurgelmir Orb",
         head="Flamma Zucchetto +2",
         neck="Asperity Necklace",
         lear="Brutal Earring",
