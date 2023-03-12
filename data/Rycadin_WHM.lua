@@ -60,7 +60,7 @@ function init_gear_sets()
     sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC['Healing Magic'],
-        {main="Tefnut Wand"}
+        {main="Tamaxchi"}
     )
         -- {main="Tamaxchi",sub="Genbu's Shield",ammo="Impatiens"})
     sets.precast.FC.Curaga = sets.precast.FC.Cure
@@ -114,7 +114,7 @@ function init_gear_sets()
     --     body="Vanir Cotehardie",hands="Theophany Mitts",ring1="Prolix Ring",ring2="Sirona's Ring",
     --     back="Tuilha Cape",waist=gear.ElementalObi,legs="Orison Pantaloons +2",feet="Piety Duckbills +1"}
     sets.midcast.Cure = {
-        main="Tefnut Wand", -- CP+15%
+        main="Tamaxchi", -- CP+15%
         body="Chelona Blazer", --CP+5%
         hands="Inyanga Dastanas +1",
         legs="Inyanga Shalwar +1",
@@ -209,7 +209,7 @@ function init_gear_sets()
     --     body="Gendewitha Bliaut",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Paguroidea Ring",
     --     back="Umbra Cape",waist="Witful Belt",legs="Nares Trews",feet="Herald's Gaiters"}
     sets.idle = {
-        main="Tefnut Wand",
+        main="Tamaxchi",
         sub="Genbu's Shield",
         ammo="Incantor Stone",
         head="Inyanga Tiara +1",
@@ -224,7 +224,7 @@ function init_gear_sets()
         back="Alaunus's Cape",
         waist="Demonry Sash",
         legs="Inyanga Shalwar +1",
-        feet="Inyan. Crackows +1",
+        feet="Herald's Gaiters",
     }
 
     -- sets.idle.PDT = {main="Bolelabunga", sub="Genbu's Shield",ammo="Incantor Stone",
