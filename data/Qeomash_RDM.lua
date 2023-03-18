@@ -172,8 +172,8 @@ function init_gear_sets()
     --     body="Gendewitha Bliaut",hands="Bokwus Gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
     --     back="Swith Cape +1",waist="Witful Belt",legs="Atrophy Tights",feet="Hagondes Sabots"}
     sets.midcast.Cure = {
-        main="Apollo's Staff",
-        sub="Staff Strap",
+        main="Tamaxchi",
+        sub="Genbu's Shield",
         head="Vitiation Chapeau +1",
         neck="Colossus's Torque",
         lear="Moonshade Earring",
