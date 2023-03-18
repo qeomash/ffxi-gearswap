@@ -35,7 +35,7 @@ function init_gear_sets()
         head="Ayanmo Zucchetto +1",
         neck="Ocachi Gorget",
         lear="Brutal Earring",
-        rear="Magnetic Earring",
+        rear="Suppanomimi",
         body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Jhakri Ring",
@@ -50,7 +50,7 @@ function init_gear_sets()
         head="Ayanmo Zucchetto +1", -- STR+20
         neck="Chivalrous Chain",
         lear="Brutal Earring",
-        rear="Magnetic Earring",
+        rear="Suppanomimi",
         body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
         hands="Jhakri Cuffs", --STR+10,Attack+25,WS+3%
         lring="Pyrosoul Ring",

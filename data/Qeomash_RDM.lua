@@ -359,7 +359,7 @@ function init_gear_sets()
         sub="Clerisy Strap",
         head="Jhakri Coronal +1",
         neck="Aesir Torque",
-        lear="Abyssal Earring",
+        -- lear="Abyssal Earring",
         rear="Magnetic Earring",
         body="Glamor Jupon", -- Drk skill +3
         -- hands="Crimson Finger Gauntlets", --Drk skill +10
@@ -500,7 +500,7 @@ function init_gear_sets()
         head="Ayanmo Zucchetto +1",
         neck="Asperity Necklace",
         lear="Brutal Earring",
-        rear="Magnetic Earring",
+        rear="Suppanomimi",
         body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Jhakri Ring",

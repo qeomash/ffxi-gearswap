@@ -25,7 +25,7 @@ function init_gear_sets()
     sets.engaged = {
         head="Mummu Bonnet",
         neck="Asperity Necklace",
-        ear1="Spike Earring",
+        ear1="Suppanomimi",
         ear2="Brutal Earring",
         body="Ashera Harness",
         hands="Meghanada Gloves",
