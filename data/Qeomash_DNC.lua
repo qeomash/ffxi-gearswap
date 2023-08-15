@@ -23,7 +23,7 @@ function init_gear_sets()
     }
 
     sets.engaged = {
-        head="Mummu Bonnet",
+        head="Malignance Chapeau",
         neck="Asperity Necklace",
         ear1="Suppanomimi",
         ear2="Brutal Earring",
@@ -50,7 +50,7 @@ function init_gear_sets()
         feet="Mummu Gamash. +1",
     }
     sets.baseWS.Dex = {
-        head="Felistris Mask",
+        head="Malignance Chapeau",
         body="Meghanada Cuirie",
         hands="Meghanada Gloves", --DEX+42
         ring1="Pyrosoul Ring",

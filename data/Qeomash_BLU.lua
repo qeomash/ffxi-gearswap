@@ -32,7 +32,7 @@ function init_gear_sets()
     }
 
     sets.engaged = {
-        head="Ayanmo Zucchetto +1",
+        head="Malignance Chapeau",
         neck="Ocachi Gorget",
         lear="Brutal Earring",
         rear="Suppanomimi",

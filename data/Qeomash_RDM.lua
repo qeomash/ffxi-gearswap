@@ -507,7 +507,7 @@ function init_gear_sets()
 
         -- head="Vitiation Chapeau +1", --haste+6%,str+14
         ammo="Aurgelmir Orb",
-        head="Ayanmo Zucchetto +1",
+        head="Malignance Chapeau",
         neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Suppanomimi",
