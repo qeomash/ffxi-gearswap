@@ -65,6 +65,9 @@ function init_gear_sets()
     Sucellos.Enhancing = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
     Sucellos.Enfeebling = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
 
+    Ghostfyre = {}
+    Ghostfyre.Duration = { name="Ghostfyre Cape", augments={'Enfb.mag. skill +4','Enha.mag. skill +2','Mag. Acc.+2','Enh. Mag. eff. dur. +17',}}
+
     sets.TH = {
         head="White Rarab Cap +1",
     }
@@ -182,7 +185,7 @@ function init_gear_sets()
         hands="Weatherspoon Cuffs +1", --CP+9%
         lring="Lebeche Ring", --CP+3%
         rring="Aqua Ring",
-        back="Swith Cape",
+        back=Ghostfyre.Duration, --CP+6%
         waist="Duelist's Belt",
         legs="Atrophy Tights", --CP+9%
         feet="Jhakri Pigaches +1",
@@ -206,7 +209,8 @@ function init_gear_sets()
         -- back="Estoqueur's Cape",waist="Olympus Sash",legs="Atrophy Tights",feet="Estoqueur's Houseaux +2"}
     sets.enspelldmg = set_combine(sets.midcast['Enhancing Magic'],
         {
-            hands="Ayanmo Manopolas +2"
+            hands="Ayanmo Manopolas +2", -- +17
+            back=Ghostfyre.Duration, -- +5
         }
     )
     sets.midcast['Enfire'] = sets.enspelldmg
