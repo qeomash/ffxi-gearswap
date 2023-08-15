@@ -198,7 +198,7 @@ function init_gear_sets()
         lear="Augmenting Earring", -- +3
         rear="Mimir Earring", -- +10
         body="Vitiation Tabard +1", -- +19
-        hands="Duelist's Gloves", -- +15
+        hands="Vitiation Gloves +1", -- +20,duration+
         back=Sucellos.Enhancing, --duration+20%
         -- waist="Olympus Sash", -- +5
         waist="Embla Sash", --duration+10%
@@ -226,7 +226,11 @@ function init_gear_sets()
     sets.midcast['Enwater'] = sets.enspelldmg
     sets.midcast['Enwater II'] = sets.enspelldmg
 
-    sets.midcast.EnhancingDuration = {hands="Atrophy Gloves +1",back="Estoqueur's Cape",feet="Estoqueur's Houseaux +2"}
+    sets.midcast.EnhancingDuration = {
+        hands="Atrophy Gloves +1",
+        -- back="Estoqueur's Cape", -- 10%
+        back=Sucellos.Enhancing, --duration+20%
+        feet="Estoqueur's Houseaux +2"}
 
     sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration, {
         body="Atrophy Tabard +2", -- Refresh+1
@@ -247,7 +251,7 @@ function init_gear_sets()
         sub="Clerisy Strap", --MAC+10
         ammo="Kalboron Stone",
         head="Vitiation Chapeau +1",
-        neck="Enfeebling Torque",
+        neck="Duelist's Torque +1", -- macc+25,enf ef+7
         lear="Vor Earring", -- +10
         rear="Snotra Earring", -- duration+10%
         body="Atrophy Tabard +2",
@@ -263,7 +267,7 @@ function init_gear_sets()
     sets.Enfeebling.Int.Hard = set_combine(sets.Enfeebling.Base,
         {
             head="Vitiation Chapeau +1",
-            neck="Enfeebling Torque",
+            neck="Duelist's Torque +1", -- macc+25,enf ef+7
             lear="Vor Earring",-- +10
             rear="Snotra Earring", -- duration+10%
             body="Atrophy Tabard +2",
@@ -292,7 +296,7 @@ function init_gear_sets()
     sets.Enfeebling.Mnd.Hard = set_combine(sets.Enfeebling.Base,
         {
             head="Vitiation Chapeau +1",
-            neck="Enfeebling Torque",
+            neck="Duelist's Torque +1", -- macc+25,enf ef+7
             lear="Vor Earring",-- +10
             rear="Snotra Earring", -- duration+10%
             body="Atrophy Tabard +2",
@@ -325,7 +329,9 @@ function init_gear_sets()
     sets.midcast['Sleep'] = sets.Enfeebling.Int.Hard
     sets.midcast['Sleep II'] = sets.Enfeebling.Int.Hard
     sets.midcast['Sleepga'] = sets.Enfeebling.Int.Hard
-    sets.midcast['Dispel'] = sets.Enfeebling.Int.Hard
+    sets.midcast['Dispel'] = set_combine(sets.Enfeebling.Int.Hard, {
+        neck="Duelist's Torque +1", -- dispel +1
+    })
 
     -- sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
     
