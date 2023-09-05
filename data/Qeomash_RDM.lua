@@ -231,7 +231,8 @@ function init_gear_sets()
         hands="Atrophy Gloves +1",
         -- back="Estoqueur's Cape", -- 10%
         back=Sucellos.Enhancing, --duration+20%
-        feet="Estoqueur's Houseaux +2"}
+        -- feet="Estoqueur's Houseaux +2"
+    }
 
     sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration, {
         body="Atrophy Tabard +2", -- Refresh+1
@@ -395,9 +396,16 @@ function init_gear_sets()
     -- Sets for special buff conditions on spells.
 
         
-    sets.buff.ComposureOther = {head="Estoqueur's Chappel +2",
-        body="Estoqueur's Sayon +2",hands="Estoqueur's Gantherots +2",
-        legs="Estoqueur's Fuseau +2",feet="Estoqueur's Houseaux +2"}
+    -- sets.buff.ComposureOther = {head="Estoqueur's Chappel +2",
+    --     body="Estoqueur's Sayon +2",hands="Estoqueur's Gantherots +2",
+    --     legs="Estoqueur's Fuseau +2",feet="Estoqueur's Houseaux +2"}
+    sets.buff.ComposureOther = {
+        head="Lethargy Chappel",
+        body="Lethargy Sayon",
+        hands="Lethargy Gantherots",
+        legs="Lethargy Fuseau",
+        feet="Lethargy Houseaux",
+    }
 
     sets.buff.Saboteur = {hands="Estoqueur's Gantherots +2"}
     
@@ -555,8 +563,8 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
     if spell.skill == 'Enfeebling Magic' and state.Buff.Saboteur then
         equip(sets.buff.Saboteur)
     elseif spell.skill == 'Enhancing Magic' then
-        --equip(sets.midcast.EnhancingDuration)
         if buffactive.composure and spell.target.type == 'PLAYER' then
+            equip(sets.midcast.EnhancingDuration)
             equip(sets.buff.ComposureOther)
         end
     elseif spellMap == 'Cure' and spell.target.type == 'SELF' then
