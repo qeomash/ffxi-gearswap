@@ -134,7 +134,7 @@ function init_gear_sets()
         rear="Geist Earring",
         body="Jhakri Robe +2", -- MND+32
         hands="Jhakri Cuffs +2", --MND+35,Attack+43,WS+7%
-        lring="Aqua Ring",
+        lring="Stikini Ring",
         rring="Aqua Ring",
         back=Sucellos.WS,
         waist="Warwolf Belt",
@@ -184,7 +184,7 @@ function init_gear_sets()
         body="Heka's Kalasiris",
         hands="Weatherspoon Cuffs +1", --CP+9%
         lring="Lebeche Ring", --CP+3%
-        rring="Aqua Ring",
+        rring="Stikini Ring",
         back=Ghostfyre.Duration, --CP+6%
         waist="Duelist's Belt",
         legs="Atrophy Tights", --CP+9%
@@ -203,6 +203,7 @@ function init_gear_sets()
         -- waist="Olympus Sash", -- +5
         waist="Embla Sash", --duration+10%
         legs="Atrophy Tights", -- +17
+        rring="Stikini Ring", -- +5
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
         -- body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
@@ -256,8 +257,8 @@ function init_gear_sets()
         rear="Snotra Earring", -- duration+10%
         body="Atrophy Tabard +2",
         hands="Jhakri Cuffs +2", --MAC+25
-        lring="Balrahn's Ring",
-        rring="Snow Ring",
+        lring="Balrahn's Ring", --MAC+4
+        rring="Stikini Ring", --sk+5 MAC+8
         back="Sucellos's Cape",
         waist="Demonry Sash",
         legs="Jhakri Slops", -- macc+27
@@ -272,8 +273,8 @@ function init_gear_sets()
             rear="Snotra Earring", -- duration+10%
             body="Atrophy Tabard +2",
             hands="Jhakri Cuffs +2", --INT+36
-            lring="Balrahn's Ring",
-            rring="Perception Ring",
+            lring="Perception Ring",
+            rring="Stikini Ring", --sk+5 MAC+8
             back="Sucellos's Cape",
             waist="Demonry Sash",
             legs="Jhakri Slops", -- macc+27
@@ -301,8 +302,8 @@ function init_gear_sets()
             rear="Snotra Earring", -- duration+10%
             body="Atrophy Tabard +2",
             hands="Jhakri Cuffs +2", --MND+35
-            lring="Balrahn's Ring",
-            rring="Perception Ring",
+            lring="Perception Ring",
+            rring="Stikini Ring", --sk+5 MAC+8
             back="Sucellos's Cape",
             waist="Demonry Sash",
             legs="Jhakri Slops", -- macc+27,MND+26
@@ -376,7 +377,7 @@ function init_gear_sets()
         -- hands="Amalric Gages", -- MAB+23, MBII+5, sure why not
         hands="Jhakri Cuffs +2", --INT+36,MAB+40
         lring="Snow Ring",
-        rring="Snow Ring",
+        rring="Stikini Ring", --sk+5 MAC+8
         back="Prism Cape",
         waist="Demonry Sash",
         legs="Jhakri Slops",
@@ -435,7 +436,7 @@ function init_gear_sets()
         body="Jhakri Robe +2", -- Refresh+4
         hands="Ayanmo Manopolas +2",
         lring="Jhakri Ring",
-        rring="Snow Ring",
+        rring="Stikini Ring",
         back="Sucellos's Cape",
         waist="Duelist's Belt",
         legs="Crimson Cuisses",
