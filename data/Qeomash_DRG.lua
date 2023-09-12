@@ -34,7 +34,7 @@ function init_gear_sets()
         head="Flamma Zucchetto +2",
         neck="Asperity Necklace",
         lear="Brutal Earring",
-        rear="Assault Earring",
+        rear="Steelflash Earring",
         body="Valorous Mail",
         hands="Sulevia's Gauntlets +2",
         lring="Flamma Ring",
@@ -59,7 +59,7 @@ function init_gear_sets()
         head="Flamma Zucchetto +2", --STR+36
         neck="Asperity Necklace",
         lear="Brutal Earring",
-        rear="Assault Earring",
+        rear="Steelflash Earring",
         -- body="Gorney Haubert +1",
         body="Vishap Mail +2",
         hands="Sulevia's Gauntlets +2",
@@ -74,7 +74,7 @@ function init_gear_sets()
         head="Flamma Zucchetto +2", --Acc+44
         neck="Asperity Necklace",
         lear="Brutal Earring",
-        rear="Assault Earring",
+        rear="Steelflash Earring",
         body="Vishap Mail +2", --Acc+47
         hands="Sulevia's Gauntlets +2", --Acc+37
         lring="Blood Ring",
