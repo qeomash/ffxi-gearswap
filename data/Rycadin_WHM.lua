@@ -211,8 +211,8 @@ function init_gear_sets()
     sets.idle = {
         main="Tamaxchi",
         sub="Genbu's Shield",
-        ammo="Incantor Stone",
-        head="Inyanga Tiara +1",
+        ammo="Homiliary",
+        head="Inyanga Tiara +2",
         neck="Orochi Nodowa",
         ear1="Abyssal Earring",
         ear2="Antivenom Earring",

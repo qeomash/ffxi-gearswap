@@ -437,6 +437,7 @@ function init_gear_sets()
     sets.AutoRefreshIdle = {
         main={ name="Colada", augments={'"Refresh"+2','STR+7','Mag. Acc.+17','"Mag.Atk.Bns."+7',}},
         sub="Genbu's Shield",
+        ammo="Homiliary",
         head="Vitiation Chapeau +1",
         neck="Orochi Nodowa",
         lear="Moonshade Earring",

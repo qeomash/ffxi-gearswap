@@ -43,6 +43,7 @@ function init_gear_sets()
     sets.idle = {
         main="Emissary", --Refresh+1
         sub="Genbu's Shield",
+        ammo="Homiliary",
         head="Duelist's Chapeau",
         neck="Orochi Nodowa",
         ear1="Moldavite Earring",
