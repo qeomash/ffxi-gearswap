@@ -17,7 +17,7 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Rhomphaia",
+        main="Geirrothr",
         sub="Duplus Grip",
         -- ranged="Lamiabane",
         ammo="Aurgelmir Orb",
