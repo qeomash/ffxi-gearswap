@@ -81,7 +81,7 @@ function init_gear_sets()
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
         head="Atrophy Chapeau +1",
-        body="Atrophy Tabard +2",hands="Yaoyotl Gloves",
+        body="Atrophy Tabard +3",hands="Yaoyotl Gloves",
         back="Refraction Cape",legs="Hagondes Pants",feet="Hagondes Sabots"}
         
     -- Don't need any special gear for Healing Waltz.
@@ -235,7 +235,7 @@ function init_gear_sets()
     }
 
     sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration, {
-        body="Atrophy Tabard +2", -- Refresh+1
+        body="Atrophy Tabard +3", -- Refresh+2
         -- legs="Estoqueur's Fuseau +2"
         }
     )
@@ -256,7 +256,7 @@ function init_gear_sets()
         neck="Duelist's Torque +1", -- macc+25,enf ef+7
         lear="Vor Earring", -- +10
         rear="Snotra Earring", -- duration+10%
-        body="Atrophy Tabard +2",
+        body="Atrophy Tabard +3",
         hands="Jhakri Cuffs +2", --MAC+25
         lring="Balrahn's Ring", --MAC+4
         rring="Stikini Ring", --sk+5 MAC+8
@@ -272,7 +272,7 @@ function init_gear_sets()
             neck="Duelist's Torque +1", -- macc+25,enf ef+7
             lear="Vor Earring",-- +10
             rear="Snotra Earring", -- duration+10%
-            body="Atrophy Tabard +2",
+            body="Atrophy Tabard +3",
             hands="Jhakri Cuffs +2", --INT+36
             lring="Perception Ring",
             rring="Stikini Ring", --sk+5 MAC+8
@@ -301,7 +301,7 @@ function init_gear_sets()
             neck="Duelist's Torque +1", -- macc+25,enf ef+7
             lear="Vor Earring",-- +10
             rear="Snotra Earring", -- duration+10%
-            body="Atrophy Tabard +2",
+            body="Atrophy Tabard +3",
             hands="Jhakri Cuffs +2", --MND+35
             lring="Perception Ring",
             rring="Stikini Ring", --sk+5 MAC+8
@@ -475,7 +475,7 @@ function init_gear_sets()
         main="Kebbie",
         range="Lamian kaman",
         head="Vitiation Chapeau +1",
-        body="Atrophy Tabard +2",
+        body="Atrophy Tabard +3",
         hands="Amalric Gages", -- MDT+3,MEv+37
         back="Lamia Mantle +1",
         ear1="Coral Earring",
@@ -531,7 +531,7 @@ function init_gear_sets()
     }
     sets.engaged.Defense = {ammo="Demonry Stone",
         head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Atrophy Tabard +2",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
+        body="Atrophy Tabard +3",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
         back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
 
     sets.meleeWeapons = {
