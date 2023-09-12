@@ -104,6 +104,7 @@ function init_gear_sets()
             hands="Vishap Finger Gauntlets +1",
             body="Vishap Mail +2",
             back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+            feet="Ostro Greaves",
         }
     )
     -- }
