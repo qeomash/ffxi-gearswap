@@ -670,12 +670,14 @@ end
 
 function enable_vermelee()
     is_meleeing = true
+    enable('main','sub','ranged', 'ammo')
     if player.sub_job == 'NIN' then
         equip(sets.dualWeapons)
     else
         equip(sets.meleeWeapons)
     end
     sets.engaged = sets.Myengaged
+    equip(sets.engaged)
     disable('main','sub','ranged')
     send_command('wait 2;input /lockstyleset 1')
     windower.add_to_chat(64,'RDM Melee: ON')
