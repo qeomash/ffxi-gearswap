@@ -195,6 +195,7 @@ function init_gear_sets()
     --sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
 
     sets.midcast['Enhancing Magic'] = {
+        main={ name="Colada", augments={'Enh. Mag. eff. dur. +2','STR+4','"Mag.Atk.Bns."+8',}},
         neck="Colossus's Torque", -- +7
         lear="Augmenting Earring", -- +3
         rear="Mimir Earring", -- +10
