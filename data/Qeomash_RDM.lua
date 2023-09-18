@@ -115,7 +115,7 @@ function init_gear_sets()
     sets.baseWS = {}
     sets.baseWS.Str = {
         head="Ayanmo Zucchetto +1", -- STR+20
-        neck="Chivalrous Chain",
+        neck="Asperity Necklace",
         lear="Brutal Earring",
         -- rear="Magnetic Earring",
         body="Ayanmo Corazza +2",
@@ -129,7 +129,7 @@ function init_gear_sets()
     }
     sets.baseWS.Mnd = {
         head="Vitiation Chapeau +1", -- MND+32
-        neck="Chivalrous Chain",
+        neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Geist Earring",
         body="Jhakri Robe +2", -- MND+32
@@ -258,7 +258,7 @@ function init_gear_sets()
         rear="Snotra Earring", -- duration+10%
         body="Atrophy Tabard +3",
         hands="Jhakri Cuffs +2", --MAC+25
-        lring="Balrahn's Ring", --MAC+4
+        lring="Stikini Ring", --sk+5 MAC+8
         rring="Stikini Ring", --sk+5 MAC+8
         back="Sucellos's Cape",
         waist="Demonry Sash",
@@ -274,7 +274,7 @@ function init_gear_sets()
             rear="Snotra Earring", -- duration+10%
             body="Atrophy Tabard +3",
             hands="Jhakri Cuffs +2", --INT+36
-            lring="Perception Ring",
+            lring="Stikini Ring", --sk+5 MAC+8
             rring="Stikini Ring", --sk+5 MAC+8
             back="Sucellos's Cape",
             waist="Demonry Sash",
@@ -439,7 +439,7 @@ function init_gear_sets()
         sub="Genbu's Shield",
         ammo="Homiliary",
         head="Vitiation Chapeau +1",
-        neck="Orochi Nodowa",
+        neck="Lissome Necklace", --Regen+1
         lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Jhakri Robe +2", -- Refresh+4
@@ -447,7 +447,7 @@ function init_gear_sets()
         lring="Jhakri Ring",
         rring="Stikini Ring",
         back="Sucellos's Cape",
-        waist="Duelist's Belt",
+        waist="Flume Belt",
         legs="Crimson Cuisses",
         feet="Ayanmo Gambieras",
     }

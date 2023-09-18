@@ -74,7 +74,7 @@ function init_gear_sets()
         lear="Loquacious Earring",
         legs="Ayanmo Cosciales",
         lring="Weatherspoon Ring",
-        waist="Paewr Belt",
+        waist="Embla Sash", --FC+5%
         back="Swith Cape",
     }
     sets.midcast['Dark Magic'] = {}

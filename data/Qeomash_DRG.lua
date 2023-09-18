@@ -52,7 +52,10 @@ function init_gear_sets()
         feet="Wyrm Greaves",
     }
 
-    sets.idle = set_combine(sets.engaged, {legs="Crimson Cuisses"})
+    sets.idle = set_combine(sets.engaged, {
+        legs="Crimson Cuisses",
+        waist="Flume Belt",
+    })
 
     sets.baseWS = {}
     sets.baseWS.Str = {

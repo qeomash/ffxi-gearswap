@@ -17,7 +17,7 @@ function init_gear_sets()
     sets.mainweapons = {
         main="Naegling",
         sub="Claidheamh Soluis",
-        ammo="Tiphia Sting",
+        ammo="Aurgelmir Orb",
     }
     sets.learningweapons = {
         main="Wax Sword",
@@ -33,7 +33,7 @@ function init_gear_sets()
 
     sets.engaged = {
         head="Malignance Chapeau",
-        neck="Ocachi Gorget",
+        neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Suppanomimi",
         body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
