@@ -109,6 +109,7 @@ function init_gear_sets()
         feet="Carmine Greaves +1",
     }
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
+    sets.precast['Enfeebling Magic'] = set_combine(sets.precast.FC, {head="Lethargy Chappel +1"})
        
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
@@ -199,11 +200,13 @@ function init_gear_sets()
         rear="Mimir Earring", -- +10
         body="Vitiation Tabard +1", -- +19
         hands="Vitiation Gloves +1", -- +20,duration+
+        lring="Stikini Ring", -- +5
+        rring="Stikini Ring", -- +5
         back=Sucellos.Enhancing, --duration+20%
         -- waist="Olympus Sash", -- +5
         waist="Embla Sash", --duration+10%
         legs="Atrophy Tights", -- +17
-        rring="Stikini Ring", -- +5
+        feet="Lethagry Houseaux +1" --+25,Dur+30%
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
         -- body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
@@ -400,11 +403,11 @@ function init_gear_sets()
     --     body="Estoqueur's Sayon +2",hands="Estoqueur's Gantherots +2",
     --     legs="Estoqueur's Fuseau +2",feet="Estoqueur's Houseaux +2"}
     sets.buff.ComposureOther = {
-        head="Lethargy Chappel",
+        head="Lethargy Chappel +1",
         body="Lethargy Sayon",
         hands="Lethargy Gantherots",
         legs="Lethargy Fuseau",
-        feet="Lethargy Houseaux",
+        feet="Lethargy Houseaux +1",
     }
 
     sets.buff.Saboteur = {hands="Estoqueur's Gantherots +2"}
