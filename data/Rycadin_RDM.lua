@@ -23,7 +23,7 @@ function init_gear_sets()
     sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
 
     sets.melee = {
-        main="Verdun",
+        main="Naegling",
     }
     sets.casting = {
         main="Iridal Staff",
