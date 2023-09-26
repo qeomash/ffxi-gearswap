@@ -59,6 +59,29 @@ function init_gear_sets()
     sets.ElementalStaves.Light = {main="Apollo's Staff", sub="Staff Strap"}
     sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
 
+    sets.Artifact = {
+        head="Atrophy Chapeau +1",
+        body="Atrophy Tabard +3",
+        hands="Atrophy Gloves +1",
+        legs="Atrophy Tights",
+        feet="Atrophy Boots +1",
+    }
+    sets.Relic = {
+        head="Vitiation Chapeau +1",
+        body="Vitiation Tabard +1",
+        hands="Vitiation Gloves +1",
+        legs="Vitiation Tights",
+        feet="Vitiation Boots",
+    }
+    sets.Empyrean = {
+        head="Lethargy Chappel +1",
+        body="Lethargy Sayon",
+        hands="Lethargy Gantherots",
+        legs="Lethargy Fuseau +1",
+        feet="Lethargy Houseaux +1",
+    }
+    -- sets.Empyrean.Legs =
+
     Sucellos = {}
     Sucellos.WS = { name="Sucellos's Cape", augments={'Accuracy+20 Attack+20','Weapon skill damage +10%',}}
     Sucellos.DA = { name="Sucellos's Cape", augments={'DEX+1','Accuracy+20 Attack+20','Accuracy+3','"Dbl.Atk."+10','Damage taken-5%',}}
@@ -80,8 +103,8 @@ function init_gear_sets()
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
-        head="Atrophy Chapeau +1",
-        body="Atrophy Tabard +3",hands="Yaoyotl Gloves",
+        head=sets.Artifact.head,
+        body=sets.Artifact.body,hands="Yaoyotl Gloves",
         back="Refraction Cape",legs="Hagondes Pants",feet="Hagondes Sabots"}
 
     -- Don't need any special gear for Healing Waltz.
@@ -98,9 +121,9 @@ function init_gear_sets()
     sets.precast.FC = {
         main="Colada",
         -- sub="Clerisy Strap", --FC+2%
-        head="Atrophy Chapeau +1",
+        head=sets.Artifact.head,
         lear="Loquacious Earring",
-        body="Vitiation Tabard +1",
+        body=sets.Relic.body,
         hands="Ayanmo Manopolas +2", --Haste+4%
         legs="Ayanmo Cosciales +2",
         lring="Weatherspoon Ring",
@@ -109,7 +132,7 @@ function init_gear_sets()
         feet="Carmine Greaves +1",
     }
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
-    sets.precast['Enfeebling Magic'] = set_combine(sets.precast.FC, {head="Lethargy Chappel +1"})
+    sets.precast['Enfeebling Magic'] = set_combine(sets.precast.FC, {head=sets.Empyrean.head})
 
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
@@ -130,7 +153,7 @@ function init_gear_sets()
         feet="Jhakri Pigaches +1", -- STR+22
     }
     sets.baseWS.Mnd = {
-        head="Vitiation Chapeau +1", -- MND+32
+        head=sets.Relic.head, -- MND+32
         neck="Asperity Necklace",
         lear="Brutal Earring",
         rear="Moonshade Earring", -- TPBonus+250
@@ -162,12 +185,12 @@ function init_gear_sets()
     -- Midcast Sets
 
     sets.midcast.FastRecast = {
-    --     head="Atrophy Chapeau +1",ear2="Loquacious Earring",
+    --     head=sets.Artifact.head,ear2="Loquacious Earring",
     --     body="Vitivation Tabard",hands="Gendewitha Gages",ring1="Prolix Ring",
     --     back="Swith Cape +1",waist="Witful Belt",legs="Hagondes Pants",feet="Hagondes Sabots"}
-        head="Atrophy Chapeau +1",
+        head=sets.Artifact.head,
         lear="Loquacious Earring",
-        body="Vitiation Tabard +1",
+        body=sets.Relic.body,
         hands="Brego Gloves",
         waist="Embla Sash", --FC+5%
         feet="Carmine Greaves +1",
@@ -179,7 +202,7 @@ function init_gear_sets()
     sets.midcast.Cure = {
         main="Tamaxchi",
         sub="Genbu's Shield",
-        head="Vitiation Chapeau +1",
+        head=sets.Relic.head,
         neck="Colossus's Torque",
         -- lear="Moonshade Earring",
         rear="Magnetic Earring",
@@ -189,7 +212,7 @@ function init_gear_sets()
         rring="Stikini Ring",
         back=Ghostfyre.Duration, --CP+6%
         waist="Duelist's Belt",
-        legs="Atrophy Tights", --CP+9%
+        legs=sets.Artifact.legs, --CP+9%
         feet="Jhakri Pigaches +1",
     }
     sets.midcast.Curaga = sets.midcast.Cure
@@ -200,14 +223,14 @@ function init_gear_sets()
         neck="Colossus's Torque", -- +7
         lear="Augmenting Earring", -- +3
         rear="Mimir Earring", -- +10
-        body="Vitiation Tabard +1", -- +19
-        hands="Vitiation Gloves +1", -- +20,duration+
+        body=sets.Relic.body, -- +19
+        hands=sets.Relic.hands, -- +20,duration+
         lring="Stikini Ring", -- +5
         rring="Stikini Ring", -- +5
         back=Sucellos.Enhancing, --duration+20%
         -- waist="Olympus Sash", -- +5
         waist="Embla Sash", --duration+10%
-        legs="Atrophy Tights", -- +17
+        legs=sets.Artifact.legs, -- +17
         feet="Lethagry Houseaux +1" --+25,Dur+30%
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
@@ -233,15 +256,15 @@ function init_gear_sets()
     sets.midcast['Enwater II'] = sets.enspelldmg
 
     sets.midcast.EnhancingDuration = {
-        hands="Atrophy Gloves +1",
+        hands=sets.Artifact.hands,
         -- back="Estoqueur's Cape", -- 10%
         back=Sucellos.Enhancing, --duration+20%
         -- feet="Estoqueur's Houseaux +2"
     }
 
     sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration, {
-        body="Atrophy Tabard +3", -- Refresh+2
-        -- legs="Estoqueur's Fuseau +2"
+        body=sets.Artifact.body, -- Refresh+2
+        legs=sets.Empyrean.legs, -- Refresh+2
         }
     )
 
@@ -257,11 +280,11 @@ function init_gear_sets()
         main="Grioavolr", --MAC+14
         sub="Clerisy Strap", --MAC+10
         ammo="Kalboron Stone",
-        head="Vitiation Chapeau +1",
+        head=sets.Relic.head,
         neck="Duelist's Torque +1", -- macc+25,enf ef+7
         lear="Vor Earring", -- +10
         rear="Snotra Earring", -- duration+10%
-        body="Atrophy Tabard +3",
+        body=sets.Artifact.body,
         hands="Jhakri Cuffs +2", --MAC+25
         lring="Stikini Ring", --sk+5 MAC+8
         rring="Stikini Ring", --sk+5 MAC+8
@@ -273,11 +296,11 @@ function init_gear_sets()
     sets.Enfeebling.Int = {}
     sets.Enfeebling.Int.Hard = set_combine(sets.Enfeebling.Base,
         {
-            head="Vitiation Chapeau +1",
+            head=sets.Relic.head,
             neck="Duelist's Torque +1", -- macc+25,enf ef+7
             lear="Vor Earring",-- +10
             rear="Snotra Earring", -- duration+10%
-            body="Atrophy Tabard +3",
+            body=sets.Artifact.body,
             hands="Jhakri Cuffs +2", --INT+36
             lring="Stikini Ring", --sk+5 MAC+8
             rring="Stikini Ring", --sk+5 MAC+8
@@ -302,11 +325,11 @@ function init_gear_sets()
     sets.Enfeebling.Mnd = {}
     sets.Enfeebling.Mnd.Hard = set_combine(sets.Enfeebling.Base,
         {
-            head="Vitiation Chapeau +1",
+            head=sets.Relic.head,
             neck="Duelist's Torque +1", -- macc+25,enf ef+7
             lear="Vor Earring",-- +10
             rear="Snotra Earring", -- duration+10%
-            body="Atrophy Tabard +3",
+            body=sets.Artifact.body,
             hands="Jhakri Cuffs +2", --MND+35
             lring="Perception Ring",
             rring="Stikini Ring", --sk+5 MAC+8
@@ -318,7 +341,7 @@ function init_gear_sets()
     )
     sets.Enfeebling.Mnd.Soft = set_combine(sets.Enfeebling.Mnd.Hard,
         {
-            head="Vitiation Chapeau +1",
+            head=sets.Relic.head,
             lear="Geist Earring",
             body="Jhakri Robe +2",
             hands="Jhakri Cuffs +2", --MND+35
@@ -405,11 +428,11 @@ function init_gear_sets()
     --     body="Estoqueur's Sayon +2",hands="Estoqueur's Gantherots +2",
     --     legs="Estoqueur's Fuseau +2",feet="Estoqueur's Houseaux +2"}
     sets.buff.ComposureOther = {
-        head="Leth. Chappel +1",
-        body="Lethargy Sayon",
-        hands="Lethargy Gantherots",
-        legs="Lethargy Fuseau",
-        feet="Leth. Houseaux +1",
+        head=sets.Empyrean.head,
+        body=sets.Empyrean.body,
+        hands=sets.Empyrean.hands,
+        legs=sets.Empyrean.legs,
+        feet=sets.Empyrean.feet,
     }
 
     sets.buff.Saboteur = {hands="Estoqueur's Gantherots +2"}
@@ -425,7 +448,7 @@ function init_gear_sets()
     sets.resting = {
         main="Pluto's Staff",
         sub="Staff Strap",
-        head="Vitiation Chapeau +1",
+        head=sets.Relic.head,
         neck="Grandiose Chain",
         ear1="Antivenom Earring",
         ear2="Magnetic Earring",
@@ -443,7 +466,7 @@ function init_gear_sets()
         main={ name="Colada", augments={'"Refresh"+2','STR+7','Mag. Acc.+17','"Mag.Atk.Bns."+7',}},
         sub="Genbu's Shield",
         ammo="Homiliary",
-        head="Vitiation Chapeau +1",
+        head=sets.Relic.head,
         neck="Lissome Necklace", --Regen+1
         body="Jhakri Robe +2", -- Refresh+4
         hands="Ayanmo Manopolas +2",
@@ -478,8 +501,8 @@ function init_gear_sets()
     sets.idle.MDT = {
         main="Kebbie",
         range="Lamian kaman",
-        head="Vitiation Chapeau +1",
-        body="Atrophy Tabard +3",
+        head=sets.Relic.head,
+        body=sets.Artifact.body,
         hands="Amalric Gages", -- MDT+3,MEv+37
         back="Lamia Mantle +1",
         ear1="Coral Earring",
