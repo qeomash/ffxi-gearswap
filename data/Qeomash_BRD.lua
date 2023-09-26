@@ -146,7 +146,7 @@ function midcast(spell)
     else
         equip(sets.midcast.Base)
     end
-    
+
     if sets.precast.JA[spell.english] then equip(sets.precast.JA[spell.english]) end
 end
 

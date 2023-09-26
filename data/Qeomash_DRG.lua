@@ -42,7 +42,7 @@ function init_gear_sets()
         back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
         waist="Ioskeha Belt",
         legs="Sulevia's Cuisses +2",
-        feet="Flamma Gambieras +2", 
+        feet="Flamma Gambieras +2",
     }
     sets.RelicAF = {
         head="Wyrm Armet +2",
@@ -124,7 +124,7 @@ function init_gear_sets()
     sets.precast.JA['Call Wyvern'] = {
         body="Wyrm Mail"
     }
-    
+
     -- Wyvern Breaths
     sets.WyvernHP = {
         head="Vishap Armet",
@@ -151,8 +151,8 @@ function init_gear_sets()
 
     sets.precast.FC = {
         -- ammo="Impatiens",
-        -- head="Cizin Helm +1", 
-        ear2="Loquacious Earring", 
+        -- head="Cizin Helm +1",
+        ear2="Loquacious Earring",
         legs="Homam Cosciales",
         -- hands="Leyline Gloves",
         -- legs="Limbo Trousers",

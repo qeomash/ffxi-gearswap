@@ -28,7 +28,7 @@ function init_gear_sets()
     sets.casting = {
         main="Iridal Staff",
     }
-   
+
     sets.precast.FC = {
         head="Warlock's Chapeau",
         neck="Holy Phial",
@@ -165,7 +165,7 @@ function init_gear_sets()
     }
 
     sets.engaged = {
-            main="Ajja Sword",
+            main="Naegling",
             sub="Genbu's Shield",
             head="Aya. Zucchetto +1",
             body="Ayanmo Corazza +1",

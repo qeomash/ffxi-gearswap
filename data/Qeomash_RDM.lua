@@ -28,7 +28,7 @@ function user_setup()
     state.IdleMode:options('Normal', 'PDT', 'MDT')
 
     gear.default.obi_waist = "Sekhmet Corset"
-    
+
     select_default_macro_book()
     send_command('wait 2;input /lockstyleset 2')
 end
@@ -73,22 +73,22 @@ function init_gear_sets()
     }
 
     -- Precast Sets
-    
+
     -- Precast sets to enhance JAs
     sets.precast.JA['Chainspell'] = {body="Vitivation Tabard"}
-    
+
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
         head="Atrophy Chapeau +1",
         body="Atrophy Tabard +3",hands="Yaoyotl Gloves",
         back="Refraction Cape",legs="Hagondes Pants",feet="Hagondes Sabots"}
-        
+
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
 
     -- Fast cast sets for spells
-    
+
     -- 80% Fast Cast (including trait) for all spells, plus 5% quick cast
     -- No other FC sets necessary.
     -- sets.precast.FC = {ammo="Impatiens",
@@ -110,7 +110,7 @@ function init_gear_sets()
     }
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
     sets.precast['Enfeebling Magic'] = set_combine(sets.precast.FC, {head="Lethargy Chappel +1"})
-       
+
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.baseWS = {}
@@ -143,13 +143,13 @@ function init_gear_sets()
         legs="Jhakri Slops", -- +26
         feet="Jhakri Pigaches +1", --MND+21
     }
-    
+
     sets.precast.WS = sets.baseWS.Str
         -- head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         -- body="Atrophy Tabard +2",hands="Yaoyotl Gloves",ring1="Rajas Ring",ring2="K'ayres Ring",
         -- back="Atheling Mantle",waist="Caudata Belt",legs="Hagondes Pants",feet="Hagondes Sabots"}
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-    -- sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, 
+    -- sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS,
     --     {neck="Soil Gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
     --     ring1="Aquasoul Ring",ring2="Aquasoul Ring",waist="Soil Belt"})
 
@@ -158,9 +158,9 @@ function init_gear_sets()
     --     body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Strendu Ring",ring2="Acumen Ring",
     --     back="Toro Cape",legs="Hagondes Pants",feet="Hagondes Sabots"}
 
-    
+
     -- Midcast Sets
-    
+
     sets.midcast.FastRecast = {
     --     head="Atrophy Chapeau +1",ear2="Loquacious Earring",
     --     body="Vitivation Tabard",hands="Gendewitha Gages",ring1="Prolix Ring",
@@ -246,7 +246,7 @@ function init_gear_sets()
     )
 
     --sets.midcast.Stoneskin = {waist="Siegel Sash"}
-    
+
     -- sets.midcast['Enfeebling Magic'] = {main="Lehbrailg +2",sub="Mephitis Grip",ammo="Kalboron Stone",
     --     head="Atrophy Chapeau +1",neck="Weike Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
     --     body="Atrophy Tabard +2",hands="Yaoyotl Gloves",ring1="Aquasoul Ring",ring2="Sangoma Ring",
@@ -341,7 +341,7 @@ function init_gear_sets()
     })
 
     -- sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
-    
+
     -- sets.midcast['Elemental Magic'] = {main="Lehbrailg +2",sub="Zuuxowu Grip",ammo="Dosis Tathlum",
     --     head="Hagondes Hat",neck="Eddy Necklace",ear1="Friomisi Earring",ear2="Hecate's Earring",
     --     body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Icesoul Ring",ring2="Acumen Ring",
@@ -400,23 +400,23 @@ function init_gear_sets()
 
     -- Sets for special buff conditions on spells.
 
-        
+
     -- sets.buff.ComposureOther = {head="Estoqueur's Chappel +2",
     --     body="Estoqueur's Sayon +2",hands="Estoqueur's Gantherots +2",
     --     legs="Estoqueur's Fuseau +2",feet="Estoqueur's Houseaux +2"}
     sets.buff.ComposureOther = {
-        head="Lethargy Chappel +1",
+        head="Leth. Chappel +1",
         body="Lethargy Sayon",
         hands="Lethargy Gantherots",
         legs="Lethargy Fuseau",
-        feet="Lethargy Houseaux +1",
+        feet="Leth. Houseaux +1",
     }
 
     sets.buff.Saboteur = {hands="Estoqueur's Gantherots +2"}
-    
+
 
     -- Sets to return to when not performing an action.
-    
+
     -- Resting sets
     -- sets.resting = {main="Chatoyant Staff",
     --     head="Vitivation Chapeau",neck="Wiglen Gorget",
@@ -460,7 +460,7 @@ function init_gear_sets()
     --     head="Atrophy Chapeau +1",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
     --     body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Sheltered Ring",ring2="Paguroidea Ring",
     --     back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
-    
+
     -- sets.idle.Weak = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
     --     head="Vitivation Chapeau",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
     --     body="Atrophy Tabard +1",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Paguroidea Ring",
@@ -487,7 +487,7 @@ function init_gear_sets()
         ring1="Merman's Ring",
         ring2="Merman's Ring",
     }
-    
+
     -- Defense sets
     sets.defense.PDT = {
         head="Atrophy Chapeau +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
@@ -510,7 +510,7 @@ function init_gear_sets()
     -- sets if more refined versions aren't defined.
     -- If you create a set with both offense and defense modes, the offense mode should be first.
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
-    
+
     -- Normal melee group
     sets.engaged = sets.AutoRefreshIdle -- default to idle, thanks trusts
     sets.Myengaged = {
@@ -600,7 +600,7 @@ function customize_idle_set(idleSet)
     if player.mpp < 51 then
         idleSet = set_combine(idleSet, sets.latent_refresh)
     end
-    
+
     return idleSet
 end
 
@@ -643,7 +643,7 @@ function job_midcast(spell, action, spellMap, eventArgs)
     -- if spell.skill == 'Elemental Magic' or spell.skill == 'Enfeebling Magic' or spell.skill == "Dark Magic" then
     --     equip(sets.ElementalStaves[spell.element])
     -- end
-    
+
 end
 
 is_meleeing = false

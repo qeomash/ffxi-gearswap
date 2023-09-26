@@ -111,5 +111,5 @@ function job_midcast(spell, action, spellMap, eventArgs)
     -- if spell.skill == 'Elemental Magic' or spell.skill == 'Enfeebling Magic' or spell.skill == "Dark Magic" then
     --     equip(sets.ElementalStaves[spell.element])
     -- end
-    
+
 end
