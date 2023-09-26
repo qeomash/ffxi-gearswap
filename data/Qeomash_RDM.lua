@@ -544,7 +544,7 @@ function init_gear_sets()
     }
     sets.dualWeapons = {
         main="Naegling",
-        sub="Claidheamh Soluis",
+        sub="Ternion Dagger +1",
         -- sub="Joyeuse",
     }
 
