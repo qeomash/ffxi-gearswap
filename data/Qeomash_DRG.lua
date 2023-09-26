@@ -32,7 +32,7 @@ function init_gear_sets()
     sets.engaged = {
         ammo="Aurgelmir Orb",
         head="Flamma Zucchetto +2",
-        neck="Asperity Necklace",
+        neck="Lissome Necklace",
         lear="Brutal Earring",
         rear="Steelflash Earring",
         body="Valorous Mail",
@@ -94,6 +94,7 @@ function init_gear_sets()
     sets.precast.WS['Drakesbane'] = set_combine(sets.baseWS.Str, {
         neck="Light Gorget"
     })
+    sets.precast.WS["Camlann's Torment"] = set_combine(sets.baseWS.Str, {neck='Light Gorget'})
 
     sets.precast.JA.Angon = {ammo="Angon",hands="Pteroslaver Finger Gauntlets +2"}
     -- Jumps
