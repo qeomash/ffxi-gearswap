@@ -62,7 +62,6 @@ function init_gear_sets()
         sub="Staff Strap",
         -- head="Duelist's Chapeau +1",
         -- neck="Orochi Nodowa",
-        lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Jhakri Robe +2",
         legs="Tatsumaki Sitagoromo",

@@ -43,6 +43,8 @@ function init_gear_sets()
     sets.baseWS = {}
     sets.baseWS.Str = {
         head="Felistris Mask",
+        ear1="Moonshade Earring", -- TPBonus+250
+        ear2="Brutal Earring",
         body="Ashera Harness",
         hands="Meghanada Gloves", -- STR+15
         ring1="Pyrosoul Ring",
@@ -51,6 +53,8 @@ function init_gear_sets()
     }
     sets.baseWS.Dex = {
         head="Malignance Chapeau",
+        ear1="Moonshade Earring", -- TPBonus+250
+        ear2="Brutal Earring",
         body="Meghanada Cuirie",
         hands="Meghanada Gloves", --DEX+42
         ring1="Pyrosoul Ring",

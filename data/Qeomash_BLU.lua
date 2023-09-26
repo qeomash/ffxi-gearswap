@@ -50,7 +50,7 @@ function init_gear_sets()
         head="Ayanmo Zucchetto +1", -- STR+20
         neck="Chivalrous Chain",
         lear="Brutal Earring",
-        rear="Suppanomimi",
+        rear="Moonshade Earring", -- TPBonus+250
         body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
         hands="Jhakri Cuffs", --STR+10,Attack+25,WS+3%
         lring="Pyrosoul Ring",

@@ -56,7 +56,7 @@ function init_gear_sets()
         head="Hecatomb Cap",
         neck="Light Gorget",
         ear1="Brutal Earring",
-        ear2="Musical Earring",
+        ear2="Moonshade Earring", -- TPBonus+250
         body="Hecatomb Harness",
         hands="Custom M Gloves",
         ring1="Flame Ring",

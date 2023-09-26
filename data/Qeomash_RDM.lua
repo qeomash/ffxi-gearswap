@@ -118,6 +118,7 @@ function init_gear_sets()
         head="Ayanmo Zucchetto +1", -- STR+20
         neck="Asperity Necklace",
         lear="Brutal Earring",
+        rear="Moonshade Earring", -- TPBonus+250
         -- rear="Magnetic Earring",
         body="Ayanmo Corazza +2",
         hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
@@ -132,7 +133,7 @@ function init_gear_sets()
         head="Vitiation Chapeau +1", -- MND+32
         neck="Asperity Necklace",
         lear="Brutal Earring",
-        rear="Geist Earring",
+        rear="Moonshade Earring", -- TPBonus+250
         body="Jhakri Robe +2", -- MND+32
         hands="Jhakri Cuffs +2", --MND+35,Attack+43,WS+7%
         lring="Stikini Ring",
@@ -180,7 +181,7 @@ function init_gear_sets()
         sub="Genbu's Shield",
         head="Vitiation Chapeau +1",
         neck="Colossus's Torque",
-        lear="Moonshade Earring",
+        -- lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Heka's Kalasiris",
         hands="Weatherspoon Cuffs +1", --CP+9%
@@ -444,8 +445,6 @@ function init_gear_sets()
         ammo="Homiliary",
         head="Vitiation Chapeau +1",
         neck="Lissome Necklace", --Regen+1
-        lear="Moonshade Earring",
-        rear="Magnetic Earring",
         body="Jhakri Robe +2", -- Refresh+4
         hands="Ayanmo Manopolas +2",
         lring="Jhakri Ring",
