@@ -38,8 +38,8 @@ function init_gear_sets()
         rear="Suppanomimi",
         body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
-        lring="Jhakri Ring",
-        rring="Rajas Ring",
+        lring="Petrov Ring",
+        rring="Chirich Ring",
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
         legs="Ayanmo Cosciales +2",

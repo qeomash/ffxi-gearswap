@@ -29,8 +29,8 @@ function init_gear_sets()
         ear2="Brutal Earring",
         body="Ashera Harness",
         hands="Meghanada Gloves",
-        lring="Mummu Ring",
-        rring="Rajas Ring",
+        lring="Petrov Ring",
+        rring="Chirich Ring",
         back="Canny Cape",
         waist="Dynamic Belt +1",
         legs="Mummu Kecks",
@@ -48,7 +48,7 @@ function init_gear_sets()
         body="Ashera Harness",
         hands="Meghanada Gloves", -- STR+15
         ring1="Pyrosoul Ring",
-        ring2="Rajas Ring",
+        rring="Chirich Ring",
         feet="Mummu Gamash. +1",
     }
     sets.baseWS.Dex = {
@@ -58,7 +58,7 @@ function init_gear_sets()
         body="Meghanada Cuirie",
         hands="Meghanada Gloves", --DEX+42
         ring1="Pyrosoul Ring",
-        ring2="Rajas Ring",
+        rring="Chirich Ring",
         feet="Mummu Gamash. +1",
     }
     sets.precast.WS = sets.baseWS.Str
