@@ -28,9 +28,14 @@ function init_gear_sets()
     sets.casting = {
         main="Iridal Staff",
     }
+    sets.TH = {
+        main="Grioavolr", -- TH+1
+        head="White Rarab Cap +1",
+        feet="Chironic Slippers", -- TH+1
+    }
 
     sets.precast.FC = {
-        head="Warlock's Chapeau",
+        head="Atrophy Chapeau",
         neck="Holy Phial",
         ear1="Moldavite Earring",
         ear2="Morion Earring",
@@ -49,7 +54,7 @@ function init_gear_sets()
         ear1="Moldavite Earring",
         ear2="Morion Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs",
+        hands="Jhakri Cuffs +1",
         back="Prism Cape",
         waist="Demonry Sash",
         legs="Carmine Cuisses",
@@ -59,12 +64,12 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {
         main="Grioavolr",
         sub="Staff Strap",
-        head="Jhakri Coronal",
+        head="Jhakri Coronal +1",
         neck="Elemental Torque",
         ear1="Moldavite Earring",
         ear2="Abyssal Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs",
+        hands="Jhakri Cuffs +1",
         ring1="Snow Ring",
         ring2="Snow Ring",
         back="Prism Cape",
@@ -81,10 +86,10 @@ function init_gear_sets()
         ear1="Moldavite Earring",
         ear2="Morion Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs",
+        hands="Jhakri Cuffs +1",
         ring1="Electrum Ring",
         ring2="Ether Ring",
-        back="Prism Cape",
+        back="Sucellos's Cape",
         waist="Duelist's Belt",
         legs="Jhakri Slops",
         feet="Jhakri Pigaches +1",
@@ -99,7 +104,7 @@ function init_gear_sets()
         ear1="Moldavite Earring",
         ear2="Abyssal Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs",
+        hands="Jhakri Cuffs +1",
         ring1="Snow Ring",
         ring2="Snow Ring",
         back="Prism Cape",
@@ -114,7 +119,7 @@ function init_gear_sets()
         neck="Enfeebling Torque",
         ear1="Moldavite Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs",
+        hands="Jhakri Cuffs +1",
         ring1="Aqua Ring",
         ring2="Aqua Ring",
         back="Prism Cape",
@@ -138,7 +143,7 @@ function init_gear_sets()
         ear1="Moldavite Earring",
         ear2="Antivenom Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs",
+        hands="Jhakri Cuffs +1",
         ring1="Electrum Ring",
         ring2="Ether Ring",
         back="Prism Cape",
@@ -150,12 +155,12 @@ function init_gear_sets()
     sets.midcast.Cure = {
         main="Iridal Staff",
         sub="Staff Strap",
-        head="Jhakri Coronal",
+        head="Jhakri Coronal +1",
         neck="Holy Phial",
         ear1="Moldavite Earring",
         ear2="Morion Earring",
         body="Chelona Blazer",
-        hands="Jhakri Cuffs",
+        hands="Jhakri Cuffs +1",
         ring1="Aqua Ring",
         ring2="Aqua Ring",
         back="Prism Cape",
@@ -172,12 +177,13 @@ function init_gear_sets()
             hands="Aya. Manopolas +1",
             legs="Jhakri Slops",
             feet="Aya. Gambieras +1",
-            waist="Demonry Sash",
+            waist="Paewr Belt",
             ring1="Jhakri Ring",
             ring2="Ayanmo Ring",
     }
     sets.precast.WS = {
-        hands="Jhakri Cuffs",
+        hands="Jhakri Cuffs +1",
     }
+    sets.midcast['Dia'] = sets.TH
 
 end

@@ -27,10 +27,23 @@ function user_setup()
     -- state.IdleMode:options('Normal', 'PDT')
 
     select_default_macro_book()
+    send_command('wait 2;input /lockstyleset 10/l2')
 end
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()
+
+    sets.TH = {
+        main="Grioavolr", -- TH+1
+        head="White Rarab Cap +1",
+        feet="Chironic Slippers", -- TH+1
+    }
+
+    Alaunus = {}
+    Alaunus.Healing = { name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Enmity-10',}}
+    Alaunus.Idle = { name="Alaunus's Cape", augments={'Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}}
+
+
     --------------------------------------
     -- Start defining the sets
     --------------------------------------
@@ -145,7 +158,7 @@ function init_gear_sets()
     --     body="Manasa Chasuble",hands="Dynasty Mitts",
     --     back="Mending Cape",waist="Olympus Sash",legs="Piety Pantaloons",feet="Orison Duckbills +2"}
     sets.midcast['Enhancing Magic'] = {
-        hands="Inyanga Dastanas +1", -- all skills +18
+        hands="Inyanga Dastanas +2", -- all skills +20
     }
 
     -- sets.midcast.Stoneskin = {
@@ -164,14 +177,14 @@ function init_gear_sets()
     --     body="Piety Briault",hands="Orison Mitts +2",
     --     legs="Theophany Pantaloons"}
     sets.midcast.Regen = {
-        head="Inyanga Tiara +1", -- +12%
+        head="Inyanga Tiara +2", -- +12%
         body="Cleric's Bliaut", -- +1 HP
     }
 
     -- sets.midcast.Protectra = {ring1="Sheltered Ring",feet="Piety Duckbills +1"}
 
     -- sets.midcast.Shellra = {ring1="Sheltered Ring",legs="Piety Pantaloons"}
-
+    sets.midcast['Dia'] = sets.TH
 
     -- sets.midcast['Divine Magic'] = {main="Bolelabunga",sub="Genbu's Shield",
     --     head="Nahtirah Hat",neck="Colossus's Torque",ear1="Psystorm Earring",ear2="Lifestorm Earring",
@@ -277,13 +290,16 @@ function init_gear_sets()
         hands="Ayanmo Manopolas +1",
         legs="Ayanmo Cosciales +1",
         feet="Ayanmo Gambieras +1",
-        waist="Demonry Sash",
-        ring1="Jhakri Ring",
-        ring2="Ayanmo Ring",
+        waist="Paewr Belt",
+        ring1="Ayanmo Ring",
+        ring2="Rajas Ring",
     }
 
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
     sets.buff['Divine Caress'] = {hands="Orison Mitts +2",back="Mending Cape"}
+
+
+
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -392,5 +408,5 @@ end
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
     -- Default macro set/book
-    set_macro_page(2, 1)
+    set_macro_page(1, 2)
 end
