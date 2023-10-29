@@ -88,10 +88,11 @@ function init_gear_sets()
     Sucellos.Enfeebling = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
 
     Ghostfyre = {}
-    Ghostfyre.Duration = { name="Ghostfyre Cape", augments={'Enfb.mag. skill +4','Enha.mag. skill +2','Mag. Acc.+2','Enh. Mag. eff. dur. +17',}}
+    Ghostfyre.Duration = { name="Ghostfyre Cape", augments={'Enfb.mag. skill +10','Enha.mag. skill +2','Mag. Acc.+10','Enh. Mag. eff. dur. +20',}}
 
     sets.TH = {
-        head="White Rarab Cap +1",
+        head="White Rarab Cap +1", -- TH+1
+        feet="Chronic Slippers", --TH+2
     }
 
     -- Precast Sets
@@ -132,6 +133,11 @@ function init_gear_sets()
     }
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
     sets.precast['Enfeebling Magic'] = set_combine(sets.precast.FC, {head=sets.Empyrean.head})
+
+    sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC,
+        {
+            sub="Sors Shield", -- CFC-5%
+        })
 
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
@@ -200,13 +206,13 @@ function init_gear_sets()
     --     back="Swith Cape +1",waist="Witful Belt",legs="Atrophy Tights",feet="Hagondes Sabots"}
     sets.midcast.Cure = {
         main="Tamaxchi",
-        sub="Genbu's Shield",
+        sub="Sors Shield", -- CP+3%
         head=sets.Relic.head,
         neck="Colossus's Torque",
         -- lear="Moonshade Earring",
         rear="Magnetic Earring",
         body="Heka's Kalasiris",
-        hands="Weatherspoon Cuffs +1", --CP+9%
+        hands="Weatherspoon Cuffs +1", --CP+9% --eh, maybe Telchine Gloves if I can find some useful augment for them?
         lring="Lebeche Ring", --CP+3%
         rring="Stikini Ring",
         back=Ghostfyre.Duration, --CP+6%
