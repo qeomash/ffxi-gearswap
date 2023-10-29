@@ -149,8 +149,8 @@ function init_gear_sets()
         rring="Rajas Ring",
         back=Sucellos.WS,
         waist="Warwolf Belt",
-        legs="Jhakri Slops", --Att+27
-        feet="Jhakri Pigaches +1", -- STR+22
+        legs="Jhakri Slops +2", --Att+45,STR+47
+        feet="Jhakri Pigaches +2", -- STR+25,Attk+42
     }
     sets.baseWS.Mnd = {
         head=sets.Relic.head, -- MND+32
@@ -163,8 +163,8 @@ function init_gear_sets()
         rring="Aqua Ring",
         back=Sucellos.WS,
         waist="Warwolf Belt",
-        legs="Jhakri Slops", -- +26
-        feet="Jhakri Pigaches +1", --MND+21
+        legs="Jhakri Slops +2", -- +26
+        feet="Jhakri Pigaches +2", --MND+21
     }
 
     sets.precast.WS = sets.baseWS.Str
@@ -212,8 +212,10 @@ function init_gear_sets()
         rring="Stikini Ring",
         back=Ghostfyre.Duration, --CP+6%
         waist="Duelist's Belt",
-        legs=sets.Artifact.legs, --CP+9%
-        feet="Jhakri Pigaches +1",
+        legs="Kaykaus Tights", --CP+10%
+        -- legs=sets.Artifact.legs, --CP+9%
+        -- feet="Jhakri Pigaches +2",
+        feet="Kaykaus Boots", --CP+10%
     }
     sets.midcast.Curaga = sets.midcast.Cure
     --sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
@@ -290,8 +292,8 @@ function init_gear_sets()
         rring="Stikini Ring", --sk+5 MAC+8
         back="Sucellos's Cape",
         waist="Demonry Sash",
-        legs="Jhakri Slops", -- macc+27
-        feet="Jhakri Pigaches +1",
+        legs="Jhakri Slops +2", -- macc+27
+        feet="Jhakri Pigaches +2",
     }
     sets.Enfeebling.Int = {}
     sets.Enfeebling.Int.Hard = set_combine(sets.Enfeebling.Base,
@@ -306,8 +308,8 @@ function init_gear_sets()
             rring="Stikini Ring", --sk+5 MAC+8
             back="Sucellos's Cape",
             waist="Demonry Sash",
-            legs="Jhakri Slops", -- macc+27
-            feet="Jhakri Pigaches +1",
+            legs="Jhakri Slops +2", -- macc+27
+            feet="Jhakri Pigaches +2",
         }
     )
     sets.Enfeebling.Int.Soft = set_combine(sets.Enfeebling.Int.Hard,
@@ -318,8 +320,8 @@ function init_gear_sets()
             lring="Snow Ring",
             rring="Snow Ring",
             back="Prism Cape",
-            legs="Jhakri Slops", -- INT+44
-            feet="Jhakri Pigaches +1",
+            legs="Jhakri Slops +2", -- INT+44
+            feet="Jhakri Pigaches +2",
         }
     )
     sets.Enfeebling.Mnd = {}
@@ -335,8 +337,8 @@ function init_gear_sets()
             rring="Stikini Ring", --sk+5 MAC+8
             back="Sucellos's Cape",
             waist="Demonry Sash",
-            legs="Jhakri Slops", -- macc+27,MND+26
-            feet="Jhakri Pigaches +1",
+            legs="Jhakri Slops +2", -- macc+27,MND+26
+            feet="Jhakri Pigaches +2",
         }
     )
     sets.Enfeebling.Mnd.Soft = set_combine(sets.Enfeebling.Mnd.Hard,
@@ -348,7 +350,7 @@ function init_gear_sets()
             lring="Aqua Ring",
             rring="Aqua Ring",
             back="Swith Cape",
-            legs="Jhakri Slops", -- MND+26
+            legs="Jhakri Slops +2", -- MND+26
         }
     )
 
@@ -378,14 +380,14 @@ function init_gear_sets()
         lear="Friomisi Earring", -- MAB+10
         rear="Hecate's Earring", -- MAB+6
         body="Jhakri Robe +2", -- MAB+43
-        -- hands="Amalric Gages", -- MAB+23, MBII+5
-        hands="Jhakri Cuffs +2", --MAB+40
+        hands="Amalric Gages", -- MAB+23, MBII+5
+        -- hands="Jhakri Cuffs +2", --MAB+40
         lring="Weatherspoon Ring", --MAB+10
         rring="Acumen Ring", -- MAB+4
         back="Izdubar Mantle", -- MAB+10
         waist="Aswang Sash", -- MAB+3
-        legs="Jhakri Slops", -- MAB+27
-        feet="Jhakri Pigaches +1", --MAB+36
+        legs="Jhakri Slops +2", -- MAB+27
+        feet="Jhakri Pigaches +2", --MAB+39
     }
 
     --sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {head=empty,body="Twilight Cloak"})
@@ -409,8 +411,8 @@ function init_gear_sets()
         rring="Stikini Ring", --sk+5 MAC+8
         back="Prism Cape",
         waist="Demonry Sash",
-        legs="Jhakri Slops",
-        feet="Jhakri Pigaches +1",
+        legs="Jhakri Slops +2",
+        feet="Jhakri Pigaches +2",
     }
 
     --sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {})
