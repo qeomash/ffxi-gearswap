@@ -81,6 +81,10 @@ function init_gear_sets()
         feet="Lethargy Houseaux +2",
     }
 
+    Colada = {}
+    Colada.Refresh = { name="Colada", augments={'"Refresh"+2','STR+7','Mag. Acc.+17','"Mag.Atk.Bns."+7',}}
+    Colada.EnhancingDur = { name="Colada", augments={'Enh. Mag. eff. dur. +2','STR+4','"Mag.Atk.Bns."+8',}}
+
     Sucellos = {}
     Sucellos.WS = { name="Sucellos's Cape", augments={'Accuracy+20 Attack+20','Weapon skill damage +10%',}}
     Sucellos.DA = { name="Sucellos's Cape", augments={'DEX+1','Accuracy+20 Attack+20','Accuracy+3','"Dbl.Atk."+10','Damage taken-5%',}}
@@ -153,9 +157,10 @@ function init_gear_sets()
         lring="Pyrosoul Ring",
         rring="Rajas Ring",
         back=Sucellos.WS,
-        waist="Warwolf Belt",
-        legs="Jhakri Slops +2", --Att+45,STR+47
-        feet="Jhakri Pigaches +2", -- STR+25,Attk+42
+        waist="Dynamic Belt +1",
+        legs=sets.Empyrean.legs, --Attk+53,STR+33
+        -- legs="Jhakri Slops +2", --Att+45,STR+47
+        feet=sets.Empyrean.feet, --Acc+50,Att+50,WS+8%
     }
     sets.baseWS.Mnd = {
         head=sets.Relic.head, -- MND+32
@@ -167,9 +172,9 @@ function init_gear_sets()
         lring="Stikini Ring",
         rring="Aqua Ring",
         back=Sucellos.WS,
-        waist="Warwolf Belt",
-        legs="Jhakri Slops +2", -- +26
-        feet="Jhakri Pigaches +2", --MND+21
+        waist="Dynamic Belt +1",
+        legs=sets.Empyrean.legs, --Attk+53,MND+38
+        feet=sets.Empyrean.feet, --Acc+50,Att+50,WS+8%
     }
 
     sets.precast.WS = sets.baseWS.Str
@@ -226,7 +231,7 @@ function init_gear_sets()
     --sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
 
     sets.midcast['Enhancing Magic'] = {
-        main={ name="Colada", augments={'Enh. Mag. eff. dur. +2','STR+4','"Mag.Atk.Bns."+8',}},
+        main=Colada.EnhancingDur,
         neck="Colossus's Torque", -- +7
         lear="Augmenting Earring", -- +3
         rear="Mimir Earring", -- +10
@@ -234,11 +239,10 @@ function init_gear_sets()
         hands=sets.Relic.hands, -- +20,duration+
         lring="Stikini Ring", -- +5
         rring="Stikini Ring", -- +5
-        back=Sucellos.Enhancing, --duration+20%
-        -- waist="Olympus Sash", -- +5
-        waist="Embla Sash", --duration+10%
+        back=Ghostfyre.Duration, --duration+20%
+        waist="Olympus Sash", -- +5
         legs=sets.Artifact.legs, -- +17
-        feet="Lethagry Houseaux +1" --+25,Dur+30%
+        feet=sets.Empyrean.feet, -- +30,duration+35%
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
         -- body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
@@ -246,6 +250,7 @@ function init_gear_sets()
     sets.enspelldmg = set_combine(sets.midcast['Enhancing Magic'],
         {
             hands="Ayanmo Manopolas +2", -- +17
+            legs=sets.Relic.legs, --enhances damage?
             back=Ghostfyre.Duration, -- +5
         }
     )
@@ -263,10 +268,14 @@ function init_gear_sets()
     sets.midcast['Enwater II'] = sets.enspelldmg
 
     sets.midcast.EnhancingDuration = {
-        hands=sets.Artifact.hands,
-        -- back="Estoqueur's Cape", -- 10%
-        back=Sucellos.Enhancing, --duration+20%
-        -- feet="Estoqueur's Houseaux +2"
+        main=Colada.EnhancingDur,
+        head=sets.Empyrean.head,
+        body=sets.Empyrean.body,
+        hands=sets.Empyrean.hands,
+        back=Ghostfyre.Duration,
+        waist="Embla Sash", --duration+10%
+        legs=sets.Empyrean.legs,
+        feet=sets.Empyrean.feet,
     }
 
     sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration, {
@@ -274,6 +283,9 @@ function init_gear_sets()
         legs=sets.Empyrean.legs, -- Refresh+3
         }
     )
+    sets.midcast.Haste = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration)
+    sets.midcast["Haste II"] = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration)
+    sets.midcast["Phalanx II"] = set_combine(sets.midcast.EnhancingDuration, sets.midcast['Enhancing Magic'])
 
     --sets.midcast.Stoneskin = {waist="Siegel Sash"}
 
@@ -287,75 +299,76 @@ function init_gear_sets()
         main="Grioavolr", --MAC+14
         sub="Clerisy Strap", --MAC+10
         ammo="Kalboron Stone",
-        head=sets.Relic.head,
+        -- head=sets.Relic.head,
+        head=sets.Artifact.head, -- MAC+44
         neck="Duelist's Torque +1", -- macc+25,enf ef+7
-        lear="Vor Earring", -- +10
-        rear="Snotra Earring", -- duration+10%
-        body=sets.Artifact.body,
-        hands="Jhakri Cuffs +2", --MAC+25
+        lear="Vor Earring", -- sk+10
+        rear="Snotra Earring", -- MAC+10,duration+10%
+        body=sets.Artifact.body, -- MAC+55
+        hands=sets.Empyrean.hands, -- MAC+52
         lring="Stikini Ring", --sk+5 MAC+8
         rring="Stikini Ring", --sk+5 MAC+8
         back="Sucellos's Cape",
         waist="Demonry Sash",
-        legs="Jhakri Slops +2", -- macc+27
-        feet="Jhakri Pigaches +2",
+        legs=sets.Empyrean.legs, --MAC+53
+        feet=sets.Empyrean.feet, --MAC+50
     }
     sets.Enfeebling.Int = {}
     sets.Enfeebling.Int.Hard = set_combine(sets.Enfeebling.Base,
         {
-            head=sets.Relic.head,
-            neck="Duelist's Torque +1", -- macc+25,enf ef+7
-            lear="Vor Earring",-- +10
-            rear="Snotra Earring", -- duration+10%
-            body=sets.Artifact.body,
-            hands="Jhakri Cuffs +2", --INT+36
-            lring="Stikini Ring", --sk+5 MAC+8
-            rring="Stikini Ring", --sk+5 MAC+8
-            back="Sucellos's Cape",
-            waist="Demonry Sash",
-            legs="Jhakri Slops +2", -- macc+27
-            feet="Jhakri Pigaches +2",
+            -- head=sets.Relic.head,
+            -- neck="Duelist's Torque +1", -- macc+25,enf ef+7
+            -- lear="Vor Earring",-- +10
+            -- rear="Snotra Earring", -- duration+10%
+            -- body=sets.Artifact.body,
+            -- hands="Jhakri Cuffs +2", --INT+36
+            -- lring="Stikini Ring", --sk+5 MAC+8
+            -- rring="Stikini Ring", --sk+5 MAC+8
+            -- back="Sucellos's Cape",
+            -- waist="Demonry Sash",
+            -- legs="Jhakri Slops +2", -- macc+27
+            -- feet="Jhakri Pigaches +2",
         }
     )
     sets.Enfeebling.Int.Soft = set_combine(sets.Enfeebling.Int.Hard,
         {
-            head="Jhakri Coronal +1",
-            body="Jhakri Robe +2",
-            hands="Jhakri Cuffs +2", --INT+36
+            -- head="Jhakri Coronal +1",
+            -- body="Jhakri Robe +2",
+            -- hands="Jhakri Cuffs +2", --INT+36
             lring="Snow Ring",
             rring="Snow Ring",
-            back="Prism Cape",
-            legs="Jhakri Slops +2", -- INT+44
-            feet="Jhakri Pigaches +2",
+            -- back="Prism Cape",
+            -- legs="Jhakri Slops +2", -- INT+44
+            -- feet="Jhakri Pigaches +2",
         }
     )
     sets.Enfeebling.Mnd = {}
     sets.Enfeebling.Mnd.Hard = set_combine(sets.Enfeebling.Base,
         {
-            head=sets.Relic.head,
-            neck="Duelist's Torque +1", -- macc+25,enf ef+7
-            lear="Vor Earring",-- +10
-            rear="Snotra Earring", -- duration+10%
-            body=sets.Artifact.body,
-            hands="Jhakri Cuffs +2", --MND+35
-            lring="Perception Ring",
-            rring="Stikini Ring", --sk+5 MAC+8
-            back="Sucellos's Cape",
-            waist="Demonry Sash",
-            legs="Jhakri Slops +2", -- macc+27,MND+26
-            feet="Jhakri Pigaches +2",
+            -- head=sets.Relic.head,
+            -- neck="Duelist's Torque +1", -- macc+25,enf ef+7
+            -- lear="Vor Earring",-- +10
+            -- rear="Snotra Earring", -- duration+10%
+            -- body=sets.Artifact.body,
+            -- hands="Jhakri Cuffs +2", --MND+35
+            -- lring="Perception Ring",
+            -- rring="Stikini Ring", --sk+5 MAC+8
+            -- back="Sucellos's Cape",
+            -- waist="Demonry Sash",
+            -- legs="Jhakri Slops +2", -- macc+27,MND+26
+            -- feet="Jhakri Pigaches +2",
         }
     )
     sets.Enfeebling.Mnd.Soft = set_combine(sets.Enfeebling.Mnd.Hard,
         {
-            head=sets.Relic.head,
-            lear="Geist Earring",
-            body="Jhakri Robe +2",
-            hands="Jhakri Cuffs +2", --MND+35
-            lring="Aqua Ring",
-            rring="Aqua Ring",
-            back="Swith Cape",
-            legs="Jhakri Slops +2", -- MND+26
+            -- head=sets.Relic.head,
+            -- lear="Geist Earring",
+            -- body="Jhakri Robe +2",
+            -- hands="Jhakri Cuffs +2", --MND+35
+            -- lring="Aqua Ring",
+            -- rring="Aqua Ring",
+            -- back="Swith Cape",
+            -- legs="Jhakri Slops +2", -- MND+26
         }
     )
 
@@ -385,14 +398,15 @@ function init_gear_sets()
         lear="Friomisi Earring", -- MAB+10
         rear="Hecate's Earring", -- MAB+6
         body="Jhakri Robe +2", -- MAB+43
-        hands="Amalric Gages", -- MAB+23, MBII+5
+        -- hands="Amalric Gages", -- MAB+23, MBII+5
+        hands=sets.Empyrean.hands, -- MAB+47, MD+22
         -- hands="Jhakri Cuffs +2", --MAB+40
         lring="Weatherspoon Ring", --MAB+10
         rring="Acumen Ring", -- MAB+4
         back="Izdubar Mantle", -- MAB+10
         waist="Aswang Sash", -- MAB+3
-        legs="Jhakri Slops +2", -- MAB+27
-        feet="Jhakri Pigaches +2", --MAB+39
+        legs=sets.Empyrean.legs, -- MAB+53
+        feet=sets.Empyrean.feet, --MAB+45
     }
 
     --sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {head=empty,body="Twilight Cloak"})
@@ -442,7 +456,7 @@ function init_gear_sets()
         feet=sets.Empyrean.feet,
     }
 
-    sets.buff.Saboteur = {hands="Estoqueur's Gantherots +2"}
+    sets.buff.Saboteur = {hands=sets.Empyrean.hands}
 
 
     -- Sets to return to when not performing an action.
@@ -470,16 +484,17 @@ function init_gear_sets()
     --     back="Shadow Mantle",waist="Flume Belt",legs="Crimson Cuisses",feet="Hagondes Sabots"}
 
     sets.AutoRefreshIdle = {
-        main={ name="Colada", augments={'"Refresh"+2','STR+7','Mag. Acc.+17','"Mag.Atk.Bns."+7',}},
+        main=Colada.Refresh,
         sub="Genbu's Shield",
         ammo="Homiliary",
-        head=sets.Relic.head,
+        head=sets.Relic.head, --Refresh+2
         neck="Lissome Necklace", --Regen+1
         body="Jhakri Robe +2", -- Refresh+4
         hands="Ayanmo Manopolas +2",
-        lring="Jhakri Ring",
+        -- Ear, get Odnowa and Etiolation
+        lring="Stikini Ring",
         rring="Stikini Ring",
-        back="Sucellos's Cape",
+        back=Sucellos.DA, -- DT-5%
         waist="Flume Belt",
         legs="Carmine Cuisses",
         feet="Ayanmo Gambieras",
@@ -597,10 +612,10 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
     if spell.skill == 'Enfeebling Magic' and state.Buff.Saboteur then
         equip(sets.buff.Saboteur)
     elseif spell.skill == 'Enhancing Magic' then
-        if buffactive.composure and spell.target.type == 'PLAYER' then
-            equip(sets.midcast.EnhancingDuration)
-            equip(sets.buff.ComposureOther)
-        end
+        -- if buffactive.composure and spell.target.type == 'PLAYER' then
+        --     equip(sets.midcast.EnhancingDuration)
+        --     equip(sets.buff.ComposureOther)
+        -- end
     elseif spellMap == 'Cure' and spell.target.type == 'SELF' then
         equip(sets.midcast.CureSelf)
     end
