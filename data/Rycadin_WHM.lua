@@ -58,23 +58,30 @@ function init_gear_sets()
     sets.precast.FC = {
         main="Grioavolr", -- FC+4%
         head="Aya. Zucchetto +1",
-        body="Inyanga Jubbah", -- FC+10%
-        hands="Aya. Manopolas +1",
+        body="Inyanga Jubbah +2", -- FC+14%
+        hands="Aya. Manopolas +1", --maybe try those garbage things you got?
+        back=Alaunus.Idle, --FC+10%
         legs="Aya. Cosciales +1", -- FC+5%
         feet="Aya. Gambieras +1",
         ammo="Incantor Stone", -- FC+2%
+        ring1="Lebeche Ring", -- QM+2%
     }
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 
     sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'], {head="Umuthi Hat"})
 
-    sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {legs="Orison Pantaloons +2"})
+    sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC,
+        {
+            main="Tamaxchi",
+            sub="Sors Shield", -- CFC-5%
+            head="Theophany Cap +1", -- CFC -5%
+        })
 
     sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
 
-    sets.precast.FC.Cure = set_combine(sets.precast.FC['Healing Magic'],
-        {main="Tamaxchi"}
-    )
+    -- sets.precast.FC.Cure = set_combine(sets.precast.FC['Healing Magic'], {}
+    --     -- {main="Tamaxchi"}
+    -- )
         -- {main="Tamaxchi",sub="Genbu's Shield",ammo="Impatiens"})
     sets.precast.FC.Curaga = sets.precast.FC.Cure
     sets.precast.FC.CureSolace = sets.precast.FC.Cure
@@ -128,10 +135,15 @@ function init_gear_sets()
     --     back="Tuilha Cape",waist=gear.ElementalObi,legs="Orison Pantaloons +2",feet="Piety Duckbills +1"}
     sets.midcast.Cure = {
         main="Tamaxchi", -- CP+15%
-        body="Chelona Blazer", --CP+5%
-        hands="Inyanga Dastanas +1",
-        legs="Inyanga Shalwar +1",
-        feet="Inyanga Crackows +1",
+        sub="Sors Shield",
+        head="Theophany Cap +1", -- CP+10%
+        neck="Cleric's Torque", -- CP+5%
+        body="Chironic Doublet", --CP+7%
+        hands="Inyanga Dastanas +2",
+        back=Alaunus.Healing,
+        legs="Kaykaus Tights", --CP+10%
+        feet="Kaykaus Boots", --CP+10%
+        ring1="Lebeche Ring", -- CP+3%
     }
     sets.midcast.Curaga = sets.midcast.Cure
     -- sets.midcast.Curaga = {main="Tamaxchi",sub="Genbu's Shield",ammo="Incantor Stone",
@@ -148,9 +160,15 @@ function init_gear_sets()
     --     head="Orison Cap +2",neck="Malison Medallion",
     --     body="Orison Bliaud +2",hands="Hieros Mittens",ring1="Ephedra Ring",ring2="Sirona's Ring",
     --     back="Mending Cape",waist="Goading Belt",legs="Theophany Pantaloons",feet="Gendewitha Galoshes"}
-
+    sets.midcast.Cursna = {
+        back="Alaunus's Cape", -- Cursna +25
+        legs="Theophany Pantaloons +1",
+    }
     -- sets.midcast.StatusRemoval = {
     --     head="Orison Cap +2",legs="Orison Pantaloons +2"}
+    sets.midcast['Erase'] = {
+        neck="Cleric's Torque", -- Erase+1
+    }
 
     -- 110 total Enhancing Magic Skill; caps even without Light Arts
     -- sets.midcast['Enhancing Magic'] = {main="Beneficus",sub="Genbu's Shield",
@@ -206,8 +224,23 @@ function init_gear_sets()
     --     head="Nahtirah Hat",neck="Weike Torque",ear1="Psystorm Earring",ear2="Lifestorm Earring",
     --     body="Vanir Cotehardie",hands="Yaoyotl Gloves",ring1="Icesoul Ring",ring2="Sangoma Ring",
     --     back="Refraction Cape",waist="Demonry Sash",legs="Bokwus Slops",feet="Piety Duckbills +1"}
-
-    
+    sets.Enfeebling = {}
+    sets.Enfeebling.Int = {
+        main="Grioavolr",
+        sub="Staff Strap",
+        head="Carmine Mask",
+        neck="Enfeebling Torque",
+        ear1="Moldavite Earring",
+        body="Inyanga Jubbah +2",
+        hands="Inyanga Dastanas +2",
+        ring1="Ayanmo Ring",
+        ring2="Inyanga Ring",
+        back="Prism Cape",
+        waist="Demonry Sash",
+        legs="Inyanga Shalwar +2",
+        feet="Inyanga Crackows +2",
+    }
+    sets.midcast['Enfeebling Magic'] = sets.Enfeebling.Int
     -- Sets to return to when not performing an action.
 
     -- Resting sets
@@ -229,14 +262,14 @@ function init_gear_sets()
         neck="Orochi Nodowa",
         ear1="Abyssal Earring",
         ear2="Antivenom Earring",
-        -- body="Inyanga Jubbah",
-        body="Cleric's Bliaut", --Refresh +1
-        hands="Aya. Manopolas +1",
+        -- body="Inyanga Jubbah +2",
+        body="Theophany Bliaut +1",
+        hands="Inyanga Dastanas +2",
         ring1="Ayanmo Ring",
         ring2="Inyanga Ring",
-        back="Alaunus's Cape",
+        back=Alaunus.Idle,
         waist="Demonry Sash",
-        legs="Inyanga Shalwar +1",
+        legs="Inyanga Shalwar +2",
         feet="Herald's Gaiters",
     }
 
