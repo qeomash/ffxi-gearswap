@@ -53,7 +53,7 @@ function init_gear_sets()
     }
 
     sets.idle = set_combine(sets.engaged, {
-        legs="Crimson Cuisses",
+        legs="Carmine Cuisses",
         waist="Flume Belt",
     })
 

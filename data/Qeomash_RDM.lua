@@ -474,7 +474,7 @@ function init_gear_sets()
         rring="Stikini Ring",
         back="Sucellos's Cape",
         waist="Flume Belt",
-        legs="Crimson Cuisses",
+        legs="Carmine Cuisses",
         feet="Ayanmo Gambieras",
     }
     sets.idle = sets.AutoRefreshIdle
@@ -523,7 +523,7 @@ function init_gear_sets()
     --     back="Engulfer Cape",waist="Flume Belt",legs="Bokwus Slops",feet="Gendewitha Galoshes"}
     sets.defense.MDT = set_combine(sets.idle.MDT, {})
 
-    sets.Kiting = {legs="Crimson Cuisses"}
+    sets.Kiting = {legs="Carmine Cuisses"}
 
     sets.latent_refresh = {waist="Fucho-no-obi"}
 

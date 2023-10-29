@@ -27,7 +27,7 @@ function init_gear_sets()
     sets.idle = {
         head="Magus Keffiyeh",
         body="Mirage Jubbah",
-        legs="Crimson Cuisses",
+        legs="Carmine Cuisses",
         feet="Carmine Greaves +1", --haste+4%,STR+14,DA+4%
     }
 
