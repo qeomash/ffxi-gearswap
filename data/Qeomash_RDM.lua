@@ -60,10 +60,10 @@ function init_gear_sets()
     sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
 
     sets.Artifact = {
-        head="Atrophy Chapeau +1",
+        head="Atrophy Chapeau +2",
         body="Atrophy Tabard +3",
         hands="Atrophy Gloves +1",
-        legs="Atrophy Tights",
+        legs="Atrophy Tights +1",
         feet="Atrophy Boots +1",
     }
     sets.Relic = {
@@ -75,12 +75,11 @@ function init_gear_sets()
     }
     sets.Empyrean = {
         head="Lethargy Chappel +1",
-        body="Lethargy Sayon",
-        hands="Lethargy Gantherots",
-        legs="Lethargy Fuseau +1",
-        feet="Lethargy Houseaux +1",
+        body="Lethargy Sayon +1",
+        hands="Lethargy Gantherots +1",
+        legs="Lethargy Fuseau +2",
+        feet="Lethargy Houseaux +2",
     }
-    -- sets.Empyrean.Legs =
 
     Sucellos = {}
     Sucellos.WS = { name="Sucellos's Cape", augments={'Accuracy+20 Attack+20','Weapon skill damage +10%',}}
@@ -98,7 +97,7 @@ function init_gear_sets()
     -- Precast Sets
 
     -- Precast sets to enhance JAs
-    sets.precast.JA['Chainspell'] = {body="Vitivation Tabard"}
+    sets.precast.JA['Chainspell'] = {body=sets.Relic.body}
 
 
     -- Waltz set (chr and vit)
@@ -266,7 +265,7 @@ function init_gear_sets()
 
     sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration, {
         body=sets.Artifact.body, -- Refresh+2
-        legs=sets.Empyrean.legs, -- Refresh+2
+        legs=sets.Empyrean.legs, -- Refresh+3
         }
     )
 
