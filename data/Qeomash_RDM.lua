@@ -76,7 +76,7 @@ function init_gear_sets()
     sets.Empyrean = {
         head="Lethargy Chappel +1",
         body="Lethargy Sayon +1",
-        hands="Lethargy Gantherots +1",
+        hands="Lethargy Gantherots +2",
         legs="Lethargy Fuseau +2",
         feet="Lethargy Houseaux +2",
     }
