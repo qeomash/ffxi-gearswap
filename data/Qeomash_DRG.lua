@@ -33,8 +33,8 @@ function init_gear_sets()
         ammo="Coiste Bodhar",
         head="Flamma Zucchetto +2",
         neck="Lissome Necklace",
-        lear="Brutal Earring",
-        rear="Steelflash Earring",
+        lear="Cessance Earring",
+        rear="Brutal Earring",
         body="Valorous Mail",
         hands="Sulevia's Gauntlets +2",
         lring="Petrov Ring",
@@ -74,7 +74,7 @@ function init_gear_sets()
     sets.baseWS.Str = {
         head="Flamma Zucchetto +2", --STR+36
         neck="Asperity Necklace",
-        lear="Brutal Earring",
+        lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body="Vishap Mail +2",
         hands="Sulevia's Gauntlets +2",
@@ -88,7 +88,7 @@ function init_gear_sets()
     sets.baseWS.Accuracy = {
         head="Flamma Zucchetto +2", --Acc+44
         neck="Asperity Necklace",
-        lear="Brutal Earring",
+        lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body="Vishap Mail +2", --Acc+47
         hands="Sulevia's Gauntlets +2", --Acc+37
