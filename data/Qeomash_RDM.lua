@@ -88,15 +88,16 @@ function init_gear_sets()
     Sucellos = {}
     Sucellos.WS = { name="Sucellos's Cape", augments={'Accuracy+20 Attack+20','Weapon skill damage +10%',}}
     Sucellos.DA = { name="Sucellos's Cape", augments={'DEX+1','Accuracy+20 Attack+20','Accuracy+3','"Dbl.Atk."+10','Damage taken-5%',}}
-    Sucellos.Enhancing = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
-    Sucellos.Enfeebling = { name="Sucellos's Cape", augments={'"Dbl.Atk."+10',}}
+    Sucellos.Enhancing = { name="Sucellos's Cape", augments={'DEX+1','Accuracy+20 Attack+20','Accuracy+3','"Dbl.Atk."+10','Damage taken-5%',}} --TODO
+    Sucellos.Enfeebling = { name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}} --TODO
+    Sucellos.Nuke = { name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}}
 
     Ghostfyre = {}
     Ghostfyre.Duration = { name="Ghostfyre Cape", augments={'Enfb.mag. skill +10','Enha.mag. skill +2','Mag. Acc.+10','Enh. Mag. eff. dur. +20',}}
 
     sets.TH = {
         head="White Rarab Cap +1", -- TH+1
-        feet="Chronic Slippers", --TH+2
+        feet="Chironic Slippers", --TH+2
     }
 
     -- Precast Sets
@@ -313,7 +314,7 @@ function init_gear_sets()
         hands=sets.Empyrean.hands, -- MAC+52
         lring="Stikini Ring", --sk+5 MAC+8
         rring="Stikini Ring", --sk+5 MAC+8
-        back="Sucellos's Cape",
+        back=Sucellos.Enfeebling,
         waist="Demonry Sash",
         legs=sets.Empyrean.legs, --MAC+53
         feet=sets.Empyrean.feet, --MAC+50
@@ -410,7 +411,7 @@ function init_gear_sets()
         -- hands="Jhakri Cuffs +2", --MAB+40
         lring="Weatherspoon Ring", --MAB+10
         rring="Acumen Ring", -- MAB+4
-        back="Izdubar Mantle", -- MAB+10
+        back=Sucellos.Nuke,
         waist="Aswang Sash", -- MAB+3
         legs=sets.Empyrean.legs, -- MAB+53
         feet=sets.Empyrean.feet, --MAB+45
