@@ -58,6 +58,7 @@ function init_gear_sets()
     sets.precast.FC = {
         main="Grioavolr", -- FC+4%
         head="Aya. Zucchetto +1",
+        lear="Loqacious Earring",
         body="Inyanga Jubbah +2", -- FC+14%
         hands="Aya. Manopolas +1", --maybe try those garbage things you got?
         back=Alaunus.Idle, --FC+10%
@@ -319,6 +320,7 @@ function init_gear_sets()
     sets.engaged = {
         main="Mes'yohi Rod",
         head="Ayanmo Zucchetto +1",
+        lear="Brutal Earring",
         body="Ayanmo Corazza +1",
         hands="Ayanmo Manopolas +1",
         legs="Ayanmo Cosciales +1",
