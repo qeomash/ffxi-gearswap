@@ -130,17 +130,22 @@ function init_gear_sets()
         body=sets.Relic.body,
         hands="Ayanmo Manopolas +2", --Haste+4%
         legs="Ayanmo Cosciales +2",
-        lring="Weatherspoon Ring",
+        ring1="Lebeche Ring", -- QM+2%
+        ring2="Weatherspoon Ring",-- QM+3%
         waist="Embla Sash", --FC+5%
         back="Swith Cape",
         feet="Carmine Greaves +1",
     }
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
-    sets.precast['Enfeebling Magic'] = set_combine(sets.precast.FC, {head=sets.Empyrean.head})
-
+    sets.precast.FC['Enfeebling Magic'] = set_combine(sets.precast.FC, {head=sets.Empyrean.head})
+    sets.precast.FC['Dispelga'] = set_combine(sets.precast.FC['Enfeebling Magic'],
+        {main="Daybreak", sub="Genbu's Shield"})
     sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC,
         {
+            main="Daybreak",
             sub="Sors Shield", -- CFC-5%
+            legs="Kaykaus Tights", -- CFC-5%
+            feet="Kaykaus Boots" -- CFC-5%
         })
 
     -- Weaponskill sets
@@ -210,7 +215,7 @@ function init_gear_sets()
     --     body="Gendewitha Bliaut",hands="Bokwus Gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
     --     back="Swith Cape +1",waist="Witful Belt",legs="Atrophy Tights",feet="Hagondes Sabots"}
     sets.midcast.Cure = {
-        main="Tamaxchi",
+        main="Daybreak",
         sub="Sors Shield", -- CP+3%
         head=sets.Relic.head,
         neck="Colossus's Torque",
@@ -296,8 +301,8 @@ function init_gear_sets()
 
     sets.Enfeebling = {}
     sets.Enfeebling.Base = {
-        main="Grioavolr", --MAC+14
-        sub="Clerisy Strap", --MAC+10
+        main="Daybreak", --MAC+14
+        -- sub="Clerisy Strap", --MAC+10
         ammo="Kalboron Stone",
         -- head=sets.Relic.head,
         head=sets.Artifact.head, -- MAC+44
@@ -382,6 +387,8 @@ function init_gear_sets()
     sets.midcast['Dispel'] = set_combine(sets.Enfeebling.Int.Hard, {
         neck="Duelist's Torque +1", -- dispel +1
     })
+    sets.midcast['Dispelga'] = set_combine(sets.midcast['Dispel'],
+        {main="Daybreak", sub="Genbu's Shield"})
 
     -- sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
 
