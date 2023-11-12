@@ -31,8 +31,8 @@ function init_gear_sets()
         rring="Acumen Ring", -- MAB+4
         back="Izdubar Mantle", -- MAB+10
         waist="Aswang Sash", -- MAB+3
-        legs="Jhakri Slops", -- MAB+27
-        feet="Jhakri Pigaches +1", --MAB+36
+        legs="Jhakri Slops +2", -- MAB+42
+        feet="Jhakri Pigaches +2", --MAB+39
     }
     -- sets.midcast.Elemental = {
     --     neck="Elemental Torque",
