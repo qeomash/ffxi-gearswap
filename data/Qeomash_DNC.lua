@@ -16,7 +16,7 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Odium",
+        main="Gleti's Knife",
         sub="Ternion Dagger +1",
         ranged="Lamiabane",
         -- ammo="Tiphia Sting",
@@ -28,38 +28,46 @@ function init_gear_sets()
         ear1="Suppanomimi",
         ear2="Brutal Earring",
         body="Ashera Harness",
-        hands="Meghanada Gloves",
+        hands="Gleti's Gauntelts",
         lring="Petrov Ring",
         rring="Chirich Ring",
         back="Canny Cape",
         waist="Dynamic Belt +1",
-        legs="Mummu Kecks",
-        feet="Mummu Gamash. +1",
+        legs="Gleti's Breeches",
+        feet="Gleti's Boots",
     }
     sets.idle = set_combine(sets.engaged, {
+        head="Gleti's Mask",
+        body="Gleti's Cuirass",
+        hands="Gleti's Gauntelts",
+        legs="Gleti's Breeches",
         feet="Tandava Crackows",
     })
 
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Felistris Mask",
+        head="Gleti's Mask",
         ear1="Moonshade Earring", -- TPBonus+250
         ear2="Brutal Earring",
-        body="Ashera Harness",
-        hands="Meghanada Gloves", -- STR+15
+        body="Gleti's Cuirass",
+        hands="Gleti's Gauntelts",
         ring1="Pyrosoul Ring",
-        ring2="Rajas Ring",
-        feet="Mummu Gamash. +1",
+        ring2="Chirich Ring",
+        waist="Sweordfaetels",
+        legs="Gleti's Breeches",
+        feet="Gleti's Boots",
     }
     sets.baseWS.Dex = {
-        head="Malignance Chapeau",
+        head="Malignance Chapeau", --DEX+40
         ear1="Moonshade Earring", -- TPBonus+250
         ear2="Brutal Earring",
-        body="Meghanada Cuirie",
-        hands="Meghanada Gloves", --DEX+42
+        body="Gleti's Cuirass",
+        hands="Gleti's Gauntelts",
         ring1="Pyrosoul Ring",
-        ring2="Rajas Ring",
-        feet="Mummu Gamash. +1",
+        ring2="Chirich Ring",
+        waist="Sweordfaetels",
+        legs="Gleti's Breeches",
+        feet="Gleti's Boots",
     }
     sets.precast.WS = sets.baseWS.Str
 

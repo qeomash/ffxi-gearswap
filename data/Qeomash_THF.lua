@@ -16,50 +16,59 @@ end
 function init_gear_sets()
 
     sets.mainweapons = {
-        main="Odium",
+        main="Gleti's Knife",
         sub="Ternion Dagger +1",
-        ranged="Lamiabane",
+        -- ranged="Lamiabane",
         -- ammo="Tiphia Sting",
     }
 
     sets.engaged = {
+        ammo="Coiste Bodhar",
         head="Malignance Chapeau",
         neck="Asperity Necklace",
         ear1="Suppanomimi",
         ear2="Brutal Earring",
         body="Ashera Harness",
-        hands="Meghanada Gloves",
+        hands="Gleti's Gauntlets",
         lring="Petrov Ring",
         rring="Chirich Ring",
         back="Canny Cape",
         waist="Dynamic Belt +1",
-        legs="Mummu Kecks",
-        feet="Mummu Gamash. +1",
+        legs="Gleti's Breeches",
+        feet="Gleti's Boots",
     }
     sets.idle = set_combine(sets.engaged, {
+        head="Gleti's Mask",
+        body="Gleti's Cuirass",
+        hands="Gleti's Gauntlets",
+        legs="Gleti's Breeches",
         feet="Trotter Boots"
     })
 
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Felistris Mask", -- STR+23
+        head="Gleti's Mask",
         ear1="Moonshade Earring", -- TPBonus+250
         ear2="Brutal Earring",
-        body="Ashera Harness",
-        hands="Meghanada Gloves", -- STR+15
+        body="Gleti's Cuirass",
+        hands="Gleti's Gauntlets",
         ring1="Pyrosoul Ring",
-        rring="Chirich Ring",
-        feet="Mummu Gamash. +1",
+        ring2="Chirich Ring",
+        waist="Sweordfaetels",
+        legs="Gleti's Breeches",
+        feet="Gleti's Boots",
     }
     sets.baseWS.Dex = {
         head="Malignance Chapeau", --DEX+40
         ear1="Moonshade Earring", -- TPBonus+250
         ear2="Brutal Earring",
-        body="Meghanada Cuirie",
-        hands="Meghanada Gloves", --DEX+42
+        body="Gleti's Cuirass",
+        hands="Gleti's Gauntlets",
         ring1="Pyrosoul Ring",
-        rring="Chirich Ring",
-        feet="Mummu Gamash. +1",
+        ring2="Chirich Ring",
+        waist="Sweordfaetels",
+        legs="Gleti's Breeches",
+        feet="Gleti's Boots",
     }
     sets.precast.WS = sets.baseWS.Str
 

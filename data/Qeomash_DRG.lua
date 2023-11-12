@@ -29,8 +29,8 @@ function init_gear_sets()
 
     sets.midcast.RA = sets.TH
 
-    sets.engaged = {
-        ammo="Aurgelmir Orb",
+    sets.ambu_engaged = {
+        ammo="Coiste Bodhar",
         head="Flamma Zucchetto +2",
         neck="Lissome Necklace",
         lear="Brutal Earring",
@@ -44,6 +44,15 @@ function init_gear_sets()
         legs="Sulevia's Cuisses +2",
         feet="Flamma Gambieras +2",
     }
+    sets.gleti_engaged = set_combine(sets.ambu_engaged, {
+        head="Gleti's Mask",
+        body="Gleti's Cuirass",
+        hands="Gleti's Gauntlets",
+        legs="Gleti's Breeches",
+        feet="Gleti's Boots",
+    })
+    -- sets.engaged = sets.gleti_engaged
+    sets.engaged = sets.ambu_engaged
     sets.RelicAF = {
         head="Wyrm Armet +2",
         body="Wyrm Mail",
@@ -53,7 +62,11 @@ function init_gear_sets()
     }
 
     sets.idle = set_combine(sets.engaged, {
+        head="Gleti's Mask",
+        body="Gleti's Cuirass",
+        hands="Gleti's Gauntlets",
         legs="Carmine Cuisses",
+        feet="Gleti's Boots",
         waist="Flume Belt",
     })
 

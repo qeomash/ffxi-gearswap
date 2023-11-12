@@ -571,8 +571,7 @@ function init_gear_sets()
         -- body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
         -- back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
 
-        -- head="Vitiation Chapeau +1", --haste+6%,str+14
-        ammo="Aurgelmir Orb",
+        ammo="Coiste Bodhar",
         head="Malignance Chapeau",
         neck="Asperity Necklace",
         lear="Brutal Earring",
