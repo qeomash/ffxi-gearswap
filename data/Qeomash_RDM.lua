@@ -398,8 +398,8 @@ function init_gear_sets()
     --     body="Hagondes Coat",hands="Yaoyotl Gloves",ring1="Icesoul Ring",ring2="Acumen Ring",
     --     back="Toro Cape",waist=gear.ElementalObi,legs="Hagondes Pants",feet="Hagondes Sabots"}
     sets.midcast['Elemental Magic'] = {
-        main="Grioavolr", -- MAB+30
-        sub="Elan Strap", -- MAB+5
+        main="Daybreak", -- MAB+40
+        sub="Culminus", -- MAB+20
         ammo="Kalboron Stone",
         head="Jhakri Coronal +1", -- MAB+38
         neck="Stoicheion Medal", -- MAB+8
