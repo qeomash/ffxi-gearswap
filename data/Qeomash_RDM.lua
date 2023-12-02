@@ -305,7 +305,8 @@ function init_gear_sets()
     sets.Enfeebling.Base = {
         main="Daybreak", --MAC+14
         -- sub="Clerisy Strap", --MAC+10
-        ammo="Kalboron Stone",
+        ranged="Ullr",
+        -- ammo="Kalboron Stone",
         -- head=sets.Relic.head,
         head=sets.Artifact.head, -- MAC+44
         neck="Duelist's Torque +1", -- macc+25,enf ef+7
@@ -401,7 +402,7 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {
         main="Daybreak", -- MAB+40
         sub="Culminus", -- MAB+20
-        ammo="Kalboron Stone",
+        ranged="Ullr", --MAC+40
         head="Jhakri Coronal +1", -- MAB+38
         neck="Stoicheion Medal", -- MAB+8
         lear="Friomisi Earring", -- MAB+10
