@@ -124,7 +124,7 @@ function init_gear_sets()
     --     body="Vitivation Tabard",hands="Gendewitha Gages",ring1="Prolix Ring",
     --     back="Swith Cape +1",waist="Witful Belt",legs="Orvail Pants +1",feet="Chelona Boots +1"}
     sets.precast.FC = {
-        main="Colada",
+        main="Crocea Mors", --FC+20%
         -- sub="Clerisy Strap", --FC+2%
         head=sets.Artifact.head,
         lear="Loquacious Earring",
@@ -303,7 +303,7 @@ function init_gear_sets()
 
     sets.Enfeebling = {}
     sets.Enfeebling.Base = {
-        main="Daybreak", --MAC+14
+        main="Crocea Mors", --MAC+50
         -- sub="Clerisy Strap", --MAC+10
         ranged="Ullr",
         -- ammo="Kalboron Stone",
