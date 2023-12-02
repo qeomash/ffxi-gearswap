@@ -155,7 +155,7 @@ function init_gear_sets()
     sets.baseWS.Str = {
         head="Ayanmo Zucchetto +1", -- STR+20
         neck="Asperity Necklace",
-        lear="Brutal Earring",
+        lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
         -- rear="Magnetic Earring",
         body="Ayanmo Corazza +2",
@@ -171,7 +171,7 @@ function init_gear_sets()
     sets.baseWS.Mnd = {
         head=sets.Relic.head, -- MND+32
         neck="Asperity Necklace",
-        lear="Brutal Earring",
+        lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body="Jhakri Robe +2", -- MND+32
         hands="Jhakri Cuffs +2", --MND+35,Attack+43,WS+7%
@@ -574,7 +574,7 @@ function init_gear_sets()
         ammo="Coiste Bodhar",
         head="Malignance Chapeau",
         neck="Asperity Necklace",
-        lear="Brutal Earring",
+        lear="Cessance Earring",
         rear="Suppanomimi",
         body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
