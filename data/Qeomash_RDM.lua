@@ -68,7 +68,7 @@ function init_gear_sets()
     }
     sets.Relic = {
         head="Vitiation Chapeau +1",
-        body="Vitiation Tabard +1",
+        body="Vitiation Tabard +2",
         hands="Vitiation Gloves +1",
         legs="Vitiation Tights",
         feet="Vitiation Boots",
@@ -158,7 +158,8 @@ function init_gear_sets()
         lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
         -- rear="Magnetic Earring",
-        body="Ayanmo Corazza +2",
+        -- body="Ayanmo Corazza +2",
+        body=sets.Relic.body, --acc30,Attk+50,
         hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         lring="Pyrosoul Ring",
         rring="Rajas Ring",
@@ -241,7 +242,7 @@ function init_gear_sets()
         neck="Colossus's Torque", -- +7
         lear="Augmenting Earring", -- +3
         rear="Mimir Earring", -- +10
-        body=sets.Relic.body, -- +19
+        body=sets.Relic.body, -- +21,duration+10%
         hands=sets.Relic.hands, -- +20,duration+
         lring="Stikini Ring", -- +5
         rring="Stikini Ring", -- +5
