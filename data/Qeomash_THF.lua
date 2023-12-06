@@ -89,6 +89,7 @@ function init_gear_sets()
     sets.TH = {
         head="White Rarab Cap +1",
         hands="Assassin's Armlets",
+        waist="Chaac Belt", --TH+1
     }
     sets.precast.JA.Step = sets.TH
 

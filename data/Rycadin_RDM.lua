@@ -32,6 +32,7 @@ function init_gear_sets()
         main="Grioavolr", -- TH+1
         head="White Rarab Cap +1",
         feet="Chironic Slippers", -- TH+1
+        waist="Chaac Belt", --TH+1
     }
 
     sets.precast.FC = {

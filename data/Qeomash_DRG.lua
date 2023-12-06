@@ -25,6 +25,7 @@ function init_gear_sets()
 
     sets.TH = {
         head="White Rarab Cap +1",
+        waist="Chaac Belt", --TH+1
     }
 
     sets.midcast.RA = sets.TH

@@ -98,6 +98,7 @@ function init_gear_sets()
     sets.TH = {
         head="White Rarab Cap +1", -- TH+1
         feet="Chironic Slippers", --TH+2
+        waist="Chaac Belt", --TH+1
     }
 
     -- Precast Sets
@@ -148,7 +149,7 @@ function init_gear_sets()
             legs="Kaykaus Tights", -- CFC-5%
             feet="Kaykaus Boots" -- CFC-5%
         })
-
+    sets.precast.FC['Dia'] = set_combine(sets.precast.FC, sets.TH)
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.baseWS = {}
@@ -448,6 +449,7 @@ function init_gear_sets()
 
     sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
         head="Appetence Crown",
+        waist="Fucho-no-obi",
         ring1="Excelsis Ring"})
     sets.midcast.Aspir = sets.midcast.Drain
 
