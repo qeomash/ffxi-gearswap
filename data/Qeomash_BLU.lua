@@ -17,7 +17,7 @@ function init_gear_sets()
     sets.mainweapons = {
         main="Naegling",
         sub="Claidheamh Soluis",
-        ammo="Aurgelmir Orb",
+        ammo="Coiste Bodhar",
     }
     sets.learningweapons = {
         main="Wax Sword",
@@ -70,6 +70,7 @@ function init_gear_sets()
 
     -- Spellcasting
     sets.precast.FC = {
+        body="Ebur Talar", --5%
         lear="Loquacious Earring",
         back="Swith Cape",
         legs="Ayanmo Cosciales +2",

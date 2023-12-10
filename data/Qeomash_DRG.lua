@@ -20,7 +20,7 @@ function init_gear_sets()
         main="Shining One",
         sub="Duplus Grip",
         -- ranged="Lamiabane",
-        ammo="Aurgelmir Orb",
+        ammo="Coiste Bodhar",
     }
 
     sets.TH = {

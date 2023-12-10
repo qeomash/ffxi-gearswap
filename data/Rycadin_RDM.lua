@@ -38,8 +38,7 @@ function init_gear_sets()
     sets.precast.FC = {
         head="Atrophy Chapeau",
         neck="Holy Phial",
-        ear1="Moldavite Earring",
-        ear2="Morion Earring",
+        ear1="Loqacious Earring",
         body="Duelist's Tabard",
         back="Prism Cape",
         legs="Ayanmo Cosciales +1",

@@ -17,8 +17,8 @@ function init_gear_sets()
     sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
 
     sets.midcast['Elemental Magic'] = {
-        main="Grioavolr", -- MAB+30
-        sub="Elan Strap", -- MAB+5
+        main="Daybreak", -- MAB+40
+        sub="Culminus", -- MAB+20
         ammo="Kalboron Stone",
         head="Jhakri Coronal +2", -- MAB+38
         neck="Stoicheion Medal", -- MAB+8

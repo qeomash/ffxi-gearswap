@@ -77,6 +77,8 @@ function init_gear_sets()
             main="Tamaxchi",
             sub="Sors Shield", -- CFC-5%
             head="Theophany Cap +1", -- CFC -5%
+            legs="Kaykaus Tights", -- CFC-5%
+            feet="Kaykaus Boots" -- CFC-5%
         })
 
     sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
