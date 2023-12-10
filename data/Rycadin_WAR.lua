@@ -14,23 +14,23 @@ end
 
 function init_gear_sets()
     sets.mainweapons = {
-        main="Hodadenon",
-        sub="Pole Grip",
+        main="Kaja Chopper",
+        sub="Duplus Grip",
         ammo="Coiste Bodhar",
     }
     sets.engaged = {
-        head="Flamma Zucchetto +1",
+        head="Flamma Zucchetto +2",
         neck="Warrior's Beads",
         lear="Brutal Earring",
         rear="Mache Earring",
-        body="Flamma Korazin",
-        hands="Sulevia's Gauntlets +1",
+        body="Flamma Korazin +2",
+        hands="Sulevia's Gauntlets +2",
         lring="Rajas Ring",
         rring="Flamma Ring",
         back="Mauler's Mantle",
         waist="Cetl Belt",
-        legs="Sulevia's Cuisses",
-        feet="Flamma Gambieras +1",
+        legs="Sulevia's Cuisses +2",
+        feet="Flamma Gambieras +2",
     }
 
     sets.idle = set_combine(sets.engaged, {
@@ -38,18 +38,18 @@ function init_gear_sets()
     })
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Sulevia's Mask +1",
+        head="Sulevia's Mask +2", --STR+33
         neck="Warrior's Beads",
         left_ear="Brutal Earring",
         right_ear="Mache Earring",
-        body="Sulevia's Plate.",
-        hands="Sulev. Gauntlets +1",
+        body="Sulevia's Platemail +2",
+        hands="Sulevia's Gauntlets +2",
         lring="Sulevia's Ring",
         rring="Flamma Ring",
         back="Mauler's Mantle",
         waist="Cetl Belt",
-        legs="Sulevia's Cuisses",
-        feet="Sulev. Leggings +1",
+        legs="Sulevia's Cuisses +2",
+        feet="Sulevia's Leggings +2", --WS+7%
     }
 
     sets.precast.WS = sets.baseWS.Str

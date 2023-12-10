@@ -55,28 +55,28 @@ function init_gear_sets()
         ear1="Moldavite Earring",
         ear2="Morion Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs +1",
+        hands="Jhakri Cuffs +2",
         back="Prism Cape",
         waist="Demonry Sash",
         legs="Carmine Cuisses",
-        feet="Jhakri Pigaches +1",
+        feet="Jhakri Pigaches +2",
     }
 
     sets.midcast['Elemental Magic'] = {
         main="Grioavolr",
         sub="Staff Strap",
-        head="Jhakri Coronal +1",
+        head="Jhakri Coronal +2",
         neck="Elemental Torque",
         ear1="Moldavite Earring",
         ear2="Abyssal Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs +1",
+        hands="Jhakri Cuffs +2",
         ring1="Snow Ring",
         ring2="Snow Ring",
         back="Prism Cape",
         waist="Duelist's Belt",
-        legs="Jhakri Slops",
-        feet="Jhakri Pigaches +1",
+        legs="Jhakri Slops +2",
+        feet="Jhakri Pigaches +2",
     }
 
     sets.midcast['Enhancing Magic'] = {
@@ -87,13 +87,13 @@ function init_gear_sets()
         ear1="Moldavite Earring",
         ear2="Morion Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs +1",
+        hands="Jhakri Cuffs +2",
         ring1="Electrum Ring",
         ring2="Ether Ring",
         back="Sucellos's Cape",
         waist="Duelist's Belt",
-        legs="Jhakri Slops",
-        feet="Jhakri Pigaches +1",
+        legs="Jhakri Slops +2",
+        feet="Jhakri Pigaches +2",
     }
 
     sets.Enfeebling = {}
@@ -105,13 +105,13 @@ function init_gear_sets()
         ear1="Moldavite Earring",
         ear2="Abyssal Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs +1",
+        hands="Jhakri Cuffs +2",
         ring1="Snow Ring",
         ring2="Snow Ring",
         back="Prism Cape",
         waist="Duelist's Belt",
-        legs="Jhakri Slops",
-        feet="Jhakri Pigaches +1",
+        legs="Jhakri Slops +2",
+        feet="Jhakri Pigaches +2",
     }
     sets.Enfeebling.Mnd = {
         main="Kaja Staff",
@@ -120,13 +120,13 @@ function init_gear_sets()
         neck="Enfeebling Torque",
         ear1="Moldavite Earring",
         body="Jhakri Robe +2",
-        hands="Jhakri Cuffs +1",
+        hands="Jhakri Cuffs +2",
         ring1="Aqua Ring",
         ring2="Aqua Ring",
         back="Prism Cape",
         waist="Demonry Sash",
-        legs="Jhakri Slops",
-        feet="Jhakri Pigaches +1",
+        legs="Jhakri Slops +2",
+        feet="Jhakri Pigaches +2",
     }
     sets.midcast['Enfeebling Magic'] = sets.Enfeebling.Int
     sets.midcast['Dia III'] = sets.Enfeebling.Mnd
@@ -156,34 +156,36 @@ function init_gear_sets()
     sets.midcast.Cure = {
         main="Iridal Staff",
         sub="Staff Strap",
-        head="Jhakri Coronal +1",
+        head="Jhakri Coronal +2",
         neck="Holy Phial",
         ear1="Moldavite Earring",
         ear2="Morion Earring",
-        body="Chelona Blazer",
-        hands="Jhakri Cuffs +1",
+        body="Chironic Doublet", --CP+7%
+        hands="Jhakri Cuffs +2",
         ring1="Aqua Ring",
         ring2="Aqua Ring",
         back="Prism Cape",
         waist="Demonry Sash",
-        legs="Jhakri Slops",
-        feet="Jhakri Pigaches +1",
+        legs="Kaykaus Tights", --CP+10%
+        feet="Kaykaus Boots", --CP+10%
     }
 
     sets.engaged = {
             main="Naegling",
             sub="Genbu's Shield",
-            head="Aya. Zucchetto +1",
-            body="Ayanmo Corazza +1",
-            hands="Aya. Manopolas +1",
-            legs="Jhakri Slops",
-            feet="Aya. Gambieras +1",
+            head="Aya. Zucchetto +2",
+            left_ear="Brutal Earring",
+            right_ear="Mache Earring",
+            body="Ayanmo Corazza +2",
+            hands="Ayanmo Manopolas +2",
+            legs="Ayanmo Cosciales +2",
+            feet="Ayanmo Gambieras +2",
             waist="Paewr Belt",
             ring1="Jhakri Ring",
             ring2="Ayanmo Ring",
     }
     sets.precast.WS = {
-        hands="Jhakri Cuffs +1",
+        hands="Jhakri Cuffs +2",
     }
     sets.midcast['Dia'] = sets.TH
 

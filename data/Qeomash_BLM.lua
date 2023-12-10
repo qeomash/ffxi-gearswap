@@ -20,7 +20,7 @@ function init_gear_sets()
         main="Grioavolr", -- MAB+30
         sub="Elan Strap", -- MAB+5
         ammo="Kalboron Stone",
-        head="Jhakri Coronal +1", -- MAB+38
+        head="Jhakri Coronal +2", -- MAB+38
         neck="Stoicheion Medal", -- MAB+8
         lear="Friomisi Earring", -- MAB+10
         rear="Hecate's Earring", -- MAB+6
@@ -71,7 +71,6 @@ function init_gear_sets()
     sets.precast.FC = {
         --head="Wayfarer Circlet",
         lear="Loquacious Earring",
-        legs="Ayanmo Cosciales",
         lring="Weatherspoon Ring",
         waist="Embla Sash", --FC+5%
         back="Swith Cape",

@@ -47,18 +47,18 @@ function init_gear_sets()
     }
 
     sets.baseWS = {
-        head="Ayanmo Zucchetto +1", -- STR+20
-        neck="Chivalrous Chain",
-        lear="Brutal Earring",
+        head="Jhakri Coronal +2", -- STR+31
+        neck="Asperity Necklace",
+        lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
-        hands="Jhakri Cuffs", --STR+10,Attack+25,WS+3%
+        hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         lring="Pyrosoul Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
-        waist="Warwolf Belt",
-        legs="Ayanmo Cosciales +2",
-        feet="Jhakri Pigaches +1", -- STR+22
+        waist="Dynamic Belt +1",
+        legs="Jhakri Slops +2", --Att+45,STR+47
+        feet="Jhakri Pigaches +2", -- STR+22
     }
     sets.baseWS.Str = set_combine(sets.baseWS, {
         lring="Pyrosoul Ring",

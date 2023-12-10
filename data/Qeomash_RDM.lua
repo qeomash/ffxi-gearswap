@@ -154,7 +154,7 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Ayanmo Zucchetto +1", -- STR+20
+        head="Jhakri Coronal +2", -- STR+31
         neck="Asperity Necklace",
         lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
@@ -341,7 +341,7 @@ function init_gear_sets()
     )
     sets.Enfeebling.Int.Soft = set_combine(sets.Enfeebling.Int.Hard,
         {
-            -- head="Jhakri Coronal +1",
+            -- head="Jhakri Coronal +2",
             -- body="Jhakri Robe +2",
             -- hands="Jhakri Cuffs +2", --INT+36
             lring="Snow Ring",
@@ -404,7 +404,7 @@ function init_gear_sets()
         main="Daybreak", -- MAB+40
         sub="Culminus", -- MAB+20
         ranged="Ullr", --MAC+40
-        head="Jhakri Coronal +1", -- MAB+38
+        head="Jhakri Coronal +2", -- MAB+38
         neck="Stoicheion Medal", -- MAB+8
         lear="Friomisi Earring", -- MAB+10
         rear="Hecate's Earring", -- MAB+6
@@ -429,7 +429,7 @@ function init_gear_sets()
     sets.midcast['Dark Magic'] = {
         main="Grioavolr",
         sub="Clerisy Strap",
-        head="Jhakri Coronal +1",
+        head="Jhakri Coronal +2",
         neck="Aesir Torque",
         -- lear="Abyssal Earring",
         rear="Magnetic Earring",
@@ -509,7 +509,7 @@ function init_gear_sets()
         back=Sucellos.DA, -- DT-5%
         waist="Flume Belt",
         legs="Carmine Cuisses",
-        feet="Ayanmo Gambieras",
+        feet="Ayanmo Gambieras +2", --DT-2%
     }
     sets.idle = sets.AutoRefreshIdle
 

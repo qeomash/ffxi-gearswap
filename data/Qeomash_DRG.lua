@@ -73,11 +73,11 @@ function init_gear_sets()
 
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Flamma Zucchetto +2", --STR+36
+        head="Sulevia's Mask +2", --STR+33
         neck="Asperity Necklace",
         lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
-        body="Vishap Mail +2",
+        body="Sulevia's Platemail +2",
         hands="Sulevia's Gauntlets +2",
         lring="Pyrosoul Ring",
         rring="Pyrosoul Ring",
@@ -87,11 +87,11 @@ function init_gear_sets()
         feet="Sulevia's Leggings +2", --WS+7%
     }
     sets.baseWS.Accuracy = {
-        head="Flamma Zucchetto +2", --Acc+44
+        head="Sulevia's Mask +2", --Acc+44
         neck="Asperity Necklace",
         lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
-        body="Vishap Mail +2", --Acc+47
+        body="Sulevia's Platemail +2", --Acc+46
         hands="Sulevia's Gauntlets +2", --Acc+37
         lring="Blood Ring",
         rring="Flamma Ring",

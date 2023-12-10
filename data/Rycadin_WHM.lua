@@ -58,13 +58,13 @@ function init_gear_sets()
     --     back="Swith Cape +1",waist="Witful Belt",legs="Orvail Pants +1",feet="Chelona Boots +1"}
     sets.precast.FC = {
         main="Grioavolr", -- FC+4%
-        head="Aya. Zucchetto +1",
+        head="Aya. Zucchetto +2",
         lear="Loqacious Earring",
         body="Inyanga Jubbah +2", -- FC+14%
-        hands="Aya. Manopolas +1", --maybe try those garbage things you got?
+        hands="Aya. Manopolas +2", --maybe try those garbage things you got?
         back=Alaunus.Idle, --FC+10%
-        legs="Aya. Cosciales +1", -- FC+5%
-        feet="Aya. Gambieras +1",
+        legs="Aya. Cosciales +2", -- FC+5%
+        feet="Aya. Gambieras +2",
         ammo="Incantor Stone", -- FC+2%
         ring1="Lebeche Ring", -- QM+2%
     }
@@ -230,7 +230,7 @@ function init_gear_sets()
     sets.Enfeebling.Int = {
         main="Grioavolr",
         sub="Staff Strap",
-        head="Carmine Mask",
+        head="Inyanga Tiara +2",
         neck="Enfeebling Torque",
         ear1="Moldavite Earring",
         body="Inyanga Jubbah +2",
@@ -320,12 +320,13 @@ function init_gear_sets()
     --     back="Umbra Cape",waist="Goading Belt",legs="Gendewitha Spats",feet="Gendewitha Galoshes"}
     sets.engaged = {
         main="Mes'yohi Rod",
-        head="Ayanmo Zucchetto +1",
-        lear="Brutal Earring",
-        body="Ayanmo Corazza +1",
-        hands="Ayanmo Manopolas +1",
-        legs="Ayanmo Cosciales +1",
-        feet="Ayanmo Gambieras +1",
+        head="Ayanmo Zucchetto +2",
+        left_ear="Brutal Earring",
+        right_ear="Mache Earring",
+        body="Ayanmo Corazza +2",
+        hands="Ayanmo Manopolas +2",
+        legs="Ayanmo Cosciales +2",
+        feet="Ayanmo Gambieras +2",
         waist="Paewr Belt",
         ring1="Ayanmo Ring",
         ring2="Rajas Ring",

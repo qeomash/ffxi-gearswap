@@ -22,21 +22,27 @@ function init_gear_sets()
         -- ammo="Tiphia Sting",
     }
 
-    sets.engaged = {
+    sets.engagedAmbu = {
         ammo="Coiste Bodhar",
         head="Malignance Chapeau",
         neck="Asperity Necklace",
         ear1="Suppanomimi",
         ear2="Brutal Earring",
         body="Ashera Harness",
-        hands="Gleti's Gauntlets",
+        hands="Mummu Wrists +2",
         lring="Petrov Ring",
         rring="Chirich Ring",
         back="Canny Cape",
         waist="Dynamic Belt +1",
+        legs="Meghanada Chausses +2",
+        feet="Mummu Gamashes +2"
+    }
+    sets.engagedGleti = set_combine(sets.engagedAmbu, {
+        hands="Gleti's Gauntlets",
         legs="Gleti's Breeches",
         feet="Gleti's Boots",
-    }
+    })
+    sets.engaged = sets.engagedAmbu
     sets.idle = set_combine(sets.engaged, {
         head="Gleti's Mask",
         body="Gleti's Cuirass",
@@ -51,7 +57,7 @@ function init_gear_sets()
         ear1="Moonshade Earring", -- TPBonus+250
         ear2="Brutal Earring",
         body="Gleti's Cuirass",
-        hands="Gleti's Gauntlets",
+        hands="Meghanada Gloves +2",
         ring1="Pyrosoul Ring",
         ring2="Chirich Ring",
         waist="Sweordfaetels",
@@ -62,13 +68,13 @@ function init_gear_sets()
         head="Malignance Chapeau", --DEX+40
         ear1="Moonshade Earring", -- TPBonus+250
         ear2="Brutal Earring",
-        body="Gleti's Cuirass",
-        hands="Gleti's Gauntlets",
+        body="Meghanada Cuirie +2",
+        hands="Meghanada Gloves +2",
         ring1="Pyrosoul Ring",
         ring2="Chirich Ring",
         waist="Sweordfaetels",
         legs="Gleti's Breeches",
-        feet="Gleti's Boots",
+        feet="Meghanada Jambeaux +2",
     }
     sets.precast.WS = sets.baseWS.Str
 
@@ -92,6 +98,10 @@ function init_gear_sets()
         waist="Chaac Belt", --TH+1
     }
     sets.precast.JA.Step = sets.TH
+
+    sets.precast.Waltz = {
+        head="Mummu Bonnet +2" -- Potency?
+    }
 
 end
 
