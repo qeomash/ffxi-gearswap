@@ -118,16 +118,15 @@ function init_gear_sets()
     sets.precast.JA.Jump = set_combine(
         sets.baseWS.Accuracy,
         {
-            hands="Vishap Finger Gauntlets +1",
             body="Vishap Mail +2",
+            hands="Vishap Finger Gauntlets +1",
             back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
             feet="Ostro Greaves",
         }
     )
-    -- }
+
     sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {
-        -- legs="Wyrm Brias",
-        legs="Vishap Brais",
+        legs="Vishap Brais +1",
     })
     sets.precast.JA['Soul Jump'] = set_combine(sets.precast.JA.Jump, {
         body="Vishap Mail +2",
@@ -145,7 +144,7 @@ function init_gear_sets()
         neck="Chanoix's Gorget",
         body="Wyvern Mail",
         hands="Ostreger Mitts",
-        legs="Vishap Brias",
+        legs="Vishap Brais +1",
     }
     sets.HealingBreath = set_combine(sets.WyvernHP, {
         head="Wyrm Armet +2",
