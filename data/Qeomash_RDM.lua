@@ -74,8 +74,8 @@ function init_gear_sets()
         feet="Vitiation Boots",
     }
     sets.Empyrean = {
-        head="Lethargy Chappel +1",
-        body="Lethargy Sayon +1",
+        head="Lethargy Chappel +2",
+        body="Lethargy Sayon +2",
         hands="Lethargy Gantherots +2",
         legs="Lethargy Fuseau +2",
         feet="Lethargy Houseaux +2",
