@@ -34,7 +34,7 @@ function init_gear_sets()
         rring="Chirich Ring",
         back="Canny Cape",
         waist="Dynamic Belt +1",
-        legs="Meghanada Chausses +2",
+        legs="Malignance Tights",
         feet="Mummu Gamashes +2"
     }
     sets.engagedGleti = set_combine(sets.engagedAmbu, {

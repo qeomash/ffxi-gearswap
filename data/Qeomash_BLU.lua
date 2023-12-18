@@ -42,7 +42,7 @@ function init_gear_sets()
         rring="Chirich Ring",
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
-        legs="Ayanmo Cosciales +2",
+        legs="Malignance Tights",
         feet="Carmine Greaves +1", --haste+4%,STR+14,DA+4%
     }
 

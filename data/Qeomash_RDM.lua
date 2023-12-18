@@ -586,7 +586,7 @@ function init_gear_sets()
         rring="Chirich Ring",
         back=Sucellos.DA,
         waist="Dynamic Belt +1",
-        legs="Ayanmo Cosciales +2",
+        legs="Malignance Tights",
         feet="Carmine Greaves +1", --haste+4%,STR+14,DA+3%
     }
     sets.engaged.Defense = {ammo="Demonry Stone",
