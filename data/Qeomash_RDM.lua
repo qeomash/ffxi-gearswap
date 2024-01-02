@@ -146,6 +146,7 @@ function init_gear_sets()
         {
             main="Daybreak",
             sub="Sors Shield", -- CFC-5%
+            body="Heka's Kalasiris", --CFC-15%
             legs="Kaykaus Tights", -- CFC-5%
             feet="Kaykaus Boots" -- CFC-5%
         })
@@ -317,7 +318,7 @@ function init_gear_sets()
         body=sets.Artifact.body, -- MAC+55
         hands=sets.Empyrean.hands, -- MAC+52
         lring="Stikini Ring", --sk+5 MAC+8
-        rring="Stikini Ring", --sk+5 MAC+8
+        rring="Metamorph Ring +1",
         back=Sucellos.Enfeebling,
         waist="Demonry Sash",
         legs=sets.Empyrean.legs, --MAC+53
@@ -346,7 +347,7 @@ function init_gear_sets()
             -- body="Jhakri Robe +2",
             -- hands="Jhakri Cuffs +2", --INT+36
             lring="Snow Ring",
-            rring="Snow Ring",
+            rring="Metamorph Ring +1",
             -- back="Prism Cape",
             -- legs="Jhakri Slops +2", -- INT+44
             -- feet="Jhakri Pigaches +2",
@@ -420,6 +421,7 @@ function init_gear_sets()
         legs=sets.Empyrean.legs, -- MAB+53
         feet=sets.Empyrean.feet, --MAB+45
     }
+    sets.Nuke = sets.midcast['Elemental Magic']
 
     --sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {head=empty,body="Twilight Cloak"})
 
