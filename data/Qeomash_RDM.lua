@@ -62,12 +62,12 @@ function init_gear_sets()
     sets.Artifact = {
         head="Atrophy Chapeau +2",
         body="Atrophy Tabard +3",
-        hands="Atrophy Gloves +1",
-        legs="Atrophy Tights +1",
+        hands="Atrophy Gloves +3",
+        legs="Atrophy Tights +2",
         feet="Atrophy Boots +1",
     }
     sets.Relic = {
-        head="Vitiation Chapeau +1",
+        head="Vitiation Chapeau +2",
         body="Vitiation Tabard +2",
         hands="Vitiation Gloves +1",
         legs="Vitiation Tights",
@@ -154,14 +154,15 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head="Jhakri Coronal +2", -- STR+31
+        head=sets.Empyrean.head, --Acc/Atk+51
         neck="Asperity Necklace",
         lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
         -- rear="Magnetic Earring",
         -- body="Ayanmo Corazza +2",
-        body=sets.Relic.body, --acc30,Attk+50,
-        hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
+        body=sets.Empyrean.body, --Att+54,Acc+54,STR+29
+        -- hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
+        hands=sets.Artifact.hands, --STR+21,Acc+53,Att+WSD+6%
         lring="Pyrosoul Ring",
         rring="Rajas Ring",
         back=Sucellos.WS,
@@ -171,11 +172,11 @@ function init_gear_sets()
         feet=sets.Empyrean.feet, --Acc+50,Att+50,WS+8%
     }
     sets.baseWS.Mnd = {
-        head=sets.Relic.head, -- MND+32
+        head=sets.Relic.head, -- MND+37,WSD+3%
         neck="Asperity Necklace",
         lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
-        body="Jhakri Robe +2", -- MND+32
+        body=sets.Empyrean.body, --Att+54,Acc+54,MND+40
         hands="Jhakri Cuffs +2", --MND+35,Attack+43,WS+7%
         lring="Stikini Ring",
         rring="Aqua Ring",
@@ -249,7 +250,7 @@ function init_gear_sets()
         rring="Stikini Ring", -- +5
         back=Ghostfyre.Duration, --duration+20%
         waist="Olympus Sash", -- +5
-        legs=sets.Artifact.legs, -- +17
+        legs=sets.Artifact.legs, -- +19
         feet=sets.Empyrean.feet, -- +30,duration+35%
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
@@ -279,7 +280,7 @@ function init_gear_sets()
         main=Colada.EnhancingDur,
         head=sets.Empyrean.head,
         body=sets.Empyrean.body,
-        hands=sets.Empyrean.hands,
+        hands=sets.Artifact.hands,
         back=Ghostfyre.Duration,
         waist="Embla Sash", --duration+10%
         legs=sets.Empyrean.legs,
@@ -408,7 +409,7 @@ function init_gear_sets()
         neck="Stoicheion Medal", -- MAB+8
         lear="Friomisi Earring", -- MAB+10
         rear="Hecate's Earring", -- MAB+6
-        body="Jhakri Robe +2", -- MAB+43
+        body=sets.Empyrean.body, -- MAB+49
         -- hands="Amalric Gages", -- MAB+23, MBII+5
         hands=sets.Empyrean.hands, -- MAB+47, MD+22
         -- hands="Jhakri Cuffs +2", --MAB+40
@@ -433,7 +434,8 @@ function init_gear_sets()
         neck="Aesir Torque",
         -- lear="Abyssal Earring",
         rear="Magnetic Earring",
-        body="Glamor Jupon", -- Drk skill +3
+        -- body="Glamor Jupon", -- Drk skill +3
+        body=sets.Empyrean.body, --MAC,MAB
         -- hands="Crimson Finger Gauntlets", --Drk skill +10
         -- hands="Amalric Gages", -- MAB+23, MBII+5, sure why not
         hands="Jhakri Cuffs +2", --INT+36,MAB+40
@@ -500,9 +502,10 @@ function init_gear_sets()
         sub="Genbu's Shield",
         ammo="Homiliary",
         head=sets.Relic.head, --Refresh+2
-        neck="Lissome Necklace", --Regen+1
-        body="Jhakri Robe +2", -- Refresh+4
-        hands="Ayanmo Manopolas +2",
+        neck="Loricate Torque +1", --DT-6%
+        -- body="Jhakri Robe +2", -- Refresh+4
+        body=sets.Empyrean.body, --Refresh+3,DT-13%
+        hands=sets.Empyrean.hands, --DT-10%
         -- Ear, get Odnowa and Etiolation
         lring="Stikini Ring",
         rring="Stikini Ring",
