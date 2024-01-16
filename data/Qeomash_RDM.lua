@@ -22,6 +22,7 @@ end
 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
+    send_command('gs enable all')
     state.OffenseMode:options('None', 'Normal')
     state.HybridMode:options('Normal', 'PhysicalDef', 'MagicalDef')
     state.CastingMode:options('Normal', 'Resistant')
@@ -129,6 +130,7 @@ function init_gear_sets()
         -- sub="Clerisy Strap", --FC+2%
         head=sets.Artifact.head,
         lear="Loquacious Earring",
+        rear="Lethargy Earring", --FC+7%
         body=sets.Relic.body,
         hands="Ayanmo Manopolas +2", --Haste+4%
         legs="Ayanmo Cosciales +2",
@@ -243,8 +245,8 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {
         main=Colada.EnhancingDur,
         neck="Colossus's Torque", -- +7
-        lear="Augmenting Earring", -- +3
-        rear="Mimir Earring", -- +10
+        lear="Mimir Earring", -- +10
+        rear="Augmenting Earring", -- +3
         body=sets.Relic.body, -- +21,duration+10%
         hands=sets.Relic.hands, -- +20,duration+
         lring="Stikini Ring", -- +5
@@ -282,6 +284,7 @@ function init_gear_sets()
         head=sets.Empyrean.head,
         body=sets.Empyrean.body,
         hands=sets.Artifact.hands,
+        rear="Lethargy Earring", --Duration+7%
         back=Ghostfyre.Duration,
         waist="Embla Sash", --duration+10%
         legs=sets.Empyrean.legs,
