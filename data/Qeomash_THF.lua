@@ -28,7 +28,7 @@ function init_gear_sets()
         neck="Asperity Necklace",
         ear1="Suppanomimi",
         ear2="Brutal Earring",
-        body="Ashera Harness",
+        body="Malignance Tabard",
         hands="Mummu Wrists +2",
         lring="Petrov Ring",
         rring="Chirich Ring",

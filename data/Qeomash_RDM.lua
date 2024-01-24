@@ -588,7 +588,8 @@ function init_gear_sets()
         neck="Asperity Necklace",
         lear="Cessance Earring",
         rear="Suppanomimi",
-        body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
+        -- body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
+        body="Malignance Tabard",
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Petrov Ring",
         rring="Chirich Ring",
