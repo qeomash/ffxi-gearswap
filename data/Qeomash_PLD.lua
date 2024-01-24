@@ -25,7 +25,7 @@ function init_gear_sets()
         lear="Suppanomimi",
         rear="Brutal Earring",
         body="Ebon Haubert",
-        hands="Gallant Gauntlets",
+        hands="Dusk Gloves",
         lring="Blood Ring",
         rring="Rajas Ring",
         back="Forager's Mantle",
@@ -40,6 +40,7 @@ function init_gear_sets()
     }
 
     sets.idle = set_combine(sets.engaged, {
+        hands="Hecatomb Mittens",
         legs="Crimson Cuisses", --Movement+12%
     })
 
@@ -55,7 +56,7 @@ function init_gear_sets()
         rring="Rajas Ring",
         back="Forager's Mantle",
         waist="Swift Belt",
-        legs="Homam Cosciales",
+        legs="Hecatomb Subligar",
         feet="Hecatomb Leggings",
     }
     sets.precast.WS = sets.baseWS.Str
