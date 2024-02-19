@@ -34,9 +34,9 @@ function init_gear_sets()
         ammo="Coiste Bodhar",
         head="Flamma Zucchetto +2",
         neck="Lissome Necklace",
-        lear="Cessance Earring",
+        lear="Sherida Earring",
         rear="Brutal Earring",
-        body="Valorous Mail",
+        body="Peltast's Plackart +2",
         hands="Sulevia's Gauntlets +2",
         lring="Petrov Ring",
         rring="Chirich Ring",
@@ -75,7 +75,7 @@ function init_gear_sets()
     sets.baseWS.Str = {
         head="Sulevia's Mask +2", --STR+33
         neck="Asperity Necklace",
-        lear="Cessance Earring",
+        lear="Sherida Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body="Sulevia's Platemail +2",
         hands="Sulevia's Gauntlets +2",
@@ -89,9 +89,9 @@ function init_gear_sets()
     sets.baseWS.Accuracy = {
         head="Sulevia's Mask +2", --Acc+44
         neck="Asperity Necklace",
-        lear="Cessance Earring",
+        lear="Sherida Earring",
         rear="Moonshade Earring", -- TPBonus+250
-        body="Sulevia's Platemail +2", --Acc+46
+        body="Peltast's Plackart +2",
         hands="Sulevia's Gauntlets +2", --Acc+37
         lring="Blood Ring",
         rring="Flamma Ring",
@@ -108,7 +108,10 @@ function init_gear_sets()
     sets.precast.WS['Drakesbane'] = set_combine(sets.baseWS.Str, {
         neck="Light Gorget"
     })
-    sets.precast.WS["Camlann's Torment"] = set_combine(sets.baseWS.Str, {neck='Light Gorget'})
+    sets.precast.WS["Camlann's Torment"] = set_combine(sets.baseWS.Str, {
+        body="Peltast's Plackart +2",
+        neck='Light Gorget'
+    })
 
     sets.precast.JA.Angon = {ammo="Angon",hands="Pteroslaver Finger Gauntlets +2"}
     -- Jumps
