@@ -244,9 +244,9 @@ function init_gear_sets()
 
     sets.midcast['Enhancing Magic'] = {
         main=Colada.EnhancingDur,
-        neck="Colossus's Torque", -- +7
+        neck="Melic Torque", --+10
         lear="Mimir Earring", -- +10
-        rear="Augmenting Earring", -- +3
+        rear="Lethargy Earring", -- duration+7%
         body=sets.Relic.body, -- +21,duration+10%
         hands=sets.Relic.hands, -- +20,duration+
         lring="Stikini Ring", -- +5
@@ -261,9 +261,14 @@ function init_gear_sets()
         -- back="Estoqueur's Cape",waist="Olympus Sash",legs="Atrophy Tights",feet="Estoqueur's Houseaux +2"}
     sets.enspelldmg = set_combine(sets.midcast['Enhancing Magic'],
         {
+            main="Pukulatmuj", -- +10
             hands="Ayanmo Manopolas +2", -- +17
+            lear="Mimir Earring", -- +10
+            rear="Augmenting Earring", -- +3
             legs=sets.Relic.legs, --enhances damage?
             back=Ghostfyre.Duration, -- +5
+            lring="Stikini Ring", -- +5
+            rring="Stikini Ring", -- +5
         }
     )
     sets.midcast['Enfire'] = sets.enspelldmg
