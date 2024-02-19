@@ -64,22 +64,22 @@ function init_gear_sets()
         head="Atrophy Chapeau +2",
         body="Atrophy Tabard +3",
         hands="Atrophy Gloves +3",
-        legs="Atrophy Tights +2",
+        legs="Atrophy Tights +3",
         feet="Atrophy Boots +1",
     }
     sets.Relic = {
         head="Vitiation Chapeau +2",
-        body="Vitiation Tabard +2",
-        hands="Vitiation Gloves +1",
+        body="Vitiation Tabard +3",
+        hands="Vitiation Gloves +2",
         legs="Vitiation Tights",
-        feet="Vitiation Boots",
+        feet="Vitiation Boots +1",
     }
     sets.Empyrean = {
         head="Lethargy Chappel +2",
         body="Lethargy Sayon +2",
         hands="Lethargy Gantherots +2",
         legs="Lethargy Fuseau +2",
-        feet="Lethargy Houseaux +2",
+        feet="Lethargy Houseaux +3",
     }
 
     Colada = {}
@@ -254,7 +254,7 @@ function init_gear_sets()
         back=Ghostfyre.Duration, --duration+20%
         waist="Olympus Sash", -- +5
         legs=sets.Artifact.legs, -- +19
-        feet=sets.Empyrean.feet, -- +30,duration+35%
+        feet=sets.Empyrean.feet, -- +35,duration+40%
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
         -- body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
@@ -325,7 +325,7 @@ function init_gear_sets()
         back=Sucellos.Enfeebling,
         waist="Demonry Sash",
         legs=sets.Empyrean.legs, --MAC+53
-        feet=sets.Empyrean.feet, --MAC+50
+        feet=sets.Empyrean.feet, --MAC+60
     }
     sets.Enfeebling.Int = {}
     sets.Enfeebling.Int.Hard = set_combine(sets.Enfeebling.Base,
@@ -409,7 +409,8 @@ function init_gear_sets()
         main="Daybreak", -- MAB+40
         sub="Culminus", -- MAB+20
         ranged="Ullr", --MAC+40
-        head="Jhakri Coronal +2", -- MAB+38
+        -- head="Jhakri Coronal +2", -- MAB+38
+        head=sets.Empyrean.head, --MAB+51
         neck="Stoicheion Medal", -- MAB+8
         lear="Friomisi Earring", -- MAB+10
         rear="Hecate's Earring", -- MAB+6
@@ -422,7 +423,7 @@ function init_gear_sets()
         back=Sucellos.Nuke,
         waist="Aswang Sash", -- MAB+3
         legs=sets.Empyrean.legs, -- MAB+53
-        feet=sets.Empyrean.feet, --MAB+45
+        feet=sets.Empyrean.feet, --MAB+50
     }
     sets.Nuke = sets.midcast['Elemental Magic']
 
