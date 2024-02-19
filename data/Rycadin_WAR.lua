@@ -28,12 +28,13 @@ function init_gear_sets()
         lring="Rajas Ring",
         rring="Flamma Ring",
         back="Mauler's Mantle",
-        waist="Cetl Belt",
+        waist="Sailfi Belt +1",
         legs="Sulevia's Cuisses +2",
         feet="Flamma Gambieras +2",
     }
 
     sets.idle = set_combine(sets.engaged, {
+        neck="Loricate Torque", --DT-5%
         feet="Hermes' Sandals" --Movement+12%
     })
     sets.baseWS = {}
