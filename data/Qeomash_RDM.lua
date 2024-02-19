@@ -587,15 +587,16 @@ function init_gear_sets()
         ammo="Coiste Bodhar",
         head="Malignance Chapeau",
         neck="Asperity Necklace",
-        lear="Cessance Earring",
-        rear="Suppanomimi",
+        lear="Sherida Earring",
+        -- rear="Suppanomimi",
+        rear="Cessance Earring",
         -- body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
         body="Malignance Tabard",
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Petrov Ring",
         rring="Chirich Ring",
         back=Sucellos.DA,
-        waist="Dynamic Belt +1",
+        waist="Windbuffet Belt +1", --TA+2%,QA+2%
         legs="Malignance Tights",
         feet="Carmine Greaves +1", --haste+4%,STR+14,DA+3%
     }
@@ -616,9 +617,16 @@ function init_gear_sets()
 
     sets.precast.WS['Aeolian Edge'] = set_combine(sets.midcast['Elemental Magic'], {
         back=Sucellos.WS,
+        rear="Moonshade Earring",
     })
     sets.precast.WS['Death Blossom'] = set_combine(sets.midcast['Elemental Magic'], {
         back=Sucellos.WS,
+        rear="Moonshade Earring",
+    })
+    sets.precast.WS['Seraph Blade'] = set_combine(sets.midcast['Elemental Magic'], {
+        back=Sucellos.WS,
+        rear="Moonshade Earring",
+        lring="Weatherspoon Ring", -- Light Affinity
     })
 
 end
