@@ -64,7 +64,7 @@ function init_gear_sets()
         hands="Aya. Manopolas +2", --maybe try those garbage things you got?
         back=Alaunus.Idle, --FC+10%
         legs="Aya. Cosciales +2", -- FC+5%
-        feet="Aya. Gambieras +2",
+        feet="Regal Pumps", --FC+3%
         ammo="Incantor Stone", -- FC+2%
         ring1="Lebeche Ring", -- QM+2%
     }
@@ -263,7 +263,7 @@ function init_gear_sets()
         sub="Genbu's Shield",
         ammo="Homiliary",
         head="Inyanga Tiara +2",
-        neck="Orochi Nodowa",
+        neck="Loricate Torque", --DT-5%
         ear1="Abyssal Earring",
         ear2="Antivenom Earring",
         -- body="Inyanga Jubbah +2",
@@ -324,7 +324,7 @@ function init_gear_sets()
         main="Mes'yohi Rod",
         head="Ayanmo Zucchetto +2",
         left_ear="Brutal Earring",
-        right_ear="Mache Earring",
+        right_ear="Suppanomimi",
         body="Ayanmo Corazza +2",
         hands="Ayanmo Manopolas +2",
         legs="Ayanmo Cosciales +2",
