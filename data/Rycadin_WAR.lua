@@ -14,7 +14,7 @@ end
 
 function init_gear_sets()
     sets.mainweapons = {
-        main="Kaja Chopper",
+        main="Lycurgos",
         sub="Duplus Grip",
         ammo="Coiste Bodhar",
     }
