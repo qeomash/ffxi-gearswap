@@ -16,20 +16,25 @@ function init_gear_sets()
 
     sets.mainweapons = {
         main="Naegling",
-        sub="Claidheamh Soluis",
+        sub="Thibron",
         ammo="Coiste Bodhar",
     }
     sets.learningweapons = {
-        main="Wax Sword",
+        main="Excalipoor II",
         sub="Wax Sword",
     }
 
     sets.idle = {
-        head="Magus Keffiyeh",
-        body="Mirage Jubbah",
+        head="Gleti's Mask",
+        neck="Loricate Torque +1", --DT-6%
+        body="Jhakri Robe +2", --refresh+2
+        hands="Gleti's Gauntlets",
+        waist="Flume Belt",
         legs="Carmine Cuisses",
-        feet="Carmine Greaves +1", --haste+4%,STR+14,DA+4%
+        feet="Gleti's Boots",
     }
+    Rosmertas = {}
+    Rosmertas.DA = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}
 
     sets.engaged = {
         head="Malignance Chapeau",
@@ -39,9 +44,9 @@ function init_gear_sets()
         body="Malignance Tabard",
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Petrov Ring",
-        rring="Chirich Ring",
-        back="Forager's Mantle",
-        waist="Dynamic Belt +1",
+        rring="Epona's Ring",
+        back=Rosmertas.DA,
+        waist="Windbuffet Belt +1",
         legs="Malignance Tights",
         feet="Carmine Greaves +1", --haste+4%,STR+14,DA+4%
     }
@@ -51,7 +56,8 @@ function init_gear_sets()
         neck="Asperity Necklace",
         lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
-        body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
+        -- body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
+        body="Jhakri Robe +2", --Acc+46,Att+46,STR+37
         hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         lring="Pyrosoul Ring",
         rring="Rajas Ring",
