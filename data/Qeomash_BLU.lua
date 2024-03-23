@@ -76,6 +76,7 @@ function init_gear_sets()
 
     -- Spellcasting
     sets.precast.FC = {
+        head="Carmine Mask", -- 9%
         body="Ebur Talar", --5%
         lear="Loquacious Earring",
         back="Swith Cape",
@@ -83,6 +84,48 @@ function init_gear_sets()
         lring="Weatherspoon Ring",
         feet="Carmine Greaves +1", --FC+8%
     }
+
+    sets.midcast.PhysicalBlu = {
+        head="Gleti's Mask",
+        neck="Asperity Necklace",
+        lear="Cessance Earring",
+        rear="Hashishin Earring", --BLU+10
+        body="Gleti's Cuirass", --STR+39
+        hands="Gleti's Gauntlets",
+        lring="Pyrosoul Ring", -- STR+7
+        rring="Pyrosoul Ring", -- STR+7
+        back="Cornflower Cape", --STR+5
+        waist="Dynamic Belt +1", --STR+4
+        legs="Gleti's Breeches",
+        feet="Gleti's Boots",
+    }
+    sets.midcast.MagicalBlu = {
+        head="Jhakri Coronal +2", -- MAB+41
+        neck="Stoicheion Medal", -- MAB+8
+        lear="Friomisi Earring", -- MAB+10
+        -- rear="Hecate's Earring", -- MAB+6
+        rear="Hashishin Earring", --BLU+10
+        body="Jhakri Robe +2", -- MAB+43
+        hands="Jhakri Cuffs +2", -- MAB+40
+        lring="Weatherspoon Ring", -- MAB+10
+        rring="Acumen Ring", -- MAB+4
+        back="Cornflower Cape", --MAB+15,BLU+5
+        waist="Aswang Sash", -- lol ass-wang
+        legs="Jhakri Slops +2", -- MAB+42
+        feet="Jhakri Pigaches +2", -- MAB+39
+    }
+    sets.midcast["Blue Magic"] = sets.midcast.MagicalBlu
+
+    physical_spells = S{'thing'}
+    for sp in physical_spells:it() do
+        sets.midcast[sp] = sets.midcast.PhysicalBlu
+    end
+
+    magical_spells = {}
+    for sp in magical_spells:it() do
+        sets.midcast[sp] = sets.midcast.MagicalBlu
+    end
+
 end
 
 function select_default_macro_book()
