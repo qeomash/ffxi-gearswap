@@ -76,9 +76,9 @@ function init_gear_sets()
     }
     sets.Empyrean = {
         head="Lethargy Chappel +2",
-        body="Lethargy Sayon +2",
+        body="Lethargy Sayon +3",
         hands="Lethargy Gantherots +2",
-        legs="Lethargy Fuseau +2",
+        legs="Lethargy Fuseau +3",
         feet="Lethargy Houseaux +3",
     }
 
@@ -233,7 +233,6 @@ function init_gear_sets()
         lring="Lebeche Ring", --CP+3%
         rring="Stikini Ring",
         back=Ghostfyre.Duration, --CP+6%
-        waist="Duelist's Belt",
         legs="Kaykaus Tights", --CP+10%
         -- legs=sets.Artifact.legs, --CP+9%
         -- feet="Jhakri Pigaches +2",
@@ -244,6 +243,7 @@ function init_gear_sets()
 
     sets.midcast['Enhancing Magic'] = {
         main=Colada.EnhancingDur,
+        head="Carmine Mask", --+10
         neck="Melic Torque", --+10
         lear="Mimir Earring", -- +10
         rear="Lethargy Earring", -- duration+7%
@@ -261,7 +261,7 @@ function init_gear_sets()
         -- back="Estoqueur's Cape",waist="Olympus Sash",legs="Atrophy Tights",feet="Estoqueur's Houseaux +2"}
     sets.enspelldmg = set_combine(sets.midcast['Enhancing Magic'],
         {
-            main="Pukulatmuj", -- +10
+            main="Pukulatmuj +1", -- +11
             hands="Ayanmo Manopolas +2", -- +17
             lear="Mimir Earring", -- +10
             rear="Augmenting Earring", -- +3
@@ -319,8 +319,8 @@ function init_gear_sets()
         ranged="Ullr",
         -- ammo="Kalboron Stone",
         -- head=sets.Relic.head,
-        head=sets.Artifact.head, -- MAC+44
-        neck="Duelist's Torque +1", -- macc+25,enf ef+7
+        head=sets.Relic.head, -- MAC+27,Skill+24
+        neck="Duelist's Torque +2", -- macc+30,enf ef+10
         lear="Vor Earring", -- sk+10
         rear="Snotra Earring", -- MAC+10,duration+10%
         body=sets.Artifact.body, -- MAC+55
@@ -328,7 +328,7 @@ function init_gear_sets()
         lring="Stikini Ring", --sk+5 MAC+8
         rring="Metamorph Ring +1",
         back=Sucellos.Enfeebling,
-        waist="Demonry Sash",
+        waist="Ovate Rope",
         legs=sets.Empyrean.legs, --MAC+53
         feet=sets.Empyrean.feet, --MAC+60
     }
@@ -399,7 +399,7 @@ function init_gear_sets()
     sets.midcast['Sleep II'] = sets.Enfeebling.Int.Hard
     sets.midcast['Sleepga'] = sets.Enfeebling.Int.Hard
     sets.midcast['Dispel'] = set_combine(sets.Enfeebling.Int.Hard, {
-        neck="Duelist's Torque +1", -- dispel +1
+        neck="Duelist's Torque +2", -- dispel +1
     })
     sets.midcast['Dispelga'] = set_combine(sets.midcast['Dispel'],
         {main="Daybreak", sub="Genbu's Shield"})
@@ -453,7 +453,7 @@ function init_gear_sets()
         lring="Snow Ring",
         rring="Stikini Ring", --sk+5 MAC+8
         back="Prism Cape",
-        waist="Demonry Sash",
+        waist="Aswang Sash",
         legs="Jhakri Slops +2",
         feet="Jhakri Pigaches +2",
     }
@@ -461,7 +461,8 @@ function init_gear_sets()
     --sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {})
 
     sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
-        head="Appetence Crown",
+        head="Pixie Hairpin +1", -- Dark affinity
+        neck="Erra Pendant",
         waist="Fucho-no-obi",
         ring1="Excelsis Ring"})
     sets.midcast.Aspir = sets.midcast.Drain
@@ -499,7 +500,6 @@ function init_gear_sets()
         ear1="Antivenom Earring",
         ear2="Magnetic Earring",
         body="Jhakri Robe +2", -- Refresh+4
-        waist="Duelist's Belt",
     }
 
     -- Idle sets
@@ -522,8 +522,8 @@ function init_gear_sets()
         rring="Stikini Ring",
         back=Sucellos.DA, -- DT-5%
         waist="Flume Belt",
-        legs="Carmine Cuisses",
-        feet="Ayanmo Gambieras +2", --DT-2%
+        legs="Carmine Cuisses +1",
+        feet="Malignance Boots", --DT-4%
     }
     sets.idle = sets.AutoRefreshIdle
 
@@ -629,6 +629,7 @@ function init_gear_sets()
         rear="Moonshade Earring",
     })
     sets.precast.WS['Seraph Blade'] = set_combine(sets.midcast['Elemental Magic'], {
+        ammo="Sroda Tathlum",
         back=Sucellos.WS,
         rear="Moonshade Earring",
         lring="Weatherspoon Ring", -- Light Affinity
