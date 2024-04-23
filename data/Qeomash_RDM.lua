@@ -91,6 +91,9 @@ function init_gear_sets()
     Sucellos.DA = { name="Sucellos's Cape", augments={'DEX+1','Accuracy+20 Attack+20','Accuracy+3','"Dbl.Atk."+10','Damage taken-5%',}}
     Sucellos.Enhancing = { name="Sucellos's Cape", augments={'DEX+1','Accuracy+20 Attack+20','Accuracy+3','"Dbl.Atk."+10','Damage taken-5%',}} --TODO
     Sucellos.Enfeebling = { name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}} --TODO
+    Sucellos.EnfeeblingInt = { name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}} --TODO
+    -- this one isn't done:
+    Sucellos.EnfeeblingMnd = { name="Sucellos's Cape", augments={'INT+30','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}} --TODO
     Sucellos.Nuke = { name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}}
 
     Ghostfyre = {}
@@ -332,78 +335,118 @@ function init_gear_sets()
         legs=sets.Empyrean.legs, --MAC+53
         feet=sets.Empyrean.feet, --MAC+60
     }
-    sets.Enfeebling.Int = {}
-    sets.Enfeebling.Int.Hard = set_combine(sets.Enfeebling.Base,
-        {
-            -- head=sets.Relic.head,
-            -- neck="Duelist's Torque +1", -- macc+25,enf ef+7
-            -- lear="Vor Earring",-- +10
-            -- rear="Snotra Earring", -- duration+10%
-            -- body=sets.Artifact.body,
-            -- hands="Jhakri Cuffs +2", --INT+36
-            -- lring="Stikini Ring", --sk+5 MAC+8
-            -- rring="Stikini Ring", --sk+5 MAC+8
-            -- back="Sucellos's Cape",
-            -- waist="Demonry Sash",
-            -- legs="Jhakri Slops +2", -- macc+27
-            -- feet="Jhakri Pigaches +2",
-        }
-    )
-    sets.Enfeebling.Int.Soft = set_combine(sets.Enfeebling.Int.Hard,
-        {
-            -- head="Jhakri Coronal +2",
-            -- body="Jhakri Robe +2",
-            -- hands="Jhakri Cuffs +2", --INT+36
-            lring="Snow Ring",
-            rring="Metamorph Ring +1",
-            -- back="Prism Cape",
-            -- legs="Jhakri Slops +2", -- INT+44
-            -- feet="Jhakri Pigaches +2",
-        }
-    )
-    sets.Enfeebling.Mnd = {}
-    sets.Enfeebling.Mnd.Hard = set_combine(sets.Enfeebling.Base,
-        {
-            -- head=sets.Relic.head,
-            -- neck="Duelist's Torque +1", -- macc+25,enf ef+7
-            -- lear="Vor Earring",-- +10
-            -- rear="Snotra Earring", -- duration+10%
-            -- body=sets.Artifact.body,
-            -- hands="Jhakri Cuffs +2", --MND+35
-            -- lring="Perception Ring",
-            -- rring="Stikini Ring", --sk+5 MAC+8
-            -- back="Sucellos's Cape",
-            -- waist="Demonry Sash",
-            -- legs="Jhakri Slops +2", -- macc+27,MND+26
-            -- feet="Jhakri Pigaches +2",
-        }
-    )
-    sets.Enfeebling.Mnd.Soft = set_combine(sets.Enfeebling.Mnd.Hard,
-        {
-            -- head=sets.Relic.head,
-            -- lear="Geist Earring",
-            -- body="Jhakri Robe +2",
-            -- hands="Jhakri Cuffs +2", --MND+35
-            -- lring="Aqua Ring",
-            -- rring="Aqua Ring",
-            -- back="Swith Cape",
-            -- legs="Jhakri Slops +2", -- MND+26
-        }
-    )
+    sets.Enfeebling.Accuracy = {
+        main="Crocea Mors", --MAC+50
+        -- sub="Ammurapi Shield",
+        ranged="Ullr",
+        head=sets.Relic.head,
+        neck="Duelist's Torque +2", -- macc+30,enf ef+10
+        lear="Snotra Earring", --mac+10
+        rear="Lethargy Earring", --macc+6
+        body=sets.Artifact.body,
+        hands=sets.Empyrean.hands,
+        lring="Metamorph Ring +1",
+        rring="Stikini Ring",
+        -- back="Aurist's Cape +1", --bis, after augmenting
+        back=Sucellos.Enfeebling,
+        waist="Ovate Rope", --macc+8
+        legs=sets.Empyrean.legs,
+        feet=sets.Empyrean.feet,
+    }
+    sets.Enfeebling.PotencyInt = {
+        main="Crocea Mors", --MAC+50
+        -- sub="Ammurapi Shield",
+        ammo="Regal Gem",
+        head=sets.Relic.head,
+        neck="Duelist's Torque +2", -- macc+30,enf ef+10
+        lear="Snotra Earring", --mac+10
+        rear="Vor Earring",
+        body=sets.Empyrean.body,
+        hands=sets.Empyrean.hands,
+        lring="Metamorph Ring +1",
+        rring="Stikini Ring",
+        back=Sucellos.EnfeeblingInt,
+        waist="Ovate Rope", --macc+8
+        legs=sets.Empyrean.legs,
+        feet=sets.Empyrean.feet,
+    }
+    sets.Enfeebling.PotencyMnd = {
+        main="Crocea Mors", --MAC+50
+        -- sub="Ammurapi Shield",
+        ammo="Regal Gem",
+        head=sets.Relic.head,
+        neck="Duelist's Torque +2", -- macc+30,enf ef+10
+        lear="Snotra Earring", --mac+10
+        rear="Vor Earring",
+        body=sets.Empyrean.body,
+        hands=sets.Empyrean.hands,
+        lring="Metamorph Ring +1",
+        rring="Stikini Ring",
+        back=Sucellos.EnfeeblingMnd,
+        waist="Ovate Rope", --macc+8
+        legs=sets.Empyrean.legs,
+        feet=sets.Empyrean.feet,
+    }
+    sets.Enfeebling.Duration = {
+        main="Crocea Mors", --MAC+50
+        -- sub="Ammurapi Shield",
+        ranged="Ullr",
+        head=sets.Empyrean.head,
+        neck="Duelist's Torque +2", -- macc+30,enf ef+10
+        lear="Snotra Earring", --mac+10
+        rear="Lethargy Earring", --macc+6
+        body=sets.Empyrean.body,
+        hands=sets.Empyrean.hands,
+        lring="Kishar Ring", --EnfDura+10%
+        rring="Stikini Ring",
+        -- back="Aurist's Cape +1", --bis, after augmenting
+        back=Sucellos.EnfeeblingMnd,
+        waist="Ovate Rope", --macc+8
+        legs=sets.Empyrean.legs,
+        feet=sets.Empyrean.feet,
+    }
+    sets.Enfeebling.Skill = {
+        main="Crocea Mors", --MAC+50
+        -- sub="Ammurapi Shield",
+        ammo="Regal Gem",
+        head=sets.Relic.head,
+        neck="Duelist's Torque +2", -- macc+30,enf ef+10
+        lear="Snotra Earring", --mac+10
+        rear="Vor Earring",
+        body=sets.Empyrean.body,
+        hands=sets.Empyrean.hands,
+        lring="Stikini Ring",
+        rring="Stikini Ring",
+        -- back="Aurist's Cape +1", --bis, after augmenting
+        back=Sucellos.EnfeeblingMnd,
+        waist="Ovate Rope", --macc+8
+        legs=sets.Empyrean.legs,
+        feet=sets.Relic.feet,
+    }
 
-    sets.midcast['Enfeebling Magic'] = sets.Enfeebling.Base
+    sets.midcast['Enfeebling Magic'] = sets.Enfeebling.PotencyMnd
     sets.midcast['Dia'] = sets.TH
-    sets.midcast['Dia III'] = sets.Enfeebling.Mnd.Hard
-    sets.midcast['Silence'] = sets.Enfeebling.Mnd.Hard
-    sets.midcast['Sleep'] = sets.Enfeebling.Int.Hard
-    sets.midcast['Sleep II'] = sets.Enfeebling.Int.Hard
-    sets.midcast['Sleepga'] = sets.Enfeebling.Int.Hard
-    sets.midcast['Dispel'] = set_combine(sets.Enfeebling.Int.Hard, {
+    sets.midcast['Dia III'] = set_combine(sets.Enfeebling.Duration, {
+        main="Daybreak",
+        ammo="Regal Gem",
+        rring="Weatherspoon Ring",
+    })
+    sets.midcast['Silence'] = sets.Enfeebling.Duration
+    sets.midcast['Sleep'] = sets.Enfeebling.Duration
+    sets.midcast["Bind"] = sets.Enfeebling.Duration
+    sets.midcast['Sleep II'] = sets.Enfeebling.Duration
+    sets.midcast['Sleepga'] = sets.Enfeebling.Duration
+    sets.midcast['Dispel'] = set_combine(sets.Enfeebling.Accuracy, {
         neck="Duelist's Torque +2", -- dispel +1
     })
     sets.midcast['Dispelga'] = set_combine(sets.midcast['Dispel'],
-        {main="Daybreak", sub="Genbu's Shield"})
-
+        {main="Daybreak", sub="Genbu's Shield"})-- TODO: ammushield here, too
+    sets.midcast['Frazzle'] = sets.Enfeebling.Skill
+    sets.midcast['Frazzle II'] = sets.Enfeebling.Skill
+    sets.midcast['Frazzle III'] = sets.Enfeebling.Skill
+    sets.midcast["Paralyze II"] = sets.Enfeebling.PotencyMnd
+    sets.midcast["Distract III"] = sets.Enfeebling.PotencyMnd
+    sets.midcast["Blind II"] = sets.Enfeebling.PotencyInt
     -- sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
 
     -- sets.midcast['Elemental Magic'] = {main="Lehbrailg +2",sub="Zuuxowu Grip",ammo="Dosis Tathlum",
@@ -711,13 +754,13 @@ end
 
 function job_midcast(spell, action, spellMap, eventArgs)
     -- Enfeebling Sets, by element
-    if spell.skill == 'Enfeebling Magic' then
-        if spell.type == 'WhiteMagic' then
-            equip(sets.Enfeebling.Mnd.Soft)
-        else
-            equip(sets.Enfeebling.Int.Soft)
-        end
-    end
+    -- if spell.skill == 'Enfeebling Magic' then
+    --     if spell.type == 'WhiteMagic' then
+    --         equip(sets.Enfeebling.Mnd)
+    --     else
+    --         equip(sets.Enfeebling.Int.Soft)
+    --     end
+    -- end
 
     -- Elemental Staves
     -- if spell.skill == 'Elemental Magic' or spell.skill == 'Enfeebling Magic' or spell.skill == "Dark Magic" then
