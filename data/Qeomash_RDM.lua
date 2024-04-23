@@ -180,7 +180,7 @@ function init_gear_sets()
     sets.baseWS.Mnd = {
         head=sets.Relic.head, -- MND+37,WSD+3%
         neck="Asperity Necklace",
-        lear="Cessance Earring",
+        lear="Regal Earring", -- MND+10
         rear="Moonshade Earring", -- TPBonus+250
         body=sets.Empyrean.body, --Att+54,Acc+54,MND+40
         hands="Jhakri Cuffs +2", --MND+35,Attack+43,WS+7%
@@ -229,7 +229,7 @@ function init_gear_sets()
         sub="Sors Shield", -- CP+3%
         head=sets.Relic.head,
         neck="Colossus's Torque",
-        -- lear="Moonshade Earring",
+        lear="Regal Earring",
         rear="Magnetic Earring",
         body="Heka's Kalasiris",
         hands="Weatherspoon Cuffs +1", --CP+9% --eh, maybe Telchine Gloves if I can find some useful augment for them?
@@ -324,8 +324,8 @@ function init_gear_sets()
         -- head=sets.Relic.head,
         head=sets.Relic.head, -- MAC+27,Skill+24
         neck="Duelist's Torque +2", -- macc+30,enf ef+10
-        lear="Vor Earring", -- sk+10
-        rear="Snotra Earring", -- MAC+10,duration+10%
+        lear="Snotra Earring", -- MAC+10,duration+10%
+        rear="Vor Earring", -- sk+10
         body=sets.Artifact.body, -- MAC+55
         hands=sets.Empyrean.hands, -- MAC+52
         lring="Stikini Ring", --sk+5 MAC+8
@@ -342,7 +342,7 @@ function init_gear_sets()
         head=sets.Relic.head,
         neck="Duelist's Torque +2", -- macc+30,enf ef+10
         lear="Snotra Earring", --mac+10
-        rear="Lethargy Earring", --macc+6
+        rear="Regal Earring", --macc+15 w/set
         body=sets.Artifact.body,
         hands=sets.Empyrean.hands,
         lring="Metamorph Ring +1",
@@ -360,7 +360,7 @@ function init_gear_sets()
         head=sets.Relic.head,
         neck="Duelist's Torque +2", -- macc+30,enf ef+10
         lear="Snotra Earring", --mac+10
-        rear="Vor Earring",
+        rear="Regal Earring",
         body=sets.Empyrean.body,
         hands=sets.Empyrean.hands,
         lring="Metamorph Ring +1",
@@ -377,7 +377,7 @@ function init_gear_sets()
         head=sets.Relic.head,
         neck="Duelist's Torque +2", -- macc+30,enf ef+10
         lear="Snotra Earring", --mac+10
-        rear="Vor Earring",
+        rear="Regal Earring",
         body=sets.Empyrean.body,
         hands=sets.Empyrean.hands,
         lring="Metamorph Ring +1",
@@ -461,7 +461,7 @@ function init_gear_sets()
         head=sets.Empyrean.head, --MAB+51
         neck="Stoicheion Medal", -- MAB+8
         lear="Friomisi Earring", -- MAB+10
-        rear="Hecate's Earring", -- MAB+6
+        rear="Regal Earring", -- MAB+7
         body=sets.Empyrean.body, -- MAB+49
         -- hands="Amalric Gages", -- MAB+23, MBII+5
         hands=sets.Empyrean.hands, -- MAB+47, MD+22
@@ -470,6 +470,7 @@ function init_gear_sets()
         rring="Acumen Ring", -- MAB+4
         back=Sucellos.Nuke,
         waist="Aswang Sash", -- MAB+3
+        -- waist="Acuity Belt +1", --needs to be agumented
         legs=sets.Empyrean.legs, -- MAB+53
         feet=sets.Empyrean.feet, --MAB+50
     }
@@ -674,6 +675,7 @@ function init_gear_sets()
     sets.precast.WS['Seraph Blade'] = set_combine(sets.midcast['Elemental Magic'], {
         ammo="Sroda Tathlum",
         back=Sucellos.WS,
+        lear="Regal Earring", --MND+10
         rear="Moonshade Earring",
         lring="Weatherspoon Ring", -- Light Affinity
     })
