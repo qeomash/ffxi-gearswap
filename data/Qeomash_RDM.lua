@@ -61,7 +61,7 @@ function init_gear_sets()
     sets.ElementalStaves.Dark = {main="Pluto's Staff", sub="Dark Grip"}
 
     sets.Artifact = {
-        head="Atrophy Chapeau +2",
+        head="Atrophy Chapeau +3",
         body="Atrophy Tabard +3",
         hands="Atrophy Gloves +3",
         legs="Atrophy Tights +3",
@@ -72,12 +72,12 @@ function init_gear_sets()
         body="Vitiation Tabard +3",
         hands="Vitiation Gloves +2",
         legs="Vitiation Tights",
-        feet="Vitiation Boots +1",
+        feet="Vitiation Boots +2",
     }
     sets.Empyrean = {
-        head="Lethargy Chappel +2",
+        head="Lethargy Chappel +3",
         body="Lethargy Sayon +3",
-        hands="Lethargy Gantherots +2",
+        hands="Lethargy Gantherots +3",
         legs="Lethargy Fuseau +3",
         feet="Lethargy Houseaux +3",
     }
