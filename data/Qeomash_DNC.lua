@@ -78,7 +78,7 @@ function init_gear_sets()
     sets.precast.WS = sets.baseWS.Str
 
     sets.precast.WS['Dancing Edge'] = set_combine(sets.baseWS.Dex, {})
-    sets.precast.WS['Evisceration'] = set_combine(sets.baseWS.Dex, {neck='Light Gorget'})
+    sets.precast.WS['Evisceration'] = set_combine(sets.baseWS.Dex, {neck='Fotia Gorget'})
 
     sets.TH = {
         head="White Rarab Cap +1",

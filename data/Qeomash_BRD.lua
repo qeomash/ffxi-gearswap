@@ -54,7 +54,7 @@ function init_gear_sets()
     }
     sets.precast.WS = {
         head="Hecatomb Cap",
-        neck="Light Gorget",
+        neck="Fotia Gorget",
         ear1="Brutal Earring",
         ear2="Moonshade Earring", -- TPBonus+250
         body="Hecatomb Harness",

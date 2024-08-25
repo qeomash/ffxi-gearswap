@@ -106,24 +106,24 @@ function init_gear_sets()
 
     sets.precast.WS = sets.baseWS.Str
     sets.precast.WS['Stardiver'] = set_combine(sets.baseWS.Str, {
-        neck='Soil Gorget',
+        neck='Fotia Gorget',
         waist="Soil Belt",
     })
-    sets.precast.WS['Sonic Thrust'] = set_combine(sets.baseWS.Str, {neck='Light Gorget'})
+    sets.precast.WS['Sonic Thrust'] = set_combine(sets.baseWS.Str, {neck='Fotia Gorget'})
     sets.precast.WS['Penta Thrust'] = set_combine(sets.baseWS.Accuracy, {})
     sets.precast.WS['Drakesbane'] = set_combine(sets.baseWS.Str, {
-        neck="Light Gorget"
+        neck="Fotia Gorget" -- replace with DRG's collar
     })
     sets.precast.WS["Camlann's Torment"] = set_combine(sets.baseWS.Str, {
         lear="Thrud Earring",
         body="Peltast's Plackart +3",
         hands="Pteroslaver Finger Gauntlets +2", --WSD+5%
-        neck='Light Gorget'
+        neck='Fotia Gorget' -- replace with DRG's collar
     })
     sets.precast.WS["Geirskogul"] = set_combine(sets.baseWS.Str, {
         lear="Thrud Earring",
         body="Peltast's Plackart +3",
-        neck='Light Gorget'
+        neck='Fotia Gorget' -- replace with DRG's collar
     })
 
     sets.precast.JA.Angon = {ammo="Angon",hands="Pteroslaver Finger Gauntlets +2"}

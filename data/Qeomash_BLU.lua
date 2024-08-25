@@ -249,7 +249,7 @@ function init_gear_sets()
     })
     sets.baseWS.Accuracy = set_combine(sets.baseWS, {})
     sets.precast.WS = sets.baseWS.Str
-    -- sets.precast.WS['Stardiver'] = set_combine(sets.baseWS.Str, {neck='Light Gorget'})
+    -- sets.precast.WS['Stardiver'] = set_combine(sets.baseWS.Str, {neck='Fotia Gorget'})
 
 
     -- Spellcasting
