@@ -36,13 +36,15 @@ function init_gear_sets()
     }
 
     sets.precast.FC = {
-        head="Atrophy Chapeau",
-        neck="Holy Phial",
-        ear1="Loqacious Earring",
+        head="Atrophy Chapeau", -- 11%
+        lear="Loqacious Earring",
         body="Duelist's Tabard",
+        hands="Jhakri Cuffs +2",
         back="Prism Cape",
+        ring1="Lebeche Ring", -- QM+2%
+        waist="Paewr Belt", --Haste+4%
         legs="Ayanmo Cosciales +1",
-        feet="Jhakri Pigaches +1",
+        feet="Jhakri Pigaches +2",
     }
 
     sets.idle = {
@@ -50,14 +52,15 @@ function init_gear_sets()
         sub="Genbu's Shield",
         ammo="Homiliary",
         head="Duelist's Chapeau",
-        neck="Orochi Nodowa",
-        ear1="Moldavite Earring",
-        ear2="Morion Earring",
+        neck="Loricate Torque",
+        lear="Moldavite Earring",
+        rear="Morion Earring",
         body="Jhakri Robe +2",
         hands="Jhakri Cuffs +2",
+        ring2="Shneddick Ring",
         back="Prism Cape",
         waist="Demonry Sash",
-        legs="Carmine Cuisses",
+        legs="Ayanmo Cosciales +2",
         feet="Jhakri Pigaches +2",
     }
 
@@ -66,8 +69,8 @@ function init_gear_sets()
         sub="Staff Strap",
         head="Jhakri Coronal +2",
         neck="Elemental Torque",
-        ear1="Moldavite Earring",
-        ear2="Abyssal Earring",
+        lear="Moldavite Earring",
+        rear="Abyssal Earring",
         body="Jhakri Robe +2",
         hands="Jhakri Cuffs +2",
         ring1="Snow Ring",
@@ -82,16 +85,15 @@ function init_gear_sets()
         main="Grioavolr",
         sub="Staff Strap",
         head="Carmine Mask",
-        neck="Holy Phial",
-        ear1="Moldavite Earring",
-        ear2="Morion Earring",
+        neck="Duelist's Torque +1", --duration
+        lear="Moldavite Earring",
+        rear="Lethargy Earring +1", -- duration+7%
         body="Jhakri Robe +2",
         hands="Jhakri Cuffs +2",
-        ring1="Electrum Ring",
         ring2="Ether Ring",
         back="Sucellos's Cape",
         waist="Duelist's Belt",
-        legs="Jhakri Slops +2",
+        legs="Carmine Cuisses", -- +17
         feet="Jhakri Pigaches +2",
     }
 
@@ -100,14 +102,14 @@ function init_gear_sets()
         main="Kaja Staff",
         sub="Staff Strap",
         head="Carmine Mask",
-        neck="Enfeebling Torque",
-        ear1="Moldavite Earring",
-        ear2="Abyssal Earring",
+        neck="Duelist's Torque +1",
+        lear="Moldavite Earring",
+        rear="Lethargy Earring +1",
         body="Jhakri Robe +2",
         hands="Jhakri Cuffs +2",
-        ring1="Snow Ring",
-        ring2="Snow Ring",
-        back="Prism Cape",
+        ring1="Jhakri Ring",
+        ring2="Ayanmo Ring",
+        back="Sucello's Cape",
         waist="Duelist's Belt",
         legs="Jhakri Slops +2",
         feet="Jhakri Pigaches +2",
@@ -116,13 +118,13 @@ function init_gear_sets()
         main="Kaja Staff",
         sub="Staff Strap",
         head="Carmine Mask",
-        neck="Enfeebling Torque",
-        ear1="Moldavite Earring",
+        neck="Duelist's Torque +1",
+        lear="Moldavite Earring",
         body="Jhakri Robe +2",
         hands="Jhakri Cuffs +2",
         ring1="Aqua Ring",
         ring2="Aqua Ring",
-        back="Prism Cape",
+        back="Sucello's Cape",
         waist="Demonry Sash",
         legs="Jhakri Slops +2",
         feet="Jhakri Pigaches +2",
@@ -133,18 +135,19 @@ function init_gear_sets()
     sets.midcast['Sleep'] = sets.Enfeebling.Int
     sets.midcast['Sleep II'] = sets.Enfeebling.Int
     sets.midcast['Sleepga'] = sets.Enfeebling.Int
-    sets.midcast['Dispel'] = sets.Enfeebling.Int
+    sets.midcast['Dispel'] = set_combine(sets.Enfeebling.Int, {
+        neck="Duelist's Torque +`", -- dispel +1
+    })
 
     sets.resting = {
         main="Grioavolr",
         sub="Staff Strap",
         head="Duelist's Chapeau",
         neck="Orochi Nodowa",
-        ear1="Moldavite Earring",
-        ear2="Antivenom Earring",
+        lear="Moldavite Earring",
+        rear="Antivenom Earring",
         body="Jhakri Robe +2",
         hands="Jhakri Cuffs +1",
-        ring1="Electrum Ring",
         ring2="Ether Ring",
         back="Prism Cape",
         waist="Duelist's Belt",
@@ -153,16 +156,16 @@ function init_gear_sets()
     }
 
     sets.midcast.Cure = {
-        main="Iridal Staff",
-        sub="Staff Strap",
+        main="Emissary",
+        sub="Sors Shield",
         head="Jhakri Coronal +2",
         neck="Holy Phial",
-        ear1="Moldavite Earring",
-        ear2="Morion Earring",
+        lear="Moldavite Earring",
+        rear="Morion Earring",
         body="Chironic Doublet", --CP+7%
         hands="Jhakri Cuffs +2",
-        ring1="Aqua Ring",
-        ring2="Aqua Ring",
+        ring1="Lebeche Ring", -- CP+3%
+        -- ring2="Janniston Ring", --CPII+5%
         back="Prism Cape",
         waist="Demonry Sash",
         legs="Kaykaus Tights", --CP+10%

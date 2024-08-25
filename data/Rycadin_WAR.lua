@@ -22,7 +22,7 @@ function init_gear_sets()
         head="Flamma Zucchetto +2",
         neck="Warrior's Beads",
         lear="Brutal Earring",
-        rear="Mache Earring",
+        rear="Boii Earring",
         body="Flamma Korazin +2",
         hands="Sulevia's Gauntlets +2",
         lring="Rajas Ring",
@@ -35,18 +35,18 @@ function init_gear_sets()
 
     sets.idle = set_combine(sets.engaged, {
         neck="Loricate Torque", --DT-5%
-        feet="Hermes' Sandals" --Movement+12%
+        rring="Shneddick Ring",
     })
     sets.baseWS = {}
     sets.baseWS.Str = {
         head="Sulevia's Mask +2", --STR+33
         neck="Warrior's Beads",
         left_ear="Brutal Earring",
-        right_ear="Mache Earring",
+        right_ear="Boii Earring",
         body="Sulevia's Platemail +2",
         hands="Sulevia's Gauntlets +2",
         lring="Sulevia's Ring",
-        rring="Flamma Ring",
+        rring="Regal Ring",
         back="Mauler's Mantle",
         waist="Cetl Belt",
         legs="Sulevia's Cuisses +2",

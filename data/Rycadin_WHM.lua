@@ -58,7 +58,7 @@ function init_gear_sets()
     --     back="Swith Cape +1",waist="Witful Belt",legs="Orvail Pants +1",feet="Chelona Boots +1"}
     sets.precast.FC = {
         main="Grioavolr", -- FC+4%
-        head="Aya. Zucchetto +2",
+        head="Ebers Cap +3",
         lear="Loqacious Earring",
         body="Inyanga Jubbah +2", -- FC+14%
         hands="Aya. Manopolas +2", --maybe try those garbage things you got?
@@ -74,10 +74,10 @@ function init_gear_sets()
 
     sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC,
         {
-            main="Tamaxchi",
+            main="Queller Rod", -- CFC-7%
             sub="Sors Shield", -- CFC-5%
             head="Theophany Cap +1", -- CFC -5%
-            legs="Kaykaus Tights", -- CFC-5%
+            legs="Ebers Pantaloons +3", -- CFC -15%
             feet="Kaykaus Boots" -- CFC-5%
         })
 
@@ -138,14 +138,16 @@ function init_gear_sets()
     --     body="Vanir Cotehardie",hands="Theophany Mitts",ring1="Prolix Ring",ring2="Sirona's Ring",
     --     back="Tuilha Cape",waist=gear.ElementalObi,legs="Orison Pantaloons +2",feet="Piety Duckbills +1"}
     sets.midcast.Cure = {
-        main="Tamaxchi", -- CP+15%
+        main="Queller Rod", -- CPII+2%,CP+10%
         sub="Sors Shield",
-        head="Theophany Cap +1", -- CP+10%
+        head="Ebers Cap +3", -- CP+19%
         neck="Cleric's Torque", -- CP+5%
-        body="Chironic Doublet", --CP+7%
-        hands="Inyanga Dastanas +2",
+        body="Ebers Bliaut +3", --CPII, Solace+18
+        -- body="Theophany Bliaut +2", -- should be ? CPII+3%
+        hands="Theophany Mitts +2", --CPII+2%
+        lear="Orison Earring", --CP+2%
         back=Alaunus.Healing,
-        legs="Kaykaus Tights", --CP+10%
+        legs="Ebers Pantaloons +3",
         feet="Kaykaus Boots", --CP+10%
         ring1="Lebeche Ring", -- CP+3%
     }
@@ -167,10 +169,15 @@ function init_gear_sets()
     sets.midcast.Cursna = {
         back="Alaunus's Cape", -- Cursna +25
         legs="Theophany Pantaloons +1",
+        rear="Ebers Earring", --sk+10
+        neck="Malison Medallion",
+        lring="Menelaus's Ring",
+        rring="Ephedra Ring",
     }
     -- sets.midcast.StatusRemoval = {
     --     head="Orison Cap +2",legs="Orison Pantaloons +2"}
     sets.midcast['Erase'] = {
+        head="Ebers Cap +3", --DV+24%
         neck="Cleric's Torque", -- Erase+1
     }
 
@@ -180,7 +187,11 @@ function init_gear_sets()
     --     body="Manasa Chasuble",hands="Dynasty Mitts",
     --     back="Mending Cape",waist="Olympus Sash",legs="Piety Pantaloons",feet="Orison Duckbills +2"}
     sets.midcast['Enhancing Magic'] = {
+        main="Gada", --skill+18,dura+6%
+        sub="Genub's Shield",
         hands="Inyanga Dastanas +2", -- all skills +20
+        feet="Theophany Duckbills +2", -- skill+19,dura+5%
+        waist="Embla Sash", --dura+10%
     }
 
     -- sets.midcast.Stoneskin = {
@@ -194,13 +205,25 @@ function init_gear_sets()
     --     head="Orison Cap +2",neck="Colossus's Torque",
     --     body="Orison Bliaud +2",hands="Orison Mitts +2",
     --     back="Mending Cape",waist="Olympus Sash",legs="Piety Pantaloons",feet="Orison Duckbills +2"}
-
+    sets.midcast.BarElement = {
+        main="Gada", --skill+18,dura+6%
+        sub="Genub's Shield",
+        head="Ebers Cap +3", -- CP+19%
+        body="Ebers Bliaut +3", --CPII, Solace+18
+        hands="Ebers Mitts +2", --dura+24
+        legs="Ebers Pantaloons +3",
+        feet="Ebers Duckbills +2",
+        waist="Embla Sash", --dura+10%
+    }
     -- sets.midcast.Regen = {main="Bolelabunga",sub="Genbu's Shield",
     --     body="Piety Briault",hands="Orison Mitts +2",
     --     legs="Theophany Pantaloons"}
     sets.midcast.Regen = {
         head="Inyanga Tiara +2", -- +12%
         body="Cleric's Bliaut", -- +1 HP
+        hands="Ebers Mitts +2", --dura+24
+        legs="Ebers Pantaloons +3",
+        feet="Ebers Duckbills +2",
     }
 
     -- sets.midcast.Protectra = {ring1="Sheltered Ring",feet="Piety Duckbills +1"}
@@ -259,22 +282,22 @@ function init_gear_sets()
     --     body="Gendewitha Bliaut",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Paguroidea Ring",
     --     back="Umbra Cape",waist="Witful Belt",legs="Nares Trews",feet="Herald's Gaiters"}
     sets.idle = {
-        main="Tamaxchi",
+        main="Queller Rod", -- Refresh+1
         sub="Genbu's Shield",
         ammo="Homiliary",
         head="Inyanga Tiara +2",
         neck="Loricate Torque", --DT-5%
-        ear1="Abyssal Earring",
-        ear2="Antivenom Earring",
-        -- body="Inyanga Jubbah +2",
-        body="Theophany Bliaut +1",
-        hands="Inyanga Dastanas +2",
+        lear="Abyssal Earring",
+        rear="Antivenom Earring",
+        body="Ebers Bliaut +3", --Refresh+4
+        -- hands="Inyanga Dastanas +2", --refresh?
+        hands="Ebers Mitts +2", --DT-10%
         ring1="Ayanmo Ring",
-        ring2="Inyanga Ring",
+        ring2="Shneddick Ring",
         back=Alaunus.Idle,
         waist="Demonry Sash",
-        legs="Inyanga Shalwar +2",
-        feet="Herald's Gaiters",
+        legs="Ebers Pantaloons +3", --DT-13%
+        feet="Inyanga Crackows +2",
     }
 
     -- sets.idle.PDT = {main="Bolelabunga", sub="Genbu's Shield",ammo="Incantor Stone",
