@@ -208,7 +208,7 @@ function init_gear_sets()
         body="Jhakri Robe +2", --refresh+2
         hands="Gleti's Gauntlets",
         waist="Flume Belt",
-        legs="Carmine Cuisses",
+        legs="Carmine Cuisses +1",
         feet="Gleti's Boots",
     }
     Rosmertas = {}

@@ -24,7 +24,7 @@ function init_gear_sets()
     }
 
     sets.TH = {
-        head="White Rarab Cap +1",
+        head="Volte Cap", -- +1
         waist="Chaac Belt", --TH+1
     }
 
@@ -66,9 +66,10 @@ function init_gear_sets()
         head="Gleti's Mask",
         body="Gleti's Cuirass",
         hands="Gleti's Gauntlets",
-        legs="Carmine Cuisses",
+        legs="Carmine Cuisses +1",
         feet="Gleti's Boots",
         waist="Flume Belt",
+        rring="Shadow Ring",
     })
 
     sets.baseWS = {}
@@ -104,14 +105,24 @@ function init_gear_sets()
     }
 
     sets.precast.WS = sets.baseWS.Str
-    sets.precast.WS['Stardiver'] = set_combine(sets.baseWS.Str, {neck='Soil Gorget'})
+    sets.precast.WS['Stardiver'] = set_combine(sets.baseWS.Str, {
+        neck='Soil Gorget',
+        waist="Soil Belt",
+    })
     sets.precast.WS['Sonic Thrust'] = set_combine(sets.baseWS.Str, {neck='Light Gorget'})
     sets.precast.WS['Penta Thrust'] = set_combine(sets.baseWS.Accuracy, {})
     sets.precast.WS['Drakesbane'] = set_combine(sets.baseWS.Str, {
         neck="Light Gorget"
     })
     sets.precast.WS["Camlann's Torment"] = set_combine(sets.baseWS.Str, {
-        body="Peltast's Plackart +2",
+        lear="Thrud Earring",
+        body="Peltast's Plackart +3",
+        hands="Pteroslaver Finger Gauntlets +2", --WSD+5%
+        neck='Light Gorget'
+    })
+    sets.precast.WS["Geirskogul"] = set_combine(sets.baseWS.Str, {
+        lear="Thrud Earring",
+        body="Peltast's Plackart +3",
         neck='Light Gorget'
     })
 
@@ -147,7 +158,7 @@ function init_gear_sets()
 
     -- Wyvern Breaths
     sets.WyvernHP = {
-        head="Vishap Armet",
+        head="Vishap Armet +2",
         neck="Chanoix's Gorget",
         body="Wyvern Mail",
         hands="Ostreger Mitts",
@@ -180,9 +191,8 @@ function init_gear_sets()
         -- ring2="Weatherspoon Ring"
     }
     sets.midcast.Breath = {
-        --head="Vishap Armet +1",
+        head="Vishap Armet +2",
         --ring1="Dreki Ring" })
-        head="Vishap Armet",
     }
 
 end

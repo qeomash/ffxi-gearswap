@@ -21,21 +21,24 @@ function init_gear_sets()
         -- ranged="Lamiabane",
         -- ammo="Tiphia Sting",
     }
+    sets.thweapons = set_combine(sets.mainweapons,
+        {sub="Thief's Knife"}
+    )
 
     sets.engagedAmbu = {
         ammo="Coiste Bodhar",
         head="Malignance Chapeau",
         neck="Asperity Necklace",
-        ear1="Suppanomimi",
+        ear1="Sherida Earring",
         ear2="Brutal Earring",
         body="Malignance Tabard",
         hands="Mummu Wrists +2",
         lring="Petrov Ring",
-        rring="Chirich Ring",
+        rring="Epona's Ring",
         back="Canny Cape",
-        waist="Dynamic Belt +1",
+        waist="Windbuffet Belt +1", --TA+2%,QA+2%
         legs="Malignance Tights",
-        feet="Mummu Gamashes +2"
+        feet="Malignance Boots",
     }
     sets.engagedGleti = set_combine(sets.engagedAmbu, {
         hands="Gleti's Gauntlets",
@@ -54,12 +57,12 @@ function init_gear_sets()
     sets.baseWS = {}
     sets.baseWS.Str = {
         head="Gleti's Mask",
-        ear1="Moonshade Earring", -- TPBonus+250
-        ear2="Brutal Earring",
+        ear1="Sherida Earring",
+        ear2="Moonshade Earring", -- TPBonus+250
         body="Gleti's Cuirass",
         hands="Meghanada Gloves +2",
         ring1="Pyrosoul Ring",
-        ring2="Chirich Ring",
+        rring="Epona's Ring",
         waist="Sweordfaetels",
         legs="Gleti's Breeches",
         feet="Gleti's Boots",
@@ -71,7 +74,7 @@ function init_gear_sets()
         body="Meghanada Cuirie +2",
         hands="Meghanada Gloves +2",
         ring1="Pyrosoul Ring",
-        ring2="Chirich Ring",
+        rring="Epona's Ring",
         waist="Sweordfaetels",
         legs="Gleti's Breeches",
         feet="Meghanada Jambeaux +2",
@@ -93,8 +96,10 @@ function init_gear_sets()
     }
 
     sets.TH = {
-        head="White Rarab Cap +1",
-        hands="Assassin's Armlets",
+        ammo="Perfect Lucky Egg", --+1
+        -- head="White Rarab Cap +1", --+1
+        head="Volte Cap", -- +1
+        hands="Assassin's Armlets", --+1
         waist="Chaac Belt", --TH+1
     }
     sets.precast.JA.Step = sets.TH
