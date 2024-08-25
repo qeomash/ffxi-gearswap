@@ -246,6 +246,7 @@ function init_gear_sets()
 
     sets.midcast['Enhancing Magic'] = {
         main=Colada.EnhancingDur,
+        sub="Ammurapi Shield", --Dura+10%
         head="Carmine Mask", --+10
         neck="Melic Torque", --+10
         lear="Mimir Earring", -- +10
@@ -289,7 +290,9 @@ function init_gear_sets()
 
     sets.midcast.EnhancingDuration = {
         main=Colada.EnhancingDur,
+        sub="Ammurapi Shield", --Dura+10%
         head=sets.Empyrean.head,
+        neck="Duelist's Torque +2", --Dura+25%
         body=sets.Empyrean.body,
         hands=sets.Artifact.hands,
         rear="Lethargy Earring", --Duration+7%
@@ -318,7 +321,7 @@ function init_gear_sets()
     sets.Enfeebling = {}
     sets.Enfeebling.Base = {
         main="Crocea Mors", --MAC+50
-        -- sub="Clerisy Strap", --MAC+10
+        sub="Ammurapi Shield", --MAC+38
         ranged="Ullr",
         -- ammo="Kalboron Stone",
         -- head=sets.Relic.head,
@@ -337,7 +340,7 @@ function init_gear_sets()
     }
     sets.Enfeebling.Accuracy = {
         main="Crocea Mors", --MAC+50
-        -- sub="Ammurapi Shield",
+        sub="Ammurapi Shield", --MAC+38
         ranged="Ullr",
         head=sets.Relic.head,
         neck="Duelist's Torque +2", -- macc+30,enf ef+10
@@ -355,7 +358,7 @@ function init_gear_sets()
     }
     sets.Enfeebling.PotencyInt = {
         main="Crocea Mors", --MAC+50
-        -- sub="Ammurapi Shield",
+        sub="Ammurapi Shield",
         ammo="Regal Gem",
         head=sets.Relic.head,
         neck="Duelist's Torque +2", -- macc+30,enf ef+10
