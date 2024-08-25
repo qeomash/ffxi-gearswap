@@ -100,7 +100,7 @@ function init_gear_sets()
     Ghostfyre.Duration = { name="Ghostfyre Cape", augments={'Enfb.mag. skill +10','Enha.mag. skill +2','Mag. Acc.+10','Enh. Mag. eff. dur. +20',}}
 
     sets.TH = {
-        head="White Rarab Cap +1", -- TH+1
+        head="Volte Cap", -- +1
         feet="Chironic Slippers", --TH+2
         waist="Chaac Belt", --TH+1
     }
@@ -310,7 +310,7 @@ function init_gear_sets()
     sets.midcast.Haste = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration)
     sets.midcast["Haste II"] = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration)
     sets.midcast["Phalanx II"] = set_combine(sets.midcast.EnhancingDuration, sets.midcast['Enhancing Magic'])
-
+    sets.midcast["Flurry II"] = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration)
     --sets.midcast.Stoneskin = {waist="Siegel Sash"}
 
     -- sets.midcast['Enfeebling Magic'] = {main="Lehbrailg +2",sub="Mephitis Grip",ammo="Kalboron Stone",
@@ -566,7 +566,7 @@ function init_gear_sets()
         hands=sets.Empyrean.hands, --DT-10%
         -- Ear, get Odnowa and Etiolation
         lring="Stikini Ring",
-        rring="Stikini Ring",
+        rring="Shadow Ring",
         back=Sucellos.DA, -- DT-5%
         waist="Flume Belt",
         legs="Carmine Cuisses +1",
@@ -630,8 +630,7 @@ function init_gear_sets()
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
 
     -- Normal melee group
-    sets.engaged = sets.AutoRefreshIdle -- default to idle, thanks trusts
-    sets.Myengaged = {
+    sets.engaged = {
         -- head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         -- body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
         -- back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
@@ -658,7 +657,7 @@ function init_gear_sets()
         back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
 
     sets.meleeWeapons = {
-        main="Naegling",
+        main="Crocea Mors",
         sub="Genbu's Shield",
     }
     sets.dualWeapons = {
@@ -666,6 +665,17 @@ function init_gear_sets()
         sub="Ternion Dagger +1",
         -- sub="Joyeuse",
     }
+
+    -- sets.meleeWeapons = {
+    --     main="Naegling",
+    --     sub="Genbu's Shield",
+    -- }
+    -- sets.dualWeapons = {
+    --     main="Naegling",
+    --     sub="Ternion Dagger +1",
+    --     -- sub="Joyeuse",
+    -- }
+
 
     sets.precast.WS['Aeolian Edge'] = set_combine(sets.midcast['Elemental Magic'], {
         back=Sucellos.WS,
@@ -683,6 +693,14 @@ function init_gear_sets()
         lring="Weatherspoon Ring", -- Light Affinity
     })
 
+    sets.precast.WS['Sanguine Blade'] = set_combine(sets.midcast['Elemental Magic'], {
+        ammo="Sroda Tathlum",
+        head="Pixie Hairpin +1",
+        back=Sucellos.WS,
+        lear="Regal Earring", --MND+10
+        rear="Moonshade Earring",
+        waist="Anrin Obi"
+    })
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -804,7 +822,7 @@ function enable_vermelee()
     else
         equip(sets.meleeWeapons)
     end
-    sets.engaged = sets.Myengaged
+    -- sets.engaged = sets.Myengaged
     equip(sets.engaged)
     disable('main','sub','ranged')
     send_command('wait 2;input /lockstyleset 1')
@@ -815,7 +833,7 @@ function disable_vermelee()
 
     is_meleeing = false
     enable('main','sub','ranged', 'ammo')
-    sets.engaged = sets.AutoRefreshIdle
+    -- sets.engaged = sets.AutoRefreshIdle
     send_command('wait 2;input /lockstyleset 2')
     windower.add_to_chat(64,'RDM Melee: OFF')
 end
