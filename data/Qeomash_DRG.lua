@@ -18,7 +18,7 @@ function init_gear_sets()
 
     sets.mainweapons = {
         main="Shining One",
-        sub="Duplus Grip",
+        sub="Utu Grip",
         -- ranged="Lamiabane",
         ammo="Coiste Bodhar",
     }
@@ -36,10 +36,10 @@ function init_gear_sets()
         neck="Lissome Necklace",
         lear="Sherida Earring",
         rear="Brutal Earring",
-        body="Peltast's Plackart +2",
+        body="Peltast's Plackart +3",
         hands="Sulevia's Gauntlets +2",
         lring="Petrov Ring",
-        rring="Chirich Ring",
+        rring="Niqmaddu Ring",
         back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
         waist="Ioskeha Belt",
         legs="Sulevia's Cuisses +2",
@@ -73,28 +73,30 @@ function init_gear_sets()
 
     sets.baseWS = {}
     sets.baseWS.Str = {
+        ammo="Knobkierrie",
         head="Sulevia's Mask +2", --STR+33
         neck="Asperity Necklace",
         lear="Sherida Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body="Sulevia's Platemail +2",
         hands="Sulevia's Gauntlets +2",
-        lring="Pyrosoul Ring",
-        rring="Pyrosoul Ring",
+        lring="Regal Ring",
+        rring="Niqmaddu Ring",
         back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
         waist="Ioskeha Belt", --ACC+12,DA+8%
         legs="Sulevia's Cuisses +2",
         feet="Sulevia's Leggings +2", --WS+7%
     }
     sets.baseWS.Accuracy = {
+        ammo="Knobkierrie",
         head="Sulevia's Mask +2", --Acc+44
         neck="Asperity Necklace",
         lear="Sherida Earring",
         rear="Moonshade Earring", -- TPBonus+250
-        body="Peltast's Plackart +2",
+        body="Peltast's Plackart +3",
         hands="Sulevia's Gauntlets +2", --Acc+37
-        lring="Blood Ring",
-        rring="Flamma Ring",
+        lring="Regal Ring",
+        rring="Niqmaddu Ring",
         back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
         waist="Ioskeha Belt", --ACC+12,DA+8%
         legs="Sulevia's Cuisses +2",
@@ -122,9 +124,11 @@ function init_gear_sets()
         sets.baseWS.Accuracy,
         {
             body="Vishap Mail +2",
-            hands="Vishap Finger Gauntlets +1",
+            hands="Vishap Finger Gauntlets +2",
             back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
             feet="Ostro Greaves",
+            lring="Petrov Ring",
+            rring="Niqmaddu Ring",
         }
     )
 
