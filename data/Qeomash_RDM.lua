@@ -68,7 +68,7 @@ function init_gear_sets()
         feet="Atrophy Boots +1",
     }
     sets.Relic = {
-        head="Vitiation Chapeau +2",
+        head="Vitiation Chapeau +3",
         body="Vitiation Tabard +3",
         hands="Vitiation Gloves +2",
         legs="Vitiation Tights",
@@ -160,9 +160,9 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.baseWS = {}
     sets.baseWS.Str = {
-        head=sets.Empyrean.head, --Acc/Atk+51
-        neck="Asperity Necklace",
-        lear="Cessance Earring",
+        head=sets.Relic.head, --Acc37/Atk+62,WSD+6%
+        neck="Republican Platinum Medal",
+        lear="Sherida Earring",
         rear="Moonshade Earring", -- TPBonus+250
         -- rear="Magnetic Earring",
         -- body="Ayanmo Corazza +2",
@@ -170,9 +170,9 @@ function init_gear_sets()
         -- hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         hands=sets.Artifact.hands, --STR+21,Acc+53,Att+WSD+6%
         lring="Pyrosoul Ring",
-        rring="Rajas Ring",
+        rring="Ilabrat Ring",
         back=Sucellos.WS,
-        waist="Dynamic Belt +1",
+        waist="Prosilio Belt +1",
         legs=sets.Empyrean.legs, --Attk+53,STR+33
         -- legs="Jhakri Slops +2", --Att+45,STR+47
         feet=sets.Empyrean.feet, --Acc+50,Att+50,WS+8%
@@ -231,7 +231,7 @@ function init_gear_sets()
         neck="Colossus's Torque",
         lear="Regal Earring",
         rear="Magnetic Earring",
-        body="Heka's Kalasiris",
+        -- body="Heka's Kalasiris",
         hands="Weatherspoon Cuffs +1", --CP+9% --eh, maybe Telchine Gloves if I can find some useful augment for them?
         lring="Lebeche Ring", --CP+3%
         rring="Stikini Ring",
@@ -331,8 +331,8 @@ function init_gear_sets()
         rear="Vor Earring", -- sk+10
         body=sets.Artifact.body, -- MAC+55
         hands=sets.Empyrean.hands, -- MAC+52
-        lring="Stikini Ring", --sk+5 MAC+8
-        rring="Metamorph Ring +1",
+        lring="Metamorph Ring +1",
+        rring="Stikini Ring",
         back=Sucellos.Enfeebling,
         waist="Ovate Rope",
         legs=sets.Empyrean.legs, --MAC+53
@@ -375,7 +375,7 @@ function init_gear_sets()
     }
     sets.Enfeebling.PotencyMnd = {
         main="Crocea Mors", --MAC+50
-        -- sub="Ammurapi Shield",
+        sub="Ammurapi Shield",
         ammo="Regal Gem",
         head=sets.Relic.head,
         neck="Duelist's Torque +2", -- macc+30,enf ef+10
@@ -392,7 +392,7 @@ function init_gear_sets()
     }
     sets.Enfeebling.Duration = {
         main="Crocea Mors", --MAC+50
-        -- sub="Ammurapi Shield",
+        sub="Ammurapi Shield",
         ranged="Ullr",
         head=sets.Empyrean.head,
         neck="Duelist's Torque +2", -- macc+30,enf ef+10
@@ -434,7 +434,7 @@ function init_gear_sets()
         ammo="Regal Gem",
         rring="Weatherspoon Ring",
     })
-    sets.midcast['Silence'] = sets.Enfeebling.Duration
+    sets.midcast['Silence'] = sets.Enfeebling.Accuracy
     sets.midcast['Sleep'] = sets.Enfeebling.Duration
     sets.midcast["Bind"] = sets.Enfeebling.Duration
     sets.midcast['Sleep II'] = sets.Enfeebling.Duration
@@ -458,11 +458,11 @@ function init_gear_sets()
     --     back="Toro Cape",waist=gear.ElementalObi,legs="Hagondes Pants",feet="Hagondes Sabots"}
     sets.midcast['Elemental Magic'] = {
         main="Daybreak", -- MAB+40
-        sub="Culminus", -- MAB+20
+        sub="Ammurapi Shield", -- MAB+38
         ranged="Ullr", --MAC+40
-        -- head="Jhakri Coronal +2", -- MAB+38
+        --ranged="Ghastly Tathlum +1"
         head=sets.Empyrean.head, --MAB+51
-        neck="Stoicheion Medal", -- MAB+8
+        neck="Sibyl Scarf", -- MAB+10,INT+10
         lear="Friomisi Earring", -- MAB+10
         rear="Regal Earring", -- MAB+7
         body=sets.Empyrean.body, -- MAB+49
@@ -487,7 +487,7 @@ function init_gear_sets()
     --     back="Refraction Cape",waist="Goading Belt",legs="Bokwus Slops",feet="Bokwus Boots"}
     sets.midcast['Dark Magic'] = {
         main="Grioavolr",
-        sub="Clerisy Strap",
+        sub="Clerisy Strap", --MAC+10
         head="Jhakri Coronal +2",
         neck="Aesir Torque",
         -- lear="Abyssal Earring",
@@ -499,7 +499,7 @@ function init_gear_sets()
         hands="Jhakri Cuffs +2", --INT+36,MAB+40
         lring="Snow Ring",
         rring="Stikini Ring", --sk+5 MAC+8
-        back="Prism Cape",
+        -- back="Prism Cape",
         waist="Aswang Sash",
         legs="Jhakri Slops +2",
         feet="Jhakri Pigaches +2",
@@ -630,11 +630,10 @@ function init_gear_sets()
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
 
     -- Normal melee group
-    sets.engaged = {
+    sets.engagedold = {
         -- head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         -- body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
         -- back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
-
         ammo="Coiste Bodhar",
         head="Malignance Chapeau",
         neck="Asperity Necklace",
@@ -651,6 +650,22 @@ function init_gear_sets()
         legs="Malignance Tights",
         feet="Carmine Greaves +1", --haste+4%,STR+14,DA+3%
     }
+    sets.engagedSTP = {
+        ammo="Coiste Bodhar",
+        head="Malignance Chapeau",
+        neck="Anu Torque",
+        lear="Sherida Earring",
+        rear="Cessance Earring",
+        body="Malignance Tabard",
+        hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
+        lring="Chirich Ring +1",
+        rring="Chirich Ring +1",
+        back=Sucellos.DA,
+        waist="Windbuffet Belt +1", --TA+2%,QA+2%
+        legs="Malignance Tights",
+        feet="Malignance Boots",
+    }
+    sets.engaged = sets.engagedSTP
     sets.engaged.Defense = {ammo="Demonry Stone",
         head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         body="Atrophy Tabard +3",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
@@ -658,7 +673,7 @@ function init_gear_sets()
 
     sets.meleeWeapons = {
         main="Crocea Mors",
-        sub="Genbu's Shield",
+        sub="Ammurapi Shield",
     }
     sets.dualWeapons = {
         main="Naegling",
@@ -691,6 +706,7 @@ function init_gear_sets()
         lear="Regal Earring", --MND+10
         rear="Moonshade Earring",
         lring="Weatherspoon Ring", -- Light Affinity
+        rring="Cornelia's Ring",
     })
 
     sets.precast.WS['Sanguine Blade'] = set_combine(sets.midcast['Elemental Magic'], {
@@ -701,6 +717,23 @@ function init_gear_sets()
         rear="Moonshade Earring",
         waist="Anrin Obi"
     })
+
+    sets.precast.WS['Savage Blade'] = {
+        head=sets.Relic.head, --WSD+6%
+        neck="Republican Platinum Medal",
+        lear="Sherida Earring",
+        rear="Moonshade Earring", -- TPBonus+250
+        body=sets.Empyrean.body, --Att+54,Acc+54,STR+29
+        hands=sets.Artifact.hands, --STR+21,Acc+53,Att+WSD+6%
+        -- lring="Pyrosoul Ring",
+        lring="Cornelia's Ring",
+        rring="Ilabrat Ring",
+        back=Sucellos.WS,
+        waist="Prosilio Belt +1",
+        legs=sets.Empyrean.legs, --Attk+53,STR+33
+        feet=sets.Empyrean.feet, --Acc+50,Att+50,WS+8%
+    }
+
 end
 
 -------------------------------------------------------------------------------------------------------------------
