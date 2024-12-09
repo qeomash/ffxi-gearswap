@@ -168,11 +168,12 @@ function init_gear_sets()
     --     back="Mending Cape",waist="Goading Belt",legs="Theophany Pantaloons",feet="Gendewitha Galoshes"}
     sets.midcast.Cursna = {
         back="Alaunus's Cape", -- Cursna +25
-        legs="Theophany Pantaloons +1",
+        legs="Theophany Pantaloons +2",
         rear="Ebers Earring", --sk+10
         neck="Malison Medallion",
         lring="Menelaus's Ring",
         rring="Ephedra Ring",
+        feet="Vanya Clogs",
     }
     -- sets.midcast.StatusRemoval = {
     --     head="Orison Cap +2",legs="Orison Pantaloons +2"}
@@ -210,7 +211,7 @@ function init_gear_sets()
         sub="Genub's Shield",
         head="Ebers Cap +3", -- CP+19%
         body="Ebers Bliaut +3", --CPII, Solace+18
-        hands="Ebers Mitts +2", --dura+24
+        hands="Ebers Mitts +3", --dura+24
         legs="Ebers Pantaloons +3",
         feet="Ebers Duckbills +2",
         waist="Embla Sash", --dura+10%
@@ -221,8 +222,8 @@ function init_gear_sets()
     sets.midcast.Regen = {
         head="Inyanga Tiara +2", -- +12%
         body="Cleric's Bliaut", -- +1 HP
-        hands="Ebers Mitts +2", --dura+24
-        legs="Ebers Pantaloons +3",
+        hands="Ebers Mitts +3", --dura+24
+        legs="Theophany Pantaloons +2",
         feet="Ebers Duckbills +2",
     }
 
@@ -286,13 +287,14 @@ function init_gear_sets()
         sub="Genbu's Shield",
         ammo="Homiliary",
         head="Inyanga Tiara +2",
-        neck="Loricate Torque", --DT-5%
+        neck="Loricate Torque +1", --DT-6%
         lear="Abyssal Earring",
         rear="Antivenom Earring",
         body="Ebers Bliaut +3", --Refresh+4
         -- hands="Inyanga Dastanas +2", --refresh?
-        hands="Ebers Mitts +2", --DT-10%
-        ring1="Ayanmo Ring",
+        hands="Ebers Mitts +3", --DT-10%
+        -- ring1="Ayanmo Ring",
+        ring1="Gurebu's Ring",
         ring2="Shneddick Ring",
         back=Alaunus.Idle,
         waist="Demonry Sash",

@@ -34,7 +34,7 @@ function init_gear_sets()
     }
 
     sets.idle = set_combine(sets.engaged, {
-        neck="Loricate Torque", --DT-5%
+        neck="Loricate Torque +1", --DT-6%
         rring="Shneddick Ring",
     })
     sets.baseWS = {}
