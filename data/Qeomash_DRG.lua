@@ -42,7 +42,7 @@ function init_gear_sets()
         rring="Niqmaddu Ring",
         back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
         waist="Ioskeha Belt",
-        legs="Sulevia's Cuisses +2",
+        legs="Pteroslaver Brais +3",
         feet="Flamma Gambieras +2",
     }
     sets.gleti_engaged = set_combine(sets.ambu_engaged, {
@@ -75,8 +75,8 @@ function init_gear_sets()
     sets.baseWS = {}
     sets.baseWS.Str = {
         ammo="Knobkierrie",
-        head="Sulevia's Mask +2", --STR+33
-        neck="Asperity Necklace",
+        head="Peltast's Mezail +2", --STR+31,WSD+8%
+        neck="Dragoon's Collar +2",
         lear="Sherida Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body="Sulevia's Platemail +2",
@@ -85,13 +85,13 @@ function init_gear_sets()
         rring="Niqmaddu Ring",
         back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
         waist="Ioskeha Belt", --ACC+12,DA+8%
-        legs="Sulevia's Cuisses +2",
+        legs="Pteroslaver Brais +3",
         feet="Sulevia's Leggings +2", --WS+7%
     }
     sets.baseWS.Accuracy = {
         ammo="Knobkierrie",
-        head="Sulevia's Mask +2", --Acc+44
-        neck="Asperity Necklace",
+        head="Peltast's Mezail +2", --STR+31,WSD+8%
+        neck="Dragoon's Collar +2",
         lear="Sherida Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body="Peltast's Plackart +3",
@@ -100,7 +100,7 @@ function init_gear_sets()
         rring="Niqmaddu Ring",
         back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
         waist="Ioskeha Belt", --ACC+12,DA+8%
-        legs="Sulevia's Cuisses +2",
+        legs="Pteroslaver Brais +3",
         feet="Flamma Gambieras +2",
     }
 
@@ -112,31 +112,35 @@ function init_gear_sets()
     sets.precast.WS['Sonic Thrust'] = set_combine(sets.baseWS.Str, {neck='Fotia Gorget'})
     sets.precast.WS['Penta Thrust'] = set_combine(sets.baseWS.Accuracy, {})
     sets.precast.WS['Drakesbane'] = set_combine(sets.baseWS.Str, {
-        neck="Fotia Gorget" -- replace with DRG's collar
+        neck="Dragoon's Collar +2"
     })
     sets.precast.WS["Camlann's Torment"] = set_combine(sets.baseWS.Str, {
+        neck="Dragoon's Collar +2",
         lear="Thrud Earring",
         body="Peltast's Plackart +3",
         hands="Pteroslaver Finger Gauntlets +2", --WSD+5%
-        neck='Fotia Gorget' -- replace with DRG's collar
+        lring="Cornelia's Ring",
+        legs="Vishap Brais +3",
     })
     sets.precast.WS["Geirskogul"] = set_combine(sets.baseWS.Str, {
+        neck="Dragoon's Collar +2",
         lear="Thrud Earring",
         body="Peltast's Plackart +3",
-        neck='Fotia Gorget' -- replace with DRG's collar
     })
 
     sets.precast.JA.Angon = {ammo="Angon",hands="Pteroslaver Finger Gauntlets +2"}
     -- Jumps
     sets.JumpSpecialGear = {
-        feet="Vishap Greaves"
+        feet="Vishap Greaves +2"
     }
     sets.precast.JA.Jump = set_combine(
         sets.baseWS.Accuracy,
         {
-            body="Vishap Mail +2",
-            hands="Vishap Finger Gauntlets +2",
+            body="Pteroslaver Mail +3",
+            neck="Vim Torque +1",
+            hands="Vishap Finger Gauntlets +3",
             back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+            legs="Pteroslaver Brais +3",
             feet="Ostro Greaves",
             lring="Petrov Ring",
             rring="Niqmaddu Ring",
@@ -144,16 +148,16 @@ function init_gear_sets()
     )
 
     sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {
-        legs="Vishap Brais +1",
+        legs="Vishap Brais +3",
     })
     sets.precast.JA['Soul Jump'] = set_combine(sets.precast.JA.Jump, {
-        body="Vishap Mail +2",
+        body="Vishap Mail +3",
     })
     sets.precast.JA['Spirit Jump'] = set_combine(sets.precast.JA.Jump, {})
     sets.precast.JA['Super Jump'] = sets.precast.JA.Jump
 
     sets.precast.JA['Call Wyvern'] = {
-        body="Wyrm Mail"
+        body="Pteroslaver Mail +3",
     }
 
     -- Wyvern Breaths
@@ -162,7 +166,7 @@ function init_gear_sets()
         neck="Chanoix's Gorget",
         body="Wyvern Mail",
         hands="Ostreger Mitts",
-        legs="Vishap Brais +1",
+        legs="Vishap Brais +3",
     }
     sets.HealingBreath = set_combine(sets.WyvernHP, {
         head="Wyrm Armet +2",
@@ -179,7 +183,15 @@ function init_gear_sets()
         -- legs="Vishap Brais +3",
         -- feet="Pteroslaver Greaves"
     })
+    sets.precast.JA['Steady Wing'] = {
+        neck="Chanoix's Gorget",
+        legs="Vishap Brais +3",
+        back="Updraft Mantle",
+    }
+    sets.precast.JA['Spirit Link'] = {
+        head="Vishap Armet +2",
 
+    }
     sets.precast.FC = {
         -- ammo="Impatiens",
         -- head="Cizin Helm +1",
