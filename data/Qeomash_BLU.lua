@@ -201,8 +201,13 @@ function init_gear_sets()
         main="Excalipoor II",
         sub="Wax Sword",
     }
+    sets.castingweapons = {
+        main="Maxentius", -- MAB+21
+        sub="Sakpata's Sword", -- MAB+20
+        ammo="Ghastly Tathlum +1"
+    }
 
-    sets.idle = {
+    sets.stdidle = {
         head="Gleti's Mask",
         neck="Loricate Torque +1", --DT-6%
         body="Jhakri Robe +2", --refresh+2
@@ -211,13 +216,27 @@ function init_gear_sets()
         legs="Carmine Cuisses +1",
         feet="Gleti's Boots",
     }
+    sets.cleavingidle = {
+        head="Malignance Chapeau", --DT-
+        neck="Loricate Torque +1", --DT-6%
+        body="Malignance Tabard",
+        hands="Ayanmo Manopolas +2", --DT-3%
+        rring="Shadow Ring",
+        waist="Flume Belt",
+        legs="Carmine Cuisses +1",
+        feet="Malignance Boots",
+    }
+
+    -- sets.idle = sets.stdidle
+    sets.idle = sets.stdidle
+
     Rosmertas = {}
     Rosmertas.DA = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}
 
     sets.engaged = {
         head="Malignance Chapeau",
         neck="Asperity Necklace",
-        lear="Brutal Earring",
+        lear="Cessance Earring",
         rear="Suppanomimi",
         body="Malignance Tabard",
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
@@ -235,13 +254,14 @@ function init_gear_sets()
         lear="Cessance Earring",
         rear="Moonshade Earring", -- TPBonus+250
         -- body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
-        body="Jhakri Robe +2", --Acc+46,Att+46,STR+37
+        -- body="Jhakri Robe +2", --Acc+46,Att+46,STR+37
+        body="Assimilator's Jubbah +3", --STR+39WSD+10%
         hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         lring="Pyrosoul Ring",
-        rring="Rajas Ring",
+        rring="Ilabrat Ring",
         back="Forager's Mantle",
         waist="Dynamic Belt +1",
-        legs="Jhakri Slops +2", --Att+45,STR+47
+        legs="Luhlaza Shalwar +3", -- WSD+10%
         feet="Jhakri Pigaches +2", -- STR+22
     }
     sets.baseWS.Str = set_combine(sets.baseWS, {
@@ -293,18 +313,18 @@ function init_gear_sets()
 
 
     sets.midcast['Blue Magic'].Magical = {
+        ammo="Ghastly Tathlum +1",
         head="Jhakri Coronal +2", -- MAB+41
-        neck="Stoicheion Medal", -- MAB+8
+        neck="Sibyl Scarf", --MAB+10
         lear="Friomisi Earring", -- MAB+10
-        -- rear="Hecate's Earring", -- MAB+6
-        rear="Hashishin Earring", --BLU+10
+        rear="Regal Earring", --MAB+7
         body="Jhakri Robe +2", -- MAB+43
         hands="Jhakri Cuffs +2", -- MAB+40
         lring="Weatherspoon Ring", -- MAB+10
         rring="Acumen Ring", -- MAB+4
         back="Cornflower Cape", --MAB+15,BLU+5
         waist="Aswang Sash", -- lol ass-wang
-        legs="Jhakri Slops +2", -- MAB+42
+        legs="Luhlaza Shalwar +3", -- MAB+57
         feet="Jhakri Pigaches +2", -- MAB+39
     }
     sets.midcast['Blue Magic'].Magical.Resistant = set_combine(sets.midcast['Blue Magic'].Magical, {})
