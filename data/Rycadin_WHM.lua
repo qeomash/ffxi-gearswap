@@ -140,6 +140,7 @@ function init_gear_sets()
     sets.midcast.Cure = {
         main="Queller Rod", -- CPII+2%,CP+10%
         sub="Sors Shield",
+        ammo="Psilomene", --Enmity-3
         head="Ebers Cap +3", -- CP+19%
         neck="Cleric's Torque", -- CP+5%
         body="Ebers Bliaut +3", --CPII, Solace+18
