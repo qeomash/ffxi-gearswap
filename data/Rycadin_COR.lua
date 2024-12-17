@@ -44,16 +44,20 @@ function user_setup()
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
 
-    gear.RAbullet = "Adlivun Bullet"
-    gear.WSbullet = "Adlivun Bullet"
+    -- gear.RAbullet = "Adlivun Bullet"
+    -- gear.WSbullet = "Adlivun Bullet"
+    -- gear.MAbullet = "Bronze Bullet"
+    -- gear.QDbullet = "Adlivun Bullet"
+    gear.RAbullet = "Bronze Bullet"
+    gear.WSbullet = "Bronze Bullet"
     gear.MAbullet = "Bronze Bullet"
-    gear.QDbullet = "Adlivun Bullet"
+    gear.QDbullet = "Bronze Bullet"
     options.ammo_warning_limit = 15
 
     -- Additional local binds
     -- send_command('bind ^` input /ja "Double-up" <me>')
-    -- send_command('bind !` input /ja "Bolter\'s Roll" <me>')
-
+    send_command('bind != input /ja "Bolter\'s Roll" <me>')
+    send_command('wait 2;input /lockstyleset 21')
     select_default_macro_book()
 end
 
@@ -112,7 +116,8 @@ function init_gear_sets()
 
     sets.precast.FC = {
         lear="Loquacious Earring",
-        lring="Menelaus's Ring" --FC-10%
+        lring="Menelaus's Ring", --FC-10%
+        rring="Kishar Ring" --FC+4%
     }
 
     -- sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})
@@ -134,14 +139,14 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.MeleeWS = {
         head="Malignance Chapeau",
-        neck="Iskur Gorget",
+        neck="Republican Platinum Medal",
         lear="Mache Earring",
-        rear="Chas. Earring +1",
+        rear="Chasasseur's Earring +1",
         body="Malignance Tabard",
         hands="Nyame Gauntlets",
         lring="Regal Ring",
         rring="Meghanada Ring",
-        -- back="",
+        back="Camulus's Mantle",
         legs="Volte Tights",
         feet="Nyame Sollerets",
         waist="Sailfi Belt +1",
@@ -156,7 +161,7 @@ function init_gear_sets()
         hands="Ikenga's Gloves",
         lring="Regal Ring",
         rring="Meghanada Ring",
-        -- back="",
+        back="Camulus's Mantle",
         waist="Sailfi Belt +1",
         legs="Ikenga's Trousers",
         feet="Ikenga's Clogs",
@@ -173,15 +178,17 @@ function init_gear_sets()
 
     sets.precast.WS['Savage Blade'] = sets.precast.MeleeWS
 
-    sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
-        head="Whirlpool Mask",neck=gear.ElementalGorget,ear1="Clearview Earring",ear2="Moonshade Earring",
-        body="Laksamana's Frac",hands="Iuitl Wristbands",ring1="Rajas Ring",ring2="Stormsoul Ring",
-        back="Terebellum Mantle",waist=gear.ElementalBelt,legs="Nahtirah Trousers",feet="Iuitl Gaiters +1"}
+    sets.precast.WS['Last Stand'] = set_combine(sets.precast.RangedWS, {})
 
-    sets.precast.WS['Last Stand'].Acc = {ammo=gear.WSbullet,
-        head="Laksamana's Hat",neck=gear.ElementalGorget,ear1="Clearview Earring",ear2="Moonshade Earring",
-        body="Laksamana's Frac",hands="Buremte Gloves",ring1="Hajduk Ring",ring2="Stormsoul Ring",
-        back="Libeccio Mantle",waist=gear.ElementalBelt,legs="Thurandaut Tights +1",feet="Laksamana's Bottes"}
+    -- sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
+    --     head="Whirlpool Mask",neck=gear.ElementalGorget,ear1="Clearview Earring",ear2="Moonshade Earring",
+    --     body="Laksamana's Frac",hands="Iuitl Wristbands",ring1="Rajas Ring",ring2="Stormsoul Ring",
+    --     back="Terebellum Mantle",waist=gear.ElementalBelt,legs="Nahtirah Trousers",feet="Iuitl Gaiters +1"}
+
+    -- sets.precast.WS['Last Stand'].Acc = {ammo=gear.WSbullet,
+    --     head="Laksamana's Hat",neck=gear.ElementalGorget,ear1="Clearview Earring",ear2="Moonshade Earring",
+    --     body="Laksamana's Frac",hands="Buremte Gloves",ring1="Hajduk Ring",ring2="Stormsoul Ring",
+    --     back="Libeccio Mantle",waist=gear.ElementalBelt,legs="Thurandaut Tights +1",feet="Laksamana's Bottes"}
 
 
     sets.precast.WS['Wildfire'] = {ammo=gear.MAbullet,
@@ -241,10 +248,10 @@ function init_gear_sets()
         ammo=gear.RAbullet,
         head="Malignance Chapeau", --RAcc+50
         neck="Iskur Gorget", --Racc+30
-        lear="Clearview Earring",
+        -- lear="Clearview Earring",
         rear="Chasseur's Earring +1",--Recycle+11,
         body="Malignance Tabard", --RAcc+50,STP+11
-        hands="Iuitl Wristbands",
+        hands="Ikenga's Gloves",
         lring="Regal Ring", --needa acc
         rring="Meghanada Ring", --RAcc+6
         -- back="Terebellum Mantle",
@@ -272,7 +279,7 @@ function init_gear_sets()
         hands="Nyame Gauntlets",
         legs="Volte Tights",
         feet="Nyame Sollerets",
-        neck="Iskur Gorget",
+        neck="Loricate Torque +1", --DT-6%
         waist="Sailfi Belt +1",
         left_ear="Mache Earring",
         right_ear="Chas. Earring +1",
@@ -342,7 +349,7 @@ function init_gear_sets()
         lear="Mache Earring",
         rear="Chas. Earring +1",
         lring="Regal Ring",
-        rring="Shneddick Ring",
+        rring="Rajas Ring",
     }
 end
 
