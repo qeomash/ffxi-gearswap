@@ -133,7 +133,7 @@ function init_gear_sets()
         -- sub="Clerisy Strap", --FC+2%
         head=sets.Artifact.head,
         lear="Loquacious Earring",
-        rear="Lethargy Earring", --FC+7%
+        rear="Lethargy Earring +1", --FC+8%
         body=sets.Relic.body,
         hands="Ayanmo Manopolas +2", --Haste+4%
         legs="Ayanmo Cosciales +2",
@@ -146,7 +146,7 @@ function init_gear_sets()
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
     sets.precast.FC['Enfeebling Magic'] = set_combine(sets.precast.FC, {head=sets.Empyrean.head})
     sets.precast.FC['Dispelga'] = set_combine(sets.precast.FC['Enfeebling Magic'],
-        {main="Daybreak", sub="Genbu's Shield"})
+        {main="Daybreak", sub="Ammurapi Shield"})
     sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC,
         {
             main="Daybreak",
@@ -243,14 +243,17 @@ function init_gear_sets()
     }
     sets.midcast.Curaga = sets.midcast.Cure
     --sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
-
+    sets.midcast.Cursna = set_combine(sets.midcast.Cure, {
+        main="Prelatic Pole",
+        sub=empty,
+    })
     sets.midcast['Enhancing Magic'] = {
         main=Colada.EnhancingDur,
         sub="Ammurapi Shield", --Dura+10%
         head="Carmine Mask", --+10
         neck="Melic Torque", --+10
         lear="Mimir Earring", -- +10
-        rear="Lethargy Earring", -- duration+7%
+        rear="Lethargy Earring +1", -- duration+8%
         body=sets.Relic.body, -- +21,duration+10%
         hands=sets.Relic.hands, -- +20,duration+
         lring="Stikini Ring", -- +5
@@ -266,6 +269,7 @@ function init_gear_sets()
     sets.enspelldmg = set_combine(sets.midcast['Enhancing Magic'],
         {
             main="Pukulatmuj +1", -- +11
+            sub="Arendsi Fleuret", -- +10
             hands="Ayanmo Manopolas +2", -- +17
             lear="Mimir Earring", -- +10
             rear="Augmenting Earring", -- +3
@@ -295,7 +299,7 @@ function init_gear_sets()
         neck="Duelist's Torque +2", --Dura+25%
         body=sets.Empyrean.body,
         hands=sets.Artifact.hands,
-        rear="Lethargy Earring", --Duration+7%
+        rear="Lethargy Earring +1", --Duration+8%
         back=Ghostfyre.Duration,
         waist="Embla Sash", --duration+10%
         legs=sets.Empyrean.legs,
@@ -397,9 +401,9 @@ function init_gear_sets()
         head=sets.Empyrean.head,
         neck="Duelist's Torque +2", -- macc+30,enf ef+10
         lear="Snotra Earring", --mac+10
-        rear="Lethargy Earring", --macc+6
+        rear="Lethargy Earring +1", --macc+14
         body=sets.Empyrean.body,
-        hands=sets.Empyrean.hands,
+        hands="Regal Cuffs",
         lring="Kishar Ring", --EnfDura+10%
         rring="Stikini Ring",
         -- back="Aurist's Cape +1", --bis, after augmenting
@@ -410,7 +414,7 @@ function init_gear_sets()
     }
     sets.Enfeebling.Skill = {
         main="Crocea Mors", --MAC+50
-        -- sub="Ammurapi Shield",
+        sub="Ammurapi Shield",
         ammo="Regal Gem",
         head=sets.Relic.head,
         neck="Duelist's Torque +2", -- macc+30,enf ef+10
@@ -423,7 +427,8 @@ function init_gear_sets()
         -- back="Aurist's Cape +1", --bis, after augmenting
         back=Sucellos.EnfeeblingMnd,
         waist="Ovate Rope", --macc+8
-        legs=sets.Empyrean.legs,
+        legs="Psycloth Lappas", -- +18,MACC
+        -- legs=sets.Empyrean.legs, -- after hitting 625 skill
         feet=sets.Relic.feet,
     }
 
@@ -443,7 +448,7 @@ function init_gear_sets()
         neck="Duelist's Torque +2", -- dispel +1
     })
     sets.midcast['Dispelga'] = set_combine(sets.midcast['Dispel'],
-        {main="Daybreak", sub="Genbu's Shield"})-- TODO: ammushield here, too
+        {main="Daybreak", sub="Ammurapi Shield"})
     sets.midcast['Frazzle'] = sets.Enfeebling.Skill
     sets.midcast['Frazzle II'] = sets.Enfeebling.Skill
     sets.midcast['Frazzle III'] = sets.Enfeebling.Skill
@@ -557,13 +562,14 @@ function init_gear_sets()
 
     sets.AutoRefreshIdle = {
         main=Colada.Refresh,
-        sub="Genbu's Shield",
+        sub="Sacro Bulwark",
         ammo="Homiliary",
         head=sets.Relic.head, --Refresh+2
         neck="Loricate Torque +1", --DT-6%
         -- body="Jhakri Robe +2", -- Refresh+4
         body=sets.Empyrean.body, --Refresh+3,DT-13%
         hands=sets.Empyrean.hands, --DT-10%
+        lear="Odnowa Earring +1",
         -- Ear, get Odnowa and Etiolation
         lring="Stikini Ring",
         rring="Shadow Ring",
@@ -655,7 +661,7 @@ function init_gear_sets()
         head="Malignance Chapeau",
         neck="Anu Torque",
         lear="Sherida Earring",
-        rear="Cessance Earring",
+        rear="Telos Earring",
         body="Malignance Tabard",
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Chirich Ring +1",
@@ -673,24 +679,13 @@ function init_gear_sets()
 
     sets.meleeWeapons = {
         main="Crocea Mors",
-        sub="Ammurapi Shield",
+        sub="Sacro Bulwark",
     }
     sets.dualWeapons = {
-        main="Naegling",
-        sub="Ternion Dagger +1",
+        main="Crocea Mors",
+        sub="Daybreak",
         -- sub="Joyeuse",
     }
-
-    -- sets.meleeWeapons = {
-    --     main="Naegling",
-    --     sub="Genbu's Shield",
-    -- }
-    -- sets.dualWeapons = {
-    --     main="Naegling",
-    --     sub="Ternion Dagger +1",
-    --     -- sub="Joyeuse",
-    -- }
-
 
     sets.precast.WS['Aeolian Edge'] = set_combine(sets.midcast['Elemental Magic'], {
         back=Sucellos.WS,
@@ -721,7 +716,7 @@ function init_gear_sets()
     sets.precast.WS['Savage Blade'] = {
         head=sets.Relic.head, --WSD+6%
         neck="Republican Platinum Medal",
-        lear="Sherida Earring",
+        lear="Telos Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body=sets.Empyrean.body, --Att+54,Acc+54,STR+29
         hands=sets.Artifact.hands, --STR+21,Acc+53,Att+WSD+6%
