@@ -19,52 +19,50 @@ function init_gear_sets()
 
 
     sets.idle = {
-        main="Terra's Staff",
-        sub="Staff Strap",
-        head="Bard's Roundlet +1",
-        neck="Orochi Nodowa",
-        ear1="Loquacious Earring",
-        ear2="Musical Earring",
-        body="Dalmatica",
-        hands="Choral Cuffs +1",
-        ring1="Balrahn's Ring",
-        ring2="Nereid Ring",
-        back="Astute Cape",
-        waist="Corsette +1",
-        legs="Tatsumaki Sitagoromo",
-        feet="Goliard Clogs",
+        head="Nyame Helm",
+        neck="Asperity Necklace",
+        ear1="Cessance Earring",
+        rear="Telos Earring",
+        body="Ashera Harness",
+        hands="Ayanmo Manopolas +2",
+        lring="Chirich Ring +1",
+        rring="Chirich Ring +1",
+        back="Laic Mantle",
+        waist="Windbuffet Belt +1", --TA+2%,QA+2%
+        legs="Ayanmo Cosciales +2",
+        feet="Ayanmo Gambieras +2",
     }
     sets.meleeWeapons = {
         main="Joyeuse",
-        sub="Genbu's Shield",
+        sub="Ammurapi Shield",
     }
     sets.engaged = {
-        head="Walahra Turban",
-        neck="Chivalrous Chain",
-        ear1="Brutal Earring",
-        ear2="Musical Earring",
-        body="Bard's Justaucorps +1",
-        hands="Dusk Gloves",
-        ring1="Blood Ring",
-        ring2="Rajas Ring",
-        back="Forager's Mantle",
-        waist="Swift Belt",
-        legs="Choral Cannions",
-        feet="Dusk Ledelsens",
+        head="Nyame Helm",
+        neck="Asperity Necklace",
+        ear1="Cessance Earring",
+        rear="Telos Earring",
+        body="Ashera Harness",
+        hands="Ayanmo Manopolas +2",
+        lring="Chirich Ring +1",
+        rring="Chirich Ring +1",
+        back="Laic Mantle",
+        waist="Windbuffet Belt +1", --TA+2%,QA+2%
+        legs="Ayanmo Cosciales +2",
+        feet="Ayanmo Gambieras +2",
     }
     sets.precast.WS = {
-        head="Hecatomb Cap",
-        neck="Fotia Gorget",
-        ear1="Brutal Earring",
-        ear2="Moonshade Earring", -- TPBonus+250
-        body="Hecatomb Harness",
-        hands="Custom M Gloves",
-        ring1="Flame Ring",
-        ring2="Rajas Ring",
-        back="Forager's Mantle",
-        waist="Warwolf belt",
-        legs="Choral Cannions",
-        feet="Hecatomb Leggings",
+        head="Nyame Helm",
+        neck="Asperity Necklace",
+        ear1="Cessance Earring",
+        rear="Telos Earring",
+        body="Nyame Mail",
+        hands="Nyame Gauntlets",
+        lring="Chirich Ring +1",
+        rring="Chirich Ring +1",
+        back="Laic Mantle",
+        waist="Windbuffet Belt +1", --TA+2%,QA+2%
+        legs="Nyame Flanchard",
+        feet="Nymae Sollerets",
     }
 
     sets.precast.FC = {
@@ -111,6 +109,7 @@ function init_gear_sets()
     sets.midcast.Base = sets.midcast.Buff
 
     -- Spell specific
+    -- Just get a Linos (augmented up to +4)
     sets.midcast.Elegy = {range="Horn +1"}
     sets.midcast.Madrigal = {range="Traversiere +1"}
     sets.midcast.March = {range="Faerie Piccolo"}

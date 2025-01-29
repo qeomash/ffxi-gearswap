@@ -18,7 +18,7 @@ function init_gear_sets()
 
     sets.midcast['Elemental Magic'] = {
         main="Daybreak", -- MAB+40
-        sub="Culminus", -- MAB+20
+        sub="Ammurapi Shield", -- MAB+20
         ammo="Kalboron Stone",
         head="Jhakri Coronal +2", -- MAB+38
         neck="Stoicheion Medal", -- MAB+8

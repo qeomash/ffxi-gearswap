@@ -9,7 +9,7 @@ end
 function user_setup()
     enable('main','sub','ranged', 'ammo')
     select_default_macro_book()
-    send_command('wait 2;input /lockstyleset 20')
+    send_command('wait 2;input /lockstyleset 19')
     equip(sets.mainweapons)
 end
 
@@ -22,7 +22,7 @@ function init_gear_sets()
         -- ammo="Tiphia Sting",
     }
 
-    sets.engaged = {
+    sets.engagedAmbu = {
         head="Malignance Chapeau",
         neck="Asperity Necklace",
         ear1="Suppanomimi",
@@ -30,11 +30,11 @@ function init_gear_sets()
         body="Malignance Tabard",
         hands="Mummu Wrists +2",
         lring="Petrov Ring",
-        rring="Chirich Ring",
-        back="Canny Cape",
-        waist="Dynamic Belt +1",
+        rring="Epona's Ring",
+        back="Toetapper Mantle",
+        waist="Windbuffet Belt +1", --TA+2%,QA+2%
         legs="Malignance Tights",
-        feet="Mummu Gamashes +2"
+        feet="Malignance Boots",
     }
     sets.engagedGleti = set_combine(sets.engagedAmbu, {
         hands="Gleti's Gauntlets",
@@ -45,7 +45,7 @@ function init_gear_sets()
     sets.idle = set_combine(sets.engaged, {
         head="Gleti's Mask",
         body="Gleti's Cuirass",
-        hands="Gleti's Gauntelts",
+        hands="Gleti's Gauntlets",
         legs="Gleti's Breeches",
         feet="Tandava Crackows",
     })
@@ -58,7 +58,7 @@ function init_gear_sets()
         body="Gleti's Cuirass",
         hands="Meghanada Gloves +2",
         ring1="Pyrosoul Ring",
-        ring2="Chirich Ring",
+        rring="Epona's Ring",
         waist="Sweordfaetels",
         legs="Gleti's Breeches",
         feet="Gleti's Boots",
@@ -70,7 +70,7 @@ function init_gear_sets()
         body="Meghanada Cuirie +2",
         hands="Meghanada Gloves +2",
         ring1="Pyrosoul Ring",
-        ring2="Chirich Ring",
+        rring="Epona's Ring",
         waist="Sweordfaetels",
         legs="Gleti's Breeches",
         feet="Meghanada Jambeaux +2",

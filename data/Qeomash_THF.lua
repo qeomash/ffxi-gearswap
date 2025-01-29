@@ -9,7 +9,7 @@ end
 function user_setup()
     enable('main','sub','ranged', 'ammo')
     select_default_macro_book()
-    send_command('wait 2;input /lockstyleset 20')
+    send_command('wait 2;input /lockstyleset 19')
     equip(sets.mainweapons)
 end
 
@@ -30,7 +30,7 @@ function init_gear_sets()
         head="Malignance Chapeau",
         neck="Asperity Necklace",
         ear1="Sherida Earring",
-        ear2="Brutal Earring",
+        ear2="Telos Earring",
         body="Malignance Tabard",
         hands="Mummu Wrists +2",
         lring="Petrov Ring",
@@ -57,7 +57,7 @@ function init_gear_sets()
     sets.baseWS = {}
     sets.baseWS.Str = {
         head="Gleti's Mask",
-        ear1="Sherida Earring",
+        ear1="Telos Earring",
         ear2="Moonshade Earring", -- TPBonus+250
         body="Gleti's Cuirass",
         hands="Meghanada Gloves +2",
@@ -70,7 +70,7 @@ function init_gear_sets()
     sets.baseWS.Dex = {
         head="Malignance Chapeau", --DEX+40
         ear1="Moonshade Earring", -- TPBonus+250
-        ear2="Brutal Earring",
+        ear2="Telos Earring",
         body="Meghanada Cuirie +2",
         hands="Meghanada Gloves +2",
         ring1="Pyrosoul Ring",
@@ -82,7 +82,7 @@ function init_gear_sets()
     sets.precast.WS = sets.baseWS.Str
 
     sets.precast.WS['Dancing Edge'] = set_combine(sets.baseWS.Dex, {})
-    sets.precast.WS['Evisceration'] = set_combine(sets.baseWS.Dex, {neck='Light Gorget'})
+    sets.precast.WS['Evisceration'] = set_combine(sets.baseWS.Dex, {neck='Fotia Gorget'})
 
     sets.precast.JA['Steal'] = {
         head="Rogue's Bonnet",
