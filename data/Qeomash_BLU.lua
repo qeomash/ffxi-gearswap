@@ -9,6 +9,8 @@ function user_setup()
     send_command('gs enable all')
     select_default_macro_book()
     send_command('wait 2;input /lockstyleset 21')
+    windower.add_to_chat(64,'* aset setlist')
+    windower.add_to_chat(64,'* aset spellset <setname>')
 end
 
 function job_setup()
@@ -200,20 +202,26 @@ function init_gear_sets()
     sets.learningweapons = {
         main="Excalipoor II",
         sub="Wax Sword",
+        hands="Magus Bazubands",
     }
     sets.castingweapons = {
-        main="Maxentius", -- MAB+21
-        sub="Sakpata's Sword", -- MAB+20
+        main="Bunzi's Rod", --MAB+35
+        sub="Maxentius", -- MAB+21
         ammo="Ghastly Tathlum +1"
     }
-
+    sets.cleavingweapons = sets.castingweapons
+    sets.TH = {
+        ammo="Perfect Lucky Egg", -- +1
+        head="Volte Cap", -- +1
+        waist="Chaac Belt", --TH+1
+    }
     sets.stdidle = {
         head="Gleti's Mask",
         neck="Loricate Torque +1", --DT-6%
-        body="Jhakri Robe +2", --refresh+2
+        body="Hashishin Mintan +2", --refresh+3
         hands="Gleti's Gauntlets",
         waist="Flume Belt",
-        legs="Carmine Cuisses +1",
+        legs="Carmine Cuisses +1", --Movement+18%
         feet="Gleti's Boots",
     }
     sets.cleavingidle = {
@@ -228,15 +236,21 @@ function init_gear_sets()
     }
 
     -- sets.idle = sets.stdidle
-    sets.idle = sets.stdidle
+    if player.sub_job == 'RDM' or player.sub_job == 'BLM' then
+        sets.idle = sets.cleavingidle
+    else
+        sets.idle = sets.stdidle
+    end
 
     Rosmertas = {}
     Rosmertas.DA = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}
+    Rosmertas.WSD = { name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 
     sets.engaged = {
+        ammo="Coiste Bodhar",
         head="Malignance Chapeau",
         neck="Asperity Necklace",
-        lear="Cessance Earring",
+        lear="Telos Earring",
         rear="Suppanomimi",
         body="Malignance Tabard",
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
@@ -249,18 +263,18 @@ function init_gear_sets()
     }
 
     sets.baseWS = {
-        head="Jhakri Coronal +2", -- STR+31
-        neck="Asperity Necklace",
-        lear="Cessance Earring",
+        ammo="Aurgelmir Orb",
+        head="Hashishin Kavuk +3", --WSD+12%
+        neck="Republican Platinum Medal",
+        lear="Telos Earring",
         rear="Moonshade Earring", -- TPBonus+250
-        -- body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
-        -- body="Jhakri Robe +2", --Acc+46,Att+46,STR+37
         body="Assimilator's Jubbah +3", --STR+39WSD+10%
         hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         lring="Pyrosoul Ring",
         rring="Ilabrat Ring",
-        back="Forager's Mantle",
+        back=Rosmertas.WSD,
         waist="Dynamic Belt +1",
+        -- waist="Sailfi Belt +1", --TA+2%, needs to be augmented
         legs="Luhlaza Shalwar +3", -- WSD+10%
         feet="Jhakri Pigaches +2", -- STR+22
     }
@@ -275,7 +289,7 @@ function init_gear_sets()
     -- Spellcasting
     sets.precast.FC = {
         head="Carmine Mask", -- 9%
-        body="Ebur Talar", --5%
+        -- body="Ebur Talar", --5%
         lear="Loquacious Earring",
         back="Swith Cape",
         legs="Ayanmo Cosciales +2",
@@ -290,7 +304,7 @@ function init_gear_sets()
     sets.midcast['Blue Magic'].Physical = {
         head="Gleti's Mask",
         neck="Asperity Necklace",
-        lear="Cessance Earring",
+        lear="Telos Earring",
         rear="Hashishin Earring", --BLU+10
         body="Gleti's Cuirass", --STR+39
         hands="Gleti's Gauntlets",
@@ -314,18 +328,18 @@ function init_gear_sets()
 
     sets.midcast['Blue Magic'].Magical = {
         ammo="Ghastly Tathlum +1",
-        head="Jhakri Coronal +2", -- MAB+41
+        head="Hashishin Kavuk +3", -- MAB+51
         neck="Sibyl Scarf", --MAB+10
         lear="Friomisi Earring", -- MAB+10
         rear="Regal Earring", --MAB+7
-        body="Jhakri Robe +2", -- MAB+43
-        hands="Jhakri Cuffs +2", -- MAB+40
+        body="Hashishin Mintan +2", -- MAB+49
+        hands="Hashishin Bazubands +2", -- MAB+40
         lring="Weatherspoon Ring", -- MAB+10
         rring="Acumen Ring", -- MAB+4
         back="Cornflower Cape", --MAB+15,BLU+5
         waist="Aswang Sash", -- lol ass-wang
-        legs="Luhlaza Shalwar +3", -- MAB+57
-        feet="Jhakri Pigaches +2", -- MAB+39
+        legs="Hashishin Tayt +2", -- MAB+48
+        feet="Hashishin Basmak +2", -- MAB+50
     }
     sets.midcast['Blue Magic'].Magical.Resistant = set_combine(sets.midcast['Blue Magic'].Magical, {})
     sets.midcast['Blue Magic'].MagicalLight = set_combine(sets.midcast['Blue Magic'].Magical, {
