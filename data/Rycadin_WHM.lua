@@ -170,7 +170,7 @@ function init_gear_sets()
     sets.midcast.Cursna = {
         back="Alaunus's Cape", -- Cursna +25
         legs="Theophany Pantaloons +2",
-        rear="Ebers Earring", --sk+10
+        rear="Ebers Earring +1", --sk+10
         neck="Malison Medallion",
         lring="Menelaus's Ring",
         rring="Ephedra Ring",
@@ -290,7 +290,7 @@ function init_gear_sets()
         head="Inyanga Tiara +2",
         neck="Loricate Torque +1", --DT-6%
         lear="Abyssal Earring",
-        rear="Antivenom Earring",
+        rear="Ebers Earring +1", --DT-3%
         body="Ebers Bliaut +3", --Refresh+4
         -- hands="Inyanga Dastanas +2", --refresh?
         hands="Ebers Mitts +3", --DT-10%
