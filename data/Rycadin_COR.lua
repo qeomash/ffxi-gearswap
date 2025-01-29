@@ -45,11 +45,11 @@ function user_setup()
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
 
     -- gear.RAbullet = "Adlivun Bullet"
-    -- gear.WSbullet = "Adlivun Bullet"
+    gear.WSbullet = "Adlivun Bullet"
     -- gear.MAbullet = "Bronze Bullet"
     -- gear.QDbullet = "Adlivun Bullet"
     gear.RAbullet = "Bronze Bullet"
-    gear.WSbullet = "Bronze Bullet"
+    -- gear.WSbullet = "Bronze Bullet"
     gear.MAbullet = "Bronze Bullet"
     gear.QDbullet = "Bronze Bullet"
     options.ammo_warning_limit = 15
@@ -87,7 +87,7 @@ function init_gear_sets()
     sets.precast.CorsairRoll = {
         -- head="Lanun Tricorne", --relic
         neck="Regal Necklace", --Roll+7,Dura+20
-        -- hands="Navarch's Gants +2" --empy
+        hands="Chasseur's Gants +3",
         back="Camulus's Mantle",
     }
 
@@ -138,24 +138,25 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.MeleeWS = {
-        head="Malignance Chapeau",
+        head="Nyame Helm",
         neck="Republican Platinum Medal",
-        lear="Mache Earring",
+        lear="Telos Earring",
         rear="Chasasseur's Earring +1",
-        body="Malignance Tabard",
+        body="Nyame Mail",
         hands="Nyame Gauntlets",
         lring="Regal Ring",
         rring="Meghanada Ring",
         back="Camulus's Mantle",
-        legs="Volte Tights",
-        feet="Nyame Sollerets",
         waist="Sailfi Belt +1",
+        legs="Nyame Flanchard",
+        feet="Nyame Sollerets",
     }
 
     sets.precast.RangedWS = {
+        ammo=gear.WSbullet,
         head="Ikenga's Hat",
         neck="Iskur Gorget",
-        lear="Mache Earring",
+        lear="Telos Earring",
         rear="Chas. Earring +1",
         body="Ikenga's Vest",
         hands="Ikenga's Gloves",
@@ -179,6 +180,18 @@ function init_gear_sets()
     sets.precast.WS['Savage Blade'] = sets.precast.MeleeWS
 
     sets.precast.WS['Last Stand'] = set_combine(sets.precast.RangedWS, {})
+
+    sets.precast.WS['Leaden Salute'] = {
+        ammo=gear.WSbullet,
+        head="Pixie Hairpin +1",
+        neck="Ygnas's Resolve +1",
+        lear="Moldavite Earring", --MAB+5
+        rear="Chausseur's Earring +1",
+        body="Nyame Mail",
+        hands="Nyame Gauntlets",
+        legs="Nyame Flanchard",
+        feet="Nyame Sollerets",
+    }
 
     -- sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
     --     head="Whirlpool Mask",neck=gear.ElementalGorget,ear1="Clearview Earring",ear2="Moonshade Earring",
@@ -249,6 +262,7 @@ function init_gear_sets()
         head="Malignance Chapeau", --RAcc+50
         neck="Iskur Gorget", --Racc+30
         -- lear="Clearview Earring",
+        lear="Telos Earring",
         rear="Chasseur's Earring +1",--Recycle+11,
         body="Malignance Tabard", --RAcc+50,STP+11
         hands="Ikenga's Gloves",
