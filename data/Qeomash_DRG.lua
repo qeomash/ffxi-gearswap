@@ -10,18 +10,29 @@ end
 function user_setup()
     enable('main','sub','ranged', 'ammo')
     select_default_macro_book()
-    send_command('wait 2;input /lockstyleset 11')
+    send_command('wait 2;input /lockstyleset 10')
     equip(sets.mainweapons)
 end
 
 function init_gear_sets()
 
-    sets.mainweapons = {
+    sets.shiningone = {
         main="Shining One",
         sub="Utu Grip",
         -- ranged="Lamiabane",
         ammo="Coiste Bodhar",
     }
+    sets.gungnir = {
+        main="Gungnir",
+        sub="Utu Grip",
+        -- ranged="Lamiabane",
+        ammo="Coiste Bodhar",
+    }
+    sets.naegling = {
+        main="Naegling",
+        ammo="Coiste Bodhar",
+    }
+    sets.mainweapons = sets.gungnir
 
     sets.TH = {
         head="Volte Cap", -- +1
@@ -52,8 +63,8 @@ function init_gear_sets()
         legs="Gleti's Breeches",
         feet="Gleti's Boots",
     })
-    -- sets.engaged = sets.gleti_engaged
-    sets.engaged = sets.ambu_engaged
+    sets.engaged = sets.gleti_engaged
+    -- sets.engaged = sets.ambu_engaged
     sets.RelicAF = {
         head="Wyrm Armet +2",
         body="Wyrm Mail",
@@ -110,6 +121,7 @@ function init_gear_sets()
         waist="Soil Belt",
     })
     sets.precast.WS['Sonic Thrust'] = set_combine(sets.baseWS.Str, {neck='Fotia Gorget'})
+    sets.precast.WS['Savage Blade'] = set_combine(sets.baseWS.Str, {neck='Fotia Gorget'})
     sets.precast.WS['Penta Thrust'] = set_combine(sets.baseWS.Accuracy, {})
     sets.precast.WS['Drakesbane'] = set_combine(sets.baseWS.Str, {
         neck="Dragoon's Collar +2"
