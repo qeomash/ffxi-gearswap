@@ -11,7 +11,7 @@ function get_sets()
 end
 
 function binds_on_load()
-    debug_log( "...entered local binds_on_load")
+    debug_log("...entered local binds_on_load")
     -- do nothing
 end
 
@@ -23,6 +23,8 @@ end
 function job_setup()
     state.Buff.Saboteur = buffactive.saboteur or false
     state.WeaponSet = M{['description'] = 'WeaponSet'}
+
+    exception_spells = S{'Enthunder'}
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -755,20 +757,31 @@ end
 -- Job-specific hooks for standard casting events.
 -------------------------------------------------------------------------------------------------------------------
 
+function job_precast(spell, action, spellMap, eventArgs)
+    maintain_weapon_mode(spell, action)
+end
+
 -- Run after the default midcast() is done.
 -- eventArgs is the same one used in job_midcast, in case information needs to be persisted.
 function job_post_midcast(spell, action, spellMap, eventArgs)
-    if spell.skill == 'Enfeebling Magic' and state.Buff.Saboteur then
-        equip(sets.buff.Saboteur)
-    elseif spell.skill == 'Enhancing Magic' then
-        -- if buffactive.composure and spell.target.type == 'PLAYER' then
-        --     equip(sets.midcast.EnhancingDuration)
-        --     equip(sets.buff.ComposureOther)
-        -- end
-    elseif spellMap == 'Cure' and spell.target.type == 'SELF' then
-        equip(sets.midcast.CureSelf)
-    end
+    debug_log("entering job_post_midcast")
+    debug_log(".."..action)
+    maintain_weapon_mode(spell, action)
+    -- if spell.skill == 'Enfeebling Magic' and state.Buff.Saboteur then
+    --     equip(sets.buff.Saboteur)
+    -- elseif spell.skill == 'Enhancing Magic' then
+    --     -- if buffactive.composure and spell.target.type == 'PLAYER' then
+    --     --     equip(sets.midcast.EnhancingDuration)
+    --     --     equip(sets.buff.ComposureOther)
+    --     -- end
+    -- elseif spellMap == 'Cure' and spell.target.type == 'SELF' then
+    --     equip(sets.midcast.CureSelf)
+    -- end
 end
+
+-- function job_aftercast(spell, action, spellMap, eventArgs)
+--     maintain_weapon_mode(spell, action)
+-- end
 
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.
@@ -776,24 +789,21 @@ end
 
 -- Handle notifications of general user state change.
 function job_state_change(stateField, newValue, oldValue)
-    -- if stateField == 'WeaponSet' and newValue ~= 'Normal' then
-    --     windower.add_to_chat(64, "should do equip:")
-    --     debug_log("should do equip", 64)
-    --     equip(sets.WeaponSet[newValue])
-    --     handle_equipping_gear()
-    -- end
-    -- if stateField == 'Offense Mode' then
-    --     if newValue == 'None' then
-    --         enable('main','sub','range')
-    --     else
-    --         disable('main','sub','range')
-    --     end
-    -- end
+    debug_log("job_state_change")
+    if stateField == 'WeaponSet' and newValue ~= 'Normal' then
+        maintain_weapon_mode(nil, 'statechange')
+    end
 end
 
 -------------------------------------------------------------------------------------------------------------------
 -- User code that supplements standard library decisions.
 -------------------------------------------------------------------------------------------------------------------
+
+
+function customize_precast_set(preCast)
+    preCast = set_combine(preCast, maintain_weapon_mode(nil, 'idle'))
+    return preCast
+end
 
 -- Modify the default idle set after it was constructed.
 function customize_idle_set(idleSet)
@@ -801,12 +811,12 @@ function customize_idle_set(idleSet)
     -- if player.mpp < 51 then
     --     idleSet = set_combine(idleSet, sets.latent_refresh)
     -- end
-    debug_log("enter customize_idle_set", 121)
-    if state.WeaponSet.current ~= 'Normal' then
-        debug_log("weapon mode should be accepted")
-        idleSet = set_combine(idleSet, sets.WeaponSet[state.WeaponSet.current])
-    end
-
+    -- debug_log("enter customize_idle_set", 121)
+    -- if state.WeaponSet.current ~= 'Normal' then
+    --     debug_log("weapon mode should be accepted")
+    --     idleSet = set_combine(idleSet, sets.WeaponSet[state.WeaponSet.current])
+    -- end
+    idleSet = set_combine(idleSet, maintain_weapon_mode(nil, 'idle'))
     return idleSet
 end
 
@@ -904,3 +914,18 @@ function disable_vermelee()
     windower.add_to_chat(64,'RDM Melee: OFF')
 end
 
+function maintain_weapon_mode(spell, action)
+    update_set = {}
+    debug_log(" ..enter maintain_weapon_mode "..action)
+    -- If the state is Normal, we allow the default to happen.
+    if state.WeaponSet.current ~= 'Normal' then
+        debug_log("weapon mode should be accepted")
+        if spell and exception_spells:contains(spell.english) and action ~= 'aftercast' then
+            debug_log("spell allows weapon changes")
+        else
+            update_set = sets.WeaponSet[state.WeaponSet.current]
+            equip(update_set)
+        end
+    end
+    return update_set
+end
