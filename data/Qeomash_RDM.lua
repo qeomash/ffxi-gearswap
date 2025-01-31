@@ -10,10 +10,19 @@ function get_sets()
     include('Mote-Include.lua')
 end
 
+function binds_on_load()
+    debug_log( "...entered local binds_on_load")
+    -- do nothing
+end
+
+function binds_on_unload()
+    -- do nothing
+end
 
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
 function job_setup()
     state.Buff.Saboteur = buffactive.saboteur or false
+    state.WeaponSet = M{['description'] = 'WeaponSet'}
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -22,11 +31,12 @@ end
 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
-    send_command('gs enable all')
-    state.OffenseMode:options('None', 'Normal')
+    enable_all_slots()
+    state.OffenseMode:options('Normal', 'Attack')
     state.HybridMode:options('Normal', 'PhysicalDef', 'MagicalDef')
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'PDT', 'MDT')
+    state.WeaponSet:options('Normal', 'Crocea', 'Naegling')
 
     gear.default.obi_waist = "Sekhmet Corset"
 
@@ -106,6 +116,16 @@ function init_gear_sets()
     }
 
     -- Precast Sets
+
+    sets.WeaponSet = {}
+    sets.WeaponSet["Crocea"] = {
+        main="Crocea Mors",
+        sub="Sacro Bulwark",
+    }
+    sets.WeaponSet["Naegling"] = {
+        main="Naegling",
+        sub="Thibron",
+    }
 
     -- Precast sets to enhance JAs
     sets.precast.JA['Chainspell'] = {body=sets.Relic.body}
@@ -756,13 +776,19 @@ end
 
 -- Handle notifications of general user state change.
 function job_state_change(stateField, newValue, oldValue)
-    if stateField == 'Offense Mode' then
-        if newValue == 'None' then
-            enable('main','sub','range')
-        else
-            disable('main','sub','range')
-        end
-    end
+    -- if stateField == 'WeaponSet' and newValue ~= 'Normal' then
+    --     windower.add_to_chat(64, "should do equip:")
+    --     debug_log("should do equip", 64)
+    --     equip(sets.WeaponSet[newValue])
+    --     handle_equipping_gear()
+    -- end
+    -- if stateField == 'Offense Mode' then
+    --     if newValue == 'None' then
+    --         enable('main','sub','range')
+    --     else
+    --         disable('main','sub','range')
+    --     end
+    -- end
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -771,8 +797,14 @@ end
 
 -- Modify the default idle set after it was constructed.
 function customize_idle_set(idleSet)
-    if player.mpp < 51 then
-        idleSet = set_combine(idleSet, sets.latent_refresh)
+    -- windower.add_to_chat(64,'customize idle')
+    -- if player.mpp < 51 then
+    --     idleSet = set_combine(idleSet, sets.latent_refresh)
+    -- end
+    debug_log("enter customize_idle_set", 121)
+    if state.WeaponSet.current ~= 'Normal' then
+        debug_log("weapon mode should be accepted")
+        idleSet = set_combine(idleSet, sets.WeaponSet[state.WeaponSet.current])
     end
 
     return idleSet
@@ -804,6 +836,11 @@ function select_default_macro_book()
 end
 
 function job_midcast(spell, action, spellMap, eventArgs)
+    -- windower.add_to_chat(64,"name:" ..spell.english .. ".")
+    -- this can be used to
+    -- for k,v in pairs(spell) do
+    --     windower.add_to_chat(64," " ..k.. ": "..v .."")
+    -- end
     -- Enfeebling Sets, by element
     -- if spell.skill == 'Enfeebling Magic' then
     --     if spell.type == 'WhiteMagic' then
@@ -822,7 +859,7 @@ end
 
 is_meleeing = false
 -- the example: https://github.com/Tunaliz/Liz_Gearswaps/blob/master/RDM_Lib.lua
-function job_self_command(command)
+function job_self_command(command, eventArgs)
     -- $ gs c [command]
     -- Super Smash RDM MELEE
     if command[1] == 'melee' then
@@ -839,6 +876,7 @@ function job_self_command(command)
                 disable_vermelee()
             end
         end
+        eventArgs.handled = true
     end
 end
 
@@ -851,7 +889,7 @@ function enable_vermelee()
         equip(sets.meleeWeapons)
     end
     -- sets.engaged = sets.Myengaged
-    equip(sets.engaged)
+    -- equip(sets.engaged)
     disable('main','sub','ranged')
     send_command('wait 2;input /lockstyleset 1')
     windower.add_to_chat(64,'RDM Melee: ON')
@@ -865,3 +903,4 @@ function disable_vermelee()
     send_command('wait 2;input /lockstyleset 2')
     windower.add_to_chat(64,'RDM Melee: OFF')
 end
+
