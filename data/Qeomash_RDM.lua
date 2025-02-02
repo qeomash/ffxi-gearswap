@@ -12,11 +12,11 @@ end
 
 function binds_on_load()
     debug_log("...entered local binds_on_load")
-    -- do nothing
+    send_command('bind f9 gs c cycle WeaponSet')
 end
 
 function binds_on_unload()
-    -- do nothing
+    send_command('unbind f9')
 end
 
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
@@ -24,7 +24,16 @@ function job_setup()
     state.Buff.Saboteur = buffactive.saboteur or false
     state.WeaponSet = M{['description'] = 'WeaponSet'}
 
-    exception_spells = S{'Enthunder'}
+    exception_spells = S{
+        'Enfire', 'Enfire II',
+        'Enblizzard', 'Enblizzard II',
+        'Enaero', 'Enaero II',
+        'Enstone', 'Enstone II',
+        'Enthunder', 'Enthunder II',
+        'Enwater', 'Enwater II',
+        'Phalanx',
+        'Temper', 'Temper II',
+    }
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -38,7 +47,7 @@ function user_setup()
     state.HybridMode:options('Normal', 'PhysicalDef', 'MagicalDef')
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'PDT', 'MDT')
-    state.WeaponSet:options('Normal', 'Crocea', 'Naegling')
+    state.WeaponSet:options('Normal', 'Crocea', 'Naegling', 'Maxentius', 'Daggers')
 
     gear.default.obi_waist = "Sekhmet Corset"
 
@@ -118,16 +127,35 @@ function init_gear_sets()
     }
 
     -- Precast Sets
-
+    sets.DefaultShield = {
+        sub="Sacro Bulwark",
+    }
     sets.WeaponSet = {}
     sets.WeaponSet["Crocea"] = {
         main="Crocea Mors",
-        sub="Sacro Bulwark",
+        sub="Daybreak",
+        range=empty,
     }
     sets.WeaponSet["Naegling"] = {
         main="Naegling",
         sub="Thibron",
+        range=empty,
     }
+    sets.WeaponSet["Maxentius"] = {
+        main="Maxentius",
+        sub="Thibron",
+        range=empty,
+    }
+    sets.WeaponSet["Daggers"] = {
+        main="Gleti's Knife",
+        sub="Ternion Dagger +1",
+        range=empty,
+    }
+    if player.sub_job ~= 'NIN' and player.sub_job ~= 'DNC' then
+        sets.WeaponSet["Crocea"] = set_combine(sets.WeaponSet["Crocea"], sets.DefaultShield)
+        sets.WeaponSet["Naegling"] = set_combine(sets.WeaponSet["Naegling"], sets.DefaultShield)
+        sets.WeaponSet["Maxentius"] = set_combine(sets.WeaponSet["Maxentius"], sets.DefaultShield)
+    end
 
     -- Precast sets to enhance JAs
     sets.precast.JA['Chainspell'] = {body=sets.Relic.body}
@@ -288,10 +316,10 @@ function init_gear_sets()
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
         -- body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
         -- back="Estoqueur's Cape",waist="Olympus Sash",legs="Atrophy Tights",feet="Estoqueur's Houseaux +2"}
-    sets.enspelldmg = set_combine(sets.midcast['Enhancing Magic'],
+    sets.midcast['Enhancing Magic'].skill = set_combine(sets.midcast['Enhancing Magic'],
         {
             main="Pukulatmuj +1", -- +11
-            sub="Arendsi Fleuret", -- +10
+            -- sub="Arendsi Fleuret", -- +10
             hands="Ayanmo Manopolas +2", -- +17
             lear="Mimir Earring", -- +10
             rear="Augmenting Earring", -- +3
@@ -301,18 +329,22 @@ function init_gear_sets()
             rring="Stikini Ring", -- +5
         }
     )
-    sets.midcast['Enfire'] = sets.enspelldmg
-    sets.midcast['Enfire II'] = sets.enspelldmg
-    sets.midcast['Enblizzard'] = sets.enspelldmg
-    sets.midcast['Enblizzard II'] = sets.enspelldmg
-    sets.midcast['Enaero'] = sets.enspelldmg
-    sets.midcast['Enaero II'] = sets.enspelldmg
-    sets.midcast['Enstone'] = sets.enspelldmg
-    sets.midcast['Enstone II'] = sets.enspelldmg
-    sets.midcast['Enthunder'] = sets.enspelldmg
-    sets.midcast['Enthunder II'] = sets.enspelldmg
-    sets.midcast['Enwater'] = sets.enspelldmg
-    sets.midcast['Enwater II'] = sets.enspelldmg
+    if player.sub_job == 'NIN' or player.sub_job == 'DNC' then
+        sets.midcast['Enhancing Magic'].skill['sub'] = "Arendsi Fleuret" -- +10
+    end
+    sets.midcast['Enfire'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enfire II'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enblizzard'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enblizzard II'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enaero'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enaero II'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enstone'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enstone II'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enthunder'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enthunder II'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enwater'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast['Enwater II'] = sets.midcast['Enhancing Magic'].skill
+    sets.midcast["Flurry II"] = sets.midcast['Enhancing Magic'].skill
 
     sets.midcast.EnhancingDuration = {
         main=Colada.EnhancingDur,
@@ -761,6 +793,10 @@ function job_precast(spell, action, spellMap, eventArgs)
     maintain_weapon_mode(spell, action)
 end
 
+function job_post_precast(spell, action, spellMap, eventArgs)
+    maintain_weapon_mode(spell, action)
+end
+
 -- Run after the default midcast() is done.
 -- eventArgs is the same one used in job_midcast, in case information needs to be persisted.
 function job_post_midcast(spell, action, spellMap, eventArgs)
@@ -801,7 +837,8 @@ end
 
 
 function customize_precast_set(preCast)
-    preCast = set_combine(preCast, maintain_weapon_mode(nil, 'idle'))
+    debug_log('doing customize precast set')
+    preCast = set_combine(preCast, maintain_weapon_mode(nil, 'precast'))
     return preCast
 end
 
