@@ -857,6 +857,11 @@ function customize_idle_set(idleSet)
     return idleSet
 end
 
+function customize_melee_set(meleeSet)
+    debug_log('doing customize precast set')
+    meleeSet = set_combine(meleeSet, maintain_weapon_mode(nil, 'melee'))
+    return meleeSet
+end
 -- Set eventArgs.handled to true if we don't want the automatic display to be run.
 function display_current_job_state(eventArgs)
     display_current_caster_state()
