@@ -16,6 +16,11 @@ end
 
 function init_gear_sets()
 
+    sets.trishula = {
+        main="Trishula",
+        sub="Utu Grip",
+        ammo="Coiste Bodhar",
+    }
     sets.shiningone = {
         main="Shining One",
         sub="Utu Grip",
@@ -32,7 +37,7 @@ function init_gear_sets()
         main="Naegling",
         ammo="Coiste Bodhar",
     }
-    sets.mainweapons = sets.gungnir
+    sets.mainweapons = sets.trishula
 
     sets.TH = {
         head="Volte Cap", -- +1
