@@ -13,10 +13,16 @@ end
 function binds_on_load()
     debug_log("...entered local binds_on_load")
     send_command('bind f9 gs c cycle WeaponSet')
+    send_command('bind f10 gs c cycle IdleMode')
+    send_command('bind f11 gs c cycle CastingMode')
+    send_command('bind f12 gs c cycle HybridMode')
 end
 
 function binds_on_unload()
     send_command('unbind f9')
+    send_command('unbind f10')
+    send_command('unbind f11')
+    send_command('unbind f12')
 end
 
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
@@ -46,7 +52,7 @@ function user_setup()
     state.OffenseMode:options('Normal', 'Attack')
     state.HybridMode:options('Normal', 'PhysicalDef', 'MagicalDef')
     state.CastingMode:options('Normal', 'Resistant')
-    state.IdleMode:options('Normal', 'PDT', 'MDT')
+    state.IdleMode:options('Normal', 'DT', 'Refresh')
     state.WeaponSet:options('Normal', 'Crocea', 'Naegling', 'Maxentius', 'Daggers')
 
     gear.default.obi_waist = "Sekhmet Corset"
@@ -482,6 +488,7 @@ function init_gear_sets()
     }
 
     sets.midcast['Enfeebling Magic'] = sets.Enfeebling.PotencyMnd
+    sets.midcast["Enfeebling Magic"].Resistant = sets.Enfeebling.Accuracy
     sets.midcast['Dia'] = sets.TH
     sets.midcast['Dia III'] = set_combine(sets.Enfeebling.Duration, {
         main="Daybreak",
@@ -648,10 +655,10 @@ function init_gear_sets()
     --     head="Gendewitha Caubeen +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
     --     body="Gendewitha Caubeen +1",hands="Yaoyotl Gloves",ring1="Defending Ring",ring2="Shadow Ring",
     --     back="Engulfer Cape",waist="Flume Belt",legs="Osmium Cuisses",feet="Gendewitha Galoshes"}
-    sets.idle.MDT = {
+    sets.idle.DT = {
         main="Kebbie",
         range="Lamian kaman",
-        head=sets.Relic.head,
+        head="Nyame Helm",
         body=sets.Artifact.body,
         hands="Amalric Gages", -- MDT+3,MEv+37
         back="Lamia Mantle +1",
@@ -660,6 +667,9 @@ function init_gear_sets()
         ring1="Merman's Ring",
         ring2="Merman's Ring",
     }
+    sets.idle.Refresh = set_combine(sets.idle, {
+        body="Jhakri Robe +2",
+    })
 
     -- Defense sets
     sets.defense.PDT = {
@@ -721,10 +731,11 @@ function init_gear_sets()
         feet="Malignance Boots",
     }
     sets.engaged = sets.engagedSTP
-    sets.engaged.Defense = {ammo="Demonry Stone",
+    sets.engaged.PhysicalDef = {ammo="Demonry Stone",
         head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         body="Atrophy Tabard +3",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
         back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
+
 
     sets.meleeWeapons = {
         main="Crocea Mors",
