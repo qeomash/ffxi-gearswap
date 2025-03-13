@@ -151,11 +151,6 @@ function init_gear_sets()
         sub="Ternion Dagger +1",
         range=empty,
     }
-    if player.sub_job ~= 'NIN' and player.sub_job ~= 'DNC' then
-        sets.WeaponSet["Crocea"] = set_combine(sets.WeaponSet["Crocea"], sets.DefaultShield)
-        sets.WeaponSet["Naegling"] = set_combine(sets.WeaponSet["Naegling"], sets.DefaultShield)
-        sets.WeaponSet["Maxentius"] = set_combine(sets.WeaponSet["Maxentius"], sets.DefaultShield)
-    end
 
     -- Precast sets to enhance JAs
     sets.precast.JA['Chainspell'] = {body=sets.Relic.body}
@@ -966,6 +961,9 @@ function maintain_weapon_mode(spell, action)
             debug_log("spell allows weapon changes")
         else
             update_set = sets.WeaponSet[state.WeaponSet.current]
+            if (player.sub_job ~= 'NIN' and player.sub_job ~= 'DNC') then
+                update_set = set_combine(update_set, sets.DefaultShield)
+            end
             equip(update_set)
         end
     end
