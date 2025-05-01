@@ -562,7 +562,7 @@ function init_gear_sets()
     sets.midcast['Dark Magic'] = {
         main="Grioavolr",
         sub="Clerisy Strap", --MAC+10
-        head="Jhakri Coronal +2",
+        head=sets.Artifact.head,
         neck="Aesir Torque",
         -- lear="Abyssal Earring",
         rear="Magnetic Earring",
@@ -579,7 +579,29 @@ function init_gear_sets()
         feet="Jhakri Pigaches +2",
     }
 
-    --sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {})
+    sets.midcast.Stun = {
+        main="Crocea Mors", --MAC+50
+        sub="Ammurapi Shield", --MAC+38
+        ranged="Ullr",
+        head=sets.Artifact.head,
+        neck="Duelist's Torque +2", -- macc+30,enf ef+10
+        lear="Regal Earring", --macc+15 w/set
+        rear="Lethargy Earring +1", --FC+8%,MACC+14
+        body=sets.Artifact.body,
+        -- body=sets.Relic.body,
+        hands=sets.Empyrean.hands,
+        -- lring="Stikini Ring +1",
+        lring="Kishar Ring", --FC+4%
+        rring="Stikini Ring +1",
+        -- back="Aurist's Cape +1", --bis, after augmenting
+        back=Sucellos.Enfeebling,
+        waist="Embla Sash", --FC+5%
+        -- legs=sets.Empyrean.legs,
+        legs="Ayanmo Cosciales +2",
+        feet=sets.Empyrean.feet,
+        -- feet="Carmine Greaves +1",
+    }
+    sets.midcast['Absorb-TP'] = sets.midcast.Stun
 
     sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
         head="Pixie Hairpin +1", -- Dark affinity
