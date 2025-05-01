@@ -31,32 +31,38 @@ end
 function init_gear_sets()
 
     sets.idle = {
-        head="Ayanmo Zucchetto +1",
+        head="Ayanmo Zucchetto +2",
         -- neck="Asperity Necklace",
         -- ear1="Cessance Earring",
         -- rear="Telos Earring",
-        body="Ayanmo Corazza", --DT-4%
+        body="Ayanmo Corazza +2", --DT-4%
         hands="Ayanmo Manopolas +1",
+        rear="Odnowa Earring", --MDT-1%
         lring="Ayanmo Ring",
         rring="Inyanga Ring",
         back="Mecistopins Mantle",
-        legs="Inyanga Shalwar +2",
-        feet="Ayanmo Gambieras +1",
+        legs="Ayanmo Cosciales +2",
+        -- feet="Ayanmo Gambieras +1",
+        feet="Fili Cothurnes +1", -- Move+18%
     }
-    sets.meleeWeapons = {
-        main="Joyeuse",
-        sub="Ammurapi Shield",
+    sets.naegling = {
+        main="Naegling",
+        -- sub="Ammurapi Shield",
     }
+    sets.daggers = {
+        main="Izhiikoh",
+    }
+
     sets.engaged = {
-        main="Nibiru Knife",
-        head="Ayanmo Zucchetto +1",
-        -- neck="Asperity Necklace",
+        head="Ayanmo Zucchetto +2",
+        -- neck="Anu Torque",
+        lear="Brutal Earring",
         -- ear1="Cessance Earring",
         -- rear="Telos Earring",
-        body="Ayanmo Corazza",
+        body="Ayanmo Corazza +2",
         hands="Ayanmo Manopolas +1",
         waist="Windbuffet Belt +1", --TA+2%,QA+2%
-        legs="Ayanmo Cosciales +1",
+        legs="Ayanmo Cosciales +2",
         feet="Ayanmo Gambieras +1",
     }
     sets.precast.WS = {
@@ -76,29 +82,31 @@ function init_gear_sets()
 
     sets.precast.FC = {
         --head="Wayfarer Circlet",
-        body="Inyanga Jubbah",
-        -- lear="Loquacious Earring",
-        legs="Ayanmo Cosciales",
+        body="Inyanga Jubbah +2", -- FC+14%
+        lear="Loquacious Earring",
+        legs="Ayanmo Cosciales +2",
         ring1="Minstrel's Ring"
     }
-    -- sets.precast.FC.Song = set_combine(sets.precast.FC.Normal, {
-
-    --     }
-    -- )
+    sets.precast.FC.BardSong = set_combine(sets.precast.FC, {
+        ranged="Linos",
+        head="Fili Calot +1", --Song-13%
+        }
+    )
+    sets.precast.FC.BardSong.AdditionalSongs = set_combine(sets.precast.FC.BardSong, {
+        ranged="Terpander",
+    })
     sets.midcast.BardSong = {
         main="Kali",
-        -- head="Walahra Turban",
+        ranged="Linos", --Songs+2
+        head="Fili Calot +1",
         neck="Moonbow Whistle",
-        -- ear1="Loquacious Earring",
-        -- ear2="Musical Earring",
-        -- body="Yigit Gomlek",
-        -- hands="Dusk Gloves",
-        -- ring1="Nereid Ring",
-        -- ring2="Nereid Ring",
-        -- back="Astute Cape",
-        -- waist="Swift Belt",
-        -- legs="Mahatma Slops",
-        feet="Brioso Slippers +1",
+        body="Fili Hongreline +1",
+        hands="Fili Manchettes +1",
+        legs="Inyanga Shalwar +2",
+        feet="Brioso Slippers +2",
+    }
+    sets.midcast.BardSong.AdditionalSongs = {
+        ranged="Terpander", -- Three Songs
     }
     -- sets.midcast.GBuff = {range="Gjallarhorn",ammo=empty} LOL will never happen
     sets.midcast.GBuff = {}
@@ -131,10 +139,10 @@ function init_gear_sets()
 
 end
 
-function user_setup()
-    enable('main','sub','ranged', 'ammo')
-    select_default_macro_book()
-end
+-- function user_setup()
+--     enable('main','sub','ranged', 'ammo')
+--     select_default_macro_book()
+-- end
 
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
@@ -142,7 +150,7 @@ function select_default_macro_book()
     set_macro_page(1, 2)
 end
 
-function midcast(spell)
+function midcast_huh(spell)
     if spell.type == 'BardSong' then
         equip_song_gear(spell)
     elseif string.find(spell.english,'Waltz') and spell.english ~= 'Healing Waltz' then
@@ -162,6 +170,7 @@ end
 
 
 function equip_song_gear(spell)
+    debug_log("entering equip_song_gear")
     if DaurdSongs:contains(spell.english) then
         equip(sets.midcast.Base,sets.midcast.DBuff)
     else
@@ -215,7 +224,7 @@ function enable_angrybard()
     is_meleeing = true
     equip(sets.meleeWeapons)
     disable('main','sub','ranged', 'ammo')
-    windower.add_to_chat(64,'Angyr Bard: ON')
+    windower.add_to_chat(64,'Angry Bard: ON')
 end
 
 function disable_angrybard()
