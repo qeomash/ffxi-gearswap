@@ -40,6 +40,17 @@ function job_setup()
         'Phalanx',
         'Temper', 'Temper II',
     }
+    enhancing_skill_spells = S{
+        'Enfire', 'Enfire II',
+        'Enblizzard', 'Enblizzard II',
+        'Enaero', 'Enaero II',
+        'Enstone', 'Enstone II',
+        'Enthunder', 'Enthunder II',
+        'Enwater', 'Enwater II',
+        'Phalanx',
+        'Temper', 'Temper II',
+    }
+
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -50,7 +61,7 @@ end
 function user_setup()
     enable_all_slots()
     state.OffenseMode:options('Normal', 'Attack')
-    state.HybridMode:options('Normal', 'PhysicalDef', 'MagicalDef')
+    state.HybridMode:options('Normal', 'DT','PhysicalDef', 'MagicalDef')
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'DT', 'Refresh')
     state.WeaponSet:options('Normal', 'Crocea', 'Naegling', 'Maxentius', 'Daggers')
@@ -330,22 +341,14 @@ function init_gear_sets()
             rring="Stikini Ring", -- +5
         }
     )
-    if player.sub_job == 'NIN' or player.sub_job == 'DNC' then
-        sets.midcast['Enhancing Magic'].skill['sub'] = "Arendsi Fleuret" -- +10
+    -- if player.sub_job == 'NIN' or player.sub_job == 'DNC' then
+    --     sets.midcast['Enhancing Magic'].skill['sub'] = "Arendsi Fleuret" -- +10
+    -- end
+
+    -- Set exception spells to use max enhancing magic skill
+    for sp in enhancing_skill_spells:it() do
+        sets.midcast[sp] = sets.midcast['Enhancing Magic'].skill
     end
-    sets.midcast['Enfire'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enfire II'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enblizzard'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enblizzard II'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enaero'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enaero II'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enstone'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enstone II'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enthunder'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enthunder II'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enwater'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast['Enwater II'] = sets.midcast['Enhancing Magic'].skill
-    sets.midcast["Flurry II"] = sets.midcast['Enhancing Magic'].skill
 
     sets.midcast.EnhancingDuration = {
         main=Colada.EnhancingDur,
@@ -506,11 +509,15 @@ function init_gear_sets()
     sets.midcast['Dispelga'] = set_combine(sets.midcast['Dispel'],
         {main="Daybreak", sub="Ammurapi Shield"})
     sets.midcast['Frazzle'] = sets.Enfeebling.Skill
-    sets.midcast['Frazzle II'] = sets.Enfeebling.Skill
+    sets.midcast['Frazzle II'] = sets.Enfeebling.Accuracy
     sets.midcast['Frazzle III'] = sets.Enfeebling.Skill
     sets.midcast["Paralyze II"] = sets.Enfeebling.PotencyMnd
     sets.midcast["Distract III"] = sets.Enfeebling.PotencyMnd
     sets.midcast["Blind II"] = sets.Enfeebling.PotencyInt
+    sets.midcast['Frazzle III'].Resistant = sets.Enfeebling.Accuracy
+    sets.midcast["Paralyze II"].Resistant = sets.Enfeebling.Accuracy
+    sets.midcast["Distract III"].Resistant = sets.Enfeebling.Accuracy
+    sets.midcast["Blind II"].Resistant = sets.Enfeebling.Accuracy
     -- sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
 
     -- sets.midcast['Elemental Magic'] = {main="Lehbrailg +2",sub="Zuuxowu Grip",ammo="Dosis Tathlum",
@@ -635,6 +642,25 @@ function init_gear_sets()
         feet="Malignance Boots", --DT-4%
     }
     sets.idle = sets.AutoRefreshIdle
+    sets.idle.DT = set_combine(sets.idle,
+        {
+            head="Nyame Helm", --DT7%
+            neck="Loricate Torque +1", --DT6%
+            body="Malignance Tabard", --DT9%
+            hands="Nyame Gauntlets", --DT7%
+            waist="Flume Belt", --PDT-4%
+            legs="Nyame Flanchard", --DT-8%
+            feet="Nyame Sollerets", --DT-7%
+        }
+    )
+    sets.idle.Refresh = set_combine(sets.AutoRefreshIdle,
+        {
+            ammo="Homiliary",
+            head=sets.Relic.head, --Refresh+2
+            lring="Stikini Ring +1",
+            rring="Stikini Ring +1",
+        }
+)
 
     -- sets.idle.Town = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
     --     head="Atrophy Chapeau +1",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
@@ -655,21 +681,7 @@ function init_gear_sets()
     --     head="Gendewitha Caubeen +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
     --     body="Gendewitha Caubeen +1",hands="Yaoyotl Gloves",ring1="Defending Ring",ring2="Shadow Ring",
     --     back="Engulfer Cape",waist="Flume Belt",legs="Osmium Cuisses",feet="Gendewitha Galoshes"}
-    sets.idle.DT = {
-        main="Kebbie",
-        range="Lamian kaman",
-        head="Nyame Helm",
-        body=sets.Artifact.body,
-        hands="Amalric Gages", -- MDT+3,MEv+37
-        back="Lamia Mantle +1",
-        ear1="Coral Earring",
-        ear2="Coral Earring",
-        ring1="Merman's Ring",
-        ring2="Merman's Ring",
-    }
-    sets.idle.Refresh = set_combine(sets.idle, {
-        body="Jhakri Robe +2",
-    })
+
 
     -- Defense sets
     sets.defense.PDT = {
@@ -731,6 +743,15 @@ function init_gear_sets()
         feet="Malignance Boots",
     }
     sets.engaged = sets.engagedSTP
+    sets.engaged.DT = set_combine(sets.engagedSTP, {
+        head="Nyame Helm", --DT7%
+        neck="Loricate Torque +1", --DT6%
+        body="Malignance Tabard", --DT9%
+        hands="Nyame Gauntlets", --DT7%
+        waist="Flume Belt", --PDT-4%
+        legs="Nyame Flanchard", --DT-8%
+        feet="Nyame Sollerets", --DT-7%
+    })
     sets.engaged.PhysicalDef = {ammo="Demonry Stone",
         head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         body="Atrophy Tabard +3",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
@@ -972,11 +993,12 @@ function maintain_weapon_mode(spell, action)
             debug_log("spell allows weapon changes")
         else
             update_set = sets.WeaponSet[state.WeaponSet.current]
-            if (player.sub_job ~= 'NIN' and player.sub_job ~= 'DNC') then
-                update_set = set_combine(update_set, sets.DefaultShield)
-            end
-            equip(update_set)
+        end
+        -- un-DW the set:
+        if (player.sub_job ~= 'NIN' and player.sub_job ~= 'DNC') then
+            update_set = set_combine(update_set, sets.DefaultShield)
         end
     end
+    equip(update_set)
     return update_set
 end
