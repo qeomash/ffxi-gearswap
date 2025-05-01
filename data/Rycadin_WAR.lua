@@ -18,6 +18,10 @@ function init_gear_sets()
         sub="Duplus Grip",
         ammo="Coiste Bodhar",
     }
+    sets.naegling = {
+        main="Naegling",
+        sub="Blurred Shield +1",
+    }
     sets.engaged = {
         head="Flamma Zucchetto +2",
         neck="Warrior's Beads",
@@ -25,7 +29,7 @@ function init_gear_sets()
         rear="Boii Earring +1",
         body="Flamma Korazin +2",
         hands="Sulevia's Gauntlets +2",
-        lring="Rajas Ring",
+        lring="Niqmaddu Ring",
         rring="Flamma Ring",
         back="Mauler's Mantle",
         waist="Sailfi Belt +1",
@@ -42,7 +46,7 @@ function init_gear_sets()
         head="Sulevia's Mask +2", --STR+33
         neck="Warrior's Beads",
         left_ear="Brutal Earring",
-        right_ear="Boii Earring",
+        right_ear="Boii Earring +1",
         body="Sulevia's Platemail +2",
         hands="Sulevia's Gauntlets +2",
         lring="Sulevia's Ring",
