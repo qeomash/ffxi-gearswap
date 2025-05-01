@@ -39,6 +39,7 @@ function job_setup()
         'Enwater', 'Enwater II',
         'Phalanx',
         'Temper', 'Temper II',
+        'Dispelga'
     }
     enhancing_skill_spells = S{
         'Enfire', 'Enfire II',
@@ -208,7 +209,7 @@ function init_gear_sets()
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
     sets.precast.FC['Enfeebling Magic'] = set_combine(sets.precast.FC, {head=sets.Empyrean.head})
     sets.precast.FC['Dispelga'] = set_combine(sets.precast.FC['Enfeebling Magic'],
-        {main="Daybreak", sub="Ammurapi Shield"})
+        {main="Daybreak", sub={name="Ammurapi Shield", priority=100}})
     sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC,
         {
             main="Daybreak",
