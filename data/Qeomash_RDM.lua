@@ -137,6 +137,7 @@ function init_gear_sets()
 
     Ghostfyre = {}
     Ghostfyre.Duration = { name="Ghostfyre Cape", augments={'Enfb.mag. skill +10','Enha.mag. skill +2','Mag. Acc.+10','Enh. Mag. eff. dur. +20',}}
+    Ghostfyre.EnhancingSkill = { name="Ghostfyre Cape", augments={'Enfb.mag. skill +8','Enha.mag. skill +9','Mag. Acc.+5',}}
 
     sets.TH = {
         head="Volte Cap", -- +1
@@ -247,7 +248,7 @@ function init_gear_sets()
         rear="Moonshade Earring", -- TPBonus+250
         body=sets.Empyrean.body, --Att+54,Acc+54,MND+40
         hands="Jhakri Cuffs +2", --MND+35,Attack+43,WS+7%
-        lring="Stikini Ring",
+        lring="Stikini Ring +1",
         rring="Aqua Ring",
         back=Sucellos.WS,
         waist="Dynamic Belt +1",
@@ -297,7 +298,7 @@ function init_gear_sets()
         -- body="Heka's Kalasiris",
         hands="Weatherspoon Cuffs +1", --CP+9% --eh, maybe Telchine Gloves if I can find some useful augment for them?
         lring="Lebeche Ring", --CP+3%
-        rring="Stikini Ring",
+        rring="Stikini Ring +1",
         back=Ghostfyre.Duration, --CP+6%
         legs="Kaykaus Tights", --CP+10%
         -- legs=sets.Artifact.legs, --CP+9%
@@ -318,12 +319,12 @@ function init_gear_sets()
         lear="Mimir Earring", -- +10
         rear="Lethargy Earring +1", -- duration+8%
         body=sets.Relic.body, -- +21,duration+10%
-        hands=sets.Relic.hands, -- +20,duration+
-        lring="Stikini Ring", -- +5
-        rring="Stikini Ring", -- +5
+        hands=sets.Relic.hands, -- +22,duration+
+        lring="Stikini Ring +1", -- +5
+        rring="Stikini Ring +1", -- +5
         back=Ghostfyre.Duration, --duration+20%
         waist="Olympus Sash", -- +5
-        legs=sets.Artifact.legs, -- +19
+        legs=sets.Empyrean.legs, -- +19
         feet=sets.Empyrean.feet, -- +35,duration+40%
     }
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
@@ -332,14 +333,14 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'].skill = set_combine(sets.midcast['Enhancing Magic'],
         {
             main="Pukulatmuj +1", -- +11
-            -- sub="Arendsi Fleuret", -- +10
-            hands="Ayanmo Manopolas +2", -- +17
+            sub="Arendsi Fleuret", -- +10
+            hands=sets.Relic.Hands, -- +22
             lear="Mimir Earring", -- +10
-            rear="Augmenting Earring", -- +3
-            legs=sets.Relic.legs, --enhances damage?
-            back=Ghostfyre.Duration, -- +5
-            lring="Stikini Ring", -- +5
-            rring="Stikini Ring", -- +5
+            rear="Andoaa Earring", -- +5
+            legs=sets.Artifact.legs, --enhances damage?
+            back=Ghostfyre.EnhancingSkill, -- +9
+            lring="Stikini Ring +1", -- +5
+            rring="Stikini Ring +1", -- +5
         }
     )
     -- if player.sub_job == 'NIN' or player.sub_job == 'DNC' then
@@ -374,6 +375,9 @@ function init_gear_sets()
     sets.midcast["Haste II"] = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration)
     sets.midcast["Phalanx II"] = set_combine(sets.midcast.EnhancingDuration, sets.midcast['Enhancing Magic'])
     sets.midcast["Flurry II"] = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration)
+    sets.midcast['Aquaveil'] = set_combine(sets.midcast['Enhancing Magic'], {
+        hands="Regal Cuffs", --Aquaveil +2
+    })
     --sets.midcast.Stoneskin = {waist="Siegel Sash"}
 
     -- sets.midcast['Enfeebling Magic'] = {main="Lehbrailg +2",sub="Mephitis Grip",ammo="Kalboron Stone",
@@ -395,7 +399,7 @@ function init_gear_sets()
         body=sets.Artifact.body, -- MAC+55
         hands=sets.Empyrean.hands, -- MAC+52
         lring="Metamorph Ring +1",
-        rring="Stikini Ring",
+        rring="Stikini Ring +1",
         back=Sucellos.Enfeebling,
         waist="Ovate Rope",
         legs=sets.Empyrean.legs, --MAC+53
@@ -411,8 +415,8 @@ function init_gear_sets()
         rear="Regal Earring", --macc+15 w/set
         body=sets.Artifact.body,
         hands=sets.Empyrean.hands,
-        lring="Metamorph Ring +1",
-        rring="Stikini Ring",
+        lring="Stikini Ring +1",
+        rring="Stikini Ring +1",
         -- back="Aurist's Cape +1", --bis, after augmenting
         back=Sucellos.Enfeebling,
         waist="Ovate Rope", --macc+8
@@ -430,7 +434,7 @@ function init_gear_sets()
         body=sets.Empyrean.body,
         hands=sets.Empyrean.hands,
         lring="Metamorph Ring +1",
-        rring="Stikini Ring",
+        rring="Stikini Ring +1",
         back=Sucellos.EnfeeblingInt,
         waist="Ovate Rope", --macc+8
         legs=sets.Empyrean.legs,
@@ -447,7 +451,7 @@ function init_gear_sets()
         body=sets.Empyrean.body,
         hands=sets.Empyrean.hands,
         lring="Metamorph Ring +1",
-        rring="Stikini Ring",
+        rring="Stikini Ring +1",
         back=Sucellos.EnfeeblingMnd,
         waist="Ovate Rope", --macc+8
         legs=sets.Empyrean.legs,
@@ -464,7 +468,7 @@ function init_gear_sets()
         body=sets.Empyrean.body,
         hands="Regal Cuffs",
         lring="Kishar Ring", --EnfDura+10%
-        rring="Stikini Ring",
+        rring="Stikini Ring +1",
         -- back="Aurist's Cape +1", --bis, after augmenting
         back=Sucellos.EnfeeblingMnd,
         waist="Ovate Rope", --macc+8
@@ -481,8 +485,8 @@ function init_gear_sets()
         rear="Vor Earring",
         body=sets.Empyrean.body,
         hands=sets.Empyrean.hands,
-        lring="Stikini Ring",
-        rring="Stikini Ring",
+        lring="Stikini Ring +1",
+        rring="Stikini Ring +1",
         -- back="Aurist's Cape +1", --bis, after augmenting
         back=Sucellos.EnfeeblingMnd,
         waist="Ovate Rope", --macc+8
@@ -567,7 +571,7 @@ function init_gear_sets()
         -- hands="Amalric Gages", -- MAB+23, MBII+5, sure why not
         hands="Jhakri Cuffs +2", --INT+36,MAB+40
         lring="Snow Ring",
-        rring="Stikini Ring", --sk+5 MAC+8
+        rring="Stikini Ring +1", --sk+5 MAC+8
         -- back="Prism Cape",
         waist="Aswang Sash",
         legs="Jhakri Slops +2",
