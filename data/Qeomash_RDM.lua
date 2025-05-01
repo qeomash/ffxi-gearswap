@@ -126,8 +126,9 @@ function init_gear_sets()
     Colada.EnhancingDur = { name="Colada", augments={'Enh. Mag. eff. dur. +2','STR+4','"Mag.Atk.Bns."+8',}}
 
     Sucellos = {}
-    Sucellos.WS = { name="Sucellos's Cape", augments={'Accuracy+20 Attack+20','Weapon skill damage +10%',}}
-    Sucellos.DA = { name="Sucellos's Cape", augments={'DEX+1','Accuracy+20 Attack+20','Accuracy+3','"Dbl.Atk."+10','Damage taken-5%',}}
+    Sucellos.WS = { name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+    Sucellos.DA = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
+    Sucellos.WSD_MND = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+6','Weapon skill damage +10%',}} -- needs dye
     Sucellos.Enhancing = { name="Sucellos's Cape", augments={'DEX+1','Accuracy+20 Attack+20','Accuracy+3','"Dbl.Atk."+10','Damage taken-5%',}} --TODO
     Sucellos.Enfeebling = { name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}} --TODO
     Sucellos.EnfeeblingInt = { name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}} --TODO
@@ -773,6 +774,9 @@ function init_gear_sets()
         -- sub="Joyeuse",
     }
 
+    sets.precast.WS = {
+        head=sets.Relic.head, --WSD+6%
+    }
     sets.precast.WS['Aeolian Edge'] = set_combine(sets.midcast['Elemental Magic'], {
         back=Sucellos.WS,
         rear="Moonshade Earring",
@@ -781,14 +785,22 @@ function init_gear_sets()
         back=Sucellos.WS,
         rear="Moonshade Earring",
     })
-    sets.precast.WS['Seraph Blade'] = set_combine(sets.midcast['Elemental Magic'], {
+    sets.precast.WS['Seraph Blade'] = {
         ammo="Sroda Tathlum",
-        back=Sucellos.WS,
+        head=sets.Empyrean.head,
+        neck="Sibyl Scarf", --MAB+10 (should be Baetyl)
         lear="Regal Earring", --MND+10
         rear="Moonshade Earring",
+        body=sets.Empyrean.body,
+        hands=sets.Empyrean.hands,
         lring="Weatherspoon Ring", -- Light Affinity
         rring="Cornelia's Ring",
-    })
+        back=Sucellos.WSD_MND,
+        -- waist="Aswang Sash", --MAB+3,Mcrit+5%
+        waist="Eschan Stone", --MAB+7,Macc+7
+        legs=sets.Empyrean.legs,
+        feet=sets.Empyrean.feet,
+    }
 
     sets.precast.WS['Sanguine Blade'] = set_combine(sets.midcast['Elemental Magic'], {
         ammo="Sroda Tathlum",
@@ -796,7 +808,8 @@ function init_gear_sets()
         back=Sucellos.WS,
         lear="Regal Earring", --MND+10
         rear="Moonshade Earring",
-        waist="Anrin Obi"
+        -- waist="Anrin Obi",
+        rring="Cornelia's Ring",
     })
 
     sets.precast.WS['Savage Blade'] = {
