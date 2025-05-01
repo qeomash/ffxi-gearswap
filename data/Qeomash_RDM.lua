@@ -410,8 +410,8 @@ function init_gear_sets()
         main="Crocea Mors", --MAC+50
         sub="Ammurapi Shield", --MAC+38
         ranged="Ullr",
-        head=sets.Relic.head,
-        neck="Duelist's Torque +2", -- macc+30,enf ef+10
+        head=sets.Artifact.head,
+        neck="Null Loop", --MACC+50
         lear="Snotra Earring", --mac+10
         rear="Regal Earring", --macc+15 w/set
         body=sets.Artifact.body,
@@ -419,8 +419,9 @@ function init_gear_sets()
         lring="Stikini Ring +1",
         rring="Stikini Ring +1",
         -- back="Aurist's Cape +1", --bis, after augmenting
-        back=Sucellos.Enfeebling,
-        waist="Ovate Rope", --macc+8
+        back="Null Shawl", --Macc+50
+        -- waist="Ovate Rope", --macc+8
+        waist="Null Belt", --MACC+30
         legs=sets.Empyrean.legs,
         feet=sets.Empyrean.feet,
     }
