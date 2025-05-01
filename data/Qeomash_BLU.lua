@@ -6,7 +6,7 @@ function get_sets()
 end
 
 function user_setup()
-    send_command('gs enable all')
+    enable_all_slots()
     select_default_macro_book()
     send_command('wait 2;input /lockstyleset 21')
     windower.add_to_chat(64,'* aset setlist')

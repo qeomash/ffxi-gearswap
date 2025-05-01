@@ -10,10 +10,47 @@ function get_sets()
     include('Mote-Include.lua')
 end
 
+function binds_on_load()
+    debug_log("...entered local binds_on_load")
+    send_command('bind f9 gs c cycle WeaponSet')
+    send_command('bind f10 gs c cycle IdleMode')
+    send_command('bind f11 gs c cycle CastingMode')
+    send_command('bind f12 gs c cycle HybridMode')
+end
+
+function binds_on_unload()
+    send_command('unbind f9')
+    send_command('unbind f10')
+    send_command('unbind f11')
+    send_command('unbind f12')
+end
 
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
 function job_setup()
     state.Buff.Saboteur = buffactive.saboteur or false
+    state.WeaponSet = M{['description'] = 'WeaponSet'}
+
+    exception_spells = S{
+        'Enfire', 'Enfire II',
+        'Enblizzard', 'Enblizzard II',
+        'Enaero', 'Enaero II',
+        'Enstone', 'Enstone II',
+        'Enthunder', 'Enthunder II',
+        'Enwater', 'Enwater II',
+        'Phalanx',
+        'Temper', 'Temper II',
+    }
+    enhancing_skill_spells = S{
+        'Enfire', 'Enfire II',
+        'Enblizzard', 'Enblizzard II',
+        'Enaero', 'Enaero II',
+        'Enstone', 'Enstone II',
+        'Enthunder', 'Enthunder II',
+        'Enwater', 'Enwater II',
+        'Phalanx',
+        'Temper', 'Temper II',
+    }
+
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -22,11 +59,12 @@ end
 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
-    send_command('gs enable all')
-    state.OffenseMode:options('None', 'Normal')
-    state.HybridMode:options('Normal', 'PhysicalDef', 'MagicalDef')
+    enable_all_slots()
+    state.OffenseMode:options('Normal', 'Attack')
+    state.HybridMode:options('Normal', 'DT','PhysicalDef', 'MagicalDef')
     state.CastingMode:options('Normal', 'Resistant')
-    state.IdleMode:options('Normal', 'PDT', 'MDT')
+    state.IdleMode:options('Normal', 'DT', 'Refresh')
+    state.WeaponSet:options('Normal', 'Crocea', 'Naegling', 'Maxentius', 'Daggers')
 
     gear.default.obi_waist = "Sekhmet Corset"
 
@@ -106,6 +144,30 @@ function init_gear_sets()
     }
 
     -- Precast Sets
+    sets.DefaultShield = {
+        sub="Sacro Bulwark",
+    }
+    sets.WeaponSet = {}
+    sets.WeaponSet["Crocea"] = {
+        main="Crocea Mors",
+        sub="Daybreak",
+        range=empty,
+    }
+    sets.WeaponSet["Naegling"] = {
+        main="Naegling",
+        sub="Thibron",
+        range=empty,
+    }
+    sets.WeaponSet["Maxentius"] = {
+        main="Maxentius",
+        sub="Thibron",
+        range=empty,
+    }
+    sets.WeaponSet["Daggers"] = {
+        main="Gleti's Knife",
+        sub="Ternion Dagger +1",
+        range=empty,
+    }
 
     -- Precast sets to enhance JAs
     sets.precast.JA['Chainspell'] = {body=sets.Relic.body}
@@ -266,10 +328,10 @@ function init_gear_sets()
         -- head="Atrophy Chapeau +1",neck="Colossus's Torque",
         -- body="Vitivation Tabard",hands="Atrophy Gloves +1",ring1="Prolix Ring",
         -- back="Estoqueur's Cape",waist="Olympus Sash",legs="Atrophy Tights",feet="Estoqueur's Houseaux +2"}
-    sets.enspelldmg = set_combine(sets.midcast['Enhancing Magic'],
+    sets.midcast['Enhancing Magic'].skill = set_combine(sets.midcast['Enhancing Magic'],
         {
             main="Pukulatmuj +1", -- +11
-            sub="Arendsi Fleuret", -- +10
+            -- sub="Arendsi Fleuret", -- +10
             hands="Ayanmo Manopolas +2", -- +17
             lear="Mimir Earring", -- +10
             rear="Augmenting Earring", -- +3
@@ -279,18 +341,14 @@ function init_gear_sets()
             rring="Stikini Ring", -- +5
         }
     )
-    sets.midcast['Enfire'] = sets.enspelldmg
-    sets.midcast['Enfire II'] = sets.enspelldmg
-    sets.midcast['Enblizzard'] = sets.enspelldmg
-    sets.midcast['Enblizzard II'] = sets.enspelldmg
-    sets.midcast['Enaero'] = sets.enspelldmg
-    sets.midcast['Enaero II'] = sets.enspelldmg
-    sets.midcast['Enstone'] = sets.enspelldmg
-    sets.midcast['Enstone II'] = sets.enspelldmg
-    sets.midcast['Enthunder'] = sets.enspelldmg
-    sets.midcast['Enthunder II'] = sets.enspelldmg
-    sets.midcast['Enwater'] = sets.enspelldmg
-    sets.midcast['Enwater II'] = sets.enspelldmg
+    -- if player.sub_job == 'NIN' or player.sub_job == 'DNC' then
+    --     sets.midcast['Enhancing Magic'].skill['sub'] = "Arendsi Fleuret" -- +10
+    -- end
+
+    -- Set exception spells to use max enhancing magic skill
+    for sp in enhancing_skill_spells:it() do
+        sets.midcast[sp] = sets.midcast['Enhancing Magic'].skill
+    end
 
     sets.midcast.EnhancingDuration = {
         main=Colada.EnhancingDur,
@@ -433,6 +491,7 @@ function init_gear_sets()
     }
 
     sets.midcast['Enfeebling Magic'] = sets.Enfeebling.PotencyMnd
+    sets.midcast["Enfeebling Magic"].Resistant = sets.Enfeebling.Accuracy
     sets.midcast['Dia'] = sets.TH
     sets.midcast['Dia III'] = set_combine(sets.Enfeebling.Duration, {
         main="Daybreak",
@@ -450,11 +509,15 @@ function init_gear_sets()
     sets.midcast['Dispelga'] = set_combine(sets.midcast['Dispel'],
         {main="Daybreak", sub="Ammurapi Shield"})
     sets.midcast['Frazzle'] = sets.Enfeebling.Skill
-    sets.midcast['Frazzle II'] = sets.Enfeebling.Skill
+    sets.midcast['Frazzle II'] = sets.Enfeebling.Accuracy
     sets.midcast['Frazzle III'] = sets.Enfeebling.Skill
     sets.midcast["Paralyze II"] = sets.Enfeebling.PotencyMnd
     sets.midcast["Distract III"] = sets.Enfeebling.PotencyMnd
     sets.midcast["Blind II"] = sets.Enfeebling.PotencyInt
+    sets.midcast['Frazzle III'].Resistant = sets.Enfeebling.Accuracy
+    sets.midcast["Paralyze II"].Resistant = sets.Enfeebling.Accuracy
+    sets.midcast["Distract III"].Resistant = sets.Enfeebling.Accuracy
+    sets.midcast["Blind II"].Resistant = sets.Enfeebling.Accuracy
     -- sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau"})
 
     -- sets.midcast['Elemental Magic'] = {main="Lehbrailg +2",sub="Zuuxowu Grip",ammo="Dosis Tathlum",
@@ -579,6 +642,25 @@ function init_gear_sets()
         feet="Malignance Boots", --DT-4%
     }
     sets.idle = sets.AutoRefreshIdle
+    sets.idle.DT = set_combine(sets.idle,
+        {
+            head="Nyame Helm", --DT7%
+            neck="Loricate Torque +1", --DT6%
+            body="Malignance Tabard", --DT9%
+            hands="Nyame Gauntlets", --DT7%
+            waist="Flume Belt", --PDT-4%
+            legs="Nyame Flanchard", --DT-8%
+            feet="Nyame Sollerets", --DT-7%
+        }
+    )
+    sets.idle.Refresh = set_combine(sets.AutoRefreshIdle,
+        {
+            ammo="Homiliary",
+            head=sets.Relic.head, --Refresh+2
+            lring="Stikini Ring +1",
+            rring="Stikini Ring +1",
+        }
+)
 
     -- sets.idle.Town = {main="Bolelabunga",sub="Genbu's Shield",ammo="Impatiens",
     --     head="Atrophy Chapeau +1",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
@@ -599,18 +681,7 @@ function init_gear_sets()
     --     head="Gendewitha Caubeen +1",neck="Twilight Torque",ear1="Bloodgem Earring",ear2="Loquacious Earring",
     --     body="Gendewitha Caubeen +1",hands="Yaoyotl Gloves",ring1="Defending Ring",ring2="Shadow Ring",
     --     back="Engulfer Cape",waist="Flume Belt",legs="Osmium Cuisses",feet="Gendewitha Galoshes"}
-    sets.idle.MDT = {
-        main="Kebbie",
-        range="Lamian kaman",
-        head=sets.Relic.head,
-        body=sets.Artifact.body,
-        hands="Amalric Gages", -- MDT+3,MEv+37
-        back="Lamia Mantle +1",
-        ear1="Coral Earring",
-        ear2="Coral Earring",
-        ring1="Merman's Ring",
-        ring2="Merman's Ring",
-    }
+
 
     -- Defense sets
     sets.defense.PDT = {
@@ -672,10 +743,20 @@ function init_gear_sets()
         feet="Malignance Boots",
     }
     sets.engaged = sets.engagedSTP
-    sets.engaged.Defense = {ammo="Demonry Stone",
+    sets.engaged.DT = set_combine(sets.engagedSTP, {
+        head="Nyame Helm", --DT7%
+        neck="Loricate Torque +1", --DT6%
+        body="Malignance Tabard", --DT9%
+        hands="Nyame Gauntlets", --DT7%
+        waist="Flume Belt", --PDT-4%
+        legs="Nyame Flanchard", --DT-8%
+        feet="Nyame Sollerets", --DT-7%
+    })
+    sets.engaged.PhysicalDef = {ammo="Demonry Stone",
         head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         body="Atrophy Tabard +3",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
         back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
+
 
     sets.meleeWeapons = {
         main="Crocea Mors",
@@ -735,20 +816,35 @@ end
 -- Job-specific hooks for standard casting events.
 -------------------------------------------------------------------------------------------------------------------
 
+function job_precast(spell, action, spellMap, eventArgs)
+    maintain_weapon_mode(spell, action)
+end
+
+function job_post_precast(spell, action, spellMap, eventArgs)
+    maintain_weapon_mode(spell, action)
+end
+
 -- Run after the default midcast() is done.
 -- eventArgs is the same one used in job_midcast, in case information needs to be persisted.
 function job_post_midcast(spell, action, spellMap, eventArgs)
-    if spell.skill == 'Enfeebling Magic' and state.Buff.Saboteur then
-        equip(sets.buff.Saboteur)
-    elseif spell.skill == 'Enhancing Magic' then
-        -- if buffactive.composure and spell.target.type == 'PLAYER' then
-        --     equip(sets.midcast.EnhancingDuration)
-        --     equip(sets.buff.ComposureOther)
-        -- end
-    elseif spellMap == 'Cure' and spell.target.type == 'SELF' then
-        equip(sets.midcast.CureSelf)
-    end
+    debug_log("entering job_post_midcast")
+    debug_log(".."..action)
+    maintain_weapon_mode(spell, action)
+    -- if spell.skill == 'Enfeebling Magic' and state.Buff.Saboteur then
+    --     equip(sets.buff.Saboteur)
+    -- elseif spell.skill == 'Enhancing Magic' then
+    --     -- if buffactive.composure and spell.target.type == 'PLAYER' then
+    --     --     equip(sets.midcast.EnhancingDuration)
+    --     --     equip(sets.buff.ComposureOther)
+    --     -- end
+    -- elseif spellMap == 'Cure' and spell.target.type == 'SELF' then
+    --     equip(sets.midcast.CureSelf)
+    -- end
 end
+
+-- function job_aftercast(spell, action, spellMap, eventArgs)
+--     maintain_weapon_mode(spell, action)
+-- end
 
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.
@@ -756,12 +852,9 @@ end
 
 -- Handle notifications of general user state change.
 function job_state_change(stateField, newValue, oldValue)
-    if stateField == 'Offense Mode' then
-        if newValue == 'None' then
-            enable('main','sub','range')
-        else
-            disable('main','sub','range')
-        end
+    debug_log("job_state_change")
+    if stateField == 'WeaponSet' and newValue ~= 'Normal' then
+        maintain_weapon_mode(nil, 'statechange')
     end
 end
 
@@ -769,15 +862,33 @@ end
 -- User code that supplements standard library decisions.
 -------------------------------------------------------------------------------------------------------------------
 
+
+function customize_precast_set(preCast)
+    debug_log('doing customize precast set')
+    preCast = set_combine(preCast, maintain_weapon_mode(nil, 'precast'))
+    return preCast
+end
+
 -- Modify the default idle set after it was constructed.
 function customize_idle_set(idleSet)
-    if player.mpp < 51 then
-        idleSet = set_combine(idleSet, sets.latent_refresh)
-    end
-
+    -- windower.add_to_chat(64,'customize idle')
+    -- if player.mpp < 51 then
+    --     idleSet = set_combine(idleSet, sets.latent_refresh)
+    -- end
+    -- debug_log("enter customize_idle_set", 121)
+    -- if state.WeaponSet.current ~= 'Normal' then
+    --     debug_log("weapon mode should be accepted")
+    --     idleSet = set_combine(idleSet, sets.WeaponSet[state.WeaponSet.current])
+    -- end
+    idleSet = set_combine(idleSet, maintain_weapon_mode(nil, 'idle'))
     return idleSet
 end
 
+function customize_melee_set(meleeSet)
+    debug_log('doing customize precast set')
+    meleeSet = set_combine(meleeSet, maintain_weapon_mode(nil, 'melee'))
+    return meleeSet
+end
 -- Set eventArgs.handled to true if we don't want the automatic display to be run.
 function display_current_job_state(eventArgs)
     display_current_caster_state()
@@ -804,6 +915,11 @@ function select_default_macro_book()
 end
 
 function job_midcast(spell, action, spellMap, eventArgs)
+    -- windower.add_to_chat(64,"name:" ..spell.english .. ".")
+    -- this can be used to
+    -- for k,v in pairs(spell) do
+    --     windower.add_to_chat(64," " ..k.. ": "..v .."")
+    -- end
     -- Enfeebling Sets, by element
     -- if spell.skill == 'Enfeebling Magic' then
     --     if spell.type == 'WhiteMagic' then
@@ -822,7 +938,7 @@ end
 
 is_meleeing = false
 -- the example: https://github.com/Tunaliz/Liz_Gearswaps/blob/master/RDM_Lib.lua
-function job_self_command(command)
+function job_self_command(command, eventArgs)
     -- $ gs c [command]
     -- Super Smash RDM MELEE
     if command[1] == 'melee' then
@@ -839,6 +955,7 @@ function job_self_command(command)
                 disable_vermelee()
             end
         end
+        eventArgs.handled = true
     end
 end
 
@@ -851,7 +968,7 @@ function enable_vermelee()
         equip(sets.meleeWeapons)
     end
     -- sets.engaged = sets.Myengaged
-    equip(sets.engaged)
+    -- equip(sets.engaged)
     disable('main','sub','ranged')
     send_command('wait 2;input /lockstyleset 1')
     windower.add_to_chat(64,'RDM Melee: ON')
@@ -864,4 +981,24 @@ function disable_vermelee()
     -- sets.engaged = sets.AutoRefreshIdle
     send_command('wait 2;input /lockstyleset 2')
     windower.add_to_chat(64,'RDM Melee: OFF')
+end
+
+function maintain_weapon_mode(spell, action)
+    update_set = {}
+    debug_log(" ..enter maintain_weapon_mode "..action)
+    -- If the state is Normal, we allow the default to happen.
+    if state.WeaponSet.current ~= 'Normal' then
+        debug_log("weapon mode should be accepted")
+        if spell and exception_spells:contains(spell.english) and action ~= 'aftercast' then
+            debug_log("spell allows weapon changes")
+        else
+            update_set = sets.WeaponSet[state.WeaponSet.current]
+        end
+        -- un-DW the set:
+        if (player.sub_job ~= 'NIN' and player.sub_job ~= 'DNC') then
+            update_set = set_combine(update_set, sets.DefaultShield)
+        end
+    end
+    equip(update_set)
+    return update_set
 end

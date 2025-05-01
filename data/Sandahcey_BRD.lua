@@ -5,6 +5,28 @@ function get_sets()
     include('Mote-Include.lua')
 end
 
+function job_setup()
+    state.SongMode = M{['description'] = 'Song Mode'}
+end
+
+function binds_on_load()
+    send_command('bind f9 gs c cycle CastingMode')
+    send_command('bind != input /ma "Chocobo Mazurka" <me>')
+end
+
+function binds_on_unload()
+    -- send_command('unbind ^`')
+    send_command('unbind f9')
+    send_command('unbind !=')
+end
+
+function user_setup()
+    enable_all_slots()
+    select_default_macro_book()
+    state.CastingMode:options('Normal', 'AdditionalSongs')
+    state.IdleMode:options('Normal', 'DT', 'Refresh')
+end
+
 
 function init_gear_sets()
 
