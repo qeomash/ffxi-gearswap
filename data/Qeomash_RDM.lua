@@ -635,7 +635,7 @@ function init_gear_sets()
         hands=sets.Empyrean.hands, --DT-10%
         lear="Odnowa Earring +1",
         -- Ear, get Odnowa and Etiolation
-        lring="Stikini Ring",
+        lring="Warden's Ring",
         rring="Shadow Ring",
         back=Sucellos.DA, -- DT-5%
         waist="Flume Belt",
@@ -739,7 +739,7 @@ function init_gear_sets()
         lring="Chirich Ring +1",
         rring="Chirich Ring +1",
         back=Sucellos.DA,
-        waist="Windbuffet Belt +1", --TA+2%,QA+2%
+        waist="Reki Yotai", --DW+7
         legs="Malignance Tights",
         feet="Malignance Boots",
     }

@@ -21,8 +21,8 @@ function init_gear_sets()
     sets.engaged = {
         head="Flamma Zucchetto +2",
         neck="Warrior's Beads",
-        lear="Brutal Earring",
-        rear="Boii Earring",
+        lear="Telos Earring",
+        rear="Boii Earring +1",
         body="Flamma Korazin +2",
         hands="Sulevia's Gauntlets +2",
         lring="Rajas Ring",

@@ -51,7 +51,7 @@ function init_gear_sets()
         head="Flamma Zucchetto +2",
         neck="Lissome Necklace",
         lear="Sherida Earring",
-        rear="Brutal Earring",
+        rear="Telos Earring",
         body="Peltast's Plackart +3",
         hands="Sulevia's Gauntlets +2",
         lring="Petrov Ring",
