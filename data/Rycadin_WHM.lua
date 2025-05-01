@@ -57,7 +57,7 @@ function init_gear_sets()
     --     body="Vanir Cotehardie",hands="Gendewitha Gages",ring1="Prolix Ring",
     --     back="Swith Cape +1",waist="Witful Belt",legs="Orvail Pants +1",feet="Chelona Boots +1"}
     sets.precast.FC = {
-        main="Grioavolr", -- FC+4%
+        -- main="Grioavolr", -- FC+4%
         head="Ebers Cap +3",
         lear="Loqacious Earring",
         body="Inyanga Jubbah +2", -- FC+14%
@@ -284,7 +284,7 @@ function init_gear_sets()
     --     body="Gendewitha Bliaut",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Paguroidea Ring",
     --     back="Umbra Cape",waist="Witful Belt",legs="Nares Trews",feet="Herald's Gaiters"}
     sets.idle = {
-        main="Queller Rod", -- Refresh+1
+        -- main="Queller Rod", -- Refresh+1
         sub="Genbu's Shield",
         ammo="Homiliary",
         head="Inyanga Tiara +2",
@@ -347,7 +347,7 @@ function init_gear_sets()
     --     body="Vanir Cotehardie",hands="Dynasty Mitts",ring1="Rajas Ring",ring2="K'ayres Ring",
     --     back="Umbra Cape",waist="Goading Belt",legs="Gendewitha Spats",feet="Gendewitha Galoshes"}
     sets.engaged = {
-        main="Mes'yohi Rod",
+        main="Tishtrya",
         head="Ayanmo Zucchetto +2",
         left_ear="Brutal Earring",
         right_ear="Suppanomimi",
