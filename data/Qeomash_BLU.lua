@@ -215,9 +215,11 @@ function init_gear_sets()
         head="Volte Cap", -- +1
         waist="Chaac Belt", --TH+1
     }
+    sets.precast.JA['Provoke'] = sets.TH
     sets.stdidle = {
         head="Gleti's Mask",
         neck="Loricate Torque +1", --DT-6%
+        lear="Odnowa Earring +1",
         body="Hashishin Mintan +2", --refresh+3
         hands="Gleti's Gauntlets",
         waist="Flume Belt",
@@ -227,11 +229,12 @@ function init_gear_sets()
     sets.cleavingidle = {
         head="Malignance Chapeau", --DT-
         neck="Loricate Torque +1", --DT-6%
-        body="Malignance Tabard",
-        hands="Ayanmo Manopolas +2", --DT-3%
+        lear="Odnowa Earring +1",
+        body="Hashishin Mintan +2", --refresh+3,DT-12%
+        hands="Nyame Gauntlets", --DT-7%
         rring="Shadow Ring",
         waist="Flume Belt",
-        legs="Carmine Cuisses +1",
+        legs="Malignance Tights", --DT-7%
         feet="Malignance Boots",
     }
 
@@ -283,8 +286,13 @@ function init_gear_sets()
     })
     sets.baseWS.Accuracy = set_combine(sets.baseWS, {})
     sets.precast.WS = sets.baseWS.Str
-    -- sets.precast.WS['Stardiver'] = set_combine(sets.baseWS.Str, {neck='Fotia Gorget'})
 
+    sets.buff["Chain Affinity"] = {
+        feet="Assimilator's Charuqs +2",
+    }
+    sets.buff["Burst Affinity"] = {
+        feet="Assimilator's Shalwar +2",
+    }
 
     -- Spellcasting
     sets.precast.FC = {
@@ -305,7 +313,7 @@ function init_gear_sets()
         head="Gleti's Mask",
         neck="Asperity Necklace",
         lear="Telos Earring",
-        rear="Hashishin Earring", --BLU+10
+        rear="Hashishin Earring +1", --BLU+11
         body="Gleti's Cuirass", --STR+39
         hands="Gleti's Gauntlets",
         lring="Pyrosoul Ring", -- STR+7
@@ -350,7 +358,9 @@ function init_gear_sets()
     sets.midcast['Blue Magic'].MagicalChr = set_combine(sets.midcast['Blue Magic'].Magical, {})
     sets.midcast['Blue Magic'].MagicalVit = set_combine(sets.midcast['Blue Magic'].Magical, {})
     sets.midcast['Blue Magic'].MagicalDex = set_combine(sets.midcast['Blue Magic'].Magical, {})
-    sets.midcast['Blue Magic'].MagicAccuracy = set_combine(sets.midcast['Blue Magic'].Magical, {})
+    sets.midcast['Blue Magic'].MagicAccuracy = set_combine(sets.midcast['Blue Magic'].Magical, {
+        head="assimilator's Keffiyeh +3",
+    })
 
 end
 
