@@ -216,7 +216,6 @@ function init_gear_sets()
         {
             main="Daybreak",
             sub="Sors Shield", -- CFC-5%
-            body="Heka's Kalasiris", --CFC-15%
             legs="Kaykaus Tights", -- CFC-5%
             feet="Kaykaus Boots" -- CFC-5%
         })
@@ -230,7 +229,6 @@ function init_gear_sets()
         lear="Sherida Earring",
         rear="Moonshade Earring", -- TPBonus+250
         -- rear="Magnetic Earring",
-        -- body="Ayanmo Corazza +2",
         body=sets.Empyrean.body, --Att+54,Acc+54,STR+29
         -- hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         hands=sets.Artifact.hands, --STR+21,Acc+53,Att+WSD+6%
@@ -297,7 +295,7 @@ function init_gear_sets()
         lear="Regal Earring",
         rear="Magnetic Earring",
         -- body="Heka's Kalasiris",
-        hands="Weatherspoon Cuffs +1", --CP+9% --eh, maybe Telchine Gloves if I can find some useful augment for them?
+        hands="Telchine Gloves", --CP+10%
         lring="Lebeche Ring", --CP+3%
         rring="Stikini Ring +1",
         back=Ghostfyre.Duration, --CP+6%
@@ -746,7 +744,6 @@ function init_gear_sets()
         lear="Sherida Earring",
         -- rear="Suppanomimi",
         rear="Cessance Earring",
-        -- body="Ayanmo Corazza +2", --Haste+4%,DA+7%,Acc+46
         body="Malignance Tabard",
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Petrov Ring",
