@@ -53,7 +53,7 @@ function init_gear_sets()
     sets.ambu_engaged = {
         ammo="Coiste Bodhar",
         head="Flamma Zucchetto +2",
-        neck="Lissome Necklace",
+        neck="Anu Torque",
         lear="Sherida Earring",
         rear="Telos Earring",
         body="Peltast's Plackart +3",
@@ -72,14 +72,14 @@ function init_gear_sets()
         legs="Gleti's Breeches",
         feet="Gleti's Boots",
     })
-    sets.engaged = sets.gleti_engaged
+    sets.engaged = sets.ambu_engaged
     -- sets.engaged = sets.ambu_engaged
     sets.RelicAF = {
         head="Wyrm Armet +2",
         body="Wyrm Mail",
         hands="Wyrm Finger Gauntlets",
         legs="Wyrm Brais",
-        feet="Wyrm Greaves",
+        feet="Pteroslaver Greaves +2",
     }
 
     sets.idle = set_combine(sets.engaged, {
@@ -140,7 +140,7 @@ function init_gear_sets()
         neck="Dragoon's Collar +2",
         lear="Thrud Earring",
         body="Peltast's Plackart +3",
-        hands="Pteroslaver Finger Gauntlets +2", --WSD+5%
+        hands="Pteroslaver Finger Gauntlets +3", --WSD+5%
         lring="Cornelia's Ring",
         legs="Vishap Brais +3",
         back=Brigantias.STR_WSD,
@@ -152,7 +152,9 @@ function init_gear_sets()
         back=Brigantias.STR_WSD,
     })
 
-    sets.precast.JA.Angon = {ammo="Angon",hands="Pteroslaver Finger Gauntlets +2"}
+    sets.precast.JA.Angon = {
+        ammo="Angon",
+        hands="Pteroslaver Finger Gauntlets +3"}
     -- Jumps
     sets.JumpSpecialGear = {
         feet="Vishap Greaves +2"
@@ -191,6 +193,7 @@ function init_gear_sets()
         body="Wyvern Mail",
         hands="Ostreger Mitts",
         legs="Vishap Brais +3",
+        feet="Pteroslaver Greaves +2",
     }
     sets.HealingBreath = set_combine(sets.WyvernHP, {
         head="Wyrm Armet +2",
@@ -211,10 +214,12 @@ function init_gear_sets()
         neck="Chanoix's Gorget",
         legs="Vishap Brais +3",
         back="Updraft Mantle",
+        feet="Pteroslaver Greaves +2",
     }
     sets.precast.JA['Spirit Link'] = {
         head="Vishap Armet +2",
-
+        hands="Peltast's Vambraces +2",
+        feet="Pteroslaver Greaves +2",
     }
     sets.precast.FC = {
         -- ammo="Impatiens",
