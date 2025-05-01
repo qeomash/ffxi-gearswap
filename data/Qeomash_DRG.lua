@@ -16,6 +16,10 @@ end
 
 function init_gear_sets()
 
+    Brigantias = {}
+    Brigantias.STR_DA = { name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}
+    Brigantias.STR_WSD = { name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+
     sets.trishula = {
         main="Trishula",
         sub="Utu Grip",
@@ -56,7 +60,7 @@ function init_gear_sets()
         hands="Sulevia's Gauntlets +2",
         lring="Petrov Ring",
         rring="Niqmaddu Ring",
-        back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+        back=Brigantias.STR_DA,
         waist="Ioskeha Belt",
         legs="Pteroslaver Brais +3",
         feet="Flamma Gambieras +2",
@@ -99,7 +103,7 @@ function init_gear_sets()
         hands="Sulevia's Gauntlets +2",
         lring="Regal Ring",
         rring="Niqmaddu Ring",
-        back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+        back=Brigantias.STR_WSD,
         waist="Ioskeha Belt", --ACC+12,DA+8%
         legs="Pteroslaver Brais +3",
         feet="Sulevia's Leggings +2", --WS+7%
@@ -114,7 +118,7 @@ function init_gear_sets()
         hands="Sulevia's Gauntlets +2", --Acc+37
         lring="Regal Ring",
         rring="Niqmaddu Ring",
-        back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+        back=Brigantias.STR_DA,
         waist="Ioskeha Belt", --ACC+12,DA+8%
         legs="Pteroslaver Brais +3",
         feet="Flamma Gambieras +2",
@@ -124,6 +128,7 @@ function init_gear_sets()
     sets.precast.WS['Stardiver'] = set_combine(sets.baseWS.Str, {
         neck='Fotia Gorget',
         waist="Soil Belt",
+        back=Brigantias.STR_DA,
     })
     sets.precast.WS['Sonic Thrust'] = set_combine(sets.baseWS.Str, {neck='Fotia Gorget'})
     sets.precast.WS['Savage Blade'] = set_combine(sets.baseWS.Str, {neck='Fotia Gorget'})
@@ -138,11 +143,13 @@ function init_gear_sets()
         hands="Pteroslaver Finger Gauntlets +2", --WSD+5%
         lring="Cornelia's Ring",
         legs="Vishap Brais +3",
+        back=Brigantias.STR_WSD,
     })
     sets.precast.WS["Geirskogul"] = set_combine(sets.baseWS.Str, {
         neck="Dragoon's Collar +2",
         lear="Thrud Earring",
         body="Peltast's Plackart +3",
+        back=Brigantias.STR_WSD,
     })
 
     sets.precast.JA.Angon = {ammo="Angon",hands="Pteroslaver Finger Gauntlets +2"}
@@ -156,7 +163,7 @@ function init_gear_sets()
             body="Pteroslaver Mail +3",
             neck="Vim Torque +1",
             hands="Vishap Finger Gauntlets +3",
-            back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+            back=Brigantias.STR_DA,
             legs="Pteroslaver Brais +3",
             feet="Ostro Greaves",
             lring="Petrov Ring",
