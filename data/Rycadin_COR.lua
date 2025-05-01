@@ -92,6 +92,7 @@ function init_gear_sets()
 
 
     sets.precast.CorsairRoll = {
+        -- main="Lanun Knife", --Dura
         -- head="Lanun Tricorne", --relic
         neck="Regal Necklace", --Roll+7,Dura+20
         hands="Chasseur's Gants +3",
@@ -186,14 +187,16 @@ function init_gear_sets()
 
     sets.precast.WS['Savage Blade'] = sets.precast.MeleeWS
 
-    sets.precast.WS['Last Stand'] = set_combine(sets.precast.RangedWS, {})
+    sets.precast.WS['Last Stand'] = set_combine(sets.precast.RangedWS, {
+
+    })
 
     sets.precast.WS['Leaden Salute'] = {
         ammo=gear.WSbullet,
         head="Pixie Hairpin +1",
         neck="Ygnas's Resolve +1",
-        lear="Moldavite Earring", --MAB+5
-        rear="Chausseur's Earring +1",
+        lear="Friomisi Earring", -- MAB+10
+        rear="Moldavite Earring", --MAB+5
         body="Nyame Mail",
         hands="Nyame Gauntlets",
         legs="Nyame Flanchard",
@@ -221,7 +224,7 @@ function init_gear_sets()
         body="Manibozho Jerkin",hands="Iuitl Wristbands",ring1="Stormsoul Ring",ring2="Demon's Ring",
         back="Toro Cape",waist=gear.ElementalBelt,legs="Iuitl Tights",feet="Iuitl Gaiters +1"}
 
-    sets.precast.WS['Leaden Salute'] = sets.precast.WS['Wildfire']
+    -- sets.precast.WS['Leaden Salute'] = sets.precast.WS['Wildfire']
 
 
     -- Midcast Sets
@@ -255,9 +258,19 @@ function init_gear_sets()
     --     back="Navarch's Mantle",waist="Aquiline Belt",legs="Iuitl Tights",feet="Iuitl Gaiters +1"}
 
     sets.midcast.CorsairShot['Light Shot'] = {ammo=gear.QDbullet,
-        head="Laksamana's Hat",neck="Stoicheion Medal",ear1="Lifestorm Earring",ear2="Psystorm Earring",
-        body="Lanun Frac",hands="Schutzen Mittens",ring1="Stormsoul Ring",ring2="Sangoma Ring",
-        back="Navarch's Mantle",waist="Aquiline Belt",legs="Iuitl Tights",feet="Iuitl Gaiters +1"}
+        head="Laksamana's Tricorne +2",
+        neck="Stoicheion Medal",
+        ear1="Lifestorm Earring",
+        ear2="Psystorm Earring",
+        body="Ikenga's Vest",
+        hands="Laksamana's Gants +2",
+        ring1="Stormsoul Ring",
+        ring2="Sangoma Ring",
+        back="Navarch's Mantle",
+        waist="Aquiline Belt",
+        legs="Ikenga's Trousers",
+        feet="Laksamana's bottes +2"
+    }
 
     sets.midcast.CorsairShot['Dark Shot'] = sets.midcast.CorsairShot['Light Shot']
 
