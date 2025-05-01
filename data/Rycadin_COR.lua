@@ -42,7 +42,7 @@ function user_setup()
     state.RangedMode:options('Normal', 'Acc')
     state.WeaponskillMode:options('Normal', 'Acc', 'Att', 'Mod')
     state.CastingMode:options('Normal', 'Resistant')
-    state.IdleMode:options('Normal', 'PDT', 'Refresh')
+    state.IdleMode:options('Normal', 'DT', 'Refresh')
 
     -- gear.RAbullet = "Adlivun Bullet"
     gear.WSbullet = "Adlivun Bullet"
@@ -56,17 +56,24 @@ function user_setup()
 
     -- Additional local binds
     -- send_command('bind ^` input /ja "Double-up" <me>')
-    send_command('bind != input /ja "Bolter\'s Roll" <me>')
     send_command('wait 2;input /lockstyleset 21')
     select_default_macro_book()
 end
 
+function binds_on_load()
+    send_command('bind != input /ja "Bolter\'s Roll" <me>')
+end
+
+function binds_on_unload()
+    -- send_command('unbind ^`')
+    send_command('unbind !=')
+end
 
 -- Called when this job file is unloaded (eg: job change)
-function user_unload()
-    send_command('unbind ^`')
-    send_command('unbind !`')
-end
+-- function user_unload()
+--     send_command('unbind ^`')
+--     send_command('unbind !`')
+-- end
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()

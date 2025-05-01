@@ -1,6 +1,6 @@
 function global_on_load()
 	debug_log('user global on load was run', 64)
-	-- send_command('bind f9 gs c cycle OffenseMode')
+	-- send_command('bind f9 gs c cycle WeaponSet')
 	-- send_command('bind ^f9 gs c cycle HybridMode')
 	-- send_command('bind !f9 gs c cycle RangedMode')
 	-- send_command('bind @f9 gs c cycle WeaponskillMode')
@@ -19,7 +19,7 @@ function global_on_load()
 end
 
 function global_on_unload()
-    -- do nothing
+    -- send_command('unbind f9')
 end
 
 function debug_log(message, color)
