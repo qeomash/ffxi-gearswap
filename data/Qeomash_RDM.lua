@@ -63,7 +63,7 @@ end
 function user_setup()
     enable_all_slots()
     state.OffenseMode:options('Normal', 'Attack')
-    state.HybridMode:options('Normal', 'DT','PhysicalDef', 'MagicalDef')
+    state.HybridMode:options('Normal', 'DT','PhysicalDef', 'Accuracy')
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'DT', 'Refresh')
     state.WeaponSet:options('Normal', 'Crocea', 'Naegling', 'Maxentius', 'Daggers')
@@ -90,8 +90,8 @@ function init_gear_sets()
     sets.Relic = {
         head="Vitiation Chapeau +3",
         body="Vitiation Tabard +3",
-        hands="Vitiation Gloves +2",
-        legs="Vitiation Tights",
+        hands="Vitiation Gloves +3",
+        legs="Vitiation Tights +1",
         feet="Vitiation Boots +2",
     }
     sets.Empyrean = {
@@ -594,7 +594,7 @@ function init_gear_sets()
         lring="Chirich Ring +1",
         rring="Chirich Ring +1",
         back=Sucellos.DA,
-        waist="Reki Yotai", --DW+7
+        waist="Reiki Yotai", --DW+7
         legs="Malignance Tights",
         feet="Malignance Boots",
     }
@@ -869,10 +869,10 @@ function maintain_weapon_mode(spell, action)
             debug_log("spell allows weapon changes")
         else
             update_set = sets.WeaponSet[state.WeaponSet.current]
-        end
-        -- un-DW the set:
-        if (player.sub_job ~= 'NIN' and player.sub_job ~= 'DNC') then
-            update_set = set_combine(update_set, sets.DefaultShield)
+            -- un-DW the set:
+            if (player.sub_job ~= 'NIN' and player.sub_job ~= 'DNC') then
+                update_set = set_combine(update_set, sets.DefaultShield)
+            end
         end
     end
     equip(update_set)
