@@ -50,14 +50,14 @@ function init_gear_sets()
 
     sets.midcast.RA = sets.TH
 
-    sets.ambu_engaged = {
+    sets.engaged_unsafe = {
         ammo="Coiste Bodhar",
         head="Flamma Zucchetto +2",
-        neck="Anu Torque",
+        neck="Vim Torque +1",
         lear="Sherida Earring",
         rear="Telos Earring",
         body="Peltast's Plackart +3",
-        hands="Sulevia's Gauntlets +2",
+        hands="Peltast's Vambraces +3",
         lring="Petrov Ring",
         rring="Niqmaddu Ring",
         back=Brigantias.STR_DA,
@@ -65,14 +65,14 @@ function init_gear_sets()
         legs="Pteroslaver Brais +3",
         feet="Flamma Gambieras +2",
     }
-    sets.gleti_engaged = set_combine(sets.ambu_engaged, {
+    sets.gleti_engaged = set_combine(sets.engaged_unsafe, {
         head="Gleti's Mask",
         body="Gleti's Cuirass",
         hands="Gleti's Gauntlets",
         legs="Gleti's Breeches",
         feet="Gleti's Boots",
     })
-    sets.engaged = sets.ambu_engaged
+    sets.engaged = sets.engaged_unsafe
     -- sets.engaged = sets.ambu_engaged
     sets.RelicAF = {
         head="Wyrm Armet +2",
@@ -95,7 +95,7 @@ function init_gear_sets()
     sets.baseWS = {}
     sets.baseWS.Str = {
         ammo="Knobkierrie",
-        head="Peltast's Mezail +2", --STR+31,WSD+8%
+        head="Peltast's Mezail +3", --STR+31,WSD+8%
         neck="Dragoon's Collar +2",
         lear="Sherida Earring",
         rear="Moonshade Earring", -- TPBonus+250
@@ -110,7 +110,7 @@ function init_gear_sets()
     }
     sets.baseWS.Accuracy = {
         ammo="Knobkierrie",
-        head="Peltast's Mezail +2", --STR+31,WSD+8%
+        head="Peltast's Mezail +3", --STR+31,WSD+8%
         neck="Dragoon's Collar +2",
         lear="Sherida Earring",
         rear="Moonshade Earring", -- TPBonus+250
@@ -218,7 +218,7 @@ function init_gear_sets()
     }
     sets.precast.JA['Spirit Link'] = {
         head="Vishap Armet +2",
-        hands="Peltast's Vambraces +2",
+        hands="Peltast's Vambraces +3",
         feet="Pteroslaver Greaves +2",
     }
     sets.precast.FC = {
