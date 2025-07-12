@@ -35,7 +35,8 @@ function init_gear_sets()
         -- neck="Asperity Necklace",
         -- ear1="Cessance Earring",
         -- rear="Telos Earring",
-        body="Ayanmo Corazza +2", --DT-4%
+        -- body="Ayanmo Corazza +2", --DT-4%
+        body="Ashera Harness", --DT-7%
         hands="Ayanmo Manopolas +1",
         rear="Odnowa Earring", --MDT-1%
         lring="Ayanmo Ring",
@@ -55,13 +56,14 @@ function init_gear_sets()
 
     sets.engaged = {
         head="Ayanmo Zucchetto +2",
-        -- neck="Anu Torque",
+        neck="Asperity Necklace",
         lear="Brutal Earring",
         -- ear1="Cessance Earring",
         -- rear="Telos Earring",
-        body="Ayanmo Corazza +2",
+        -- body="Ayanmo Corazza +2",
+        body="Ashera Harness",
         hands="Ayanmo Manopolas +1",
-        waist="Windbuffet Belt +1", --TA+2%,QA+2%
+        waist="Sailfi Belt +1",
         legs="Ayanmo Cosciales +2",
         feet="Ayanmo Gambieras +1",
     }
@@ -88,16 +90,21 @@ function init_gear_sets()
         ring1="Minstrel's Ring"
     }
     sets.precast.FC.BardSong = set_combine(sets.precast.FC, {
-        ranged="Linos",
+        -- ranged="Linos",
+        ranged="Miracle Cheer",
         head="Fili Calot +1", --Song-13%
         }
     )
     sets.precast.FC.BardSong.AdditionalSongs = set_combine(sets.precast.FC.BardSong, {
         ranged="Terpander",
     })
+    sets.precast.FC.BardSong.Linos = set_combine(sets.precast.FC.BardSong, {
+        ranged="Linos",
+    })
     sets.midcast.BardSong = {
         main="Kali",
-        ranged="Linos", --Songs+2
+        -- ranged="Linos", --Songs+2
+        ranged="Miracle Cheer",
         head="Fili Calot +1",
         neck="Moonbow Whistle",
         body="Fili Hongreline +1",
@@ -108,6 +115,9 @@ function init_gear_sets()
     sets.midcast.BardSong.AdditionalSongs = {
         ranged="Terpander", -- Three Songs
     }
+    sets.midcast.BardSong.Linos = set_combine(sets.midcast.BardSong, {
+        ranged="Linos",
+    })
     -- sets.midcast.GBuff = {range="Gjallarhorn",ammo=empty} LOL will never happen
     sets.midcast.GBuff = {}
 
@@ -117,14 +127,18 @@ function init_gear_sets()
         -- ear1="Melody Earring +1",
         -- ear2="Musical Earring",
         -- body="Errant houppelande",
-        -- hands="Choral Cuffs +1",
+        hands="Inyanga Dastanas +2",
         -- ring1="Nereid Ring",
         -- ring2="Nereid Ring",
         -- back="Astute Cape",
         -- waist="Corsette +1",
-        -- legs="Mahatma Slops",
+        legs="Inyanga Shalwar +2",
         -- feet="Goliard Clogs",
     }
+    sets.midcast.Lullaby = sets.midcast.Debuff
+    sets.midcast['Horde Lullaby II'] = set_combine(sets.midcast.Debuff, {
+        ranged="Terpander"
+    })
     sets.midcast.Base = sets.midcast.Buff
 
     -- Spell specific
