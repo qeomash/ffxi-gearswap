@@ -220,7 +220,7 @@ function init_gear_sets()
         head="Gleti's Mask",
         neck="Loricate Torque +1", --DT-6%
         lear="Odnowa Earring +1",
-        body="Hashishin Mintan +2", --refresh+3
+        body="Hashishin Mintan +3", --refresh+3
         hands="Gleti's Gauntlets",
         waist="Flume Belt",
         legs="Carmine Cuisses +1", --Movement+18%
@@ -230,7 +230,7 @@ function init_gear_sets()
         head="Malignance Chapeau", --DT-
         neck="Loricate Torque +1", --DT-6%
         lear="Odnowa Earring +1",
-        body="Hashishin Mintan +2", --refresh+3,DT-12%
+        body="Hashishin Mintan +3", --refresh+3,DT-12%
         hands="Nyame Gauntlets", --DT-7%
         rring="Shadow Ring",
         waist="Flume Belt",
@@ -252,7 +252,8 @@ function init_gear_sets()
     sets.engaged = {
         ammo="Coiste Bodhar",
         head="Malignance Chapeau",
-        neck="Asperity Necklace",
+        -- neck="Asperity Necklace",
+        neck="Mirage Stole +2",
         lear="Telos Earring",
         rear="Suppanomimi",
         body="Malignance Tabard",
@@ -260,7 +261,8 @@ function init_gear_sets()
         lring="Petrov Ring",
         rring="Epona's Ring",
         back=Rosmertas.DA,
-        waist="Windbuffet Belt +1",
+        -- waist="Windbuffet Belt +1",
+        waist="Reiki Yotai",
         legs="Malignance Tights",
         feet="Carmine Greaves +1", --haste+4%,STR+14,DA+4%
     }
@@ -276,8 +278,7 @@ function init_gear_sets()
         lring="Pyrosoul Ring",
         rring="Ilabrat Ring",
         back=Rosmertas.WSD,
-        waist="Dynamic Belt +1",
-        -- waist="Sailfi Belt +1", --TA+2%, needs to be augmented
+        waist="Sailfi Belt +1", --TA+2%, needs to be augmented
         legs="Luhlaza Shalwar +3", -- WSD+10%
         feet="Jhakri Pigaches +2", -- STR+22
     }
@@ -286,6 +287,22 @@ function init_gear_sets()
     })
     sets.baseWS.Accuracy = set_combine(sets.baseWS, {})
     sets.precast.WS = sets.baseWS.Str
+
+    sets.precast.WS['Savage Blade'] = {
+        ammo="Aurgelmir Orb",
+        head="Hashishin Kavuk +3", --WSD+12%
+        neck="Republican Platinum Medal",
+        lear="Ishvara Earring",
+        rear="Moonshade Earring", -- TPBonus+250
+        body="Assimilator's Jubbah +3", --STR+39WSD+10%
+        hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
+        lring="Pyrosoul Ring",
+        rring="Ilabrat Ring",
+        back=Rosmertas.WSD,
+        waist="Sailfi Belt +1",
+        legs="Luhlaza Shalwar +3", -- WSD+10%
+        feet="Jhakri Pigaches +2", -- STR+22
+    }
 
     sets.buff["Chain Affinity"] = {
         feet="Assimilator's Charuqs +2",
@@ -340,8 +357,8 @@ function init_gear_sets()
         neck="Sibyl Scarf", --MAB+10
         lear="Friomisi Earring", -- MAB+10
         rear="Regal Earring", --MAB+7
-        body="Hashishin Mintan +2", -- MAB+49
-        hands="Hashishin Bazubands +2", -- MAB+40
+        body="Hashishin Mintan +3", -- MAB+49
+        hands="Hashishin Bazubands +3", -- MAB+40
         lring="Weatherspoon Ring", -- MAB+10
         rring="Acumen Ring", -- MAB+4
         back="Cornflower Cape", --MAB+15,BLU+5
