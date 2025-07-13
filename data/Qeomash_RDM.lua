@@ -88,7 +88,7 @@ function init_gear_sets()
         feet="Atrophy Boots +1",
     }
     sets.Relic = {
-        head="Vitiation Chapeau +3",
+        head="Vitiation Chapeau +4",
         body="Vitiation Tabard +3",
         hands="Vitiation Gloves +3",
         legs="Vitiation Tights +1",
