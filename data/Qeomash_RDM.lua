@@ -102,10 +102,6 @@ function init_gear_sets()
         feet="Lethargy Houseaux +3",
     }
 
-    Colada = {}
-    Colada.Refresh = { name="Colada", augments={'"Refresh"+2','STR+7','Mag. Acc.+17','"Mag.Atk.Bns."+7',}}
-    Colada.EnhancingDur = { name="Colada", augments={'Enh. Mag. eff. dur. +2','STR+4','"Mag.Atk.Bns."+8',}}
-
     Sucellos = {}
     Sucellos.WS = { name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
     Sucellos.DA = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
@@ -169,7 +165,7 @@ function init_gear_sets()
     --------------------------------------
 
     sets.idle = {
-        main=Colada.Refresh,
+        main=gear.Colada.Refresh,
         sub="Sacro Bulwark",
         ammo="Homiliary",
         head=sets.Relic.head, --Refresh+2
@@ -276,7 +272,7 @@ function init_gear_sets()
 
     -- Enhancing Magic
     sets.midcast['Enhancing Magic'] = {
-        main=Colada.EnhancingDur,
+        main=gear.Colada.EnhancingDur,
         sub="Ammurapi Shield", --Dura+10%
         head="Carmine Mask", --+10
         neck="Melic Torque", --+10
@@ -310,7 +306,7 @@ function init_gear_sets()
     end
 
     sets.midcast.EnhancingDuration = {
-        main=Colada.EnhancingDur,
+        main=gear.Colada.EnhancingDur,
         sub="Ammurapi Shield", --Dura+10%
         head=sets.Empyrean.head,
         neck="Duelist's Torque +2", --Dura+25%
