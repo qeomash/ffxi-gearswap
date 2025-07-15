@@ -91,8 +91,8 @@ function init_gear_sets()
         head="Vitiation Chapeau +4",
         body="Vitiation Tabard +3",
         hands="Vitiation Gloves +3",
-        legs="Vitiation Tights +1",
-        feet="Vitiation Boots +2",
+        legs="Vitiation Tights +3",
+        feet="Vitiation Boots +3",
     }
     sets.Empyrean = {
         head="Lethargy Chappel +3",
