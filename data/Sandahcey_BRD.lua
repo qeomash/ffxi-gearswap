@@ -135,9 +135,8 @@ function init_gear_sets()
         legs="Inyanga Shalwar +2",
         -- feet="Goliard Clogs",
     }
-    sets.midcast.Lullaby = sets.midcast.Debuff
-    sets.midcast['Horde Lullaby II'] = set_combine(sets.midcast.Debuff, {
-        ranged="Terpander"
+    sets.midcast.Lullaby = set_combine(sets.midcast.Debuff, {
+        ranged="Blurred Harp +1",
     })
     sets.midcast.Base = sets.midcast.Buff
 
