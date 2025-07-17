@@ -12,17 +12,38 @@ end
 
 function binds_on_load()
     debug_log("...entered local binds_on_load")
+
     send_command('bind f9 gs c cycle WeaponSet')
+    send_command('bind ~f9 gs c cycle WeaponSet reverse')
+    send_command('bind !f9 gs c reset WeaponSet')
+
     send_command('bind f10 gs c cycle IdleMode')
+    send_command('bind ~f10 gs c cycle IdleMode reverse')
+    send_command('bind !f10 gs c reset IdleMode')
+
     send_command('bind f11 gs c cycle CastingMode')
+    send_command('bind ~f11 gs c cycle CastingMode reverse')
+    send_command('bind !f11 gs c reset CastingMode')
+
     send_command('bind f12 gs c cycle HybridMode')
+    send_command('bind ~f12 gs c cycle HybridMode reverse')
+    send_command('bind !f12 gs c reset HybridMode')
+
 end
 
 function binds_on_unload()
     send_command('unbind f9')
+    send_command('unbind ~f9')
+    send_command('unbind !f9')
     send_command('unbind f10')
+    send_command('unbind ~f10')
+    send_command('unbind !f10')
     send_command('unbind f11')
+    send_command('unbind ~f11')
+    send_command('unbind !f11')
     send_command('unbind f12')
+    send_command('unbind ~f12')
+    send_command('unbind !f12')
 end
 
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
