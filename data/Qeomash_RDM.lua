@@ -23,7 +23,7 @@ function binds_on_load()
 
     send_command('bind f11 gs c cycle CastingMode')
     send_command('bind ~f11 gs c cycle CastingMode reverse')
-    send_command('bind !f11 gs c reset CastingMode')
+    -- send_command('bind !f11 gs c reset CastingMode')
 
     send_command('bind f12 gs c cycle HybridMode')
     send_command('bind ~f12 gs c cycle HybridMode reverse')
@@ -40,7 +40,7 @@ function binds_on_unload()
     send_command('unbind !f10')
     send_command('unbind f11')
     send_command('unbind ~f11')
-    send_command('unbind !f11')
+    -- send_command('unbind !f11')
     send_command('unbind f12')
     send_command('unbind ~f12')
     send_command('unbind !f12')
@@ -199,10 +199,10 @@ function init_gear_sets()
         ammo="Homiliary",
         head=sets.Relic.head, --Refresh+2
         neck="Loricate Torque +1", --DT-6%
-        body=sets.Empyrean.body, --Refresh+4,DT-14%
-        hands=sets.Empyrean.hands, --DT-10%
         lear="Odnowa Earring +1",
         -- Ear, get Odnowa and Etiolation
+        body=sets.Empyrean.body, --Refresh+4,DT-14%
+        hands=sets.Empyrean.hands, --DT-10%
         lring="Warden's Ring",
         rring="Shadow Ring",
         back=Sucellos.DA, -- DT-5%
@@ -332,7 +332,7 @@ function init_gear_sets()
             hands=sets.Relic.Hands, -- +22
             lear="Mimir Earring", -- +10
             rear="Andoaa Earring", -- +5
-            legs=sets.Artifact.legs, --enhances damage?
+            legs=sets.Artifact.legs, --+22
             back=Ghostfyre.EnhancingSkill, -- +9
             lring="Stikini Ring +1", -- +5
             rring="Stikini Ring +1", -- +5
@@ -602,9 +602,6 @@ function init_gear_sets()
 
     -- Engaged sets
     sets.engagedold = {
-        -- head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        -- body="Atrophy Tabard +1",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
-        -- back="Atheling Mantle",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
         ammo="Coiste Bodhar",
         head="Malignance Chapeau",
         neck="Asperity Necklace",
