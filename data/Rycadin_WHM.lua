@@ -35,7 +35,7 @@ function init_gear_sets()
 
     sets.TH = {
         main="Grioavolr", -- TH+1
-        head="White Rarab Cap +1",
+        head="Volte Cap", --TH+1
         feet="Chironic Slippers", -- TH+1
         waist="Chaac Belt", --TH+1
     }
@@ -92,7 +92,8 @@ function init_gear_sets()
     -- CureMelee spell map should default back to Healing Magic.
 
     -- Precast sets to enhance JAs
-    sets.precast.JA.Benediction = {body="Piety Briault"}
+    sets.precast.JA.Benediction = {body="Piety Bliaut +2"}
+    sets.precast.JA["Devotion"] = {head="Piety Cap +1"}
 
     -- Waltz set (chr and vit)
     -- sets.precast.Waltz = {
@@ -152,7 +153,9 @@ function init_gear_sets()
         feet="Kaykaus Boots", --CP+10%
         ring1="Lebeche Ring", -- CP+3%
     }
-    sets.midcast.Curaga = sets.midcast.Cure
+    sets.midcast.Curaga = set_combine(sets.midcast.Cure, {
+        body="Theophany Bliaut +4"
+    })
     -- sets.midcast.Curaga = {main="Tamaxchi",sub="Genbu's Shield",ammo="Incantor Stone",
     --     head="Gendewitha Caubeen",neck="Orison Locket",ear1="Lifestorm Earring",ear2="Orison Earring",
     --     body="Vanir Cotehardie",hands="Theophany Mitts",ring1="Prolix Ring",ring2="Sirona's Ring",
@@ -192,7 +195,7 @@ function init_gear_sets()
         main="Gada", --skill+18,dura+6%
         sub="Genub's Shield",
         hands="Inyanga Dastanas +2", -- all skills +20
-        feet="Theophany Duckbills +2", -- skill+19,dura+5%
+        feet="Theophany Duckbills +3", -- skill+19,dura+10%
         waist="Embla Sash", --dura+10%
     }
 
@@ -213,19 +216,19 @@ function init_gear_sets()
         head="Ebers Cap +3", -- CP+19%
         body="Ebers Bliaut +3", --CPII, Solace+18
         hands="Ebers Mitts +3", --dura+24
-        legs="Ebers Pantaloons +3",
+        legs="Piety Pantaloons +2", -- +33
         feet="Ebers Duckbills +2",
         waist="Embla Sash", --dura+10%
     }
-    -- sets.midcast.Regen = {main="Bolelabunga",sub="Genbu's Shield",
-    --     body="Piety Briault",hands="Orison Mitts +2",
-    --     legs="Theophany Pantaloons"}
+
     sets.midcast.Regen = {
+        main="Bolelabunga", -- +12%
         head="Inyanga Tiara +2", -- +12%
-        body="Cleric's Bliaut", -- +1 HP
+        body="Piety Bliaut +2", -- +36% HP
         hands="Ebers Mitts +3", --dura+24
+        waist="Embla Sash",
         legs="Theophany Pantaloons +2",
-        feet="Ebers Duckbills +2",
+        feet="Theophany Duckbills +3", --dura+10%
     }
 
     -- sets.midcast.Protectra = {ring1="Sheltered Ring",feet="Piety Duckbills +1"}
@@ -264,7 +267,7 @@ function init_gear_sets()
         hands="Inyanga Dastanas +2",
         ring1="Ayanmo Ring",
         ring2="Inyanga Ring",
-        back="Prism Cape",
+        back="Null Shawl",
         waist="Demonry Sash",
         legs="Inyanga Shalwar +2",
         feet="Inyanga Crackows +2",
@@ -284,7 +287,7 @@ function init_gear_sets()
     --     body="Gendewitha Bliaut",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Paguroidea Ring",
     --     back="Umbra Cape",waist="Witful Belt",legs="Nares Trews",feet="Herald's Gaiters"}
     sets.idle = {
-        -- main="Queller Rod", -- Refresh+1
+        main="Bolelabunga", --Refresh=1,Regen+1
         sub="Genbu's Shield",
         ammo="Homiliary",
         head="Inyanga Tiara +2",
