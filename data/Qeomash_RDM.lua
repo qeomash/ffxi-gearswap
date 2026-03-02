@@ -364,6 +364,7 @@ function init_gear_sets()
         feet=sets.Empyrean.feet,
     }
     sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration, {
+        head="Amalric Coif +1", --Refresh+2
         body=sets.Artifact.body, -- Refresh+2
         legs=sets.Empyrean.legs, -- Refresh+3
         }
@@ -373,6 +374,7 @@ function init_gear_sets()
     sets.midcast["Phalanx II"] = set_combine(sets.midcast.EnhancingDuration, sets.midcast['Enhancing Magic'])
     sets.midcast["Flurry II"] = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.EnhancingDuration)
     sets.midcast['Aquaveil'] = set_combine(sets.midcast['Enhancing Magic'], {
+        head="Amalric Coif +1", --Aquaveil +2
         hands="Regal Cuffs", --Aquaveil +2
     })
 
@@ -685,7 +687,7 @@ function init_gear_sets()
         hands=sets.Artifact.hands, --STR+21,Acc+53,Att+WSD+6%
         lring="Pyrosoul Ring",
         rring="Ilabrat Ring",
-        back=Sucellos.WS,
+        back=Sucellos.WSD_STR,
         waist="Prosilio Belt +1",
         legs=sets.Empyrean.legs, --Attk+53,STR+33
         -- legs="Jhakri Slops +2", --Att+45,STR+47
@@ -700,7 +702,7 @@ function init_gear_sets()
         hands="Jhakri Cuffs +2", --MND+35,Attack+43,WS+7%
         lring="Stikini Ring +1",
         rring="Aqua Ring",
-        back=Sucellos.WS,
+        back=Sucellos.WSD_STR,
         waist="Dynamic Belt +1",
         legs=sets.Empyrean.legs, --Attk+53,MND+38
         feet=sets.Empyrean.feet, --Acc+50,Att+50,WS+8%
@@ -708,26 +710,31 @@ function init_gear_sets()
     sets.precast.WS = sets.baseWS.Str
 
     sets.precast.WS['Aeolian Edge'] = set_combine(sets.midcast['Elemental Magic'], {
-        back=Sucellos.WS,
+        back=Sucellos.WSD_STR,
         rear="Moonshade Earring",
     })
     sets.precast.WS['Death Blossom'] = set_combine(sets.midcast['Elemental Magic'], {
-        back=Sucellos.WS,
+        back=Sucellos.WSD_STR,
         rear="Moonshade Earring",
     })
     sets.precast.WS['Seraph Blade'] = {
         ammo="Sroda Tathlum",
         head=sets.Empyrean.head,
+        -- neck='Fotia Gorget',
         neck="Sibyl Scarf", --MAB+10 (should be Baetyl)
         lear="Regal Earring", --MND+10
         rear="Moonshade Earring",
         body=sets.Empyrean.body,
-        hands=sets.Empyrean.hands,
+        -- hands=sets.Empyrean.hands,
+        hands="Jhakri Cuffs +2", -- WSD+7%
+        -- hands=sets.Artifact.hands, --WSD+9%
         lring="Weatherspoon Ring", -- Light Affinity
         rring="Cornelia's Ring",
         back=Sucellos.WSD_MND,
         -- waist="Aswang Sash", --MAB+3,Mcrit+5%
-        waist="Eschan Stone", --MAB+7,Macc+7
+        -- waist="Eschan Stone", --MAB+7,Macc+7
+        -- waist="Orpheus's Sash",
+        waist="Orpheus's Sash",
         legs=sets.Empyrean.legs,
         feet=sets.Empyrean.feet,
     }
@@ -749,15 +756,17 @@ function init_gear_sets()
         lear="Telos Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body=sets.Empyrean.body, --Att+54,Acc+54,STR+29
-        hands=sets.Artifact.hands, --STR+21,Acc+53,Att+WSD+6%
+        hands=sets.Artifact.hands, --STR+21,Acc+53,Att+WSD+9%
         -- lring="Pyrosoul Ring",
         lring="Cornelia's Ring",
         rring="Ilabrat Ring",
-        back=Sucellos.WS,
+        back=Sucellos.WSD_STR,
         waist="Prosilio Belt +1",
         legs=sets.Empyrean.legs, --Attk+53,STR+33
         feet=sets.Empyrean.feet, --Acc+50,Att+50,WS+8%
     }
+    -- sets.precast.WS['Knight of Round'] = sets.precast.WS['Savage Blade']
+    sets.precast.WS['Black Halo'] = sets.precast.WS['Savage Blade']
 
 end
 
