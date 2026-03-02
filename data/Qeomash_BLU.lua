@@ -240,6 +240,10 @@ end
 
 function init_gear_sets()
 
+    Rosmertas = {}
+    Rosmertas.DA = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
+    Rosmertas.WSD = { name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+
     sets.WeaponSet = {}
     sets.WeaponSet["Naegling"] = {
         main="Naegling",
@@ -369,12 +373,12 @@ function init_gear_sets()
     sets.precast.WS['Savage Blade'] = {
         ammo="Aurgelmir Orb",
         head="Hashishin Kavuk +3", --WSD+12%
-        neck="Republican Platinum Medal",
+        neck="Mirage Stole +2",
         lear="Ishvara Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body="Assimilator's Jubbah +3", --STR+39WSD+10%
         hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
-        lring="Pyrosoul Ring",
+        lring="Cornelia's Ring",
         rring="Ilabrat Ring",
         back=Rosmertas.WSD,
         waist="Sailfi Belt +1",
