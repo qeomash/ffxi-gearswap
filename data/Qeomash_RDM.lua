@@ -103,14 +103,14 @@ function init_gear_sets()
     -- Predefined Special Gear and Sets
     sets.Artifact = {
         head="Atrophy Chapeau +3",
-        body="Atrophy Tabard +3",
-        hands="Atrophy Gloves +3",
-        legs="Atrophy Tights +3",
+        body="Atrophy Tabard +4",
+        hands="Atrophy Gloves +4",
+        legs="Atrophy Tights +4",
         feet="Atrophy Boots +1",
     }
     sets.Relic = {
         head="Vitiation Chapeau +4",
-        body="Vitiation Tabard +3",
+        body="Vitiation Tabard +4",
         hands="Vitiation Gloves +3",
         legs="Vitiation Tights +3",
         feet="Vitiation Boots +3",
