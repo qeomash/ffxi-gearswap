@@ -84,10 +84,10 @@ end
 function user_setup()
     enable_all_slots()
     state.OffenseMode:options('Normal', 'Attack')
-    state.HybridMode:options('Normal', 'DT','PhysicalDef', 'Accuracy')
+    state.HybridMode:options('Normal', 'DT', 'Accuracy', "Enspell")
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'DT', 'Refresh')
-    state.WeaponSet:options('Normal', 'Crocea', 'Naegling', 'Maxentius', 'Daggers')
+    state.WeaponSet:options('Normal', 'Crocea', 'Naegling', 'Maxentius', 'Daggers', 'DiamondAspis', '1DMG')
 
     select_default_macro_book()
     send_command('wait 2;input /lockstyleset 2')
@@ -170,7 +170,16 @@ function init_gear_sets()
         sub="Ternion Dagger +1",
         range=empty,
     }
-
+    sets.WeaponSet["DiamondAspis"] = {
+        main="Colada",
+        sub="Diamond Aspis",
+        range=empty,
+    }
+    sets.WeaponSet["1DMG"] = {
+        main="Aern Dagger",
+        sub="Aern Dagger II",
+        range="Ullr",
+    }
 
     -- JA Related Sets
     sets.precast.JA['Chainspell'] = {body=sets.Relic.body}
@@ -632,10 +641,26 @@ function init_gear_sets()
         back="Null Shawl",
         waist="Null Belt",
     })
-    sets.engaged.PhysicalDef = {ammo="Demonry Stone",
-        head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Atrophy Tabard +3",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
-        back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
+    sets.engaged.Enspell = {
+        head="Umuthi Hat",
+        neck="Null Loop",
+        lear="Suppanomimi",
+        -- rear="Hollow Earring",
+        rear="Lethargy Earring +1",
+        -- body=sets.Empyrean.body,
+        body="Malignance Tabard",
+        hands="Ayanmo Manopolas +2",
+        lring="Chirich Ring +1",
+        rring="Chirich Ring +1",
+        back="Ghostfyre Cape",
+        waist="Orpheus's Sash",
+        legs="Malignance Tights",
+        feet="Carmine Greaves +1",
+    }
+    -- sets.engaged.PhysicalDef = {ammo="Demonry Stone",
+    --     head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
+    --     body="Atrophy Tabard +3",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
+    --     back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
 
 
     -- Weaponskill sets
