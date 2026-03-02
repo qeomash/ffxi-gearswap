@@ -527,7 +527,8 @@ function init_gear_sets()
         --ranged="Ghastly Tathlum +1"
         head=sets.Empyrean.head, --MAB+51
         neck="Sibyl Scarf", -- MAB+10,INT+10
-        lear="Friomisi Earring", -- MAB+10
+        -- lear="Friomisi Earring", -- MAB+10
+        lear="Malignance Earring", --MAB+8,Macc+10
         rear="Regal Earring", -- MAB+7
         body=sets.Empyrean.body, -- MAB+49
         -- hands="Amalric Gages", -- MAB+23, MBII+5
@@ -551,7 +552,7 @@ function init_gear_sets()
         sub="Clerisy Strap", --MAC+10
         head=sets.Artifact.head,
         neck="Aesir Torque",
-        -- lear="Abyssal Earring",
+        lear="Malignance Earring", --MAB+8,Macc+10
         rear="Magnetic Earring",
         -- body="Glamor Jupon", -- Drk skill +3
         body=sets.Empyrean.body, --MAC,MAB
@@ -734,10 +735,11 @@ function init_gear_sets()
     sets.precast.WS['Sanguine Blade'] = set_combine(sets.midcast['Elemental Magic'], {
         ammo="Sroda Tathlum",
         head="Pixie Hairpin +1",
-        back=Sucellos.WS,
-        lear="Regal Earring", --MND+10
-        rear="Moonshade Earring",
-        -- waist="Anrin Obi",
+        back=Sucellos.WSD_STR,
+        lear="Malignance Earring", --MAB+8,Macc+10
+        rear="Regal Earring", --MND+10
+        -- rear="Moonshade Earring",
+        waist="Orpheus's Sash",
         rring="Cornelia's Ring",
     })
 
