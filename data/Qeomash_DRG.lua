@@ -65,6 +65,21 @@ function init_gear_sets()
         legs="Pteroslaver Brais +3",
         feet="Flamma Gambieras +2",
     }
+    sets.engaged_standard = {
+        ammo="Coiste Bodhar",
+        head="Hjarrandi Helm",
+        neck="Vim Torque +1",
+        lear="Sherida Earring",
+        rear="Sroda Earring",
+        body="Peltast's Plackart +3",
+        hands="Peltast's Vambraces +3",
+        lring="Petrov Ring",
+        rring="Niqmaddu Ring",
+        back=Brigantias.STR_DA,
+        waist="Ioskeha Belt",
+        legs="Pteroslaver Brais +3",
+        feet="Flamma Gambieras +2",
+    }
     sets.gleti_engaged = set_combine(sets.engaged_unsafe, {
         head="Gleti's Mask",
         body="Gleti's Cuirass",
@@ -72,7 +87,8 @@ function init_gear_sets()
         legs="Gleti's Breeches",
         feet="Gleti's Boots",
     })
-    sets.engaged = sets.engaged_unsafe
+    -- sets.engaged = sets.gleti_engaged
+    sets.engaged = sets.engaged_standard
     -- sets.engaged = sets.ambu_engaged
     sets.RelicAF = {
         head="Wyrm Armet +2",
