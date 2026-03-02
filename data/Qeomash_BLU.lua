@@ -5,15 +5,60 @@ function get_sets()
     include('Mote-Include.lua')
 end
 
+function binds_on_load()
+    debug_log("...entered local binds_on_load")
+
+    send_command('bind f9 gs c cycle WeaponSet')
+    send_command('bind ~f9 gs c cycle WeaponSet reverse')
+    send_command('bind !f9 gs c reset WeaponSet')
+
+    send_command('bind f10 gs c cycle IdleMode')
+    send_command('bind ~f10 gs c cycle IdleMode reverse')
+    send_command('bind !f10 gs c reset IdleMode')
+
+    send_command('bind f11 gs c cycle CastingMode')
+    send_command('bind ~f11 gs c cycle CastingMode reverse')
+    -- send_command('bind !f11 gs c reset CastingMode')
+
+    send_command('bind f12 gs c cycle OffenseMode')
+    send_command('bind ~f12 gs c cycle OffenseMode reverse')
+    send_command('bind !f12 gs c reset OffenseMode')
+
+end
+
+
+function binds_on_unload()
+    send_command('unbind f9')
+    send_command('unbind ~f9')
+    send_command('unbind !f9')
+    send_command('unbind f10')
+    send_command('unbind ~f10')
+    send_command('unbind !f10')
+    send_command('unbind f11')
+    send_command('unbind ~f11')
+    -- send_command('unbind !f11')
+    send_command('unbind f12')
+    send_command('unbind ~f12')
+    send_command('unbind !f12')
+end
+
 function user_setup()
     enable_all_slots()
+
+    state.OffenseMode:options('Normal', 'Mid', 'DT', 'Accuracy')
+    -- state.HybridMode:options('Normal', 'DT', 'Accuracy')
+    state.CastingMode:options('Normal', 'Resistant')
+    state.IdleMode:options('Normal', 'DT', 'Refresh')
+    state.WeaponSet:options('Naegling', 'Nuking', 'Learning')
+
+
     select_default_macro_book()
     send_command('wait 2;input /lockstyleset 21')
-    windower.add_to_chat(64,'* aset setlist')
-    windower.add_to_chat(64,'* aset spellset <setname>')
 end
 
 function job_setup()
+    windower.add_to_chat(64,'* aset setlist')
+    windower.add_to_chat(64,'* aset spellset <setname>')
     state.Buff['Burst Affinity'] = buffactive['Burst Affinity'] or false
     state.Buff['Chain Affinity'] = buffactive['Chain Affinity'] or false
     state.Buff.Convergence = buffactive.Convergence or false
@@ -25,6 +70,7 @@ function job_setup()
 
     include('Mote-TreasureHunter')
     state.TreasureMode:set('None')
+    state.WeaponSet = M{['description'] = 'WeaponSet'}
 
     state.HasteMode = M{['description']='Haste Mode', 'Normal', 'Hi', 'Trust'}
 
@@ -194,69 +240,75 @@ end
 
 function init_gear_sets()
 
-    sets.mainweapons = {
+    sets.WeaponSet = {}
+    sets.WeaponSet["Naegling"] = {
         main="Naegling",
         sub="Thibron",
         ammo="Coiste Bodhar",
     }
-    sets.learningweapons = {
+    sets.WeaponSet["Learning"] = {
         main="Excalipoor II",
         sub="Wax Sword",
         hands="Magus Bazubands",
     }
-    sets.castingweapons = {
+    sets.WeaponSet["Nuking"] = {
         main="Bunzi's Rod", --MAB+35
         sub="Maxentius", -- MAB+21
         ammo="Ghastly Tathlum +1"
     }
-    sets.cleavingweapons = sets.castingweapons
     sets.TH = {
         ammo="Perfect Lucky Egg", -- +1
         head="Volte Cap", -- +1
         waist="Chaac Belt", --TH+1
     }
     sets.precast.JA['Provoke'] = sets.TH
-    sets.stdidle = {
+    sets.idle = {
         head="Gleti's Mask",
         neck="Loricate Torque +1", --DT-6%
         lear="Odnowa Earring +1",
         body="Hashishin Mintan +3", --refresh+3
         hands="Gleti's Gauntlets",
+        lring="Warden's Ring",
+        rring="Shadow Ring",
+        back=Rosmertas.DA,
         waist="Flume Belt",
         legs="Carmine Cuisses +1", --Movement+18%
         feet="Gleti's Boots",
     }
-    sets.cleavingidle = {
+    sets.idle.DT = {
         head="Malignance Chapeau", --DT-
         neck="Loricate Torque +1", --DT-6%
         lear="Odnowa Earring +1",
         body="Hashishin Mintan +3", --refresh+3,DT-12%
         hands="Nyame Gauntlets", --DT-7%
+        back=Rosmertas.DA,
         rring="Shadow Ring",
         waist="Flume Belt",
         legs="Malignance Tights", --DT-7%
         feet="Malignance Boots",
     }
+    sets.idle.Refresh = set_combine(sets.idle, {
+        body="Hashishin Mintan +3", --+4
+        lring="Stikini Ring +1", --Refresh+1
+        rring="Stikini Ring +1", --refresh+1
+    })
 
-    -- sets.idle = sets.stdidle
-    if player.sub_job == 'RDM' or player.sub_job == 'BLM' then
-        sets.idle = sets.cleavingidle
-    else
-        sets.idle = sets.stdidle
-    end
-
-    Rosmertas = {}
-    Rosmertas.DA = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
-    Rosmertas.WSD = { name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+    -- -- sets.idle = sets.stdidle
+    -- if player.sub_job == 'RDM' or player.sub_job == 'BLM' then
+    --     sets.idle = sets.cleavingidle
+    -- else
+    --     sets.idle = sets.stdidle
+    -- end
 
     sets.engaged = {
         ammo="Coiste Bodhar",
-        head="Malignance Chapeau",
+        -- head="Malignance Chapeau",
+        head=gear.Adhemar.A.head,
         -- neck="Asperity Necklace",
         neck="Mirage Stole +2",
         lear="Telos Earring",
         rear="Suppanomimi",
-        body="Malignance Tabard",
+        body=gear.Adhemar.A.body,
         hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
         lring="Petrov Ring",
         rring="Epona's Ring",
@@ -264,8 +316,34 @@ function init_gear_sets()
         -- waist="Windbuffet Belt +1",
         waist="Reiki Yotai",
         legs="Malignance Tights",
+        --Get Herculean with TA3~4%
         feet="Carmine Greaves +1", --haste+4%,STR+14,DA+4%
     }
+    sets.engaged.Mid = set_combine(sets.engaged, {
+        head="Malignance Chapeau",
+        body="Malignance Tabard",
+        legs="Malignance Tights",
+        feet="Malignance Boots", --DT-4%
+    })
+    sets.engaged.DT = set_combine(sets.engaged, {
+        head="Nyame Helm", --DT7%
+        neck="Null Loop", --DT5%, accuracy
+        body="Malignance Tabard", --DT9%
+        hands="Nyame Gauntlets", --DT7%
+        waist="Flume Belt", --PDT-4%
+        legs="Nyame Flanchard", --DT-8%
+        feet="Nyame Sollerets", --DT-7%
+    })
+    sets.engaged.Accuracy = set_combine(sets.engaged, {
+        head="Malignance Chapeau", --+50
+        neck="Null Loop", -- +50
+        body="Hashishin Mintan +3", -- +64
+        hands="Hashishin Bazubands +3", --+62
+        -- back="Null Shawl",
+        waist="Null Belt",
+        legs="Hashishin Tayt", -- +63
+        feet="Malignance Boots", --DT-4%
+    })
 
     sets.baseWS = {
         ammo="Aurgelmir Orb",
@@ -411,6 +489,12 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
     end
 end
 
+function job_state_change(stateField, newValue, oldValue)
+    debug_log("job_state_change")
+    if stateField == 'WeaponSet' then
+        equip(sets.WeaponSet[state.WeaponSet.current])
+    end
+end
 
 function select_default_macro_book()
     -- Default macro set/book
