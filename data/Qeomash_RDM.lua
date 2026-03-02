@@ -240,13 +240,12 @@ function init_gear_sets()
     sets.precast.FC = {
         main="Crocea Mors", --FC+20%
         head=sets.Artifact.head,
-        lear="Loquacious Earring",
+        lear="Malignance Earring", --FC+4%
+        -- lear="Loquacious Earring",
         rear="Lethargy Earring +1", --FC+8%
         body=sets.Relic.body,
         hands="Ayanmo Manopolas +2", --Haste+4%
         legs="Ayanmo Cosciales +2",
-        ring1="Lebeche Ring", -- QM+2%
-        ring2="Weatherspoon Ring",-- QM+3%
         waist="Embla Sash", --FC+5%
         back="Swith Cape",
         feet="Carmine Greaves +1",
@@ -259,6 +258,8 @@ function init_gear_sets()
         {
             main="Daybreak",
             sub="Sors Shield", -- CFC-5%
+            ring1="Lebeche Ring", -- QM+2%
+            ring2="Weatherspoon Ring",-- QM+3%
             legs="Kaykaus Tights", -- CFC-5%
             feet="Kaykaus Boots" -- CFC-5%
         })
