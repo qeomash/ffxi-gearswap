@@ -44,14 +44,11 @@ function user_setup()
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'DT', 'Refresh')
 
-    -- gear.RAbullet = "Adlivun Bullet"
-    gear.WSbullet = "Adlivun Bullet"
-    -- gear.MAbullet = "Bronze Bullet"
-    -- gear.QDbullet = "Adlivun Bullet"
-    gear.RAbullet = "Bronze Bullet"
-    -- gear.WSbullet = "Bronze Bullet"
-    gear.MAbullet = "Bronze Bullet"
-    gear.QDbullet = "Bronze Bullet"
+    gear.MainGun = "Fomalhaut"
+    gear.WSbullet = "Chrono Bullet"
+    gear.RAbullet = "Chrono Bullet"
+    gear.MAbullet = "Chrono Bullet"
+    gear.QDbullet = "Chrono Bullet"
     options.ammo_warning_limit = 15
 
     -- Additional local binds
@@ -81,22 +78,31 @@ function init_gear_sets()
     -- Start defining the sets
     --------------------------------------
 
+    Camulus = {}
+    Camulus.TP = { name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
+    Camulus.RA = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Damage taken-5%',}}
+    Camulus.WSD_MAB = { name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}
+    Camulus.WSD_STR = { name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+
     -- Precast Sets
 
     -- Precast sets to enhance JAs
 
     sets.precast.JA['Triple Shot'] = {body="Navarch's Frac +2"}
-    sets.precast.JA['Snake Eye'] = {legs="Lanun Culottes"}
-    sets.precast.JA['Wild Card'] = {feet="Lanun Bottes"}
-    sets.precast.JA['Random Deal'] = {body="Lanun Frac"}
+    sets.precast.JA['Snake Eye'] = {legs="Lanun Trews +1"}
+    sets.precast.JA['Fold'] = {legs="Lanun Gants +1"}
+    sets.precast.JA['Wild Card'] = {feet="Lanun Bottes +2"}
+    sets.precast.JA['Random Deal'] = {body="Lanun Frac +4"}
 
 
     sets.precast.CorsairRoll = {
-        -- main="Lanun Knife", --Dura
-        -- head="Lanun Tricorne", --relic
+        main="Lanun Knife", --Dura
+        sub={name="Nusku Shield", priority=100},
+        ranged="Compensator", -- Dura+20
+        head="Lanun Tricorne +2",
         neck="Regal Necklace", --Roll+7,Dura+20
         hands="Chasseur's Gants +3",
-        back="Camulus's Mantle",
+        back=Camulus.TP,
     }
 
     sets.precast.CorsairRoll["Caster's Roll"] = set_combine(sets.precast.CorsairRoll, {legs="Navarch's Culottes +2"})
@@ -154,7 +160,7 @@ function init_gear_sets()
         hands="Nyame Gauntlets",
         lring="Regal Ring",
         rring="Meghanada Ring",
-        back="Camulus's Mantle",
+        back=Camulus.WSD_STR,
         waist="Sailfi Belt +1",
         legs="Nyame Flanchard",
         feet="Nyame Sollerets",
@@ -169,8 +175,8 @@ function init_gear_sets()
         body="Ikenga's Vest",
         hands="Ikenga's Gloves",
         lring="Regal Ring",
-        rring="Meghanada Ring",
-        back="Camulus's Mantle",
+        rring="Dingir Ring",
+        back=Camulus.WSD_MAB,
         waist="Sailfi Belt +1",
         legs="Ikenga's Trousers",
         feet="Ikenga's Clogs",
@@ -197,10 +203,14 @@ function init_gear_sets()
         neck="Ygnas's Resolve +1",
         lear="Friomisi Earring", -- MAB+10
         rear="Moldavite Earring", --MAB+5
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
+        body="Lanun Frac +4",
+        hands="Chasseur's Gants +3", -- for now?
+        -- hands="Nyame Gauntlets",
+        lring="Dingir Ring", --MAB+10
+        rring="Arvina Ringlet +1", --MAB+3
+        back=Camulus.WSD_MAB,
         legs="Nyame Flanchard",
-        feet="Nyame Sollerets",
+        feet="Lanun Bottes +2",
     }
 
     -- sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
@@ -213,16 +223,16 @@ function init_gear_sets()
     --     body="Laksamana's Frac",hands="Buremte Gloves",ring1="Hajduk Ring",ring2="Stormsoul Ring",
     --     back="Libeccio Mantle",waist=gear.ElementalBelt,legs="Thurandaut Tights +1",feet="Laksamana's Bottes"}
 
+    sets.precast.WS['Wildfire'] = sets.precast.WS['Leaden Salute']
+    -- sets.precast.WS['Wildfire'] = {ammo=gear.MAbullet,
+    --     head="Wayfarer Circlet",neck="Stoicheion Medal",ear1="Friomisi Earring",ear2="Hecate's Earring",
+    --     body="Manibozho Jerkin",hands="Iuitl Wristbands",ring1="Stormsoul Ring",ring2="Demon's Ring",
+    --     back="Toro Cape",waist=gear.ElementalBelt,legs="Iuitl Tights",feet="Iuitl Gaiters +1"}
 
-    sets.precast.WS['Wildfire'] = {ammo=gear.MAbullet,
-        head="Wayfarer Circlet",neck="Stoicheion Medal",ear1="Friomisi Earring",ear2="Hecate's Earring",
-        body="Manibozho Jerkin",hands="Iuitl Wristbands",ring1="Stormsoul Ring",ring2="Demon's Ring",
-        back="Toro Cape",waist=gear.ElementalBelt,legs="Iuitl Tights",feet="Iuitl Gaiters +1"}
-
-    sets.precast.WS['Wildfire'].Brew = {ammo=gear.MAbullet,
-        head="Wayfarer Circlet",neck="Stoicheion Medal",ear1="Friomisi Earring",ear2="Hecate's Earring",
-        body="Manibozho Jerkin",hands="Iuitl Wristbands",ring1="Stormsoul Ring",ring2="Demon's Ring",
-        back="Toro Cape",waist=gear.ElementalBelt,legs="Iuitl Tights",feet="Iuitl Gaiters +1"}
+    -- sets.precast.WS['Wildfire'].Brew = {ammo=gear.MAbullet,
+    --     head="Wayfarer Circlet",neck="Stoicheion Medal",ear1="Friomisi Earring",ear2="Hecate's Earring",
+    --     body="Manibozho Jerkin",hands="Iuitl Wristbands",ring1="Stormsoul Ring",ring2="Demon's Ring",
+    --     back="Toro Cape",waist=gear.ElementalBelt,legs="Iuitl Tights",feet="Iuitl Gaiters +1"}
 
     -- sets.precast.WS['Leaden Salute'] = sets.precast.WS['Wildfire']
 
@@ -242,7 +252,7 @@ function init_gear_sets()
         neck="Stoicheion Medal",
         ear1="Friomisi Earring",
         ear2="Hecate's Earring",
-        body="Lanun Frac",
+        body="Lanun Frac +4",
         hands="Schutzen Mittens",
         ring1="Hajduk Ring",
         ring2="Demon's Ring",
@@ -308,6 +318,7 @@ function init_gear_sets()
 
     -- Idle sets
     sets.idle = {
+        ranged=gear.MainGun,
         head="Malignance Chapeau",
         body="Malignance Tabard",
         hands="Nyame Gauntlets",
@@ -373,6 +384,7 @@ function init_gear_sets()
     --     body="Iuitl Vest",hands="Iuitl Wristbands",ring1="Defending Ring",ring2=gear.DarkRing.physical,
     --     back="Shadow Mantle",waist="Flume Belt",legs="Nahtirah Trousers",feet="Iuitl Gaiters +1"}
     sets.engaged = {
+        ranged=gear.MainGun,
         head="Malignance Chapeau",
         neck="Iskur Gorget",
         body="Malignance Tabard",
