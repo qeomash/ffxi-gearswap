@@ -280,12 +280,13 @@ function init_gear_sets()
     -- Healing
     sets.midcast.Cure = {
         main="Daybreak",
-        sub="Sors Shield", -- CP+3%
-        head=sets.Relic.head,
+        sub={name="Sors Shield", priority=100}, -- CP+3%
+        head="Kaykaus Mitra +1",
         neck="Colossus's Torque",
         lear="Regal Earring",
         rear="Magnetic Earring",
-        hands="Telchine Gloves", --CP+10%
+        body="Kaykaus Bliaut +1",
+        hands="Kaykaus Cuffs +1",
         lring="Lebeche Ring", --CP+3%
         rring="Stikini Ring +1",
         back=Ghostfyre.Duration, --CP+6%
@@ -293,10 +294,17 @@ function init_gear_sets()
         feet="Kaykaus Boots", --CP+10%
     }
     sets.midcast.Curaga = sets.midcast.Cure
-    sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
+    sets.midcast.CureSelf = set_combine(sets.midcast.Cure,
+        {ring1="Kunaji Ring",ring2="Asklepian Ring"})
     sets.midcast.Cursna = set_combine(sets.midcast.Cure, {
         main="Prelatic Pole",
         sub=empty,
+        body=sets.Relic.body, -- skill+
+        legs=sets.Artifact.legs, --skill+
+        neck="Debilis Medallion",
+        waist="Bishop's Sash",
+        lring="Menelaus's Ring",
+        feet="Vanya Clogs",
     })
 
 
