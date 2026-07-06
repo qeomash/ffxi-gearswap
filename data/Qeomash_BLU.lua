@@ -49,7 +49,7 @@ function user_setup()
     -- state.HybridMode:options('Normal', 'DT', 'Accuracy')
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'DT', 'Refresh')
-    state.WeaponSet:options('Naegling', 'Nuking', 'Learning')
+    state.WeaponSet:options('Naegling', 'Tizona', 'Nuking', 'Learning')
 
 
     select_default_macro_book()
@@ -247,6 +247,11 @@ function init_gear_sets()
     sets.WeaponSet = {}
     sets.WeaponSet["Naegling"] = {
         main="Naegling",
+        sub="Thibron",
+        ammo="Coiste Bodhar",
+    }
+    sets.WeaponSet["Tizona"] = {
+        main="Tizona",
         sub="Thibron",
         ammo="Coiste Bodhar",
     }
