@@ -7,23 +7,45 @@ function get_sets()
 end
 
 function user_setup()
-    enable('main','sub','ranged', 'ammo')
+    enable_all_slots()
+    state.WeaponSet = M{['description'] = 'WeaponSet'}
+    state.OffenseMode:options('Normal', 'Attack')
+    state.HybridMode:options('Normal', 'TreasureHunter')
+    state.IdleMode:options('Normal')
+    state.WeaponSet:options(
+        'Daggers', 'Naegling',
+        'Procs: Daggers', 'Procs: Katana', 'Procs: GKT'
+    )
+
     select_default_macro_book()
     send_command('wait 2;input /lockstyleset 19')
-    equip(sets.mainweapons)
+    send_command('gs c reset WeaponSet')
 end
 
 function init_gear_sets()
 
-    sets.mainweapons = {
+    sets.WeaponSet = {}
+    sets.WeaponSet["Daggers"] = {
         main="Gleti's Knife",
         sub="Ternion Dagger +1",
-        -- ranged="Lamiabane",
-        -- ammo="Tiphia Sting",
     }
-    sets.thweapons = set_combine(sets.mainweapons,
-        {sub="Thief's Knife"}
-    )
+    sets.WeaponSet["Naegling"] = {
+        main="Naegling",
+        sub="Ternion Dagger +1",
+    }
+
+    sets.WeaponSet['Procs: Daggers'] = {
+        main="Aern Dagger",
+        sub="Aern Dagger II",
+    }
+    sets.WeaponSet['Procs: Katana'] = {
+        main="Debahocho",
+        sub="Aern Dagger II",
+    }
+    sets.WeaponSet['Procs: GKT'] = {
+        main="Shinai",
+        sub="Alber Strap",
+    }
 
     sets.engagedAmbu = {
         ammo="Coiste Bodhar",

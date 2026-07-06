@@ -6,11 +6,61 @@ function get_sets()
 end
 
 function user_setup()
-    enable('main','sub','ranged', 'ammo')
+    enable_all_slots()
+    state.WeaponSet = M{['description'] = 'WeaponSet'}
+
+    state.HybridMode:options('Normal', 'DT', 'Accuracy', "Enspell")
+    state.CastingMode:options('Normal', 'Resistant')
+    state.IdleMode:options('Normal', 'DT', 'Refresh')
+    state.WeaponSet:options(
+        'Chango', 'Naegling',
+        'Procs: Dagger', 'Procs: Sword', 'Procs: GSword', 'Procs: Scythe', 'Procs: Polearm', 'Procs: Club', 'Procs: Staff'
+    )
+
+
     select_default_macro_book()
     send_command('wait 2;input /lockstyleset 15')
-    equip(sets.mainweapons)
+    send_command('gs c reset WeaponSet')
 end
+
+
+function binds_on_load()
+    debug_log("...entered local binds_on_load")
+
+    send_command('bind f9 gs c cycle WeaponSet')
+    send_command('bind ~f9 gs c cycle WeaponSet reverse')
+    send_command('bind !f9 gs c reset WeaponSet')
+
+    send_command('bind f10 gs c cycle IdleMode')
+    send_command('bind ~f10 gs c cycle IdleMode reverse')
+    send_command('bind !f10 gs c reset IdleMode')
+
+    send_command('bind f11 gs c cycle CastingMode')
+    send_command('bind ~f11 gs c cycle CastingMode reverse')
+    -- send_command('bind !f11 gs c reset CastingMode')
+
+    send_command('bind f12 gs c cycle HybridMode')
+    send_command('bind ~f12 gs c cycle HybridMode reverse')
+    send_command('bind !f12 gs c reset HybridMode')
+
+end
+
+
+function binds_on_unload()
+    send_command('unbind f9')
+    send_command('unbind ~f9')
+    send_command('unbind !f9')
+    send_command('unbind f10')
+    send_command('unbind ~f10')
+    send_command('unbind !f10')
+    send_command('unbind f11')
+    send_command('unbind ~f11')
+    -- send_command('unbind !f11')
+    send_command('unbind f12')
+    send_command('unbind ~f12')
+    send_command('unbind !f12')
+end
+
 
 function init_gear_sets()
 
@@ -18,15 +68,52 @@ function init_gear_sets()
     Cichols.TP_DA = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
     Cichols.STR_WSD = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 
-    sets.mainweapons = {
+    sets.WeaponSet = {}
+    sets.WeaponSet['Chango'] = {
         main="Chango",
         sub="Duplus Grip",
         ammo="Coiste Bodhar",
     }
-    sets.naegling = {
+    sets.WeaponSet['Naegling'] = {
         main="Naegling",
         sub="Blurred Shield +1",
+        ammo="Coiste Bodhar",
     }
+
+    sets.WeaponSet['Procs: Dagger'] = {
+        main="Aern Dagger",
+        sub="Blurred Shield +1",
+    }
+
+    sets.WeaponSet['Procs: Sword'] = {
+        main="Excalipoor II",
+        sub="Blurred Shield +1",
+    }
+    sets.WeaponSet['Procs: GSword'] = {
+        main="Goujian",
+        sub="Duplus Grip",
+    }
+    sets.WeaponSet['Procs: Scythe'] = {
+        main="Bronze Zaghnal",
+        sub="Duplus Grip",
+    }
+    sets.WeaponSet['Procs: Polearm'] = {
+        main="Tzee Xicu's Blade",
+        sub="Duplus Grip",
+    }
+    sets.WeaponSet['Procs: GKT'] = {
+        main="Zanmato +1",
+        sub="Duplus Grip",
+    }
+    sets.WeaponSet['Procs: Club'] = {
+        main="Soulflayer's Wand",
+        sub="Blurred Shield +1",
+    }
+    sets.WeaponSet['Procs: Staff'] = {
+        main="Levin",
+        sub="Duplus Grip",
+    }
+
     sets.engaged = {
         head="Flamma Zucchetto +2",
         neck="Warrior's Beads",
