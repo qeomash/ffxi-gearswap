@@ -101,6 +101,7 @@ function init_gear_sets()
         head="Volte Cap", -- +1
         hands="Assassin's Armlets", --+1
         waist="Chaac Belt", --TH+1
+        legs="Volte Hose", --TH+1
     }
     sets.precast.JA.Step = sets.TH
 

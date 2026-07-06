@@ -360,7 +360,7 @@ function init_gear_sets()
         neck="Republican Platinum Medal",
         lear="Telos Earring",
         rear="Moonshade Earring", -- TPBonus+250
-        body="Assimilator's Jubbah +3", --STR+39WSD+10%
+        body="Assimilator's Jubbah +4", --STR+39WSD+12%
         hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         lring="Pyrosoul Ring",
         rring="Ilabrat Ring",
@@ -381,7 +381,7 @@ function init_gear_sets()
         neck="Mirage Stole +2",
         lear="Ishvara Earring",
         rear="Moonshade Earring", -- TPBonus+250
-        body="Assimilator's Jubbah +3", --STR+39WSD+10%
+        body="Assimilator's Jubbah +4", --STR+39WSD+12%
         hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         lring="Cornelia's Ring",
         rring="Ilabrat Ring",

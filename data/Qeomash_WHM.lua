@@ -77,7 +77,7 @@ function init_gear_sets()
     }
     sets.Empyrean = {
         head="Ebers Cap",
-        body="Ebers Bliaut",
+        body="Ebers Bliaut +1",
         hands="Orison Mitts +1",
         legs="Ebers Pantaloons +3",
         feet="Orison Duckbills +1",
@@ -141,7 +141,7 @@ function init_gear_sets()
         -- body="Kaykaus Bliaut", -- CPII+4%
         hands=sets.Artifact.hands, --CPII+2%
         lear="Orison Earring", --CP+2%
-        rear="Enervating Earring", --Enmity-3
+        rear="Glorious Earring", --CPII+2%
         back=Alaunus.Healing,
         legs=sets.Empyrean.legs,
         feet="Kaykaus Boots", --CP+10%
