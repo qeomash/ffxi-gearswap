@@ -53,3 +53,11 @@ end
 function enable_all_slots()
 	enable('main','sub','range','ammo','head','neck','lear','rear','body','hands','lring','rring','back','waist','legs','feet')
 end
+
+
+function job_state_change(stateField, newValue, oldValue)
+    debug_log("job_state_change")
+    if stateField == 'WeaponSet' then
+        equip(sets.WeaponSet[state.WeaponSet.current])
+    end
+end
