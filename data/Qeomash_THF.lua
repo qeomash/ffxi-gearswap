@@ -6,11 +6,47 @@ function get_sets()
     include('Mote-Include.lua')
 end
 
+function binds_on_load()
+    debug_log("...entered local binds_on_load")
+
+    send_command('bind f9 gs c cycle WeaponSet')
+    send_command('bind ~f9 gs c cycle WeaponSet reverse')
+    send_command('bind !f9 gs c reset WeaponSet')
+
+    send_command('bind f10 gs c cycle IdleMode')
+    send_command('bind ~f10 gs c cycle IdleMode reverse')
+    send_command('bind !f10 gs c reset IdleMode')
+
+    send_command('bind f11 gs c cycle CastingMode')
+    send_command('bind ~f11 gs c cycle CastingMode reverse')
+    -- send_command('bind !f11 gs c reset CastingMode')
+
+    send_command('bind f12 gs c cycle HybridMode')
+    send_command('bind ~f12 gs c cycle HybridMode reverse')
+    send_command('bind !f12 gs c reset HybridMode')
+
+end
+
+function binds_on_unload()
+    send_command('unbind f9')
+    send_command('unbind ~f9')
+    send_command('unbind !f9')
+    send_command('unbind f10')
+    send_command('unbind ~f10')
+    send_command('unbind !f10')
+    send_command('unbind f11')
+    send_command('unbind ~f11')
+    -- send_command('unbind !f11')
+    send_command('unbind f12')
+    send_command('unbind ~f12')
+    send_command('unbind !f12')
+end
+
 function user_setup()
     enable_all_slots()
     state.WeaponSet = M{['description'] = 'WeaponSet'}
     state.OffenseMode:options('Normal', 'Attack')
-    state.HybridMode:options('Normal', 'TreasureHunter')
+    state.HybridMode:options('Normal', 'TreasureHunter', 'ProcNeck')
     state.IdleMode:options('Normal')
     state.WeaponSet:options(
         'Daggers', 'Naegling',
@@ -47,7 +83,15 @@ function init_gear_sets()
         sub="Alber Strap",
     }
 
-    sets.engagedAmbu = {
+    sets.TH = {
+        ammo="Perfect Lucky Egg", --+1
+        head="Volte Cap", -- +1
+        hands="Assassin's Armlets", --+1
+        waist="Chaac Belt", --TH+1
+        legs="Volte Hose", --TH+1
+    }
+
+    sets.engagedBase = {
         ammo="Coiste Bodhar",
         head="Malignance Chapeau",
         neck="Asperity Necklace",
@@ -62,18 +106,23 @@ function init_gear_sets()
         legs="Malignance Tights",
         feet="Malignance Boots",
     }
-    sets.engagedGleti = set_combine(sets.engagedAmbu, {
+    sets.engaged = sets.engagedBase
+    sets.engaged.TreasureHunter = set_combine(sets.engagedBase, sets.TH)
+    sets.engaged.ProcNeck = set_combine(sets.engagedBase, {
+        neck="Hoxne Torque", -- Skills +30
+    })
+    sets.engaged.Gleti = set_combine(sets.engagedBase, {
         hands="Gleti's Gauntlets",
         legs="Gleti's Breeches",
         feet="Gleti's Boots",
     })
-    sets.engaged = sets.engagedAmbu
-    sets.idle = set_combine(sets.engaged, {
+
+    sets.idle = set_combine(sets.engagedBase, {
         head="Gleti's Mask",
         body="Gleti's Cuirass",
         hands="Gleti's Gauntlets",
         legs="Gleti's Breeches",
-        feet="Trotter Boots"
+        feet="Trotter Boots" --Movement+
     })
 
     sets.baseWS = {}
@@ -117,14 +166,6 @@ function init_gear_sets()
         feet="Rogue's Poulaines",
     }
 
-    sets.TH = {
-        ammo="Perfect Lucky Egg", --+1
-        -- head="White Rarab Cap +1", --+1
-        head="Volte Cap", -- +1
-        hands="Assassin's Armlets", --+1
-        waist="Chaac Belt", --TH+1
-        legs="Volte Hose", --TH+1
-    }
     sets.precast.JA.Step = sets.TH
 
     sets.precast.Waltz = {
