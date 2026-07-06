@@ -87,7 +87,7 @@ function user_setup()
     state.HybridMode:options('Normal', 'DT', 'Accuracy', "Enspell")
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'DT', 'Refresh')
-    state.WeaponSet:options('Normal', 'Crocea', 'Naegling', 'Maxentius', 'Daggers', 'DiamondAspis', '1DMG')
+    state.WeaponSet:options('Normal', 'Crocea', 'Naegling', 'Maxentius', 'Daggers', 'Excalibur', 'DiamondAspis', '1DMG')
 
     select_default_macro_book()
     send_command('wait 2;input /lockstyleset 2')
@@ -102,7 +102,7 @@ function init_gear_sets()
 
     -- Predefined Special Gear and Sets
     sets.Artifact = {
-        head="Atrophy Chapeau +3",
+        head="Atrophy Chapeau +4",
         body="Atrophy Tabard +4",
         hands="Atrophy Gloves +4",
         legs="Atrophy Tights +4",
@@ -141,6 +141,7 @@ function init_gear_sets()
         head="Volte Cap", -- +1
         feet="Chironic Slippers", --TH+2
         waist="Chaac Belt", --TH+1
+        legs="Volte Hose", --TH+1
     }
 
     sets.DefaultShield = {
@@ -167,6 +168,11 @@ function init_gear_sets()
     sets.WeaponSet["Daggers"] = {
         main="Gleti's Knife",
         sub="Ternion Dagger +1",
+        range=empty,
+    }
+    sets.WeaponSet["Excalibur"] = {
+        main="Excalibur",
+        sub="Thibron",
         range=empty,
     }
     sets.WeaponSet["DiamondAspis"] = {
@@ -303,7 +309,9 @@ function init_gear_sets()
         legs=sets.Artifact.legs, --skill+
         neck="Debilis Medallion",
         waist="Bishop's Sash",
+        back="Oretania's Cape +1", -- +5
         lring="Menelaus's Ring",
+        rring="Ephedra Ring",
         feet="Vanya Clogs",
     })
 
@@ -313,7 +321,7 @@ function init_gear_sets()
         main=gear.Colada.EnhancingDur,
         sub="Ammurapi Shield", --Dura+10%
         head="Carmine Mask", --+10
-        neck="Melic Torque", --+10
+        neck="Hoxne Torque", -- +30
         lear="Mimir Earring", -- +10
         rear="Lethargy Earring +1", -- duration+8%
         body=sets.Relic.body, -- +21,duration+10%
@@ -329,6 +337,7 @@ function init_gear_sets()
         {
             main="Pukulatmuj +1", -- +11
             sub="Forfend +1", -- +10
+            neck="Hoxne Torque", -- +30
             hands=sets.Relic.Hands, -- +22
             lear="Mimir Earring", -- +10
             rear="Andoaa Earring", -- +5
@@ -669,7 +678,7 @@ function init_gear_sets()
     --     head="Atrophy Chapeau +1",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
     --     body="Atrophy Tabard +3",hands="Atrophy Gloves +1",ring1="Rajas Ring",ring2="K'ayres Ring",
     --     back="Kayapa Cape",waist="Goading Belt",legs="Osmium Cuisses",feet="Atrophy Boots"}
-
+    sets.precast.JA.Step = sets.engaged.Accuracy
 
     -- Weaponskill sets
     sets.baseWS = {}
@@ -706,14 +715,6 @@ function init_gear_sets()
     }
     sets.precast.WS = sets.baseWS.Str
 
-    sets.precast.WS['Aeolian Edge'] = set_combine(sets.midcast['Elemental Magic'], {
-        back=Sucellos.WSD_STR,
-        rear="Moonshade Earring",
-    })
-    sets.precast.WS['Death Blossom'] = set_combine(sets.midcast['Elemental Magic'], {
-        back=Sucellos.WSD_STR,
-        rear="Moonshade Earring",
-    })
     sets.precast.WS['Seraph Blade'] = {
         ammo="Sroda Tathlum",
         head=sets.Empyrean.head,
@@ -730,31 +731,39 @@ function init_gear_sets()
         back=Sucellos.WSD_MND,
         -- waist="Aswang Sash", --MAB+3,Mcrit+5%
         -- waist="Eschan Stone", --MAB+7,Macc+7
-        -- waist="Orpheus's Sash",
         waist="Orpheus's Sash",
         legs=sets.Empyrean.legs,
         feet=sets.Empyrean.feet,
     }
-
     sets.precast.WS['Sanguine Blade'] = set_combine(sets.midcast['Elemental Magic'], {
         ammo="Sroda Tathlum",
         head="Pixie Hairpin +1",
-        back=Sucellos.WSD_STR,
+        hands="Jhakri Cuffs +2", -- WSD+7%
         lear="Malignance Earring", --MAB+8,Macc+10
         rear="Regal Earring", --MND+10
         -- rear="Moonshade Earring",
-        waist="Orpheus's Sash",
         rring="Cornelia's Ring",
+        back=Sucellos.WSD_STR,
+        waist="Orpheus's Sash",
     })
-
+    sets.precast.WS['Red Lotus Blade'] = set_combine(sets.midcast['Elemental Magic'], {
+        ammo="Sroda Tathlum",
+        neck="Sibyl Scarf", -- MAB+10,INT+10
+        lear="Regal Earring", --MND+10
+        rear="Moonshade Earring",
+        hands="Jhakri Cuffs +2", -- WSD+7%
+        lring="Epaminondas's Ring", --WSD+5%
+        rring="Cornelia's Ring", --WSD+10%
+        -- back=Sucellos.WSD_INT, -- I should make an INT one
+        waist="Orpheus's Sash",
+    })
     sets.precast.WS['Savage Blade'] = {
-        head=sets.Relic.head, --WSD+6%
+        head=sets.Relic.head, --WSD+9%
         neck="Republican Platinum Medal",
         lear="Telos Earring",
         rear="Moonshade Earring", -- TPBonus+250
         body=sets.Empyrean.body, --Att+54,Acc+54,STR+29
         hands=sets.Artifact.hands, --STR+21,Acc+53,Att+WSD+9%
-        -- lring="Pyrosoul Ring",
         lring="Cornelia's Ring",
         rring="Ilabrat Ring",
         back=Sucellos.WSD_STR,
@@ -762,8 +771,14 @@ function init_gear_sets()
         legs=sets.Empyrean.legs, --Attk+53,STR+33
         feet=sets.Empyrean.feet, --Acc+50,Att+50,WS+8%
     }
-    -- sets.precast.WS['Knight of Round'] = sets.precast.WS['Savage Blade']
+    sets.precast.WS['Death Blossom'] = set_combine(sets.precast.WS['Savage Blade'], {
+        back=Sucellos.WSD_MND,
+    })
+    sets.precast.WS['Knight of Round'] = set_combine(sets.precast.WS['Savage Blade'], {
+        rear="Ishvara Earring",
+    })
     sets.precast.WS['Black Halo'] = sets.precast.WS['Savage Blade']
+    sets.precast.WS['Aeolian Edge'] = sets.precast.WS['Red Lotus Blade']
 
 end
 
