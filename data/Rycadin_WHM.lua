@@ -64,7 +64,7 @@ function init_gear_sets()
         hands="Aya. Manopolas +2", --maybe try those garbage things you got?
         back=Alaunus.Idle, --FC+10%
         legs="Aya. Cosciales +2", -- FC+5%
-        feet="Regal Pumps", --FC+3%
+        feet="Regal Pumps +1", --FC+4~%
         ammo="Incantor Stone", -- FC+2%
         ring1="Lebeche Ring", -- QM+2%
     }
@@ -76,7 +76,7 @@ function init_gear_sets()
         {
             main="Queller Rod", -- CFC-7%
             sub="Sors Shield", -- CFC-5%
-            head="Theophany Cap +1", -- CFC -5%
+            head="Theophany Cap +2", -- CFC -5%
             legs="Ebers Pantaloons +3", -- CFC -15%
             feet="Kaykaus Boots" -- CFC-5%
         })
@@ -129,10 +129,10 @@ function init_gear_sets()
     gear.default.obi_waist = "Goading Belt"
     gear.default.obi_back = "Mending Cape"
 
-    sets.midcast.CureSolace = {main="Tamaxchi",sub="Genbu's Shield",ammo="Incantor Stone",
-        head="Gendewitha Caubeen",neck="Orison Locket",ear1="Lifestorm Earring",ear2="Orison Earring",
-        body="Orison Bliaud +2",hands="Theophany Mitts",ring1="Prolix Ring",ring2="Sirona's Ring",
-        back="Tuilha Cape",waist=gear.ElementalObi,legs="Orison Pantaloons +2",feet="Piety Duckbills +1"}
+    -- sets.midcast.CureSolace = {main="Tamaxchi",sub="Genbu's Shield",ammo="Incantor Stone",
+    --     head="Gendewitha Caubeen",neck="Orison Locket",ear1="Lifestorm Earring",ear2="Orison Earring",
+    --     body="Orison Bliaud +2",hands="Theophany Mitts",ring1="Prolix Ring",ring2="Sirona's Ring",
+    --     back="Tuilha Cape",waist=gear.ElementalObi,legs="Orison Pantaloons +2",feet="Piety Duckbills +1"}
 
     -- sets.midcast.Cure = {main="Tamaxchi",sub="Genbu's Shield",ammo="Incantor Stone",
     --     head="Gendewitha Caubeen",neck="Orison Locket",ear1="Lifestorm Earring",ear2="Orison Earring",
@@ -148,6 +148,7 @@ function init_gear_sets()
         -- body="Theophany Bliaut +2", -- should be ? CPII+3%
         hands="Theophany Mitts +2", --CPII+2%
         lear="Orison Earring", --CP+2%
+        rear="Glorious Earring", --CPII+2%
         back=Alaunus.Healing,
         legs="Ebers Pantaloons +3",
         feet="Kaykaus Boots", --CP+10%

@@ -13,8 +13,13 @@ function user_setup()
 end
 
 function init_gear_sets()
+
+    Cichols = {}
+    Cichols.TP_DA = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
+    Cichols.STR_WSD = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+
     sets.mainweapons = {
-        main="Lycurgos",
+        main="Chango",
         sub="Duplus Grip",
         ammo="Coiste Bodhar",
     }
@@ -31,7 +36,7 @@ function init_gear_sets()
         hands="Sulevia's Gauntlets +2",
         lring="Niqmaddu Ring",
         rring="Flamma Ring",
-        back="Mauler's Mantle",
+        back=Cichols.TP_DA,
         waist="Sailfi Belt +1",
         legs="Sulevia's Cuisses +2",
         feet="Flamma Gambieras +2",
@@ -51,8 +56,8 @@ function init_gear_sets()
         hands="Sulevia's Gauntlets +2",
         lring="Sulevia's Ring",
         rring="Regal Ring",
-        back="Mauler's Mantle",
-        waist="Cetl Belt",
+        back=Cichols.STR_WSD,
+        waist="Sailfi Belt +1",
         legs="Sulevia's Cuisses +2",
         feet="Sulevia's Leggings +2", --WS+7%
     }

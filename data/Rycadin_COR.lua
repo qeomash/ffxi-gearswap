@@ -91,7 +91,7 @@ function init_gear_sets()
     sets.precast.JA['Triple Shot'] = {body="Navarch's Frac +2"}
     sets.precast.JA['Snake Eye'] = {legs="Lanun Trews +1"}
     sets.precast.JA['Fold'] = {legs="Lanun Gants +1"}
-    sets.precast.JA['Wild Card'] = {feet="Lanun Bottes +2"}
+    sets.precast.JA['Wild Card'] = {feet="Lanun Bottes +3"}
     sets.precast.JA['Random Deal'] = {body="Lanun Frac +4"}
 
 
@@ -102,6 +102,7 @@ function init_gear_sets()
         head="Lanun Tricorne +2",
         neck="Regal Necklace", --Roll+7,Dura+20
         hands="Chasseur's Gants +3",
+        lring="Luzaf's Ring",
         back=Camulus.TP,
     }
 
@@ -210,7 +211,7 @@ function init_gear_sets()
         rring="Arvina Ringlet +1", --MAB+3
         back=Camulus.WSD_MAB,
         legs="Nyame Flanchard",
-        feet="Lanun Bottes +2",
+        feet="Lanun Bottes +3",
     }
 
     -- sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
@@ -324,7 +325,8 @@ function init_gear_sets()
         hands="Nyame Gauntlets",
         legs="Volte Tights",
         feet="Nyame Sollerets",
-        neck="Loricate Torque +1", --DT-6%
+        -- neck="Loricate Torque +1", --DT-6%
+        neck="Commodore Charm +1", --just for the points
         waist="Sailfi Belt +1",
         left_ear="Mache Earring",
         right_ear="Chas. Earring +1",

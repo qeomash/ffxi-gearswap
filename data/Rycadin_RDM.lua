@@ -29,8 +29,9 @@ function init_gear_sets()
         main="Iridal Staff",
     }
     sets.TH = {
-        main="Grioavolr", -- TH+1
-        head="White Rarab Cap +1",
+        -- main="Grioavolr", -- TH+1
+        ammo="Perfect Lucky Egg", --TH+1
+        head="Volte Cap", --TH+1
         feet="Chironic Slippers", -- TH+1
         waist="Chaac Belt", --TH+1
     }
@@ -123,8 +124,8 @@ function init_gear_sets()
         lear="Moldavite Earring",
         body="Jhakri Robe +2",
         hands="Jhakri Cuffs +2",
-        ring1="Aqua Ring",
-        ring2="Aqua Ring",
+        ring1="Stikini Ring",
+        ring2="Stikini Ring",
         back="Sucello's Cape",
         waist="Demonry Sash",
         legs="Jhakri Slops +2",
@@ -144,7 +145,7 @@ function init_gear_sets()
         main="Grioavolr",
         sub="Staff Strap",
         head="Duelist's Chapeau",
-        neck="Orochi Nodowa",
+        -- neck="Bathy Choker", --regen+2
         lear="Moldavite Earring",
         rear="Antivenom Earring",
         body="Jhakri Robe +2",
