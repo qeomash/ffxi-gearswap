@@ -83,11 +83,13 @@ end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
     enable_all_slots()
-    state.OffenseMode:options('Normal', 'Attack')
+    -- state.OffenseMode:options('Normal', 'Attack')
     state.HybridMode:options('Normal', 'DT', 'Accuracy', "Enspell")
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'DT', 'Refresh')
-    state.WeaponSet:options('Normal', 'Crocea', 'Naegling', 'Maxentius', 'Daggers', 'Excalibur', 'DiamondAspis', '1DMG')
+    state.WeaponSet:options('Normal',
+        'Crocea+Daybreak', 'Naegling', "Crocea+Thib", 'Maxentius', "Crocea+Demersal",
+        'Daggers', 'Excalibur', 'DiamondAspis', '1DMG')
 
     select_default_macro_book()
     send_command('wait 2;input /lockstyleset 2')
@@ -150,7 +152,7 @@ function init_gear_sets()
 
     -- Weapon Mode Sets
     sets.WeaponSet = {}
-    sets.WeaponSet["Crocea"] = {
+    sets.WeaponSet["Crocea+Daybreak"] = {
         main="Crocea Mors",
         sub="Daybreak",
         range=empty,
@@ -160,9 +162,19 @@ function init_gear_sets()
         sub="Thibron",
         range=empty,
     }
+    sets.WeaponSet["Crocea+Thib"] = {
+        main="Crocea Mors",
+        sub="Thibron",
+        range=empty,
+    }
     sets.WeaponSet["Maxentius"] = {
         main="Maxentius",
         sub="Thibron",
+        range=empty,
+    }
+    sets.WeaponSet["Crocea+Demersal"] = {
+        main="Crocea Mors",
+        sub="Demersal Degen +1",
         range=empty,
     }
     sets.WeaponSet["Daggers"] = {
