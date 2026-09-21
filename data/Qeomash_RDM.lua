@@ -113,7 +113,7 @@ function init_gear_sets()
     sets.Relic = {
         head="Vitiation Chapeau +4",
         body="Vitiation Tabard +4",
-        hands="Vitiation Gloves +3",
+        hands="Vitiation Gloves +4",
         legs="Vitiation Tights +3",
         feet="Vitiation Boots +3",
     }
@@ -300,7 +300,7 @@ function init_gear_sets()
         main="Daybreak",
         sub={name="Sors Shield", priority=100}, -- CP+3%
         head="Kaykaus Mitra +1",
-        neck="Colossus's Torque",
+        neck="Hoxne Torque", -- +30
         lear="Regal Earring",
         rear="Magnetic Earring",
         body="Kaykaus Bliaut +1",
@@ -336,8 +336,8 @@ function init_gear_sets()
         neck="Hoxne Torque", -- +30
         lear="Mimir Earring", -- +10
         rear="Lethargy Earring +1", -- duration+8%
-        body=sets.Relic.body, -- +21,duration+10%
-        hands=sets.Relic.hands, -- +22,duration+
+        body=sets.Relic.body, -- +24,duration+10%
+        hands=sets.Relic.hands, -- +25,duration+
         lring="Stikini Ring +1", -- +5
         rring="Stikini Ring +1", -- +5
         back=Ghostfyre.Duration, --duration+20%
@@ -350,7 +350,7 @@ function init_gear_sets()
             main="Pukulatmuj +1", -- +11
             sub="Forfend +1", -- +10
             neck="Hoxne Torque", -- +30
-            hands=sets.Relic.Hands, -- +22
+            hands=sets.Relic.Hands, -- +25
             lear="Mimir Earring", -- +10
             rear="Andoaa Earring", -- +5
             legs=sets.Artifact.legs, --+22
@@ -574,7 +574,7 @@ function init_gear_sets()
         main="Grioavolr",
         sub="Clerisy Strap", --MAC+10
         head=sets.Artifact.head,
-        neck="Aesir Torque",
+        neck="Hoxne Torque", -- +30
         lear="Malignance Earring", --MAB+8,Macc+10
         rear="Magnetic Earring",
         -- body="Glamor Jupon", -- Drk skill +3
@@ -582,7 +582,7 @@ function init_gear_sets()
         -- hands="Crimson Finger Gauntlets", --Drk skill +10
         -- hands="Amalric Gages", -- MAB+23, MBII+5, sure why not
         hands="Jhakri Cuffs +2", --INT+36,MAB+40
-        lring="Snow Ring",
+        lring="Stikini Ring +1",
         rring="Stikini Ring +1", --sk+5 MAC+8
         -- back="Prism Cape",
         waist="Aswang Sash",
@@ -703,26 +703,12 @@ function init_gear_sets()
         body=sets.Empyrean.body, --Att+54,Acc+54,STR+29
         -- hands="Jhakri Cuffs +2", --STR+18,Attack+43,WS+7%
         hands=sets.Artifact.hands, --STR+21,Acc+53,Att+WSD+6%
-        lring="Pyrosoul Ring",
+        lring="Cornelia's Ring",
         rring="Ilabrat Ring",
         back=Sucellos.WSD_STR,
         waist="Prosilio Belt +1",
         legs=sets.Empyrean.legs, --Attk+53,STR+33
         -- legs="Jhakri Slops +2", --Att+45,STR+47
-        feet=sets.Empyrean.feet, --Acc+50,Att+50,WS+8%
-    }
-    sets.baseWS.Mnd = {
-        head=sets.Relic.head, -- MND+37,WSD+3%
-        neck="Asperity Necklace",
-        lear="Regal Earring", -- MND+10
-        rear="Moonshade Earring", -- TPBonus+250
-        body=sets.Empyrean.body, --Att+54,Acc+54,MND+40
-        hands="Jhakri Cuffs +2", --MND+35,Attack+43,WS+7%
-        lring="Stikini Ring +1",
-        rring="Aqua Ring",
-        back=Sucellos.WSD_STR,
-        waist="Dynamic Belt +1",
-        legs=sets.Empyrean.legs, --Attk+53,MND+38
         feet=sets.Empyrean.feet, --Acc+50,Att+50,WS+8%
     }
     sets.precast.WS = sets.baseWS.Str
