@@ -30,7 +30,13 @@ end
 
 function init_gear_sets()
 
+    Intarabus = {}
+    Intarabus.Idle = { name="Intarabus's Cape", augments={'Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Damage taken-5%',}}
+    Intarabus.Debuff = { name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}}
+
     sets.idle = {
+        main="Daybreak",
+        sub="Genbu's Shield",
         head="Ayanmo Zucchetto +2",
         -- neck="Asperity Necklace",
         -- ear1="Cessance Earring",
@@ -39,9 +45,9 @@ function init_gear_sets()
         body="Ashera Harness", --DT-7%
         hands="Ayanmo Manopolas +1",
         rear="Odnowa Earring", --MDT-1%
-        lring="Ayanmo Ring",
-        rring="Inyanga Ring",
-        back="Mecistopins Mantle",
+        lring="Shneddick Ring",
+        rring="Defending Ring", --DT-10%
+        back=Intarabus.Idle,
         legs="Ayanmo Cosciales +2",
         -- feet="Ayanmo Gambieras +1",
         feet="Fili Cothurnes +1", -- Move+18%
@@ -87,12 +93,18 @@ function init_gear_sets()
         body="Inyanga Jubbah +2", -- FC+14%
         lear="Loquacious Earring",
         legs="Ayanmo Cosciales +2",
-        ring1="Minstrel's Ring"
+        ring1="Minstrel's Ring",
+        back=Intarabus.Debuff,
+        feet="Volte Gaiters",
     }
     sets.precast.FC.BardSong = set_combine(sets.precast.FC, {
         -- ranged="Linos",
         ranged="Miracle Cheer",
         head="Fili Calot +1", --Song-13%
+        }
+    )
+    sets.precast.FC['Honor March'] = set_combine(sets.precast.FC.BardSong, {
+        ranged="Marsyas",
         }
     )
     sets.precast.FC.BardSong.AdditionalSongs = set_combine(sets.precast.FC.BardSong, {
@@ -107,10 +119,11 @@ function init_gear_sets()
         ranged="Miracle Cheer",
         head="Fili Calot +1",
         neck="Moonbow Whistle",
-        body="Fili Hongreline +1",
-        hands="Fili Manchettes +1",
+        body="Fili Hongreline +3",
+        hands="Fili Manchettes +2",
         legs="Inyanga Shalwar +2",
-        feet="Brioso Slippers +2",
+        feet="Brioso Slippers +4",
+        back=Intarabus.Debuff,
     }
     sets.midcast.BardSong.AdditionalSongs = {
         ranged="Terpander", -- Three Songs
@@ -118,25 +131,29 @@ function init_gear_sets()
     sets.midcast.BardSong.Linos = set_combine(sets.midcast.BardSong, {
         ranged="Linos",
     })
+    sets.midcast.BardSong["Honor March"] = set_combine(sets.midcast.BardSong, {
+        ranged="Marsyas",
+    })
     -- sets.midcast.GBuff = {range="Gjallarhorn",ammo=empty} LOL will never happen
     sets.midcast.GBuff = {}
 
     sets.midcast.Debuff = {
-        -- head="Bard's Roundlet +1",
+        head="Brioso Roundlet +2",
         -- neck="Wind Torque",
         -- ear1="Melody Earring +1",
         -- ear2="Musical Earring",
-        -- body="Errant houppelande",
+        body="Brioso Justaucorps +4",
         hands="Inyanga Dastanas +2",
         -- ring1="Nereid Ring",
         -- ring2="Nereid Ring",
-        -- back="Astute Cape",
+        back=Intarabus.Debuff,
         -- waist="Corsette +1",
         legs="Inyanga Shalwar +2",
         -- feet="Goliard Clogs",
     }
     sets.midcast.Lullaby = set_combine(sets.midcast.Debuff, {
         ranged="Blurred Harp +1",
+        hands="Brioso Cuffs +4",
     })
     sets.midcast.Base = sets.midcast.Buff
 
@@ -245,3 +262,4 @@ function disable_angrybard()
     enable('main','sub','ranged', 'ammo')
     windower.add_to_chat(64,'Angry Bard: OFF')
 end
+
