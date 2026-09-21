@@ -84,9 +84,10 @@ function init_gear_sets()
     }
 
     sets.TH = {
-        ammo="Perfect Lucky Egg", --+1
+        -- ammo="Perfect Lucky Egg", --+1
         head="Volte Cap", -- +1
-        hands="Assassin's Armlets", --+1
+        body="Volte Jupon", -- +2
+        -- hands="Assassin's Armlets", --+1
         waist="Chaac Belt", --TH+1
         legs="Volte Hose", --TH+1
     }

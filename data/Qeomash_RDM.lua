@@ -141,6 +141,7 @@ function init_gear_sets()
 
     sets.TH = {
         head="Volte Cap", -- +1
+        body="Volte Jupon", --TH+2
         feet="Chironic Slippers", --TH+2
         waist="Chaac Belt", --TH+1
         legs="Volte Hose", --TH+1
