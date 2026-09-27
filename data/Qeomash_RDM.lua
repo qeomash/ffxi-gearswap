@@ -646,7 +646,7 @@ function init_gear_sets()
         lear="Sherida Earring",
         rear="Telos Earring",
         body="Malignance Tabard",
-        hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
+        hands="Malignance Gloves",
         lring="Chirich Ring +1",
         rring="Chirich Ring +1",
         back=Sucellos.DA,

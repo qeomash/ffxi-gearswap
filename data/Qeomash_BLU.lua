@@ -318,7 +318,7 @@ function init_gear_sets()
         lear="Telos Earring",
         rear="Suppanomimi",
         body=gear.Adhemar.A.body,
-        hands="Ayanmo Manopolas +2", --Acc+43,Haste+4%
+        hands="Malignance Gloves",
         lring="Petrov Ring",
         rring="Epona's Ring",
         back=Rosmertas.DA,
@@ -331,6 +331,7 @@ function init_gear_sets()
     sets.engaged.Mid = set_combine(sets.engaged, {
         head="Malignance Chapeau",
         body="Malignance Tabard",
+        hands="Malignance Gloves",
         legs="Malignance Tights",
         feet="Malignance Boots", --DT-4%
     })

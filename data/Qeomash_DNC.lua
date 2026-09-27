@@ -28,7 +28,7 @@ function init_gear_sets()
         ear1="Sherida Earring",
         ear2="Telos Earring",
         body="Malignance Tabard",
-        hands="Mummu Wrists +2",
+        hands="Malignance Gloves",
         lring="Petrov Ring",
         rring="Epona's Ring",
         back="Toetapper Mantle",
