@@ -35,8 +35,11 @@ function init_gear_sets()
     }
 
     sets.precast.FC = {
+        head="Carmine Mask",
+        neck="Baetyl Pendant", --FC+4%
         lear="Loquacious Earring",
         legs="Homam Cosciales",
+        feet="Carmine Greaves +1",
     }
 
     sets.idle = set_combine(sets.engaged, {

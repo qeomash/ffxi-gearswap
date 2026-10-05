@@ -63,6 +63,8 @@ function init_gear_sets()
     sets.engaged = sets.engagedTank
 
     sets.precast.FC = {
+        head="Carmine Mask", --FC+9%
+        neck="Baetyl Pendant", --FC+4%
         lear="Loquacious Earring",
         legs="Ayanmo Cosciales +2",
         feet="Carmine Greaves +1",

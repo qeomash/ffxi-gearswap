@@ -403,6 +403,7 @@ function init_gear_sets()
     sets.precast.FC = {
         head="Carmine Mask", -- 9%
         -- body="Ebur Talar", --5%
+        neck="Baetyl Pendant", --4%
         lear="Loquacious Earring",
         back="Swith Cape",
         legs="Ayanmo Cosciales +2",

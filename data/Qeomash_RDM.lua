@@ -717,8 +717,7 @@ function init_gear_sets()
     sets.precast.WS['Seraph Blade'] = {
         ammo="Sroda Tathlum",
         head=sets.Empyrean.head,
-        -- neck='Fotia Gorget',
-        neck="Sibyl Scarf", --MAB+10 (should be Baetyl)
+        neck="Baetyl Pendant", --MAB+13
         lear="Regal Earring", --MND+10
         rear="Moonshade Earring",
         body=sets.Empyrean.body,
@@ -737,6 +736,7 @@ function init_gear_sets()
     sets.precast.WS['Sanguine Blade'] = set_combine(sets.midcast['Elemental Magic'], {
         ammo="Sroda Tathlum",
         head="Pixie Hairpin +1",
+        neck="Baetyl Pendant", --MAB+13
         hands="Jhakri Cuffs +2", -- WSD+7%
         lear="Malignance Earring", --MAB+8,Macc+10
         rear="Regal Earring", --MND+10
