@@ -71,7 +71,7 @@ function init_gear_sets()
     sets.WeaponSet = {}
     sets.WeaponSet['Chango'] = {
         main="Chango",
-        sub="Duplus Grip",
+        sub="Utu Grip",
         ammo="Coiste Bodhar",
     }
     sets.WeaponSet['Naegling'] = {
@@ -91,19 +91,19 @@ function init_gear_sets()
     }
     sets.WeaponSet['Procs: GSword'] = {
         main="Goujian",
-        sub="Duplus Grip",
+        sub="Utu Grip",
     }
     sets.WeaponSet['Procs: Scythe'] = {
         main="Bronze Zaghnal",
-        sub="Duplus Grip",
+        sub="Utu Grip",
     }
     sets.WeaponSet['Procs: Polearm'] = {
         main="Tzee Xicu's Blade",
-        sub="Duplus Grip",
+        sub="Utu Grip",
     }
     sets.WeaponSet['Procs: GKT'] = {
         main="Zanmato +1",
-        sub="Duplus Grip",
+        sub="Utu Grip",
     }
     sets.WeaponSet['Procs: Club'] = {
         main="Soulflayer's Wand",
@@ -111,7 +111,7 @@ function init_gear_sets()
     }
     sets.WeaponSet['Procs: Staff'] = {
         main="Levin",
-        sub="Duplus Grip",
+        sub="Utu Grip",
     }
 
     sets.engaged = {
