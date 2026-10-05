@@ -434,7 +434,6 @@ function init_gear_sets()
         hands=sets.Empyrean.hands,
         lring="Stikini Ring +1",
         rring="Stikini Ring +1",
-        -- back="Aurist's Cape +1", --bis, after augmenting
         back="Null Shawl", --Macc+50
         -- waist="Ovate Rope", --macc+8
         waist="Null Belt", --MACC+30
@@ -521,7 +520,7 @@ function init_gear_sets()
         ammo="Regal Gem",
         rring="Weatherspoon Ring",
     })
-    sets.midcast['Silence'] = sets.Enfeebling.Accuracy
+    sets.midcast['Silence'] = sets.Enfeebling.Duration
     sets.midcast['Sleep'] = sets.Enfeebling.Duration
     sets.midcast["Bind"] = sets.Enfeebling.Duration
     sets.midcast['Sleep II'] = sets.Enfeebling.Duration
@@ -537,6 +536,12 @@ function init_gear_sets()
     sets.midcast["Paralyze II"] = sets.Enfeebling.PotencyMnd
     sets.midcast["Distract III"] = sets.Enfeebling.PotencyMnd
     sets.midcast["Blind II"] = sets.Enfeebling.PotencyInt
+
+    sets.midcast["Bind"].Resistant = sets.Enfeebling.Accuracy
+    sets.midcast['Silence'].Resistant = sets.Enfeebling.Accuracy
+    sets.midcast['Sleep'].Resistant = sets.Enfeebling.Accuracy
+    sets.midcast['Sleep II'].Resistant = sets.Enfeebling.Accuracy
+    sets.midcast['Sleepga'].Resistant = sets.Enfeebling.Accuracy
     sets.midcast['Frazzle III'].Resistant = sets.Enfeebling.Accuracy
     sets.midcast["Paralyze II"].Resistant = sets.Enfeebling.Accuracy
     sets.midcast["Distract III"].Resistant = sets.Enfeebling.Accuracy
@@ -727,8 +732,6 @@ function init_gear_sets()
         lring="Weatherspoon Ring", -- Light Affinity
         rring="Cornelia's Ring",
         back=Sucellos.WSD_MND,
-        -- waist="Aswang Sash", --MAB+3,Mcrit+5%
-        -- waist="Eschan Stone", --MAB+7,Macc+7
         waist="Orpheus's Sash",
         legs=sets.Empyrean.legs,
         feet=sets.Empyrean.feet,
